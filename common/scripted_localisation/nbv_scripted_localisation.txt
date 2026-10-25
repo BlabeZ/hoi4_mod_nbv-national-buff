@@ -1,0 +1,300 @@
+# Row dispatch adapted from BUFF UI GETBUFFName. IDs refer to the approved metric index.
+
+defined_text = {
+    name = NBVRowContainer
+    text = { trigger = { check_variable = { nbv_row_id = 10000 } } localization_key = nbv_high_heading_row }
+    text = { trigger = { check_variable = { nbv_row_id = 20000 } } localization_key = nbv_low_heading_row }
+    text = { trigger = { check_variable = { nbv_row_id < 0 } } localization_key = nbv_low_row }
+    text = { localization_key = nbv_high_row }
+}
+
+defined_text = {
+    name = NBVHighName1
+    text = {
+        trigger = { nbv_resolve_high_1 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighValue1
+    text = {
+        trigger = { nbv_resolve_high_1 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighTooltip1
+    text = {
+        trigger = { nbv_resolve_high_1 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighName2
+    text = {
+        trigger = { nbv_resolve_high_2 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighValue2
+    text = {
+        trigger = { nbv_resolve_high_2 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighTooltip2
+    text = {
+        trigger = { nbv_resolve_high_2 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighName3
+    text = {
+        trigger = { nbv_resolve_high_3 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighValue3
+    text = {
+        trigger = { nbv_resolve_high_3 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVHighTooltip3
+    text = {
+        trigger = { nbv_resolve_high_3 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowName1
+    text = {
+        trigger = { nbv_resolve_low_1 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowValue1
+    text = {
+        trigger = { nbv_resolve_low_1 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowTooltip1
+    text = {
+        trigger = { nbv_resolve_low_1 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowName2
+    text = {
+        trigger = { nbv_resolve_low_2 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowValue2
+    text = {
+        trigger = { nbv_resolve_low_2 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowTooltip2
+    text = {
+        trigger = { nbv_resolve_low_2 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowName3
+    text = {
+        trigger = { nbv_resolve_low_3 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowValue3
+    text = {
+        trigger = { nbv_resolve_low_3 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowTooltip3
+    text = {
+        trigger = { nbv_resolve_low_3 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowName4
+    text = {
+        trigger = { nbv_resolve_low_4 = yes }
+        localization_key = "nbv_row_name_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowValue4
+    text = {
+        trigger = { nbv_resolve_low_4 = yes }
+        localization_key = "nbv_row_value_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVLowTooltip4
+    text = {
+        trigger = { nbv_resolve_low_4 = yes }
+        localization_key = "nbv_row_tooltip_[?nbv_entry_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVRowName
+    text = {
+        trigger = {
+            meta_trigger = {
+                text = { set_temp_variable = { nbv_loc_id = nbv_entry_id } }
+            }
+        }
+        localization_key = "nbv_row_name_[?nbv_loc_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVRowValue
+    text = {
+        trigger = {
+            meta_trigger = {
+                text = { set_temp_variable = { nbv_loc_id = nbv_entry_id } }
+            }
+        }
+        localization_key = "nbv_row_value_[?nbv_loc_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVRowTooltip
+    text = {
+        trigger = {
+            meta_trigger = {
+                text = { set_temp_variable = { nbv_loc_id = nbv_entry_id } }
+            }
+        }
+        localization_key = "nbv_row_tooltip_[?nbv_loc_id]"
+    }
+    text = { localization_key = nbv_empty_text }
+}
+
+defined_text = {
+    name = NBVFilterLabel
+    text = {
+        trigger = { has_country_flag = nbv_show_zero }
+        localization_key = nbv_filter_all
+    }
+    text = { localization_key = nbv_filter_active }
+}
+
+defined_text = {
+    name = nbv_tab_1_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 1 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}
+
+defined_text = {
+    name = nbv_tab_2_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 2 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}
+
+defined_text = {
+    name = nbv_tab_3_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 3 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}
+
+defined_text = {
+    name = nbv_tab_4_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 4 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}
+
+defined_text = {
+    name = nbv_tab_5_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 5 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}
+
+defined_text = {
+    name = nbv_tab_6_sprite
+    text = {
+        trigger = { check_variable = { nbv_page = 6 } }
+        localization_key = GFX_nbv_tab_selected
+    }
+    text = { localization_key = GFX_nbv_tab_normal }
+}

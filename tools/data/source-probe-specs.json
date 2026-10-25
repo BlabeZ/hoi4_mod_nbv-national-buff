@@ -1,0 +1,866 @@
+{
+  "probes": [
+    {
+      "name": "army_advisor",
+      "source_id": "GER_franz_halder:army_chief:franz_halder:army_chief_offensive_2",
+      "key": "army_attack_factor",
+      "contribution": 0.1,
+      "category": "advisor",
+      "name_contains": "陆军进攻",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "deactivate_advisor = franz_halder"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "hired",
+          "effects": [
+            "activate_advisor = franz_halder"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "trait_removed",
+          "effects": [
+            "remove_trait = { character = GER_franz_halder slot = army_chief trait = army_chief_offensive_2 }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "trait_restored",
+          "effects": [
+            "add_trait = { character = GER_franz_halder slot = army_chief trait = army_chief_offensive_2 }"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "dismissed",
+          "effects": [
+            "deactivate_advisor = franz_halder"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+10.0%"
+    },
+    {
+      "name": "political_advisor",
+      "source_id": "GER_martin_bormann:political_advisor:martin_bormann:GER_secretary_to_the_fuhrer",
+      "key": "political_power_factor",
+      "contribution": 0.1,
+      "category": "advisor",
+      "name_contains": "元首秘书",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "deactivate_advisor = martin_bormann"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "hired",
+          "effects": [
+            "activate_advisor = martin_bormann"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "trait_removed",
+          "effects": [
+            "remove_trait = { character = GER_martin_bormann slot = political_advisor trait = GER_secretary_to_the_fuhrer }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "trait_restored",
+          "effects": [
+            "add_trait = { character = GER_martin_bormann slot = political_advisor trait = GER_secretary_to_the_fuhrer }"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "dismissed",
+          "effects": [
+            "deactivate_advisor = martin_bormann"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+10.0%"
+    },
+    {
+      "name": "high_command",
+      "source_id": "GER_ferdinand_schorner:high_command:ferdinand_schorner:army_infantry_2",
+      "key": "army_infantry_attack_factor",
+      "contribution": 0.1,
+      "category": "advisor",
+      "name_contains": "步兵部队",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "deactivate_advisor = ferdinand_schorner"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "hired",
+          "effects": [
+            "activate_advisor = ferdinand_schorner"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "trait_removed",
+          "effects": [
+            "remove_trait = { character = GER_ferdinand_schorner slot = high_command trait = army_infantry_2 }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "trait_restored",
+          "effects": [
+            "add_trait = { character = GER_ferdinand_schorner slot = high_command trait = army_infantry_2 }"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "dismissed",
+          "effects": [
+            "deactivate_advisor = ferdinand_schorner"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+10.0%"
+    },
+    {
+      "name": "theorist",
+      "source_id": "GER_walther_wever:theorist:walther_wever:air_warfare_theorist",
+      "key": "air_doctrine_cost_factor",
+      "contribution": -0.1,
+      "category": "advisor",
+      "name_contains": "空战理论家",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "deactivate_advisor = walther_wever"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "hired",
+          "effects": [
+            "activate_advisor = walther_wever"
+          ],
+          "present": true,
+          "delta": -0.1,
+          "guards": []
+        },
+        {
+          "name": "trait_removed",
+          "effects": [
+            "remove_trait = { character = GER_walther_wever slot = theorist trait = air_warfare_theorist }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "trait_restored",
+          "effects": [
+            "add_trait = { character = GER_walther_wever slot = theorist trait = air_warfare_theorist }"
+          ],
+          "present": true,
+          "delta": -0.1,
+          "guards": []
+        },
+        {
+          "name": "dismissed",
+          "effects": [
+            "deactivate_advisor = walther_wever"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "-10.0%"
+    },
+    {
+      "name": "advisor_role_isolation",
+      "source_id": "GER_werner_von_fritsch:high_command:werner_von_fritsch_high_command:army_logistics_2",
+      "key": "attrition",
+      "contribution": -0.08,
+      "category": "advisor",
+      "name_contains": "陆军后勤",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "deactivate_advisor = werner_von_fritsch_army_chief",
+            "deactivate_advisor = werner_von_fritsch_high_command"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": [
+            {
+              "source_id": "GER_werner_von_fritsch:army_chief:werner_von_fritsch_army_chief:army_chief_army_high_command",
+              "key": "army_artillery_attack_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "hired",
+          "effects": [
+            "activate_advisor = werner_von_fritsch_high_command"
+          ],
+          "present": true,
+          "delta": -0.08,
+          "guards": [
+            {
+              "source_id": "GER_werner_von_fritsch:army_chief:werner_von_fritsch_army_chief:army_chief_army_high_command",
+              "key": "army_artillery_attack_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "dismissed",
+          "effects": [
+            "deactivate_advisor = werner_von_fritsch_high_command"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": [
+            {
+              "source_id": "GER_werner_von_fritsch:army_chief:werner_von_fritsch_army_chief:army_chief_army_high_command",
+              "key": "army_artillery_attack_factor",
+              "present": false
+            }
+          ]
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "-8.0%"
+    },
+    {
+      "name": "technology",
+      "source_id": "basic_machine_tools",
+      "key": "production_factory_max_efficiency_factor",
+      "contribution": 0.1,
+      "category": "technology",
+      "name_contains": "基础机床",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "set_technology = { basic_machine_tools = 0 popup = no }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "researched",
+          "effects": [
+            "set_technology = { basic_machine_tools = 1 popup = no }"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "set_technology = { basic_machine_tools = 0 popup = no }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_technology = { basic_machine_tools = 1 popup = no }"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+10.0%"
+    },
+    {
+      "name": "grand_doctrine",
+      "source_id": "new_mobile_warfare",
+      "key": "army_speed_factor",
+      "contribution": 0.1,
+      "category": "grand_doctrine",
+      "name_contains": "机动作战",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "set_grand_doctrine = superior_firepower"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "set_grand_doctrine = new_mobile_warfare"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "set_grand_doctrine = superior_firepower"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_grand_doctrine = new_mobile_warfare"
+          ],
+          "present": true,
+          "delta": 0.1,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+10.0%"
+    },
+    {
+      "name": "subdoctrine_reward",
+      "source_id": "defensive_postures:reward:1",
+      "key": "dig_in_speed_factor",
+      "contribution": 0.05,
+      "category": "subdoctrine_reward",
+      "name_contains": "防御态势",
+      "phases": [
+        {
+          "name": "unearned",
+          "effects": [
+            "set_sub_doctrine = defensive_postures"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": [
+            {
+              "source_id": "defensive_postures:reward:5",
+              "key": "dig_in_speed_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "mastered",
+          "effects": [
+            "add_mastery = { amount = 100 sub_doctrine = defensive_postures }"
+          ],
+          "present": true,
+          "delta": 0.05,
+          "guards": [
+            {
+              "source_id": "defensive_postures:reward:5",
+              "key": "dig_in_speed_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "inactive",
+          "effects": [
+            "set_sub_doctrine = mobile_infantry"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": [
+            {
+              "source_id": "defensive_postures:reward:5",
+              "key": "dig_in_speed_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "reset_on_return",
+          "effects": [
+            "set_sub_doctrine = defensive_postures"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": [
+            {
+              "source_id": "defensive_postures:reward:5",
+              "key": "dig_in_speed_factor",
+              "present": false
+            }
+          ]
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "add_mastery = { amount = 100 sub_doctrine = defensive_postures }"
+          ],
+          "present": true,
+          "delta": 0.05,
+          "guards": [
+            {
+              "source_id": "defensive_postures:reward:5",
+              "key": "dig_in_speed_factor",
+              "present": false
+            }
+          ]
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+5.0%"
+    },
+    {
+      "name": "singular_modifier_reward",
+      "source_id": "coastal_defence_fleet:reward:1",
+      "key": "refit_speed",
+      "contribution": 0.15,
+      "category": "subdoctrine_reward",
+      "name_contains": "岸防舰艇",
+      "phases": [
+        {
+          "name": "unearned",
+          "effects": [
+            "set_grand_doctrine = new_fleet_in_being",
+            "set_sub_doctrine = coastal_defence_fleet"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "mastered",
+          "effects": [
+            "add_mastery = { amount = 100 sub_doctrine = coastal_defence_fleet }"
+          ],
+          "present": true,
+          "delta": 0.15,
+          "guards": []
+        },
+        {
+          "name": "inactive",
+          "effects": [
+            "set_grand_doctrine = new_base_strike"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+15.0%"
+    },
+    {
+      "name": "doctrine_milestone",
+      "source_id": "new_mobile_warfare:milestone:1",
+      "key": "land_reinforce_rate",
+      "contribution": 0.02,
+      "category": "doctrine_milestone",
+      "name_contains": "机动作战",
+      "phases": [
+        {
+          "name": "unearned",
+          "effects": [
+            "set_grand_doctrine = new_mobile_warfare",
+            "set_sub_doctrine = defensive_postures"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "completed",
+          "effects": [
+            "add_mastery = { amount = 500 sub_doctrine = defensive_postures }"
+          ],
+          "present": true,
+          "delta": 0.02,
+          "guards": []
+        },
+        {
+          "name": "inactive",
+          "effects": [
+            "set_grand_doctrine = superior_firepower"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "reset_on_return",
+          "effects": [
+            "set_grand_doctrine = new_mobile_warfare",
+            "set_sub_doctrine = defensive_postures"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "add_mastery = { amount = 500 sub_doctrine = defensive_postures }"
+          ],
+          "present": true,
+          "delta": 0.02,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+2.0%"
+    },
+    {
+      "name": "dynamic_modifier",
+      "source_id": "african_union_executive_council_modifier",
+      "key": "political_power_gain",
+      "contribution": -0.1,
+      "category": "dynamic_modifier",
+      "name_contains": "执行理事会",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "if = { limit = { has_dynamic_modifier = african_union_executive_council_modifier } remove_dynamic_modifier = { modifier = african_union_executive_council_modifier } }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "add_dynamic_modifier = { modifier = african_union_executive_council_modifier }"
+          ],
+          "present": true,
+          "delta": -0.1,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "remove_dynamic_modifier = { modifier = african_union_executive_council_modifier }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "-0.10"
+    },
+    {
+      "name": "active_decision",
+      "source_id": "improved_worker_conditions",
+      "key": "stability_weekly",
+      "contribution": 0.005,
+      "category": "active_decision",
+      "name_contains": "改善工作环境",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "remove_decision = improved_worker_conditions"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "activate_decision = improved_worker_conditions"
+          ],
+          "present": true,
+          "delta": 0.005,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "remove_decision = improved_worker_conditions"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+0.50%"
+    },
+    {
+      "name": "variable_dynamic_spirit",
+      "source_id": "GER_army_modifier",
+      "key": "supply_consumption_factor",
+      "contribution": 0.15,
+      "category": "dynamic_modifier_variable",
+      "name_contains": "德意志国防军",
+      "phases": [
+        {
+          "name": "initial",
+          "effects": [
+            "set_variable = { GER_military_supply_consumption_factor = 0.15 }",
+            "if = { limit = { NOT = { has_dynamic_modifier = GER_army_modifier } } add_dynamic_modifier = { modifier = GER_army_modifier } }"
+          ],
+          "present": true,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "changed_input",
+          "effects": [
+            "set_variable = { GER_military_supply_consumption_factor = 0.20 }"
+          ],
+          "present": true,
+          "delta": null,
+          "guards": [],
+          "refresh_cache": false,
+          "expected_value_text": "+20.0%"
+        },
+        {
+          "name": "zero",
+          "effects": [
+            "set_variable = { GER_military_supply_consumption_factor = 0 }"
+          ],
+          "present": false,
+          "delta": -0.15,
+          "guards": [],
+          "expected_value_text": ""
+        },
+        {
+          "name": "tiny",
+          "effects": [
+            "set_variable = { GER_military_supply_consumption_factor = 0.00001 }"
+          ],
+          "present": true,
+          "delta": -0.14999,
+          "guards": [],
+          "expected_value_text": "+0.001%"
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "remove_dynamic_modifier = { modifier = GER_army_modifier }"
+          ],
+          "present": false,
+          "delta": -0.15,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_variable = { GER_military_supply_consumption_factor = 0.15 }",
+            "add_dynamic_modifier = { modifier = GER_army_modifier }"
+          ],
+          "present": true,
+          "delta": 0,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+15.0%"
+    },
+    {
+      "name": "ideology_embargo",
+      "source_id": "fascism",
+      "key": "embargo_cost_factor",
+      "contribution": 1,
+      "category": "ideology",
+      "name_contains": "法西斯主义",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": 1.5,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": 1.5,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+100.0%"
+    },
+    {
+      "name": "ideology_hidden",
+      "source_id": "fascism",
+      "key": "join_faction_tension",
+      "contribution": -0.1,
+      "category": "ideology",
+      "name_contains": "法西斯主义",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": -0.9,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": -0.9,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "-10.0%"
+    },
+    {
+      "name": "ideology_percentage_points",
+      "source_id": "fascism",
+      "key": "civilian_intel_to_others",
+      "contribution": 15,
+      "category": "ideology",
+      "name_contains": "法西斯主义",
+      "phases": [
+        {
+          "name": "inactive",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "active",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": -5,
+          "guards": []
+        },
+        {
+          "name": "removed",
+          "effects": [
+            "set_politics = { ruling_party = democratic }"
+          ],
+          "present": false,
+          "delta": 0,
+          "guards": []
+        },
+        {
+          "name": "restored",
+          "effects": [
+            "set_politics = { ruling_party = fascism }"
+          ],
+          "present": true,
+          "delta": -5,
+          "guards": []
+        }
+      ],
+      "cleanup": [],
+      "expected_value_text": "+15.0%"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Private aliases of vanilla button art. No copied images or external dependencies.
+# The scripted GUI picks the selected or normal sprite per category button.
+spriteTypes = {
+    # Original core.gfx GFX_tiled_header_1 at the window's header dimensions.
+    # A transparent-to-input root icon lets the movable parent receive drags.
+    corneredTileSpriteType = {
+        name = "GFX_nbv_header_background"
+        size = { x = 984 y = 44 }
+        texturefile = "gfx/interface/tiles/tiled_header_1.dds"
+        borderSize = { x = 8 y = 8 }
+        tilingCenter = yes
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+    }
+    textSpriteType = {
+        name = "GFX_nbv_tab_normal"
+        texturefile = "gfx/interface/button_148x34.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    textSpriteType = {
+        name = "GFX_nbv_tab_selected"
+        texturefile = "gfx/interface/button_148x34_light.dds"
+        noOfFrames = 1
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

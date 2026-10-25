@@ -1,0 +1,66 @@
+{
+  "method": "build_time_static_reservation_for_audited_layouts",
+  "runtime_collision_detection": false,
+  "requires_custom_launcher": false,
+  "excluded_families": [
+    "TNO and its submods"
+  ],
+  "parent": "raid_filter",
+  "gap": 10,
+  "default": {
+    "x": 0,
+    "y": -202,
+    "width": 77,
+    "height": 77
+  },
+  "position": {
+    "x": 0,
+    "y": -202,
+    "width": 77,
+    "height": 77
+  },
+  "shifts": [],
+  "reservations": [
+    {
+      "name": "KR Mitteleuropa",
+      "x": 0,
+      "y": -115,
+      "width": 77,
+      "height": 77
+    },
+    {
+      "name": "EAW lore sidebar background and button",
+      "x": -11,
+      "y": -4,
+      "width": 87,
+      "height": 74
+    }
+  ],
+  "other_audited_layouts": [
+    "TFR: top-bar entry",
+    "BUFF UI: politics-tab entry"
+  ],
+  "icon": {
+    "native_frame": [
+      55,
+      41
+    ],
+    "position": [
+      11,
+      18
+    ],
+    "button_position": [
+      3,
+      3
+    ],
+    "button_size": [
+      71,
+      71
+    ]
+  },
+  "limits": [
+    "Audited installed layouts only; future layout changes need re-audit.",
+    "Unknown dynamically positioned controls and transient popups are not detected.",
+    "No generic screen-bounds guarantee at arbitrary GUI scales."
+  ]
+}

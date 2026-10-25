@@ -1,0 +1,2742 @@
+# National Buff Viewer. Stable IDs: metric-index.json; GUI order: display-layout.json.
+# KR 1521695605: Mitteleuropa entry attachment, separate window and country flags.
+# BUFF UI 3795966002: numbered metric lists and direct ROOT.modifier localization.
+# TNO 3449417512: calculator_visible -> temp array -> dynamic_lists pattern.
+# TNO reference: common/scripted_guis/TNO_Politics.txt:1025,1044;
+# interface/TNO_SG_Politics_Misc.gui:73 (calculator icon before the list).
+# This UI and its timing still require validation in the target engine version.
+# State is per country. No gameplay modifiers are set, summed or cached.
+# Page memory survives all close paths. It is country state, not a client setting.
+# player_context rebinds flags/page/ROOT on tag change; an unopened country closes.
+# There is no documented on_tag-change callback in the installed game.
+
+nbv_refresh = {
+    if = {
+        limit = { nbv_valid_page = no }
+        set_variable = { nbv_page = 1 }
+        set_country_flag = nbv_show_zero
+    }
+    nbv_rebuild_cached_lists = yes
+}
+
+nbv_open = {
+    nbv_refresh = yes
+    set_country_flag = nbv_window_open
+}
+
+nbv_close = {
+    # The selected nbv_page already is the remembered page. Do not reset it.
+    clr_country_flag = nbv_window_open
+}
+
+nbv_toggle = {
+    if = {
+        limit = { has_country_flag = nbv_window_open }
+        nbv_close = yes
+    }
+    else = { nbv_open = yes }
+}
+
+nbv_toggle_zero_filter = {
+    if = {
+        limit = { has_country_flag = nbv_show_zero }
+        clr_country_flag = nbv_show_zero
+    }
+    else = { set_country_flag = nbv_show_zero }
+    nbv_refresh = yes
+}
+
+nbv_select_page_1 = {
+    set_variable = { nbv_page = 1 }
+    nbv_refresh = yes
+}
+
+nbv_select_page_2 = {
+    set_variable = { nbv_page = 2 }
+    nbv_refresh = yes
+}
+
+nbv_select_page_3 = {
+    set_variable = { nbv_page = 3 }
+    nbv_refresh = yes
+}
+
+nbv_select_page_4 = {
+    set_variable = { nbv_page = 4 }
+    nbv_refresh = yes
+}
+
+nbv_select_page_5 = {
+    set_variable = { nbv_page = 5 }
+    nbv_refresh = yes
+}
+
+nbv_select_page_6 = {
+    set_variable = { nbv_page = 6 }
+    nbv_refresh = yes
+}
+
+# Fallback membership only; never cache modifier values. Intended for diagnosing
+# temp-array lifetime in the engine. Normal GUI uses the temporary arrays.
+nbv_rebuild_cached_lists = {
+    clear_array = nbv_high_entries_cache
+    clear_array = nbv_low_entries_cache
+    if = {
+        limit = { check_variable = { nbv_page = 1 } }
+        # 3: political_power_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@political_power_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 3 }
+        }
+        # 4: political_power_gain; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@political_power_gain = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 4 }
+        }
+        # 23: political_advisor_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@political_advisor_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 23 }
+        }
+        # 89: theorist_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@theorist_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 89 }
+        }
+        # 255: army_advisor_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_advisor_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 255 }
+        }
+        # 440: navy_advisor_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_advisor_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 440 }
+        }
+        # 489: air_advisor_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_advisor_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 489 }
+        }
+        # 62: high_command_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@high_command_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 62 }
+        }
+        # 18: mobilization_laws_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mobilization_laws_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 18 }
+        }
+        # 32: trade_laws_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@trade_laws_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 32 }
+        }
+        # 13: economy_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@economy_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 13 }
+        }
+        # 1: conscription; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@conscription = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 1 }
+        }
+        # 21: non_core_manpower; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@non_core_manpower = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 21 }
+        }
+        # 35: weekly_manpower; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@weekly_manpower = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 35 }
+        }
+        # 69: monthly_population; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@monthly_population = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 69 }
+        }
+        # 19: mobilization_speed; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mobilization_speed = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 19 }
+        }
+        # 5: stability_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@stability_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 5 }
+        }
+        # 30: stability_weekly; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@stability_weekly = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 30 }
+        }
+        # 90: war_stability_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@war_stability_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 90 }
+        }
+        # 71: offensive_war_stability_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@offensive_war_stability_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 71 }
+        }
+        # 46: defensive_war_stability_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@defensive_war_stability_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 46 }
+        }
+        # 22: party_popularity_stability_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@party_popularity_stability_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 22 }
+        }
+        # 6: war_support_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@war_support_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 6 }
+        }
+        # 34: war_support_weekly; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@war_support_weekly = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 34 }
+        }
+        # 92: weekly_bombing_war_support; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@weekly_bombing_war_support = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 92 }
+        }
+        # 93: weekly_casualties_war_support; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@weekly_casualties_war_support = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 93 }
+        }
+        # 94: weekly_convoys_war_support; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@weekly_convoys_war_support = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 94 }
+        }
+        # 9: compliance_gain; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@compliance_gain = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 9 }
+        }
+        # 10: compliance_growth; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@compliance_growth = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 10 }
+        }
+        # 15: join_faction_tension; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@join_faction_tension = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 15 }
+        }
+        # 16: justify_war_goal_time; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@justify_war_goal_time = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 16 }
+        }
+        # 64: justify_war_goal_when_in_major_war_time; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@justify_war_goal_when_in_major_war_time = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 64 }
+        }
+        # 28: send_volunteer_size; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@send_volunteer_size = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 28 }
+        }
+        # 31: surrender_limit; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@surrender_limit = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 31 }
+        }
+        # 36: annex_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@annex_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 36 }
+        }
+        # 78: puppet_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@puppet_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 78 }
+        }
+        # 7: autonomy_gain; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_gain = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 7 }
+        }
+        # 37: autonomy_gain_global_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_gain_global_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 37 }
+        }
+        # 38: autonomy_gain_ll_to_overlord_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_gain_ll_to_overlord_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 38 }
+        }
+        # 39: autonomy_gain_trade_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_gain_trade_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 39 }
+        }
+        # 40: autonomy_gain_warscore; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_gain_warscore = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 40 }
+        }
+        # 42: autonomy_manpower_share; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_manpower_share = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 42 }
+        }
+        # 24: resistance_damage_to_garrison; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_damage_to_garrison = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 24 }
+        }
+        # 25: resistance_growth; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_growth = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 25 }
+        }
+        # 26: resistance_growth_on_our_occupied_states; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_growth_on_our_occupied_states = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 26 }
+        }
+        # 27: resistance_target; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_target = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 27 }
+        }
+        # 80: required_garrison_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@required_garrison_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 80 }
+        }
+        # 81: resistance_activity; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_activity = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 81 }
+        }
+        # 82: resistance_decay; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_decay = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 82 }
+        }
+        # 83: resistance_decay_on_our_occupied_states; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_decay_on_our_occupied_states = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 83 }
+        }
+        # 84: resistance_garrison_penetration_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_garrison_penetration_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 84 }
+        }
+        # 85: resistance_target_on_our_occupied_states; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resistance_target_on_our_occupied_states = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 85 }
+        }
+        # 45: compliance_growth_on_our_occupied_states; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@compliance_growth_on_our_occupied_states = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 45 }
+        }
+        # 48: embargo_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@embargo_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 48 }
+        }
+        # 49: embargo_threshold_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@embargo_threshold_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 49 }
+        }
+        # 50: enemy_declare_war_tension; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_declare_war_tension = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 50 }
+        }
+        # 51: enemy_justify_war_goal_time; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_justify_war_goal_time = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 51 }
+        }
+        # 17: lend_lease_tension; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@lend_lease_tension = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 17 }
+        }
+        # 52: exile_manpower_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@exile_manpower_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 52 }
+        }
+        # 53: exiled_government_weekly_manpower; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@exiled_government_weekly_manpower = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 53 }
+        }
+        # 65: legitimacy_daily; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@legitimacy_daily = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 65 }
+        }
+        # 66: legitimacy_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@legitimacy_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 66 }
+        }
+        # 54: extra_trade_to_overlord_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@extra_trade_to_overlord_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 54 }
+        }
+        # 33: trade_opinion_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@trade_opinion_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 33 }
+        }
+        # 55: faction_influence_contribution_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@faction_influence_contribution_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 55 }
+        }
+        # 56: faction_influence_war_score_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@faction_influence_war_score_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 56 }
+        }
+        # 57: faction_trade_opinion_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@faction_trade_opinion_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 57 }
+        }
+        # 12: drift_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@drift_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 12 }
+        }
+        # 47: democratic_acceptance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@democratic_acceptance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 47 }
+        }
+        # 44: communism_acceptance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@communism_acceptance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 44 }
+        }
+        # 58: fascism_acceptance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@fascism_acceptance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 58 }
+        }
+        # 70: neutrality_acceptance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@neutrality_acceptance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 70 }
+        }
+        # 59: forced_surrender_limit; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@forced_surrender_limit = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 59 }
+        }
+        # 60: guarantee_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@guarantee_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 60 }
+        }
+        # 61: guarantee_tension; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@guarantee_tension = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 61 }
+        }
+        # 63: improve_relations_maintain_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@improve_relations_maintain_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 63 }
+        }
+        # 67: master_ideology_drift; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@master_ideology_drift = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 67 }
+        }
+        # 68: max_surrender_limit_offset; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_surrender_limit_offset = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 68 }
+        }
+        # 72: opinion_gain_monthly; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@opinion_gain_monthly = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 72 }
+        }
+        # 74: opinion_gain_monthly_same_ideology; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@opinion_gain_monthly_same_ideology = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 74 }
+        }
+        # 76: overlord_trade_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@overlord_trade_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 76 }
+        }
+        # 77: political_power_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@political_power_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 77 }
+        }
+        # 29: send_volunteers_tension; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@send_volunteers_tension = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 29 }
+        }
+        # 88: subjects_autonomy_gain; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@subjects_autonomy_gain = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 88 }
+        }
+        # 2: conscription_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@conscription_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 2 }
+        }
+        # 43: autonomy_manpower_share_from_subjects; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@autonomy_manpower_share_from_subjects = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 43 }
+        }
+    }
+    if = {
+        limit = { check_variable = { nbv_page = 2 } }
+        # 95: consumer_goods_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@consumer_goods_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 95 }
+        }
+        # 132: consumer_goods_expected_value; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@consumer_goods_expected_value = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 132 }
+        }
+        # 109: global_building_slots_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@global_building_slots_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 109 }
+        }
+        # 103: production_speed_buildings_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_buildings_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 103 }
+        }
+        # 102: production_speed_arms_factory_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_arms_factory_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 102 }
+        }
+        # 104: production_speed_industrial_complex_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_industrial_complex_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 104 }
+        }
+        # 120: production_speed_dockyard_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_dockyard_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 120 }
+        }
+        # 121: production_speed_infrastructure_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_infrastructure_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 121 }
+        }
+        # 105: research_speed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@research_speed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 105 }
+        }
+        # 100: production_factory_efficiency_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_factory_efficiency_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 100 }
+        }
+        # 101: production_factory_max_efficiency_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_factory_max_efficiency_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 101 }
+        }
+        # 116: production_factory_start_efficiency_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_factory_start_efficiency_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 116 }
+        }
+        # 114: line_change_production_efficiency_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@line_change_production_efficiency_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 114 }
+        }
+        # 98: industrial_capacity_factory; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_capacity_factory = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 98 }
+        }
+        # 97: industrial_capacity_dockyard; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_capacity_dockyard = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 97 }
+        }
+        # 99: local_resources_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@local_resources_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 99 }
+        }
+        # 117: production_lack_of_resource_penalty_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_lack_of_resource_penalty_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 117 }
+        }
+        # 108: fuel_gain_factor_from_states; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@fuel_gain_factor_from_states = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 108 }
+        }
+        # 115: min_export; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@min_export = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 115 }
+        }
+        # 169: military_factory_donations; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@military_factory_donations = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 169 }
+        }
+        # 144: industrial_factory_donations; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_factory_donations = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 144 }
+        }
+        # 203: dockyard_donations; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@dockyard_donations = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 203 }
+        }
+        # 143: industrial_concern_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_concern_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 143 }
+        }
+        # 202: tank_manufacturer_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@tank_manufacturer_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 202 }
+        }
+        # 171: naval_manufacturer_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_manufacturer_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 171 }
+        }
+        # 125: aircraft_manufacturer_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@aircraft_manufacturer_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 125 }
+        }
+        # 166: materiel_manufacturer_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@materiel_manufacturer_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 166 }
+        }
+        # 170: military_industrial_organization_funds_gain; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@military_industrial_organization_funds_gain = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 170 }
+        }
+        # 107: factory_energy_consumption; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@factory_energy_consumption = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 107 }
+        }
+        # 110: industrial_capacity_dockyard_powered; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_capacity_dockyard_powered = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 110 }
+        }
+        # 111: industrial_capacity_factory_powered; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industrial_capacity_factory_powered = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 111 }
+        }
+        # 96: fuel_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@fuel_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 96 }
+        }
+        # 126: base_fuel_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@base_fuel_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 126 }
+        }
+        # 127: bunker_max_level_terrain_limit; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@bunker_max_level_terrain_limit = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 127 }
+        }
+        # 128: cic_construction_boost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cic_construction_boost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 128 }
+        }
+        # 129: cic_construction_boost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cic_construction_boost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 129 }
+        }
+        # 168: mic_to_overlord_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mic_to_overlord_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 168 }
+        }
+        # 130: cic_to_overlord_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cic_to_overlord_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 130 }
+        }
+        # 131: coastal_bunker_max_level_terrain_limit; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@coastal_bunker_max_level_terrain_limit = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 131 }
+        }
+        # 133: conversion_cost_civ_to_mil_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@conversion_cost_civ_to_mil_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 133 }
+        }
+        # 134: conversion_cost_mil_to_civ_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@conversion_cost_mil_to_civ_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 134 }
+        }
+        # 106: civilian_factory_use; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@civilian_factory_use = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 106 }
+        }
+        # 140: energy_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@energy_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 140 }
+        }
+        # 141: equipment_conversion_speed; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@equipment_conversion_speed = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 141 }
+        }
+        # 145: industry_air_damage_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industry_air_damage_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 145 }
+        }
+        # 146: license_air_purchase_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_air_purchase_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 146 }
+        }
+        # 147: license_anti_tank_eq_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_anti_tank_eq_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 147 }
+        }
+        # 148: license_anti_tank_eq_production_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_anti_tank_eq_production_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 148 }
+        }
+        # 150: license_armor_purchase_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_armor_purchase_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 150 }
+        }
+        # 151: license_artillery_eq_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_artillery_eq_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 151 }
+        }
+        # 152: license_artillery_eq_production_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_artillery_eq_production_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 152 }
+        }
+        # 154: license_infantry_eq_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_infantry_eq_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 154 }
+        }
+        # 155: license_infantry_eq_production_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_infantry_eq_production_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 155 }
+        }
+        # 157: license_light_tank_eq_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_light_tank_eq_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 157 }
+        }
+        # 158: license_light_tank_eq_production_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_light_tank_eq_production_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 158 }
+        }
+        # 160: license_production_speed; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_production_speed = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 160 }
+        }
+        # 161: license_purchase_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_purchase_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 161 }
+        }
+        # 162: license_subject_master_purchase_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@license_subject_master_purchase_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 162 }
+        }
+        # 164: local_resources_coal_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@local_resources_coal_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 164 }
+        }
+        # 165: local_resources_oil_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@local_resources_oil_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 165 }
+        }
+        # 167: max_fuel_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_fuel_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 167 }
+        }
+        # 172: nuclear_production_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@nuclear_production_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 172 }
+        }
+        # 173: out_of_power_impact_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@out_of_power_impact_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 173 }
+        }
+        # 174: production_oil_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_oil_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 174 }
+        }
+        # 112: industry_free_repair_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industry_free_repair_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 112 }
+        }
+        # 113: industry_repair_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@industry_repair_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 113 }
+        }
+        # 118: production_speed_bunker_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_bunker_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 118 }
+        }
+        # 119: production_speed_coastal_bunker_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_coastal_bunker_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 119 }
+        }
+        # 122: production_speed_rail_way_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_rail_way_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 122 }
+        }
+        # 123: production_speed_supply_node_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_supply_node_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 123 }
+        }
+        # 124: production_speed_synthetic_refinery_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_synthetic_refinery_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 124 }
+        }
+        # 175: production_speed_air_base_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_air_base_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 175 }
+        }
+        # 176: production_speed_air_facility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_air_facility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 176 }
+        }
+        # 177: production_speed_anti_air_building_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_anti_air_building_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 177 }
+        }
+        # 178: production_speed_energy_infrastructure_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_energy_infrastructure_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 178 }
+        }
+        # 179: production_speed_facility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_facility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 179 }
+        }
+        # 180: production_speed_fuel_silo_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_fuel_silo_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 180 }
+        }
+        # 181: production_speed_industrial_infrastructure_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_industrial_infrastructure_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 181 }
+        }
+        # 182: production_speed_land_facility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_land_facility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 182 }
+        }
+        # 183: production_speed_naval_base_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_naval_base_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 183 }
+        }
+        # 184: production_speed_naval_facility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_naval_facility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 184 }
+        }
+        # 185: production_speed_naval_headquarters_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_naval_headquarters_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 185 }
+        }
+        # 186: production_speed_naval_supply_hub_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_naval_supply_hub_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 186 }
+        }
+        # 187: production_speed_nuclear_facility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_nuclear_facility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 187 }
+        }
+        # 188: production_speed_nuclear_reactor_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_nuclear_reactor_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 188 }
+        }
+        # 189: production_speed_radar_station_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_radar_station_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 189 }
+        }
+        # 190: production_speed_rocket_site_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@production_speed_rocket_site_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 190 }
+        }
+        # 191: repair_speed_arms_factory_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_arms_factory_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 191 }
+        }
+        # 192: repair_speed_bunker_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_bunker_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 192 }
+        }
+        # 193: repair_speed_industrial_complex_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_industrial_complex_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 193 }
+        }
+        # 194: repair_speed_infrastructure_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_infrastructure_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 194 }
+        }
+        # 195: repair_speed_rail_way_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_rail_way_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 195 }
+        }
+        # 196: research_sharing_per_country_bonus_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@research_sharing_per_country_bonus_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 196 }
+        }
+        # 197: resource_trade_cost_bonus_per_factory; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resource_trade_cost_bonus_per_factory = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 197 }
+        }
+        # 198: resources_to_overlord_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@resources_to_overlord_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 198 }
+        }
+        # 199: special_project_facility_supply_consumption_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_project_facility_supply_consumption_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 199 }
+        }
+        # 200: special_project_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_project_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 200 }
+        }
+        # 201: specialization_nuclear_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@specialization_nuclear_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 201 }
+        }
+        # 142: global_building_slots; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@global_building_slots = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 142 }
+        }
+    }
+    if = {
+        limit = { check_variable = { nbv_page = 3 } }
+        # 204: army_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 204 }
+        }
+        # 205: army_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 205 }
+        }
+        # 295: land_night_attack; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_night_attack = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 295 }
+        }
+        # 217: army_core_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_core_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 217 }
+        }
+        # 218: army_core_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_core_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 218 }
+        }
+        # 226: breakthrough_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@breakthrough_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 226 }
+        }
+        # 228: combat_width_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@combat_width_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 228 }
+        }
+        # 242: max_planning; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_planning = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 242 }
+        }
+        # 298: max_planning_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_planning_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 298 }
+        }
+        # 247: planning_speed; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@planning_speed = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 247 }
+        }
+        # 224: army_org_regain; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_org_regain = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 224 }
+        }
+        # 206: army_morale_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_morale_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 206 }
+        }
+        # 207: army_org_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_org_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 207 }
+        }
+        # 208: army_speed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_speed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 208 }
+        }
+        # 347: recon_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@recon_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 347 }
+        }
+        # 209: land_reinforce_rate; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_reinforce_rate = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 209 }
+        }
+        # 231: coordination_bonus; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@coordination_bonus = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 231 }
+        }
+        # 210: supply_consumption_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@supply_consumption_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 210 }
+        }
+        # 219: army_fuel_consumption_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_fuel_consumption_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 219 }
+        }
+        # 225: attrition; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@attrition = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 225 }
+        }
+        # 211: acclimatization_cold_climate_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@acclimatization_cold_climate_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 211 }
+        }
+        # 212: acclimatization_hot_climate_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@acclimatization_hot_climate_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 212 }
+        }
+        # 220: army_infantry_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_infantry_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 220 }
+        }
+        # 221: army_infantry_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_infantry_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 221 }
+        }
+        # 213: army_armor_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_armor_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 213 }
+        }
+        # 214: army_armor_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_armor_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 214 }
+        }
+        # 215: army_artillery_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_artillery_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 215 }
+        }
+        # 216: army_artillery_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_artillery_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 216 }
+        }
+        # 249: special_forces_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 249 }
+        }
+        # 251: special_forces_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 251 }
+        }
+        # 260: army_bonus_air_superiority_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_bonus_air_superiority_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 260 }
+        }
+        # 227: cas_damage_reduction; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cas_damage_reduction = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 227 }
+        }
+        # 229: command_power_gain; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@command_power_gain = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 229 }
+        }
+        # 230: command_power_gain_mult; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@command_power_gain_mult = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 230 }
+        }
+        # 233: experience_gain_army; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_army = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 233 }
+        }
+        # 235: experience_gain_army_unit_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_army_unit_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 235 }
+        }
+        # 236: experience_loss_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_loss_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 236 }
+        }
+        # 237: initiative_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@initiative_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 237 }
+        }
+        # 238: land_doctrine_cost_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_doctrine_cost_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 238 }
+        }
+        # 239: max_command_power; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_command_power = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 239 }
+        }
+        # 240: max_dig_in; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_dig_in = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 240 }
+        }
+        # 232: dig_in_speed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@dig_in_speed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 232 }
+        }
+        # 244: org_loss_at_low_org_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@org_loss_at_low_org_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 244 }
+        }
+        # 245: org_loss_when_moving; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@org_loss_when_moving = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 245 }
+        }
+        # 246: out_of_supply_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@out_of_supply_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 246 }
+        }
+        # 250: special_forces_cap; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_cap = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 250 }
+        }
+        # 243: minimum_training_level; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@minimum_training_level = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 243 }
+        }
+        # 252: special_forces_training_time_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_training_time_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 252 }
+        }
+        # 254: training_time_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@training_time_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 254 }
+        }
+        # 257: army_attack_against_major_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_attack_against_major_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 257 }
+        }
+        # 265: army_defence_against_major_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_defence_against_major_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 265 }
+        }
+        # 261: army_breakthrough_against_major_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_breakthrough_against_major_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 261 }
+        }
+        # 258: army_attack_against_minor_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_attack_against_minor_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 258 }
+        }
+        # 222: army_non_core_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_non_core_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 222 }
+        }
+        # 223: army_non_core_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_non_core_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 223 }
+        }
+        # 263: army_claim_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_claim_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 263 }
+        }
+        # 264: army_claim_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_claim_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 264 }
+        }
+        # 256: army_armor_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_armor_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 256 }
+        }
+        # 259: army_attack_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_attack_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 259 }
+        }
+        # 262: army_chief_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_chief_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 262 }
+        }
+        # 301: military_leader_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@military_leader_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 301 }
+        }
+        # 299: mechanized_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mechanized_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 299 }
+        }
+        # 300: mechanized_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mechanized_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 300 }
+        }
+        # 302: modifier_army_sub_unit_armored_car_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_armored_car_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 302 }
+        }
+        # 303: modifier_army_sub_unit_armored_car_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_armored_car_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 303 }
+        }
+        # 304: modifier_army_sub_unit_armored_car_recon_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_armored_car_recon_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 304 }
+        }
+        # 305: modifier_army_sub_unit_armored_car_recon_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_armored_car_recon_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 305 }
+        }
+        # 306: modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 306 }
+        }
+        # 307: modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 307 }
+        }
+        # 308: modifier_army_sub_unit_category_special_forces_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_category_special_forces_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 308 }
+        }
+        # 279: cavalry_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cavalry_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 279 }
+        }
+        # 280: cavalry_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@cavalry_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 280 }
+        }
+        # 311: modifier_army_sub_unit_cavalry_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_cavalry_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 311 }
+        }
+        # 312: modifier_army_sub_unit_infantry_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_infantry_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 312 }
+        }
+        # 313: modifier_army_sub_unit_infantry_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_infantry_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 313 }
+        }
+        # 314: modifier_army_sub_unit_infantry_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_infantry_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 314 }
+        }
+        # 315: modifier_army_sub_unit_irregular_infantry_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_irregular_infantry_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 315 }
+        }
+        # 316: modifier_army_sub_unit_irregular_infantry_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_irregular_infantry_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 316 }
+        }
+        # 317: modifier_army_sub_unit_irregular_infantry_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_irregular_infantry_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 317 }
+        }
+        # 318: modifier_army_sub_unit_irregular_infantry_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_irregular_infantry_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 318 }
+        }
+        # 319: modifier_army_sub_unit_long_range_patrol_support_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_long_range_patrol_support_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 319 }
+        }
+        # 320: modifier_army_sub_unit_long_range_patrol_support_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 320 }
+        }
+        # 321: modifier_army_sub_unit_marine_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_marine_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 321 }
+        }
+        # 322: modifier_army_sub_unit_marine_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_marine_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 322 }
+        }
+        # 323: modifier_army_sub_unit_marine_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_marine_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 323 }
+        }
+        # 324: modifier_army_sub_unit_military_police_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_military_police_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 324 }
+        }
+        # 325: modifier_army_sub_unit_military_police_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_military_police_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 325 }
+        }
+        # 326: modifier_army_sub_unit_militia_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_militia_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 326 }
+        }
+        # 327: modifier_army_sub_unit_militia_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_militia_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 327 }
+        }
+        # 328: modifier_army_sub_unit_militia_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_militia_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 328 }
+        }
+        # 329: modifier_army_sub_unit_militia_org_recovery_cap_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_militia_org_recovery_cap_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 329 }
+        }
+        # 330: modifier_army_sub_unit_militia_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_militia_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 330 }
+        }
+        # 331: modifier_army_sub_unit_mountaineers_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_mountaineers_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 331 }
+        }
+        # 332: modifier_army_sub_unit_mountaineers_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_mountaineers_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 332 }
+        }
+        # 333: modifier_army_sub_unit_mountaineers_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_mountaineers_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 333 }
+        }
+        # 334: modifier_army_sub_unit_mountaineers_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_mountaineers_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 334 }
+        }
+        # 335: modifier_army_sub_unit_paratrooper_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_paratrooper_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 335 }
+        }
+        # 336: modifier_army_sub_unit_paratrooper_max_org_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@modifier_army_sub_unit_paratrooper_max_org_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 336 }
+        }
+        # 337: motorized_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@motorized_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 337 }
+        }
+        # 338: motorized_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@motorized_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 338 }
+        }
+        # 267: army_fuel_capacity_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_fuel_capacity_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 267 }
+        }
+        # 268: army_leader_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 268 }
+        }
+        # 269: army_leader_start_attack_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_start_attack_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 269 }
+        }
+        # 270: army_leader_start_defense_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_start_defense_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 270 }
+        }
+        # 271: army_leader_start_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_start_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 271 }
+        }
+        # 272: army_leader_start_logistics_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_start_logistics_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 272 }
+        }
+        # 273: army_leader_start_planning_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_leader_start_planning_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 273 }
+        }
+        # 276: army_retreat_speed_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_retreat_speed_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 276 }
+        }
+        # 277: army_speed_factor_for_controller; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_speed_factor_for_controller = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 277 }
+        }
+        # 278: army_spirit_category_type_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_spirit_category_type_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 278 }
+        }
+        # 281: coastal_bunker_effectiveness_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@coastal_bunker_effectiveness_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 281 }
+        }
+        # 282: command_abilities_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@command_abilities_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 282 }
+        }
+        # 284: enemy_army_bonus_air_superiority_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_army_bonus_air_superiority_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 284 }
+        }
+        # 285: equipment_capture; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@equipment_capture = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 285 }
+        }
+        # 286: equipment_capture_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@equipment_capture_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 286 }
+        }
+        # 287: experience_gain_artillery_combat_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_artillery_combat_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 287 }
+        }
+        # 288: extra_marine_supply_grace; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@extra_marine_supply_grace = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 288 }
+        }
+        # 289: field_officer_promotion_penalty; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@field_officer_promotion_penalty = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 289 }
+        }
+        # 290: grant_medal_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@grant_medal_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 290 }
+        }
+        # 291: heat_attrition_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@heat_attrition_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 291 }
+        }
+        # 292: land_bunker_effectiveness_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_bunker_effectiveness_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 292 }
+        }
+        # 293: land_equipment_upgrade_xp_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_equipment_upgrade_xp_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 293 }
+        }
+        # 294: land_mastery_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@land_mastery_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 294 }
+        }
+        # 296: marines_special_forces_contribution_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@marines_special_forces_contribution_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 296 }
+        }
+        # 248: send_volunteer_divisions_required; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@send_volunteer_divisions_required = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 248 }
+        }
+        # 266: army_experience_from_volunteers; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_experience_from_volunteers = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 266 }
+        }
+        # 297: max_command_power_mult; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_command_power_mult = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 297 }
+        }
+        # 339: mountaineers_special_forces_contribution_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mountaineers_special_forces_contribution_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 339 }
+        }
+        # 340: no_supply_grace; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@no_supply_grace = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 340 }
+        }
+        # 341: paratroopers_special_forces_contribution_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@paratroopers_special_forces_contribution_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 341 }
+        }
+        # 342: pocket_penalty; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@pocket_penalty = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 342 }
+        }
+        # 343: promote_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@promote_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 343 }
+        }
+        # 344: railway_gun_bombardment_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@railway_gun_bombardment_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 344 }
+        }
+        # 345: rangers_special_forces_contribution_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@rangers_special_forces_contribution_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 345 }
+        }
+        # 346: reassignment_duration_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@reassignment_duration_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 346 }
+        }
+        # 348: recon_factor_while_entrenched; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@recon_factor_while_entrenched = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 348 }
+        }
+        # 349: special_forces_cap_flat; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_cap_flat = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 349 }
+        }
+        # 350: special_forces_doctrine_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_doctrine_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 350 }
+        }
+        # 351: special_forces_min; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_min = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 351 }
+        }
+        # 352: special_forces_no_supply_grace; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_no_supply_grace = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 352 }
+        }
+        # 353: special_forces_out_of_supply_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@special_forces_out_of_supply_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 353 }
+        }
+        # 354: supply_combat_penalties_on_core_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@supply_combat_penalties_on_core_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 354 }
+        }
+        # 355: supply_node_range; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@supply_node_range = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 355 }
+        }
+        # 356: terrain_trait_xp_gain_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@terrain_trait_xp_gain_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 356 }
+        }
+        # 357: truck_attrition_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@truck_attrition_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 357 }
+        }
+        # 358: unit_cavalry_design_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_cavalry_design_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 358 }
+        }
+        # 359: unit_infantry_design_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_infantry_design_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 359 }
+        }
+        # 360: unit_leader_as_advisor_cp_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_leader_as_advisor_cp_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 360 }
+        }
+        # 361: unit_mechanized_design_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_mechanized_design_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 361 }
+        }
+        # 362: unit_medal_effectiveness; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_medal_effectiveness = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 362 }
+        }
+        # 363: unit_motorized_design_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_motorized_design_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 363 }
+        }
+        # 364: unit_mountaineers_design_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@unit_mountaineers_design_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 364 }
+        }
+        # 365: winter_attrition; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@winter_attrition = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 365 }
+        }
+        # 366: winter_attrition_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@winter_attrition_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 366 }
+        }
+        # 367: air_invasion_division_cap; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_invasion_division_cap = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 367 }
+        }
+        # 368: air_invasion_plan_cap; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_invasion_plan_cap = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 368 }
+        }
+        # 369: training_time_army; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@training_time_army = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 369 }
+        }
+        # 275: army_org; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_org = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 275 }
+        }
+        # 234: experience_gain_army_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_army_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 234 }
+        }
+        # 241: max_dig_in_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@max_dig_in_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 241 }
+        }
+    }
+    if = {
+        limit = { check_variable = { nbv_page = 4 } }
+        # 423: naval_invasion_capacity; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_invasion_capacity = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 423 }
+        }
+        # 424: naval_invasion_division_cap; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_invasion_division_cap = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 424 }
+        }
+        # 425: naval_invasion_penalty; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_invasion_penalty = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 425 }
+        }
+        # 426: naval_invasion_plan_cap; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_invasion_plan_cap = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 426 }
+        }
+        # 370: naval_damage_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_damage_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 370 }
+        }
+        # 371: naval_defense_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_defense_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 371 }
+        }
+        # 372: naval_hit_chance; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_hit_chance = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 372 }
+        }
+        # 373: positioning; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@positioning = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 373 }
+        }
+        # 374: repair_speed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@repair_speed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 374 }
+        }
+        # 375: sortie_efficiency; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@sortie_efficiency = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 375 }
+        }
+        # 376: carrier_capacity_penalty_reduction; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@carrier_capacity_penalty_reduction = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 376 }
+        }
+        # 377: convoy_retreat_speed; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@convoy_retreat_speed = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 377 }
+        }
+        # 378: experience_gain_navy; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_navy = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 378 }
+        }
+        # 380: naval_coordination; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_coordination = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 380 }
+        }
+        # 381: naval_critical_effect_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_critical_effect_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 381 }
+        }
+        # 382: naval_critical_score_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_critical_score_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 382 }
+        }
+        # 383: naval_heavy_gun_hit_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_heavy_gun_hit_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 383 }
+        }
+        # 384: naval_light_gun_hit_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_light_gun_hit_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 384 }
+        }
+        # 385: naval_night_attack; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_night_attack = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 385 }
+        }
+        # 386: naval_retreat_speed; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_retreat_speed = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 386 }
+        }
+        # 387: naval_speed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_speed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 387 }
+        }
+        # 388: naval_torpedo_hit_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_torpedo_hit_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 388 }
+        }
+        # 389: naval_torpedo_reveal_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_torpedo_reveal_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 389 }
+        }
+        # 390: naval_torpedo_screen_penetration_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_torpedo_screen_penetration_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 390 }
+        }
+        # 391: navy_capital_ship_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_capital_ship_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 391 }
+        }
+        # 392: navy_capital_ship_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_capital_ship_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 392 }
+        }
+        # 393: navy_fuel_consumption_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_fuel_consumption_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 393 }
+        }
+        # 394: navy_org_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_org_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 394 }
+        }
+        # 395: navy_screen_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_screen_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 395 }
+        }
+        # 396: navy_screen_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_screen_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 396 }
+        }
+        # 397: navy_submarine_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_submarine_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 397 }
+        }
+        # 398: navy_submarine_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_submarine_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 398 }
+        }
+        # 399: navy_weather_penalty; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_weather_penalty = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 399 }
+        }
+        # 400: night_spotting_chance; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@night_spotting_chance = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 400 }
+        }
+        # 401: spotting_chance; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@spotting_chance = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 401 }
+        }
+        # 402: air_carrier_night_penalty_reduction_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_carrier_night_penalty_reduction_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 402 }
+        }
+        # 403: amphibious_invasion; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@amphibious_invasion = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 403 }
+        }
+        # 404: carrier_night_traffic; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@carrier_night_traffic = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 404 }
+        }
+        # 405: carrier_sortie_hours_delay; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@carrier_sortie_hours_delay = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 405 }
+        }
+        # 406: carrier_traffic; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@carrier_traffic = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 406 }
+        }
+        # 407: convoy_escort_efficiency; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@convoy_escort_efficiency = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 407 }
+        }
+        # 408: convoy_raiding_efficiency_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@convoy_raiding_efficiency_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 408 }
+        }
+        # 409: experience_gain_destroyer_combat_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_destroyer_combat_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 409 }
+        }
+        # 410: experience_gain_destroyer_training_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_destroyer_training_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 410 }
+        }
+        # 411: experience_gain_navy_unit_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_navy_unit_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 411 }
+        }
+        # 412: mines_planting_by_fleets_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mines_planting_by_fleets_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 412 }
+        }
+        # 413: mines_sweeping_by_fleets_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mines_sweeping_by_fleets_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 413 }
+        }
+        # 414: naval_accidents_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_accidents_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 414 }
+        }
+        # 415: naval_detection; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_detection = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 415 }
+        }
+        # 416: naval_doctrine_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_doctrine_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 416 }
+        }
+        # 417: naval_enemy_fleet_size_ratio_penalty_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_enemy_fleet_size_ratio_penalty_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 417 }
+        }
+        # 418: naval_equipment_upgrade_xp_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_equipment_upgrade_xp_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 418 }
+        }
+        # 419: naval_general_support_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_general_support_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 419 }
+        }
+        # 420: naval_general_support_value_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_general_support_value_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 420 }
+        }
+        # 421: naval_has_potf_in_combat_attack; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_has_potf_in_combat_attack = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 421 }
+        }
+        # 422: naval_has_potf_in_combat_defense; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_has_potf_in_combat_defense = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 422 }
+        }
+        # 427: naval_invasion_prep_speed; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_invasion_prep_speed = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 427 }
+        }
+        # 428: naval_mine_hit_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_mine_hit_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 428 }
+        }
+        # 429: naval_mines_damage_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_mines_damage_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 429 }
+        }
+        # 430: naval_mines_effect_reduction; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_mines_effect_reduction = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 430 }
+        }
+        # 431: naval_morale; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_morale = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 431 }
+        }
+        # 433: naval_repair_support_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_repair_support_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 433 }
+        }
+        # 434: naval_repair_support_value_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_repair_support_value_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 434 }
+        }
+        # 435: naval_retreat_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_retreat_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 435 }
+        }
+        # 436: naval_retreat_chance_after_initial_combat; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_retreat_chance_after_initial_combat = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 436 }
+        }
+        # 437: naval_retreat_speed_after_initial_combat; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_retreat_speed_after_initial_combat = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 437 }
+        }
+        # 438: naval_ship_recovery_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_ship_recovery_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 438 }
+        }
+        # 439: naval_supply_consumption_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_supply_consumption_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 439 }
+        }
+        # 441: navy_anti_air_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_anti_air_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 441 }
+        }
+        # 442: navy_casualty_on_sink; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_casualty_on_sink = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 442 }
+        }
+        # 443: navy_chief_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_chief_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 443 }
+        }
+        # 444: navy_leader_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_leader_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 444 }
+        }
+        # 445: navy_leader_start_attack_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_leader_start_attack_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 445 }
+        }
+        # 446: navy_leader_start_defense_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_leader_start_defense_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 446 }
+        }
+        # 447: navy_leader_start_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_leader_start_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 447 }
+        }
+        # 448: navy_leader_start_maneuvering_level; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_leader_start_maneuvering_level = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 448 }
+        }
+        # 449: navy_max_range_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_max_range_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 449 }
+        }
+        # 451: navy_spirit_category_type_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_spirit_category_type_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 451 }
+        }
+        # 452: navy_submarine_detection_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_submarine_detection_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 452 }
+        }
+        # 453: refit_ic_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@refit_ic_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 453 }
+        }
+        # 454: refit_speed; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@refit_speed = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 454 }
+        }
+        # 455: screening_efficiency; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@screening_efficiency = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 455 }
+        }
+        # 456: screening_without_screens; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@screening_without_screens = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 456 }
+        }
+        # 457: shore_bombardment_bonus; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@shore_bombardment_bonus = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 457 }
+        }
+        # 458: sub_retreat_speed; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@sub_retreat_speed = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 458 }
+        }
+        # 459: transport_capacity; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@transport_capacity = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 459 }
+        }
+        # 460: underway_replenishment_convoy_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@underway_replenishment_convoy_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 460 }
+        }
+        # 461: underway_replenishment_range; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@underway_replenishment_range = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 461 }
+        }
+        # 379: experience_gain_navy_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_navy_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 379 }
+        }
+    }
+    if = {
+        limit = { check_variable = { nbv_page = 5 } }
+        # 462: air_agility_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_agility_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 462 }
+        }
+        # 463: air_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 463 }
+        }
+        # 464: air_cas_efficiency; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_cas_efficiency = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 464 }
+        }
+        # 465: air_defence_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_defence_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 465 }
+        }
+        # 466: air_mission_efficiency; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_mission_efficiency = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 466 }
+        }
+        # 467: air_range_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_range_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 467 }
+        }
+        # 468: air_superiority_efficiency; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_superiority_efficiency = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 468 }
+        }
+        # 469: air_accidents_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_accidents_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 469 }
+        }
+        # 470: air_ace_bonuses_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_ace_bonuses_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 470 }
+        }
+        # 471: air_ace_generation_chance_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_ace_generation_chance_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 471 }
+        }
+        # 472: air_bombing_targetting; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_bombing_targetting = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 472 }
+        }
+        # 473: air_cas_present_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_cas_present_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 473 }
+        }
+        # 474: air_close_air_support_org_damage_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_close_air_support_org_damage_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 474 }
+        }
+        # 475: air_detection; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_detection = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 475 }
+        }
+        # 476: air_fuel_consumption_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_fuel_consumption_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 476 }
+        }
+        # 477: air_mission_xp_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_mission_xp_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 477 }
+        }
+        # 478: air_nav_efficiency; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_nav_efficiency = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 478 }
+        }
+        # 479: air_strategic_bomber_bombing_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_strategic_bomber_bombing_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 479 }
+        }
+        # 480: air_superiority_detect_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_superiority_detect_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 480 }
+        }
+        # 481: air_training_xp_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_training_xp_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 481 }
+        }
+        # 482: air_untrained_pilots_penalty_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_untrained_pilots_penalty_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 482 }
+        }
+        # 483: air_wing_xp_loss_when_killed_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_wing_xp_loss_when_killed_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 483 }
+        }
+        # 485: naval_strike_attack_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_strike_attack_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 485 }
+        }
+        # 486: naval_strike_targetting_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_strike_targetting_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 486 }
+        }
+        # 487: ace_effectiveness_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@ace_effectiveness_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 487 }
+        }
+        # 490: air_chief_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_chief_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 490 }
+        }
+        # 491: air_doctrine_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_doctrine_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 491 }
+        }
+        # 492: air_equipment_upgrade_xp_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_equipment_upgrade_xp_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 492 }
+        }
+        # 493: air_escort_efficiency; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_escort_efficiency = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 493 }
+        }
+        # 494: air_home_defence_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_home_defence_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 494 }
+        }
+        # 495: air_intercept_efficiency; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_intercept_efficiency = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 495 }
+        }
+        # 496: air_interception_detect_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_interception_detect_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 496 }
+        }
+        # 497: air_manpower_requirement_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_manpower_requirement_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 497 }
+        }
+        # 498: air_night_penalty; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_night_penalty = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 498 }
+        }
+        # 499: air_power_projection_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_power_projection_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 499 }
+        }
+        # 500: air_spirit_category_type_cost_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_spirit_category_type_cost_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 500 }
+        }
+        # 501: air_superiority_bonus_in_combat; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_superiority_bonus_in_combat = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 501 }
+        }
+        # 502: air_volunteer_cap; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_volunteer_cap = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 502 }
+        }
+        # 503: air_weather_penalty; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@air_weather_penalty = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 503 }
+        }
+        # 505: ground_attack_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@ground_attack_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 505 }
+        }
+        # 506: mines_planting_by_air_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mines_planting_by_air_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 506 }
+        }
+        # 507: mines_sweeping_by_air_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@mines_sweeping_by_air_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 507 }
+        }
+        # 508: naval_strike_agility_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@naval_strike_agility_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 508 }
+        }
+        # 509: port_strike; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@port_strike = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 509 }
+        }
+        # 510: static_anti_air_damage_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@static_anti_air_damage_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 510 }
+        }
+        # 511: static_anti_air_hit_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@static_anti_air_hit_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 511 }
+        }
+        # 512: tech_air_damage_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@tech_air_damage_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 512 }
+        }
+        # 484: experience_gain_air_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@experience_gain_air_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 484 }
+        }
+    }
+    if = {
+        limit = { check_variable = { nbv_page = 6 } }
+        # 520: operative_slot; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operative_slot = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 520 }
+        }
+        # 518: intelligence_agency_defense; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@intelligence_agency_defense = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 518 }
+        }
+        # 530: intel_network_gain; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@intel_network_gain = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 530 }
+        }
+        # 531: intel_network_gain_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@intel_network_gain_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 531 }
+        }
+        # 514: airforce_intel_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@airforce_intel_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 514 }
+        }
+        # 519: navy_intel_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_intel_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 519 }
+        }
+        # 515: army_intel_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_intel_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 515 }
+        }
+        # 516: civilian_intel_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@civilian_intel_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 516 }
+        }
+        # 517: decryption_power_factor; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@decryption_power_factor = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 517 }
+        }
+        # 533: new_operative_slot_bonus; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@new_operative_slot_bonus = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 533 }
+        }
+        # 534: operation_cost; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_cost = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 534 }
+        }
+        # 513: agency_upgrade_time; P0; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@agency_upgrade_time = 0 } } } }
+            add_to_array = { nbv_high_entries_cache = 513 }
+        }
+        # 541: decryption; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@decryption = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 541 }
+        }
+        # 543: encryption; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@encryption = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 543 }
+        }
+        # 521: airforce_intel_to_others; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@airforce_intel_to_others = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 521 }
+        }
+        # 532: navy_intel_to_others; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@navy_intel_to_others = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 532 }
+        }
+        # 522: army_intel_to_others; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@army_intel_to_others = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 522 }
+        }
+        # 523: civilian_intel_to_others; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@civilian_intel_to_others = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 523 }
+        }
+        # 524: crypto_strength; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@crypto_strength = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 524 }
+        }
+        # 525: decryption_power; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@decryption_power = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 525 }
+        }
+        # 535: own_operative_capture_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@own_operative_capture_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 535 }
+        }
+        # 536: own_operative_detection_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@own_operative_detection_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 536 }
+        }
+        # 537: own_operative_detection_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@own_operative_detection_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 537 }
+        }
+        # 526: enemy_operative_capture_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_operative_capture_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 526 }
+        }
+        # 527: enemy_operative_detection_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_operative_detection_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 527 }
+        }
+        # 528: enemy_operative_detection_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_operative_detection_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 528 }
+        }
+        # 529: enemy_operative_intel_extraction_rate; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@enemy_operative_intel_extraction_rate = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 529 }
+        }
+        # 538: boost_ideology_mission_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@boost_ideology_mission_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 538 }
+        }
+        # 539: boost_resistance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@boost_resistance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 539 }
+        }
+        # 540: commando_trait_chance_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@commando_trait_chance_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 540 }
+        }
+        # 545: intel_from_combat_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@intel_from_combat_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 545 }
+        }
+        # 546: intel_from_operatives_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@intel_from_operatives_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 546 }
+        }
+        # 547: occupied_operative_recruitment_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@occupied_operative_recruitment_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 547 }
+        }
+        # 549: operation_coordinated_strike_outcome; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_coordinated_strike_outcome = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 549 }
+        }
+        # 550: operation_infiltrate_outcome; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_infiltrate_outcome = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 550 }
+        }
+        # 551: operation_make_resistance_contacts_outcome; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_make_resistance_contacts_outcome = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 551 }
+        }
+        # 552: operation_steal_tech_outcome; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_steal_tech_outcome = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 552 }
+        }
+        # 553: operation_steal_tech_risk; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operation_steal_tech_risk = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 553 }
+        }
+        # 554: operative_death_on_capture_chance; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@operative_death_on_capture_chance = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 554 }
+        }
+        # 555: propaganda_mission_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@propaganda_mission_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 555 }
+        }
+        # 556: root_out_resistance_effectiveness_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@root_out_resistance_effectiveness_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 556 }
+        }
+        # 557: subversive_activites_upkeep; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@subversive_activites_upkeep = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 557 }
+        }
+        # 558: target_sabotage_cost; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@target_sabotage_cost = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 558 }
+        }
+        # 559: target_sabotage_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@target_sabotage_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 559 }
+        }
+        # 544: encryption_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@encryption_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 544 }
+        }
+        # 542: decryption_factor; P2; runtime_read_validated=true
+        if = {
+            limit = { OR = { has_country_flag = nbv_show_zero NOT = { check_variable = { ROOT.modifier@decryption_factor = 0 } } } }
+            add_to_array = { nbv_low_entries_cache = 542 }
+        }
+    }
+}

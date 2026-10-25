@@ -1,0 +1,110 @@
+{
+  "version": "0.1.11",
+  "date": "2026-10-25T16:18:00.181821+08:00",
+  "local_descriptor": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv_national_buff.mod",
+  "descriptor_sha256": "524e5b2efdc6a6312e4f4ea7d1f43c8e58b668b826af6630775273e4d1110b5c",
+  "source_manifest_sha256": "2a47fc16e78c2636c11286bc3bc5c556b19d03f56963987c1d7cd2a88696f749",
+  "icon_manifest_sha256": "af1fb5bc3d5a17f1a1ca75569f0b9ee5ef584af3e6f74a7cc87706c29f6253d7",
+  "display_layout_sha256": "2d677d100a70dbca4945a08e5a03b543e18e4ea859c6580d74d3cb5d8d0ad61f",
+  "display_count": 528,
+  "engine_report_sha256": "d090171459356e102bcc71e5c20bb9a704b5e62269760152301389826c33d0c9",
+  "engine_test_version": "0.1.11",
+  "engine_checks_passed": true,
+  "launcher_sha256": "57f4cb119c9a90486394621cd6fb92f6d89a7dd9bb8887481935a9b2893a37cb",
+  "launcher_restored": true,
+  "user_playset_sha256": "1811ed9166ad3ffe17ea3d7198639f3144015a28909d486d3eab8c6d20028d5f",
+  "user_playset_modified_by_install": false,
+  "original_mod_files_modified": false,
+  "ui_visual_verified": false,
+  "runtime_files_changed_after_engine_test": false,
+  "engine_runner_completed": true,
+  "recovered_idea_bindings": 755,
+  "additional_advisor_bindings": 12,
+  "additional_doctrine_bindings": 9,
+  "new_country_status_bindings": 15,
+  "landmark_source_implemented": false,
+  "pride_and_coastal_source_implemented": false,
+  "special_source_groups": {
+    "sov": true,
+    "sov_wrong_root": true,
+    "landmark_unavailable": true,
+    "status_curves": true,
+    "peace": true
+  },
+  "sidebar_icon_centered": true,
+  "sidebar_static_known_layout_reservation": true,
+  "sidebar_runtime_collision_detection": false,
+  "tno_compatibility": false,
+  "source_coverage_changes_in_this_release": false,
+  "sidebar_placement_sha256": "744d520ab1b49bb988130498ad271b85ea7bd712cb919dba24ef1793aa9075a3",
+  "third_party_combined_game_launch_tested": false,
+  "selected_source_coverage_count": 514,
+  "selected_source_contribution_count": 28931,
+  "registry_and_binding_tables_unchanged": [
+    "tools/data/advisor-source-bindings.json",
+    "tools/data/doctrine-technology-source-bindings.json",
+    "tools/data/dynamic-source-bindings.json",
+    "tools/data/dynamic-spirit-source-bindings.json",
+    "tools/data/faction-source-bindings.json",
+    "tools/data/ideology-source-bindings.json",
+    "tools/data/leader-source-bindings.json",
+    "tools/data/metric-index.json",
+    "tools/data/modifier-format-bindings.json",
+    "tools/data/modifier-icon-bindings.json",
+    "tools/data/source-bindings.json",
+    "tools/data/special-source-bindings.json"
+  ],
+  "new_display_ids": [
+    2,
+    43,
+    234,
+    241,
+    275,
+    379,
+    542,
+    544
+  ],
+  "homonym_audit_sha256": "e8c6106a7642b970c32b0ab7ecf31e94b9ff0c122fe21cf937ef4569ec561f09",
+  "runtime_diff_from_v0110": [
+    "common/scripted_effects/nbv_effects.txt",
+    "common/scripted_triggers/nbv_triggers.txt",
+    "descriptor.mod",
+    "localisation/english/nbv_l_english.yml",
+    "localisation/simp_chinese/nbv_l_simp_chinese.yml"
+  ],
+  "other_existing_519_relative_order_and_bands_unchanged": true,
+  "moved_existing_ids": [
+    484
+  ],
+  "requested_other_section_suffixes": {
+    "政治": [
+      2,
+      43
+    ],
+    "陆军": [
+      275,
+      234,
+      241
+    ],
+    "海军": [
+      379
+    ],
+    "空军": [
+      484
+    ],
+    "情报": [
+      544,
+      542
+    ]
+  },
+  "naming_configuration_sha256": "9ba4c23b59df65f7f48eb1231fbfb39d5a4ad41830d084dbadedebd6e1a0fa99",
+  "current_mod_directory": "D:\\projects\\hoi4_mod\\1\\nbv-national-buff",
+  "naming_configuration_fixed": true,
+  "naming_fix_runtime_files_unchanged": 355,
+  "naming_fix_new_engine_run": false,
+  "launcher_rename_repair": "launcher-rename-repair.json",
+  "current_install_directory": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv-national-buff",
+  "launcher_mod_id_preserved": "a35f6b06-091c-460e-ba23-5493ffbcb291",
+  "playset_memberships_preserved": 2,
+  "last_install_repair_date": "2026-10-25"
+}

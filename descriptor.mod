@@ -1,0 +1,5 @@
+name="国家BUFF统计 UI"
+picture="thumbnail.png"
+version="0.1.11"
+supported_version="1.19.*"
+tags={ "Utilities" "Gameplay" }

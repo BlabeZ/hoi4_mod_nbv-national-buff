@@ -1,0 +1,465 @@
+# National Buff Viewer. Base-game window artwork and fonts.
+# Names use private text icons ported from Modifier Icons CN; see nbv_modifier_icons.gfx.
+# A single vertical list owns every heading and row, so content bounds and
+# scroll range come from one grid. Row height 34; card height 30.
+# Scroll-container pattern: BUFF UI 3795966002/interface/BDUI_gui_tools.gui.
+# right_vertical_slider_intel is an existing base-game extendedScrollbarType.
+# A scroll container needs its own input-capable background and clipping.
+# Root-level transparent header art follows KR Mitteleuropa / vanilla achievements.
+guiTypes = {
+    containerWindowType = {
+        name = "nbv_entry_window"
+        position = { x = 0 y = -202 }
+        size = { width = 77 height = 77 }
+        clipping = no
+        buttonType = {
+            name = "nbv_open_button"
+            position = { x = 3 y = 3 }
+            size = { x = 71 y = 71 }
+            quadTextureSprite = "GFX_tiled_window_small_selectable"
+            pdx_tooltip = "nbv_entry_tooltip"
+            clicksound = click_ok
+            oversound = ui_menu_over
+        }
+        iconType = {
+            name = "nbv_entry_icon"
+            # Native ledger frame is 55x41; centre it inside the 71x71 button.
+            position = { x = 11 y = 18 }
+            spriteType = "GFX_ledger_button"
+            frame = 1
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "nbv_window"
+        position = { x = -500 y = -325 }
+        size = { width = 1000 height = 650 }
+        orientation = center
+        moveable = yes
+        click_to_front = yes
+        clipping = yes
+        show_sound = menu_open_window
+        hide_sound = menu_close_window
+        iconType = {
+            name = "nbv_calculator"
+            position = { x = 0 y = 0 }
+            spriteType = "GFX_tiled_window_transparent_transparent"
+            alwaystransparent = yes
+        }
+        background = {
+            name = "nbv_window_background"
+            quadTextureSprite = "GFX_tiled_window"
+        }
+        iconType = {
+            name = "nbv_header_background"
+            position = { x = 8 y = 6 }
+            spriteType = "GFX_nbv_header_background"
+            alwaystransparent = yes
+        }
+        instantTextboxType = {
+            name = "nbv_title"
+            position = { x = 24 y = 14 }
+            font = "hoi_24header"
+            text = "nbv_window_title"
+            maxWidth = 890
+            maxHeight = 30
+            format = left
+            alwaystransparent = yes
+        }
+        buttonType = {
+            name = "nbv_close_button"
+            position = { x = -51 y = 13 }
+            orientation = upper_right
+            quadTextureSprite = "GFX_closebutton"
+            shortcut = "ESCAPE"
+            clicksound = click_close
+            pdx_tooltip = "CLOSE"
+        }
+        buttonType = {
+            name = "nbv_tab_1"
+            position = { x = 24 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_1"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_tab_2"
+            position = { x = 182 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_2"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_tab_3"
+            position = { x = 340 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_3"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_tab_4"
+            position = { x = 498 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_4"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_tab_5"
+            position = { x = 656 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_5"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_tab_6"
+            position = { x = 814 y = 60 }
+            quadTextureSprite = "GFX_nbv_tab_normal"
+            buttonText = "nbv_page_6"
+            buttonFont = "hoi_18mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_filter_button"
+            position = { x = 706 y = 104 }
+            quadTextureSprite = "GFX_button_123x34"
+            buttonText = "nbv_filter_button_text"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        buttonType = {
+            name = "nbv_refresh_button"
+            position = { x = 839 y = 104 }
+            quadTextureSprite = "GFX_button_123x34"
+            buttonText = "nbv_refresh"
+            buttonFont = "hoi_16mbs"
+            clicksound = click_default
+        }
+        containerWindowType = {
+            name = "nbv_scroll_area"
+            position = { x = 24 y = 148 }
+            size = { width = 970 height = 486 }
+            clipping = yes
+            verticalScrollbar = "right_vertical_slider_intel"
+            autohide_scrollbars = no
+            scroll_wheel_factor = 34
+            smooth_scrolling = yes
+            background = {
+                name = "nbv_scroll_background"
+                quadTextureSprite = "GFX_tiled_window_transparent"
+            }
+            gridBoxType = {
+                name = "nbv_rows_grid"
+                position = { x = 0 y = 0 }
+                size = { width = 944 height = 34 }
+                slotsize = { width = 944 height = 34 }
+                max_slots_horizontal = 1
+                format = "UPPER_LEFT"
+            }
+            instantTextboxType = {
+                name = "nbv_empty_state"
+                position = { x = 24 y = 50 }
+                font = "hoi_18mbs"
+                text = "nbv_empty_state"
+                maxWidth = 890
+                maxHeight = 24
+                format = center
+                alwaystransparent = yes
+            }
+        }
+    }
+
+    containerWindowType = {
+        name = "nbv_high_heading_row"
+        position = { x = 0 y = 0 }
+        size = { width = 944 height = 34 }
+        instantTextboxType = {
+            name = "nbv_high_heading"
+            position = { x = 6 y = 5 }
+            font = "hoi_18mbs"
+            text = "nbv_high_title"
+            maxWidth = 930
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "nbv_low_heading_row"
+        position = { x = 0 y = 0 }
+        size = { width = 944 height = 34 }
+        instantTextboxType = {
+            name = "nbv_low_heading"
+            position = { x = 6 y = 5 }
+            font = "hoi_18mbs"
+            text = "nbv_low_title"
+            maxWidth = 930
+            maxHeight = 24
+            format = left
+            alwaystransparent = yes
+        }
+    }
+
+    containerWindowType = {
+        name = "nbv_high_row"
+        position = { x = 0 y = 0 }
+        size = { width = 944 height = 34 }
+        containerWindowType = {
+            name = "nbv_high_cell_1"
+            position = { x = 0 y = 0 }
+            size = { width = 306 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_high_hitbox_1"
+                position = { x = 0 y = 0 }
+                size = { x = 306 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_high_tooltip_1"
+            }
+            instantTextboxType = {
+                name = "nbv_high_name_1"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_name_1_text"
+                maxWidth = 208
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_high_value_1"
+                position = { x = 220 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_value_1_text"
+                maxWidth = 78
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = "nbv_high_cell_2"
+            position = { x = 314 y = 0 }
+            size = { width = 306 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_high_hitbox_2"
+                position = { x = 0 y = 0 }
+                size = { x = 306 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_high_tooltip_2"
+            }
+            instantTextboxType = {
+                name = "nbv_high_name_2"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_name_2_text"
+                maxWidth = 208
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_high_value_2"
+                position = { x = 220 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_value_2_text"
+                maxWidth = 78
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = "nbv_high_cell_3"
+            position = { x = 628 y = 0 }
+            size = { width = 306 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_high_hitbox_3"
+                position = { x = 0 y = 0 }
+                size = { x = 306 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_high_tooltip_3"
+            }
+            instantTextboxType = {
+                name = "nbv_high_name_3"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_name_3_text"
+                maxWidth = 208
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_high_value_3"
+                position = { x = 220 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_high_value_3_text"
+                maxWidth = 78
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+    }
+
+    containerWindowType = {
+        name = "nbv_low_row"
+        position = { x = 0 y = 0 }
+        size = { width = 944 height = 34 }
+        containerWindowType = {
+            name = "nbv_low_cell_1"
+            position = { x = 0 y = 0 }
+            size = { width = 227 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_low_hitbox_1"
+                position = { x = 0 y = 0 }
+                size = { x = 227 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_low_tooltip_1"
+            }
+            instantTextboxType = {
+                name = "nbv_low_name_1"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_name_1_text"
+                maxWidth = 139
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_low_value_1"
+                position = { x = 151 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_value_1_text"
+                maxWidth = 68
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = "nbv_low_cell_2"
+            position = { x = 235 y = 0 }
+            size = { width = 227 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_low_hitbox_2"
+                position = { x = 0 y = 0 }
+                size = { x = 227 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_low_tooltip_2"
+            }
+            instantTextboxType = {
+                name = "nbv_low_name_2"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_name_2_text"
+                maxWidth = 139
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_low_value_2"
+                position = { x = 151 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_value_2_text"
+                maxWidth = 68
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = "nbv_low_cell_3"
+            position = { x = 470 y = 0 }
+            size = { width = 227 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_low_hitbox_3"
+                position = { x = 0 y = 0 }
+                size = { x = 227 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_low_tooltip_3"
+            }
+            instantTextboxType = {
+                name = "nbv_low_name_3"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_name_3_text"
+                maxWidth = 139
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_low_value_3"
+                position = { x = 151 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_value_3_text"
+                maxWidth = 68
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+        containerWindowType = {
+            name = "nbv_low_cell_4"
+            position = { x = 705 y = 0 }
+            size = { width = 227 height = 30 }
+            clipping = yes
+            buttonType = {
+                name = "nbv_low_hitbox_4"
+                position = { x = 0 y = 0 }
+                size = { x = 227 y = 30 }
+                quadTextureSprite = "GFX_tiled_window_small_small"
+                pdx_tooltip = "nbv_low_tooltip_4"
+            }
+            instantTextboxType = {
+                name = "nbv_low_name_4"
+                position = { x = 8 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_name_4_text"
+                maxWidth = 139
+                maxHeight = 20
+                fixedsize = yes
+                format = left
+                alwaystransparent = yes
+            }
+            instantTextboxType = {
+                name = "nbv_low_value_4"
+                position = { x = 151 y = 5 }
+                font = "hoi_16mbs"
+                text = "nbv_low_value_4_text"
+                maxWidth = 68
+                maxHeight = 20
+                fixedsize = yes
+                format = right
+                alwaystransparent = yes
+            }
+        }
+    }
+}

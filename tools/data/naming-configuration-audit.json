@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25T17:25:34.210498+08:00",
+  "directory": "D:\\projects\\hoi4_mod\\1\\nbv-national-buff",
+  "display_name": "国家BUFF统计 UI",
+  "registration": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv_national_buff.mod",
+  "registration_filename_preserved": true,
+  "canonical_archive_root": "nbv-national-buff",
+  "metadata_unit_tests_passed": 4,
+  "installer_cases_passed": 4,
+  "static_checks_passed": 187,
+  "runtime_files_unchanged": 355,
+  "new_engine_run": false,
+  "engine_evidence_reused_version": "0.1.11",
+  "backup_directory": "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\naming-fix-20261025-171946",
+  "name_preserved_during_build": true,
+  "workshop_id_preserved": true,
+  "gameplay_changed": false,
+  "superseded_by": "launcher-rename-repair.json",
+  "limitation_discovered": "Original registration outside the deployment parent failed Launcher renameV0Mod."
+}

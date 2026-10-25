@@ -1,0 +1,389 @@
+{
+  "schema_version": 1,
+  "recorded_date": "2026-10-25",
+  "timezone": "Asia/Singapore",
+  "scope": "Read-only hashes of installed reference sources cited by REFERENCE-AND-PORTING.md. This historical manifest does not copy assets. Actual Modifier Icons assets ported in 0.1.6 and their hashes are recorded separately in tools/data/modifier-icon-bindings.json. Provenance metadata is not runtime validation.",
+  "files": [
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ribbons\\00_ribbons.txt",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "1eb4550c9dc77b68c57383dff8ae9f83d63ff27d5bcd734d3555984512007a47",
+      "size_bytes": 19893,
+      "referenced_line_starts": [
+        178
+      ],
+      "line_count": 685
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_guis\\_documentation.md",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "43ce647fc5fde27488855b060b5463c790e5e356149fceb010d36b960b40f838",
+      "size_bytes": 6228,
+      "referenced_line_starts": [
+        102
+      ],
+      "line_count": 145
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\triggers_documentation.md",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "7d27ed77dadaf3a213a4b3e2c624bf9c02dae495317abe8eee833b27c2d1de29",
+      "size_bytes": 180523,
+      "referenced_line_starts": [
+        698,
+        2025,
+        2154
+      ],
+      "line_count": 7713
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\gfx\\interface\\button_148x34.dds",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "c5cb81cd7f178c4a82ac99586996a12ca981181d2f7313f26cb97a6c8beb553f",
+      "size_bytes": 21440,
+      "referenced_line_starts": [],
+      "usage": "Referenced vanilla texture only; not copied into this mod."
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\gfx\\interface\\button_148x34_light.dds",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "b3d111da8d82388350352c9e1d703c0f68a4e0f9ee82c2697536fd4bb32c6cf3",
+      "size_bytes": 21440,
+      "referenced_line_starts": [],
+      "usage": "Referenced vanilla texture only; not copied into this mod."
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\gfx\\interface\\tiles\\tiled_window_transparent.dds",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "f25207c86dd9afa64d97da8863598eda5fb4790d90a54ae1457ddfd9b5949cc9",
+      "size_bytes": 36228,
+      "referenced_line_starts": [],
+      "usage": "Referenced vanilla texture only; not copied into this mod."
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\gfx\\interface\\topbar\\toolbar\\ledger_button.dds",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "253ac53af5d568cf595306b386907ef6eeb9a85d6aa49ea610e9d9ef4862e70b",
+      "size_bytes": 18168,
+      "referenced_line_starts": [],
+      "usage": "Referenced vanilla texture only; not copied into this mod."
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\career_profile\\awards_view.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "7473ea36dc688afbab12b5183cb3f294a8b224d17bbb398779e5a749bfc7b391",
+      "size_bytes": 9623,
+      "referenced_line_starts": [
+        20
+      ],
+      "line_count": 421
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\core.gfx",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "90d9751fa3dc1faf0aadd6f2c725d523bded8cd908dc27f7e6f08e04058bf1ba",
+      "size_bytes": 38845,
+      "referenced_line_starts": [
+        138,
+        148,
+        177,
+        269,
+        525,
+        539
+      ],
+      "line_count": 1876
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\core.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "553b14374957f1a0403b627a5252cce0b9a8578cae1a70be2686e660f2c7c481",
+      "size_bytes": 12073,
+      "referenced_line_starts": [
+        247
+      ],
+      "line_count": 582
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\core_chinese.gfx",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "2ea17ec80081a5133b861775d7e33088e389309393fea9e9f29b8eb342cf634b",
+      "size_bytes": 11002,
+      "referenced_line_starts": [
+        158,
+        191,
+        279
+      ],
+      "line_count": 433
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\countryarmyview.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "9c37dc7f856e792a5a2a56493c2c54de9509e209ee9d5ed117e7fd3eeff5c950",
+      "size_bytes": 21569,
+      "referenced_line_starts": [
+        318
+      ],
+      "line_count": 988
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\countrypoliticsview.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "811051a83ef087b87be4de9b226fb831f6d6d8f20cd440371619501b5710c183",
+      "size_bytes": 42263,
+      "referenced_line_starts": [
+        815
+      ],
+      "line_count": 1895
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\countrytechtreeview.gfx",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "a65a41f2a3d94b62c38ddd7311d2606cd4a8817872f374893d851f6ec517dc8c",
+      "size_bytes": 63578,
+      "referenced_line_starts": [
+        253
+      ],
+      "line_count": 2107
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\general_stuff.gfx",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "9657e2fb357a9dc997101e26c031371257ed41e135a5f97dc94dd295b31f4fbe",
+      "size_bytes": 9343,
+      "referenced_line_starts": [
+        202
+      ],
+      "line_count": 412
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\military_raids\\country_raids_view.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "248e68d217e76b3fa8e015cffc3748f5fee3964a9e0a8b6f054969879369767d",
+      "size_bytes": 23690,
+      "referenced_line_starts": [
+        1018
+      ],
+      "line_count": 1061
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\topbar.gfx",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "0e0d560a35738f0ec72280805de7d54665ccc3a9e95e145b1c7c41dd74aafaba",
+      "size_bytes": 10100,
+      "referenced_line_starts": [
+        357
+      ],
+      "line_count": 426
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_effects\\MIT effects (Mitteleuropa).txt",
+      "source": "Kaiserreich",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605",
+      "sha256": "66ada39a8d0e1cd0d3c8f419cf04ab4bf9d338b246cee37fdcadb35adf2d61b7",
+      "size_bytes": 31744,
+      "referenced_line_starts": [
+        1064
+      ],
+      "line_count": 1115
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_guis\\germany_mitteleuropa.txt",
+      "source": "Kaiserreich",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605",
+      "sha256": "26f5378cda43af8ae5e2f83cc2b92621b99709f6dcb9df4dbd01daf2f622aeab",
+      "size_bytes": 17751,
+      "referenced_line_starts": [
+        6
+      ],
+      "line_count": 557
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\interface\\kaiserreich\\gui_mitteleuropa.gui",
+      "source": "Kaiserreich",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=1521695605",
+      "sha256": "0fb3c105d26412b659fe4da87ce113ffcc25b89a02c8e633d03d617a2138e61c",
+      "size_bytes": 13864,
+      "referenced_line_starts": [
+        13,
+        39,
+        49,
+        62,
+        70,
+        81,
+        333
+      ],
+      "line_count": 542
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\2438003901\\common\\scripted_guis\\TNO_Politics.txt",
+      "source": "The New Order: Last Days of Europe",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901",
+      "sha256": "1de6208d0844b6e04df29a614afac8493a05d8f34f442982cfcc25dc7fa59d1a",
+      "size_bytes": 49783,
+      "referenced_line_starts": [
+        1005,
+        1023
+      ],
+      "line_count": 1031
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\2438003901\\interface\\TNO_SG_Politics_Misc.gui",
+      "source": "The New Order: Last Days of Europe",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901",
+      "sha256": "95427b91ca19d045b2da6bae3ce703f0c12c8bf92f8874e387c269694910dd3b",
+      "size_bytes": 3600,
+      "referenced_line_starts": [
+        46
+      ],
+      "line_count": 145
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\common\\decisions\\categories\\common_dicision_categories.txt",
+      "source": "BUFF数值可视化",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440479297",
+      "sha256": "fe36a63393da755e9117210cd8903fc209aeb0f82314a006cd1114b933061997",
+      "size_bytes": 507,
+      "referenced_line_starts": [
+        1
+      ],
+      "line_count": 38
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\common\\decisions\\we_common.txt",
+      "source": "BUFF数值可视化",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440479297",
+      "sha256": "58fa4ae37d9f2f8d1a59cbd204389cdcd85b06d990c93138e9ef34c20dd6bb12",
+      "size_bytes": 1786,
+      "referenced_line_starts": [
+        45
+      ],
+      "line_count": 126
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\localisation\\simp_chinese\\we_l_simp_chinese.yml",
+      "source": "BUFF数值可视化",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440479297",
+      "sha256": "e5e471abe148d631863ef8781225e93765b842bea62560d3dff5d5b24ea46069",
+      "size_bytes": 14248,
+      "referenced_line_starts": [
+        4
+      ],
+      "line_count": 19
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3449417512\\common\\scripted_guis\\TNO_Politics.txt",
+      "source": "TNO: 2WRW-TNO",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3449417512",
+      "sha256": "9139497b311aa436a66051e4b43a687c4c6e96d22af13ae3020789eae8ecb383",
+      "size_bytes": 49191,
+      "referenced_line_starts": [
+        1025
+      ],
+      "line_count": 1052
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3449417512\\interface\\TNO_SG_Politics_Misc.gui",
+      "source": "TNO: 2WRW-TNO",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3449417512",
+      "sha256": "4d1efaba0982002553c496a521919b8e2b0f69b747987c0cdf27f603267495c1",
+      "size_bytes": 4015,
+      "referenced_line_starts": [
+        73
+      ],
+      "line_count": 172
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\common\\scripted_guis\\BDUI_scripted_gui.txt",
+      "source": "buff display ui",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3795966002",
+      "sha256": "61d1e137de672b29bcb0cd7bbf7429ba50d4474ebb2431739bd23483d2693f6d",
+      "size_bytes": 3474,
+      "referenced_line_starts": [
+        43,
+        63
+      ],
+      "line_count": 135
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\common\\scripted_localisation\\BDUI_scripted_localisation.txt",
+      "source": "buff display ui",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3795966002",
+      "sha256": "e202e90a1ef03d7085d48310c2cd60fbef62a016bd0466f7e58968d10ebfabf3",
+      "size_bytes": 2413,
+      "referenced_line_starts": [
+        14
+      ],
+      "line_count": 80
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\interface\\BDUI_gui_tools.gui",
+      "source": "buff display ui",
+      "source_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3795966002",
+      "sha256": "0bbeda8f85e61bf0fe21a41a120577af6955e38be01e841196d07c0b29ca6454",
+      "size_bytes": 4682,
+      "referenced_line_starts": [
+        124,
+        125,
+        132,
+        137,
+        190
+      ],
+      "line_count": 211
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\achievements.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "894e7d7048b818bb6017f577e04231c0e9c31b02fe044c9a6b2ce3686135a919",
+      "size_bytes": 2844,
+      "referenced_line_starts": [
+        8,
+        14,
+        22
+      ],
+      "line_count": 136
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\musicplayer.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "3bc3d575de66e13bcc68d7a7e0f4bdd654250eac72ef61fa6d1f0ed76b1bc357",
+      "size_bytes": 3886,
+      "referenced_line_starts": [
+        90
+      ],
+      "line_count": 178
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\countryintelligenceagencyview.gui",
+      "source": "Hearts of Iron IV vanilla",
+      "source_url": "https://store.steampowered.com/app/394360/Hearts_of_Iron_IV/",
+      "sha256": "00153f0968113c3f29d914bda227c729ba5d95f5888135c0dd98db89748ef3e5",
+      "size_bytes": 33356,
+      "referenced_line_starts": [
+        644,
+        651,
+        1428
+      ],
+      "line_count": 1466
+    }
+  ],
+  "icon_asset_manifest": "tools/data/modifier-icon-bindings.json"
+}

@@ -1,0 +1,69 @@
+# National Buff Viewer. Stable IDs: metric-index.json; GUI order: display-layout.json.
+# KR 1521695605: Mitteleuropa entry attachment, separate window and country flags.
+# BUFF UI 3795966002: numbered metric lists and direct ROOT.modifier localization.
+# TNO 3449417512: calculator_visible -> temp array -> dynamic_lists pattern.
+# TNO reference: common/scripted_guis/TNO_Politics.txt:1025,1044;
+# interface/TNO_SG_Politics_Misc.gui:73 (calculator icon before the list).
+# This UI and its timing still require validation in the target engine version.
+# State is per country. No gameplay modifiers are set, summed or cached.
+# Default GUI updates: intentionally no dirty binding, AI effects or on_actions.
+scripted_gui = {
+    nbv_entry = {
+        context_type = player_context
+        parent_window_name = raid_filter
+        window_name = "nbv_entry_window"
+        visible = { always = yes }
+        effects = {
+            nbv_open_button_click = { nbv_toggle = yes }
+        }
+    }
+    nbv_main = {
+        context_type = player_context
+        window_name = "nbv_window"
+        visible = {
+            has_country_flag = nbv_window_open
+        }
+        dynamic_lists = {
+            nbv_rows_grid = {
+                array = nbv_display_rows
+                value = nbv_row_id
+                index = nbv_row_index
+                change_scope = no
+                entry_container = "[NBVRowContainer]"
+            }
+        }
+        properties = {
+            nbv_tab_1 = { image = "[nbv_tab_1_sprite]" }
+            nbv_tab_2 = { image = "[nbv_tab_2_sprite]" }
+            nbv_tab_3 = { image = "[nbv_tab_3_sprite]" }
+            nbv_tab_4 = { image = "[nbv_tab_4_sprite]" }
+            nbv_tab_5 = { image = "[nbv_tab_5_sprite]" }
+            nbv_tab_6 = { image = "[nbv_tab_6_sprite]" }
+        }
+        triggers = {
+            nbv_calculator_visible = { nbv_prepare_view = yes }
+            nbv_high_cell_1_visible = { nbv_resolve_high_1 = yes }
+            nbv_high_cell_2_visible = { nbv_resolve_high_2 = yes }
+            nbv_high_cell_3_visible = { nbv_resolve_high_3 = yes }
+            nbv_low_cell_1_visible = { nbv_resolve_low_1 = yes }
+            nbv_low_cell_2_visible = { nbv_resolve_low_2 = yes }
+            nbv_low_cell_3_visible = { nbv_resolve_low_3 = yes }
+            nbv_low_cell_4_visible = { nbv_resolve_low_4 = yes }
+            nbv_empty_state_visible = {
+                check_variable = { nbv_high_count = 0 }
+                check_variable = { nbv_low_count = 0 }
+            }
+        }
+        effects = {
+            nbv_close_button_click = { nbv_close = yes }
+            nbv_filter_button_click = { nbv_toggle_zero_filter = yes }
+            nbv_refresh_button_click = { nbv_refresh = yes }
+            nbv_tab_1_click = { nbv_select_page_1 = yes }
+            nbv_tab_2_click = { nbv_select_page_2 = yes }
+            nbv_tab_3_click = { nbv_select_page_3 = yes }
+            nbv_tab_4_click = { nbv_select_page_4 = yes }
+            nbv_tab_5_click = { nbv_select_page_5 = yes }
+            nbv_tab_6_click = { nbv_select_page_6 = yes }
+        }
+    }
+}

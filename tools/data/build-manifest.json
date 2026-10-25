@@ -1,0 +1,5611 @@
+{
+  "record_count": 559,
+  "categories": {
+    "政治": 94,
+    "工业": 109,
+    "陆军": 166,
+    "海军": 92,
+    "空军": 51,
+    "情报": 47
+  },
+  "format_confidence": {
+    "confirmed": 373,
+    "source_inferred": 179,
+    "unresolved": 7
+  },
+  "records": [
+    {
+      "id": 1,
+      "key": "conscription",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@conscription|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 2,
+      "key": "conscription_factor",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@conscription_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 3,
+      "key": "political_power_factor",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@political_power_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 4,
+      "key": "political_power_gain",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@political_power_gain|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 5,
+      "key": "stability_factor",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@stability_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 6,
+      "key": "war_support_factor",
+      "category": "政治",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@war_support_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 7,
+      "key": "autonomy_gain",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@autonomy_gain|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 8,
+      "key": "communism_drift",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@communism_drift|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 9,
+      "key": "compliance_gain",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@compliance_gain|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 10,
+      "key": "compliance_growth",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@compliance_growth|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 11,
+      "key": "democratic_drift",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@democratic_drift|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 12,
+      "key": "drift_defence_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@drift_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 13,
+      "key": "economy_cost_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@economy_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 14,
+      "key": "fascism_drift",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@fascism_drift|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 15,
+      "key": "join_faction_tension",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@join_faction_tension|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 16,
+      "key": "justify_war_goal_time",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@justify_war_goal_time|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 17,
+      "key": "lend_lease_tension",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@lend_lease_tension|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 18,
+      "key": "mobilization_laws_cost_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@mobilization_laws_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 19,
+      "key": "mobilization_speed",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@mobilization_speed|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 20,
+      "key": "neutrality_drift",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@neutrality_drift|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 21,
+      "key": "non_core_manpower",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@non_core_manpower|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 22,
+      "key": "party_popularity_stability_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@party_popularity_stability_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 23,
+      "key": "political_advisor_cost_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@political_advisor_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 24,
+      "key": "resistance_damage_to_garrison",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@resistance_damage_to_garrison|-=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 25,
+      "key": "resistance_growth",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@resistance_growth|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 26,
+      "key": "resistance_growth_on_our_occupied_states",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@resistance_growth_on_our_occupied_states|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 27,
+      "key": "resistance_target",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@resistance_target|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 28,
+      "key": "send_volunteer_size",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@send_volunteer_size|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 29,
+      "key": "send_volunteers_tension",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@send_volunteers_tension|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 30,
+      "key": "stability_weekly",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@stability_weekly|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 31,
+      "key": "surrender_limit",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@surrender_limit|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 32,
+      "key": "trade_laws_cost_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@trade_laws_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 33,
+      "key": "trade_opinion_factor",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@trade_opinion_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 34,
+      "key": "war_support_weekly",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@war_support_weekly|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 35,
+      "key": "weekly_manpower",
+      "category": "政治",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@weekly_manpower|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 36,
+      "key": "annex_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@annex_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 37,
+      "key": "autonomy_gain_global_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_gain_global_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 38,
+      "key": "autonomy_gain_ll_to_overlord_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_gain_ll_to_overlord_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 39,
+      "key": "autonomy_gain_trade_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_gain_trade_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 40,
+      "key": "autonomy_gain_warscore",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_gain_warscore|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 41,
+      "key": "autonomy_gain_warscore_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_gain_warscore_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 42,
+      "key": "autonomy_manpower_share",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_manpower_share|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 43,
+      "key": "autonomy_manpower_share_from_subjects",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@autonomy_manpower_share_from_subjects|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 44,
+      "key": "communism_acceptance",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@communism_acceptance|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 45,
+      "key": "compliance_growth_on_our_occupied_states",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@compliance_growth_on_our_occupied_states|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 46,
+      "key": "defensive_war_stability_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@defensive_war_stability_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 47,
+      "key": "democratic_acceptance",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@democratic_acceptance|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 48,
+      "key": "embargo_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@embargo_cost_factor|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 49,
+      "key": "embargo_threshold_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@embargo_threshold_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 50,
+      "key": "enemy_declare_war_tension",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@enemy_declare_war_tension|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 51,
+      "key": "enemy_justify_war_goal_time",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@enemy_justify_war_goal_time|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 52,
+      "key": "exile_manpower_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@exile_manpower_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 53,
+      "key": "exiled_government_weekly_manpower",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@exiled_government_weekly_manpower|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 54,
+      "key": "extra_trade_to_overlord_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@extra_trade_to_overlord_factor|Y=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 55,
+      "key": "faction_influence_contribution_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@faction_influence_contribution_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 56,
+      "key": "faction_influence_war_score_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@faction_influence_war_score_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 57,
+      "key": "faction_trade_opinion_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@faction_trade_opinion_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 58,
+      "key": "fascism_acceptance",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@fascism_acceptance|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 59,
+      "key": "forced_surrender_limit",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@forced_surrender_limit|Y=%2]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 60,
+      "key": "guarantee_cost",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@guarantee_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 61,
+      "key": "guarantee_tension",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@guarantee_tension|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 62,
+      "key": "high_command_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@high_command_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 63,
+      "key": "improve_relations_maintain_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@improve_relations_maintain_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 64,
+      "key": "justify_war_goal_when_in_major_war_time",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@justify_war_goal_when_in_major_war_time|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 65,
+      "key": "legitimacy_daily",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@legitimacy_daily|+=2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 66,
+      "key": "legitimacy_gain_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@legitimacy_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 67,
+      "key": "master_ideology_drift",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@master_ideology_drift|Y=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 68,
+      "key": "max_surrender_limit_offset",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@max_surrender_limit_offset|Y=%2]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 69,
+      "key": "monthly_population",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@monthly_population|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 70,
+      "key": "neutrality_acceptance",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@neutrality_acceptance|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 71,
+      "key": "offensive_war_stability_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@offensive_war_stability_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 72,
+      "key": "opinion_gain_monthly",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@opinion_gain_monthly|+=2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 73,
+      "key": "opinion_gain_monthly_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@opinion_gain_monthly_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 74,
+      "key": "opinion_gain_monthly_same_ideology",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@opinion_gain_monthly_same_ideology|+=2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 75,
+      "key": "opinion_gain_monthly_same_ideology_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@opinion_gain_monthly_same_ideology_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 76,
+      "key": "overlord_trade_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@overlord_trade_cost_factor|Y=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 77,
+      "key": "political_power_cost",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@political_power_cost|-=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 78,
+      "key": "puppet_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@puppet_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 79,
+      "key": "recruitable_population_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@recruitable_population_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 80,
+      "key": "required_garrison_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@required_garrison_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 81,
+      "key": "resistance_activity",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resistance_activity|R=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 82,
+      "key": "resistance_decay",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resistance_decay|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 83,
+      "key": "resistance_decay_on_our_occupied_states",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resistance_decay_on_our_occupied_states|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 84,
+      "key": "resistance_garrison_penetration_chance",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resistance_garrison_penetration_chance|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 85,
+      "key": "resistance_target_on_our_occupied_states",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resistance_target_on_our_occupied_states|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 86,
+      "key": "send_volunteer_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@send_volunteer_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 87,
+      "key": "stability_weekly_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@stability_weekly_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 88,
+      "key": "subjects_autonomy_gain",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@subjects_autonomy_gain|+=%%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 89,
+      "key": "theorist_cost_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@theorist_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 90,
+      "key": "war_stability_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@war_stability_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 91,
+      "key": "war_support_weekly_factor",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@war_support_weekly_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 92,
+      "key": "weekly_bombing_war_support",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@weekly_bombing_war_support|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 93,
+      "key": "weekly_casualties_war_support",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@weekly_casualties_war_support|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 94,
+      "key": "weekly_convoys_war_support",
+      "category": "政治",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@weekly_convoys_war_support|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 95,
+      "key": "consumer_goods_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@consumer_goods_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 96,
+      "key": "fuel_gain_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@fuel_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 97,
+      "key": "industrial_capacity_dockyard",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industrial_capacity_dockyard|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 98,
+      "key": "industrial_capacity_factory",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industrial_capacity_factory|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 99,
+      "key": "local_resources_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@local_resources_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 100,
+      "key": "production_factory_efficiency_gain_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_factory_efficiency_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 101,
+      "key": "production_factory_max_efficiency_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_factory_max_efficiency_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 102,
+      "key": "production_speed_arms_factory_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_arms_factory_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 103,
+      "key": "production_speed_buildings_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_buildings_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 104,
+      "key": "production_speed_industrial_complex_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_industrial_complex_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 105,
+      "key": "research_speed_factor",
+      "category": "工业",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@research_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 106,
+      "key": "civilian_factory_use",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@civilian_factory_use|Y=1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 107,
+      "key": "factory_energy_consumption",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@factory_energy_consumption|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 108,
+      "key": "fuel_gain_factor_from_states",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@fuel_gain_factor_from_states|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 109,
+      "key": "global_building_slots_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@global_building_slots_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 110,
+      "key": "industrial_capacity_dockyard_powered",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industrial_capacity_dockyard_powered|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 111,
+      "key": "industrial_capacity_factory_powered",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industrial_capacity_factory_powered|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 112,
+      "key": "industry_free_repair_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industry_free_repair_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 113,
+      "key": "industry_repair_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@industry_repair_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 114,
+      "key": "line_change_production_efficiency_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@line_change_production_efficiency_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 115,
+      "key": "min_export",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@min_export|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 116,
+      "key": "production_factory_start_efficiency_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_factory_start_efficiency_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 117,
+      "key": "production_lack_of_resource_penalty_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_lack_of_resource_penalty_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 118,
+      "key": "production_speed_bunker_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_bunker_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 119,
+      "key": "production_speed_coastal_bunker_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_coastal_bunker_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 120,
+      "key": "production_speed_dockyard_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_dockyard_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 121,
+      "key": "production_speed_infrastructure_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_infrastructure_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 122,
+      "key": "production_speed_rail_way_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_rail_way_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 123,
+      "key": "production_speed_supply_node_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_supply_node_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 124,
+      "key": "production_speed_synthetic_refinery_factor",
+      "category": "工业",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@production_speed_synthetic_refinery_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 125,
+      "key": "aircraft_manufacturer_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@aircraft_manufacturer_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 126,
+      "key": "base_fuel_gain_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@base_fuel_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 127,
+      "key": "bunker_max_level_terrain_limit",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@bunker_max_level_terrain_limit|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 128,
+      "key": "cic_construction_boost",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@cic_construction_boost|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 129,
+      "key": "cic_construction_boost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@cic_construction_boost_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 130,
+      "key": "cic_to_overlord_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@cic_to_overlord_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 131,
+      "key": "coastal_bunker_max_level_terrain_limit",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@coastal_bunker_max_level_terrain_limit|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 132,
+      "key": "consumer_goods_expected_value",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@consumer_goods_expected_value|Y=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 133,
+      "key": "conversion_cost_civ_to_mil_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@conversion_cost_civ_to_mil_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 134,
+      "key": "conversion_cost_mil_to_civ_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@conversion_cost_mil_to_civ_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 135,
+      "key": "country_resource_chromium",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@country_resource_chromium|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 136,
+      "key": "country_resource_oil",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@country_resource_oil|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 137,
+      "key": "country_resource_rubber",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@country_resource_rubber|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 138,
+      "key": "country_resource_steel",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@country_resource_steel|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 139,
+      "key": "country_resource_tungsten",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@country_resource_tungsten|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 140,
+      "key": "energy_gain_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@energy_gain_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 141,
+      "key": "equipment_conversion_speed",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@equipment_conversion_speed|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 142,
+      "key": "global_building_slots",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@global_building_slots|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 143,
+      "key": "industrial_concern_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@industrial_concern_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 144,
+      "key": "industrial_factory_donations",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@industrial_factory_donations|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 145,
+      "key": "industry_air_damage_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@industry_air_damage_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 146,
+      "key": "license_air_purchase_cost",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_air_purchase_cost|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 147,
+      "key": "license_anti_tank_eq_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_anti_tank_eq_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 148,
+      "key": "license_anti_tank_eq_production_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_anti_tank_eq_production_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 149,
+      "key": "license_anti_tank_eq_tech_difference_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_anti_tank_eq_tech_difference_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 150,
+      "key": "license_armor_purchase_cost",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_armor_purchase_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 151,
+      "key": "license_artillery_eq_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_artillery_eq_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 152,
+      "key": "license_artillery_eq_production_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_artillery_eq_production_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 153,
+      "key": "license_artillery_eq_tech_difference_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_artillery_eq_tech_difference_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 154,
+      "key": "license_infantry_eq_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_infantry_eq_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 155,
+      "key": "license_infantry_eq_production_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_infantry_eq_production_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 156,
+      "key": "license_infantry_eq_tech_difference_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_infantry_eq_tech_difference_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 157,
+      "key": "license_light_tank_eq_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_light_tank_eq_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 158,
+      "key": "license_light_tank_eq_production_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_light_tank_eq_production_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 159,
+      "key": "license_light_tank_eq_tech_difference_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_light_tank_eq_tech_difference_speed_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 160,
+      "key": "license_production_speed",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_production_speed|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 161,
+      "key": "license_purchase_cost",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_purchase_cost|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 162,
+      "key": "license_subject_master_purchase_cost",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_subject_master_purchase_cost|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 163,
+      "key": "license_tech_difference_speed",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@license_tech_difference_speed|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 164,
+      "key": "local_resources_coal_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@local_resources_coal_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 165,
+      "key": "local_resources_oil_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@local_resources_oil_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 166,
+      "key": "materiel_manufacturer_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@materiel_manufacturer_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 167,
+      "key": "max_fuel_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@max_fuel_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 168,
+      "key": "mic_to_overlord_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mic_to_overlord_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 169,
+      "key": "military_factory_donations",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@military_factory_donations|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 170,
+      "key": "military_industrial_organization_funds_gain",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@military_industrial_organization_funds_gain|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 171,
+      "key": "naval_manufacturer_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_manufacturer_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 172,
+      "key": "nuclear_production_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@nuclear_production_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 173,
+      "key": "out_of_power_impact_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@out_of_power_impact_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 174,
+      "key": "production_oil_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_oil_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 175,
+      "key": "production_speed_air_base_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_air_base_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 176,
+      "key": "production_speed_air_facility_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_air_facility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 177,
+      "key": "production_speed_anti_air_building_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_anti_air_building_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 178,
+      "key": "production_speed_energy_infrastructure_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_energy_infrastructure_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 179,
+      "key": "production_speed_facility_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_facility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 180,
+      "key": "production_speed_fuel_silo_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_fuel_silo_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 181,
+      "key": "production_speed_industrial_infrastructure_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_industrial_infrastructure_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 182,
+      "key": "production_speed_land_facility_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_land_facility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 183,
+      "key": "production_speed_naval_base_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_naval_base_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 184,
+      "key": "production_speed_naval_facility_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_naval_facility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 185,
+      "key": "production_speed_naval_headquarters_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_naval_headquarters_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 186,
+      "key": "production_speed_naval_supply_hub_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_naval_supply_hub_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 187,
+      "key": "production_speed_nuclear_facility_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_nuclear_facility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 188,
+      "key": "production_speed_nuclear_reactor_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_nuclear_reactor_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 189,
+      "key": "production_speed_radar_station_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_radar_station_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 190,
+      "key": "production_speed_rocket_site_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@production_speed_rocket_site_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 191,
+      "key": "repair_speed_arms_factory_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@repair_speed_arms_factory_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 192,
+      "key": "repair_speed_bunker_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@repair_speed_bunker_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 193,
+      "key": "repair_speed_industrial_complex_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@repair_speed_industrial_complex_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 194,
+      "key": "repair_speed_infrastructure_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@repair_speed_infrastructure_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 195,
+      "key": "repair_speed_rail_way_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@repair_speed_rail_way_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 196,
+      "key": "research_sharing_per_country_bonus_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@research_sharing_per_country_bonus_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 197,
+      "key": "resource_trade_cost_bonus_per_factory",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resource_trade_cost_bonus_per_factory|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 198,
+      "key": "resources_to_overlord_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@resources_to_overlord_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 199,
+      "key": "special_project_facility_supply_consumption_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_project_facility_supply_consumption_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 200,
+      "key": "special_project_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_project_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 201,
+      "key": "specialization_nuclear_speed_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@specialization_nuclear_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 202,
+      "key": "tank_manufacturer_cost_factor",
+      "category": "工业",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@tank_manufacturer_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 203,
+      "key": "dockyard_donations",
+      "category": "工业",
+      "priority": "P3",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@dockyard_donations|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 204,
+      "key": "army_attack_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 205,
+      "key": "army_defence_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 206,
+      "key": "army_morale_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_morale_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 207,
+      "key": "army_org_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 208,
+      "key": "army_speed_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 209,
+      "key": "land_reinforce_rate",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@land_reinforce_rate|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 210,
+      "key": "supply_consumption_factor",
+      "category": "陆军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@supply_consumption_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 211,
+      "key": "acclimatization_cold_climate_gain_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@acclimatization_cold_climate_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 212,
+      "key": "acclimatization_hot_climate_gain_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@acclimatization_hot_climate_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 213,
+      "key": "army_armor_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_armor_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 214,
+      "key": "army_armor_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_armor_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 215,
+      "key": "army_artillery_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_artillery_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 216,
+      "key": "army_artillery_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_artillery_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 217,
+      "key": "army_core_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_core_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 218,
+      "key": "army_core_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_core_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 219,
+      "key": "army_fuel_consumption_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_fuel_consumption_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 220,
+      "key": "army_infantry_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_infantry_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 221,
+      "key": "army_infantry_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_infantry_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 222,
+      "key": "army_non_core_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_non_core_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 223,
+      "key": "army_non_core_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_non_core_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 224,
+      "key": "army_org_regain",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_org_regain|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 225,
+      "key": "attrition",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@attrition|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 226,
+      "key": "breakthrough_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@breakthrough_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 227,
+      "key": "cas_damage_reduction",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@cas_damage_reduction|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 228,
+      "key": "combat_width_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@combat_width_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 229,
+      "key": "command_power_gain",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@command_power_gain|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 230,
+      "key": "command_power_gain_mult",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@command_power_gain_mult|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 231,
+      "key": "coordination_bonus",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@coordination_bonus|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 232,
+      "key": "dig_in_speed_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@dig_in_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 233,
+      "key": "experience_gain_army",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_army|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 234,
+      "key": "experience_gain_army_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_army_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 235,
+      "key": "experience_gain_army_unit_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_army_unit_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 236,
+      "key": "experience_loss_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_loss_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 237,
+      "key": "initiative_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@initiative_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 238,
+      "key": "land_doctrine_cost_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@land_doctrine_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 239,
+      "key": "max_command_power",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@max_command_power|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 240,
+      "key": "max_dig_in",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@max_dig_in|+=1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 241,
+      "key": "max_dig_in_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@max_dig_in_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 242,
+      "key": "max_planning",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@max_planning|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 243,
+      "key": "minimum_training_level",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@minimum_training_level|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 244,
+      "key": "org_loss_at_low_org_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@org_loss_at_low_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 245,
+      "key": "org_loss_when_moving",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@org_loss_when_moving|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 246,
+      "key": "out_of_supply_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@out_of_supply_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 247,
+      "key": "planning_speed",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@planning_speed|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 248,
+      "key": "send_volunteer_divisions_required",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@send_volunteer_divisions_required|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 249,
+      "key": "special_forces_attack_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@special_forces_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 250,
+      "key": "special_forces_cap",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@special_forces_cap|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 251,
+      "key": "special_forces_defence_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@special_forces_defence_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 252,
+      "key": "special_forces_training_time_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@special_forces_training_time_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 253,
+      "key": "training_time_army_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@training_time_army_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 254,
+      "key": "training_time_factor",
+      "category": "陆军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@training_time_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 255,
+      "key": "army_advisor_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_advisor_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 256,
+      "key": "army_armor_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_armor_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 257,
+      "key": "army_attack_against_major_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_attack_against_major_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 258,
+      "key": "army_attack_against_minor_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_attack_against_minor_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 259,
+      "key": "army_attack_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_attack_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 260,
+      "key": "army_bonus_air_superiority_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_bonus_air_superiority_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 261,
+      "key": "army_breakthrough_against_major_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_breakthrough_against_major_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 262,
+      "key": "army_chief_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_chief_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 263,
+      "key": "army_claim_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_claim_attack_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 264,
+      "key": "army_claim_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_claim_defence_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 265,
+      "key": "army_defence_against_major_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_defence_against_major_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 266,
+      "key": "army_experience_from_volunteers",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_experience_from_volunteers|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 267,
+      "key": "army_fuel_capacity_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_fuel_capacity_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 268,
+      "key": "army_leader_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 269,
+      "key": "army_leader_start_attack_level",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_start_attack_level|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 270,
+      "key": "army_leader_start_defense_level",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_start_defense_level|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 271,
+      "key": "army_leader_start_level",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_start_level|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 272,
+      "key": "army_leader_start_logistics_level",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_start_logistics_level|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 273,
+      "key": "army_leader_start_planning_level",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_leader_start_planning_level|G=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 274,
+      "key": "army_morale",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_morale|+=1]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 275,
+      "key": "army_org",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_org|+=1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 276,
+      "key": "army_retreat_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_retreat_speed_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 277,
+      "key": "army_speed_factor_for_controller",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_speed_factor_for_controller|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 278,
+      "key": "army_spirit_category_type_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@army_spirit_category_type_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 279,
+      "key": "cavalry_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@cavalry_attack_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 280,
+      "key": "cavalry_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@cavalry_defence_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 281,
+      "key": "coastal_bunker_effectiveness_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@coastal_bunker_effectiveness_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 282,
+      "key": "command_abilities_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@command_abilities_cost_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 283,
+      "key": "dig_in_speed",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@dig_in_speed|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 284,
+      "key": "enemy_army_bonus_air_superiority_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@enemy_army_bonus_air_superiority_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 285,
+      "key": "equipment_capture",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@equipment_capture|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 286,
+      "key": "equipment_capture_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@equipment_capture_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 287,
+      "key": "experience_gain_artillery_combat_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@experience_gain_artillery_combat_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 288,
+      "key": "extra_marine_supply_grace",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@extra_marine_supply_grace|+=1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 289,
+      "key": "field_officer_promotion_penalty",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@field_officer_promotion_penalty|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 290,
+      "key": "grant_medal_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@grant_medal_cost_factor|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 291,
+      "key": "heat_attrition_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@heat_attrition_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 292,
+      "key": "land_bunker_effectiveness_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@land_bunker_effectiveness_factor|Y=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 293,
+      "key": "land_equipment_upgrade_xp_cost",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@land_equipment_upgrade_xp_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 294,
+      "key": "land_mastery_gain_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@land_mastery_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 295,
+      "key": "land_night_attack",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@land_night_attack|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 296,
+      "key": "marines_special_forces_contribution_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@marines_special_forces_contribution_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 297,
+      "key": "max_command_power_mult",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@max_command_power_mult|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 298,
+      "key": "max_planning_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@max_planning_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 299,
+      "key": "mechanized_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mechanized_attack_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 300,
+      "key": "mechanized_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mechanized_defence_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 301,
+      "key": "military_leader_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@military_leader_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 302,
+      "key": "modifier_army_sub_unit_armored_car_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_armored_car_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 303,
+      "key": "modifier_army_sub_unit_armored_car_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_armored_car_max_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 304,
+      "key": "modifier_army_sub_unit_armored_car_recon_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_armored_car_recon_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 305,
+      "key": "modifier_army_sub_unit_armored_car_recon_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_armored_car_recon_max_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 306,
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 307,
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 308,
+      "key": "modifier_army_sub_unit_category_special_forces_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_category_special_forces_max_org_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 309,
+      "key": "modifier_army_sub_unit_cavalry_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_cavalry_attack_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 310,
+      "key": "modifier_army_sub_unit_cavalry_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_cavalry_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 311,
+      "key": "modifier_army_sub_unit_cavalry_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_cavalry_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 312,
+      "key": "modifier_army_sub_unit_infantry_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_infantry_attack_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 313,
+      "key": "modifier_army_sub_unit_infantry_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_infantry_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 314,
+      "key": "modifier_army_sub_unit_infantry_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_infantry_speed_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 315,
+      "key": "modifier_army_sub_unit_irregular_infantry_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_irregular_infantry_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 316,
+      "key": "modifier_army_sub_unit_irregular_infantry_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_irregular_infantry_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 317,
+      "key": "modifier_army_sub_unit_irregular_infantry_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_irregular_infantry_max_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 318,
+      "key": "modifier_army_sub_unit_irregular_infantry_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_irregular_infantry_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 319,
+      "key": "modifier_army_sub_unit_long_range_patrol_support_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_long_range_patrol_support_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 320,
+      "key": "modifier_army_sub_unit_long_range_patrol_support_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_long_range_patrol_support_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 321,
+      "key": "modifier_army_sub_unit_marine_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_marine_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 322,
+      "key": "modifier_army_sub_unit_marine_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_marine_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 323,
+      "key": "modifier_army_sub_unit_marine_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_marine_max_org_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 324,
+      "key": "modifier_army_sub_unit_military_police_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_military_police_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 325,
+      "key": "modifier_army_sub_unit_military_police_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_military_police_max_org_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 326,
+      "key": "modifier_army_sub_unit_militia_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_militia_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 327,
+      "key": "modifier_army_sub_unit_militia_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_militia_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 328,
+      "key": "modifier_army_sub_unit_militia_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_militia_max_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 329,
+      "key": "modifier_army_sub_unit_militia_org_recovery_cap_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_militia_org_recovery_cap_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 330,
+      "key": "modifier_army_sub_unit_militia_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_militia_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 331,
+      "key": "modifier_army_sub_unit_mountaineers_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_mountaineers_attack_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 332,
+      "key": "modifier_army_sub_unit_mountaineers_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_mountaineers_defence_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 333,
+      "key": "modifier_army_sub_unit_mountaineers_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_mountaineers_max_org_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 334,
+      "key": "modifier_army_sub_unit_mountaineers_speed_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_mountaineers_speed_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 335,
+      "key": "modifier_army_sub_unit_paratrooper_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_paratrooper_attack_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 336,
+      "key": "modifier_army_sub_unit_paratrooper_max_org_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@modifier_army_sub_unit_paratrooper_max_org_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 337,
+      "key": "motorized_attack_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@motorized_attack_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 338,
+      "key": "motorized_defence_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@motorized_defence_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 339,
+      "key": "mountaineers_special_forces_contribution_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mountaineers_special_forces_contribution_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 340,
+      "key": "no_supply_grace",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@no_supply_grace|+=1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 341,
+      "key": "paratroopers_special_forces_contribution_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@paratroopers_special_forces_contribution_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 342,
+      "key": "pocket_penalty",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@pocket_penalty|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 343,
+      "key": "promote_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@promote_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 344,
+      "key": "railway_gun_bombardment_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@railway_gun_bombardment_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 345,
+      "key": "rangers_special_forces_contribution_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@rangers_special_forces_contribution_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 346,
+      "key": "reassignment_duration_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@reassignment_duration_factor|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 347,
+      "key": "recon_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@recon_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 348,
+      "key": "recon_factor_while_entrenched",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@recon_factor_while_entrenched|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 349,
+      "key": "special_forces_cap_flat",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_forces_cap_flat|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 350,
+      "key": "special_forces_doctrine_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_forces_doctrine_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 351,
+      "key": "special_forces_min",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_forces_min|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 352,
+      "key": "special_forces_no_supply_grace",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_forces_no_supply_grace|+=1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 353,
+      "key": "special_forces_out_of_supply_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@special_forces_out_of_supply_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 354,
+      "key": "supply_combat_penalties_on_core_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@supply_combat_penalties_on_core_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 355,
+      "key": "supply_node_range",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@supply_node_range|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 356,
+      "key": "terrain_trait_xp_gain_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@terrain_trait_xp_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 357,
+      "key": "truck_attrition_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@truck_attrition_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 358,
+      "key": "unit_cavalry_design_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_cavalry_design_cost_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 359,
+      "key": "unit_infantry_design_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_infantry_design_cost_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 360,
+      "key": "unit_leader_as_advisor_cp_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_leader_as_advisor_cp_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 361,
+      "key": "unit_mechanized_design_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_mechanized_design_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 362,
+      "key": "unit_medal_effectiveness",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_medal_effectiveness|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 363,
+      "key": "unit_motorized_design_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_motorized_design_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 364,
+      "key": "unit_mountaineers_design_cost_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@unit_mountaineers_design_cost_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 365,
+      "key": "winter_attrition",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@winter_attrition|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 366,
+      "key": "winter_attrition_factor",
+      "category": "陆军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@winter_attrition_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 367,
+      "key": "air_invasion_division_cap",
+      "category": "陆军",
+      "priority": "P3",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_invasion_division_cap|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 368,
+      "key": "air_invasion_plan_cap",
+      "category": "陆军",
+      "priority": "P3",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_invasion_plan_cap|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 369,
+      "key": "training_time_army",
+      "category": "陆军",
+      "priority": "P3",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@training_time_army|=1]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 370,
+      "key": "naval_damage_factor",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_damage_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 371,
+      "key": "naval_defense_factor",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_defense_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 372,
+      "key": "naval_hit_chance",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_hit_chance|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 373,
+      "key": "positioning",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@positioning|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 374,
+      "key": "repair_speed_factor",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@repair_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 375,
+      "key": "sortie_efficiency",
+      "category": "海军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@sortie_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 376,
+      "key": "carrier_capacity_penalty_reduction",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@carrier_capacity_penalty_reduction|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 377,
+      "key": "convoy_retreat_speed",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@convoy_retreat_speed|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 378,
+      "key": "experience_gain_navy",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_navy|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 379,
+      "key": "experience_gain_navy_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_navy_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 380,
+      "key": "naval_coordination",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_coordination|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 381,
+      "key": "naval_critical_effect_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_critical_effect_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 382,
+      "key": "naval_critical_score_chance_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_critical_score_chance_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 383,
+      "key": "naval_heavy_gun_hit_chance_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_heavy_gun_hit_chance_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 384,
+      "key": "naval_light_gun_hit_chance_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_light_gun_hit_chance_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 385,
+      "key": "naval_night_attack",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_night_attack|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 386,
+      "key": "naval_retreat_speed",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_retreat_speed|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 387,
+      "key": "naval_speed_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_speed_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 388,
+      "key": "naval_torpedo_hit_chance_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_torpedo_hit_chance_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 389,
+      "key": "naval_torpedo_reveal_chance_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_torpedo_reveal_chance_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 390,
+      "key": "naval_torpedo_screen_penetration_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_torpedo_screen_penetration_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 391,
+      "key": "navy_capital_ship_attack_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_capital_ship_attack_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 392,
+      "key": "navy_capital_ship_defence_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_capital_ship_defence_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 393,
+      "key": "navy_fuel_consumption_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_fuel_consumption_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 394,
+      "key": "navy_org_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_org_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 395,
+      "key": "navy_screen_attack_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_screen_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 396,
+      "key": "navy_screen_defence_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_screen_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 397,
+      "key": "navy_submarine_attack_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_submarine_attack_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 398,
+      "key": "navy_submarine_defence_factor",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_submarine_defence_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 399,
+      "key": "navy_weather_penalty",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_weather_penalty|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 400,
+      "key": "night_spotting_chance",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@night_spotting_chance|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 401,
+      "key": "spotting_chance",
+      "category": "海军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@spotting_chance|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 402,
+      "key": "air_carrier_night_penalty_reduction_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_carrier_night_penalty_reduction_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 403,
+      "key": "amphibious_invasion",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@amphibious_invasion|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 404,
+      "key": "carrier_night_traffic",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@carrier_night_traffic|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 405,
+      "key": "carrier_sortie_hours_delay",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@carrier_sortie_hours_delay|-=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 406,
+      "key": "carrier_traffic",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@carrier_traffic|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 407,
+      "key": "convoy_escort_efficiency",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@convoy_escort_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 408,
+      "key": "convoy_raiding_efficiency_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@convoy_raiding_efficiency_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 409,
+      "key": "experience_gain_destroyer_combat_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@experience_gain_destroyer_combat_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 410,
+      "key": "experience_gain_destroyer_training_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@experience_gain_destroyer_training_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 411,
+      "key": "experience_gain_navy_unit_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@experience_gain_navy_unit_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 412,
+      "key": "mines_planting_by_fleets_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mines_planting_by_fleets_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 413,
+      "key": "mines_sweeping_by_fleets_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mines_sweeping_by_fleets_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 414,
+      "key": "naval_accidents_chance",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_accidents_chance|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 415,
+      "key": "naval_detection",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_detection|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 416,
+      "key": "naval_doctrine_cost_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_doctrine_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 417,
+      "key": "naval_enemy_fleet_size_ratio_penalty_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_enemy_fleet_size_ratio_penalty_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 418,
+      "key": "naval_equipment_upgrade_xp_cost",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_equipment_upgrade_xp_cost|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 419,
+      "key": "naval_general_support_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_general_support_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 420,
+      "key": "naval_general_support_value_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_general_support_value_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 421,
+      "key": "naval_has_potf_in_combat_attack",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_has_potf_in_combat_attack|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 422,
+      "key": "naval_has_potf_in_combat_defense",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_has_potf_in_combat_defense|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 423,
+      "key": "naval_invasion_capacity",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_invasion_capacity|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 424,
+      "key": "naval_invasion_division_cap",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_invasion_division_cap|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 425,
+      "key": "naval_invasion_penalty",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_invasion_penalty|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 426,
+      "key": "naval_invasion_plan_cap",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_invasion_plan_cap|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 427,
+      "key": "naval_invasion_prep_speed",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_invasion_prep_speed|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 428,
+      "key": "naval_mine_hit_chance",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_mine_hit_chance|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 429,
+      "key": "naval_mines_damage_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_mines_damage_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 430,
+      "key": "naval_mines_effect_reduction",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_mines_effect_reduction|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 431,
+      "key": "naval_morale",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_morale|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 432,
+      "key": "naval_morale_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_morale_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 433,
+      "key": "naval_repair_support_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_repair_support_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 434,
+      "key": "naval_repair_support_value_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_repair_support_value_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 435,
+      "key": "naval_retreat_chance",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_retreat_chance|Y=%0]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 436,
+      "key": "naval_retreat_chance_after_initial_combat",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_retreat_chance_after_initial_combat|Y=%0]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 437,
+      "key": "naval_retreat_speed_after_initial_combat",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_retreat_speed_after_initial_combat|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 438,
+      "key": "naval_ship_recovery_chance",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_ship_recovery_chance|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 439,
+      "key": "naval_supply_consumption_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_supply_consumption_factor|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 440,
+      "key": "navy_advisor_cost_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_advisor_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 441,
+      "key": "navy_anti_air_attack_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_anti_air_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 442,
+      "key": "navy_casualty_on_sink",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_casualty_on_sink|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 443,
+      "key": "navy_chief_cost_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_chief_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 444,
+      "key": "navy_leader_cost_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_leader_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 445,
+      "key": "navy_leader_start_attack_level",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_leader_start_attack_level|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 446,
+      "key": "navy_leader_start_defense_level",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_leader_start_defense_level|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 447,
+      "key": "navy_leader_start_level",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_leader_start_level|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 448,
+      "key": "navy_leader_start_maneuvering_level",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_leader_start_maneuvering_level|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 449,
+      "key": "navy_max_range_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_max_range_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 450,
+      "key": "navy_org",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_org|+=1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 451,
+      "key": "navy_spirit_category_type_cost_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_spirit_category_type_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 452,
+      "key": "navy_submarine_detection_factor",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@navy_submarine_detection_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 453,
+      "key": "refit_ic_cost",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@refit_ic_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 454,
+      "key": "refit_speed",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@refit_speed|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 455,
+      "key": "screening_efficiency",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@screening_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 456,
+      "key": "screening_without_screens",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@screening_without_screens|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 457,
+      "key": "shore_bombardment_bonus",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@shore_bombardment_bonus|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 458,
+      "key": "sub_retreat_speed",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@sub_retreat_speed|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 459,
+      "key": "transport_capacity",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@transport_capacity|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 460,
+      "key": "underway_replenishment_convoy_cost",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@underway_replenishment_convoy_cost|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 461,
+      "key": "underway_replenishment_range",
+      "category": "海军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@underway_replenishment_range|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 462,
+      "key": "air_agility_factor",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_agility_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 463,
+      "key": "air_attack_factor",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 464,
+      "key": "air_cas_efficiency",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_cas_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 465,
+      "key": "air_defence_factor",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 466,
+      "key": "air_mission_efficiency",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_mission_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 467,
+      "key": "air_range_factor",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_range_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 468,
+      "key": "air_superiority_efficiency",
+      "category": "空军",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_superiority_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 469,
+      "key": "air_accidents_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_accidents_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 470,
+      "key": "air_ace_bonuses_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_ace_bonuses_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 471,
+      "key": "air_ace_generation_chance_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_ace_generation_chance_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 472,
+      "key": "air_bombing_targetting",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_bombing_targetting|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 473,
+      "key": "air_cas_present_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_cas_present_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 474,
+      "key": "air_close_air_support_org_damage_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_close_air_support_org_damage_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 475,
+      "key": "air_detection",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_detection|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 476,
+      "key": "air_fuel_consumption_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_fuel_consumption_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 477,
+      "key": "air_mission_xp_gain_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_mission_xp_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 478,
+      "key": "air_nav_efficiency",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_nav_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 479,
+      "key": "air_strategic_bomber_bombing_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_strategic_bomber_bombing_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 480,
+      "key": "air_superiority_detect_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_superiority_detect_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 481,
+      "key": "air_training_xp_gain_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_training_xp_gain_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 482,
+      "key": "air_untrained_pilots_penalty_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_untrained_pilots_penalty_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 483,
+      "key": "air_wing_xp_loss_when_killed_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@air_wing_xp_loss_when_killed_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 484,
+      "key": "experience_gain_air_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@experience_gain_air_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 485,
+      "key": "naval_strike_attack_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_strike_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 486,
+      "key": "naval_strike_targetting_factor",
+      "category": "空军",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@naval_strike_targetting_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 487,
+      "key": "ace_effectiveness_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@ace_effectiveness_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 488,
+      "key": "air_accidents",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_accidents|-=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 489,
+      "key": "air_advisor_cost_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_advisor_cost_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 490,
+      "key": "air_chief_cost_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_chief_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 491,
+      "key": "air_doctrine_cost_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_doctrine_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 492,
+      "key": "air_equipment_upgrade_xp_cost",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_equipment_upgrade_xp_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 493,
+      "key": "air_escort_efficiency",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_escort_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 494,
+      "key": "air_home_defence_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_home_defence_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 495,
+      "key": "air_intercept_efficiency",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_intercept_efficiency|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 496,
+      "key": "air_interception_detect_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_interception_detect_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 497,
+      "key": "air_manpower_requirement_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_manpower_requirement_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 498,
+      "key": "air_night_penalty",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_night_penalty|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 499,
+      "key": "air_power_projection_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_power_projection_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 500,
+      "key": "air_spirit_category_type_cost_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_spirit_category_type_cost_factor|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 501,
+      "key": "air_superiority_bonus_in_combat",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_superiority_bonus_in_combat|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 502,
+      "key": "air_volunteer_cap",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_volunteer_cap|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 503,
+      "key": "air_weather_penalty",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@air_weather_penalty|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 504,
+      "key": "experience_gain_air",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@experience_gain_air|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 505,
+      "key": "ground_attack_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@ground_attack_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 506,
+      "key": "mines_planting_by_air_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mines_planting_by_air_factor|+=%1]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 507,
+      "key": "mines_sweeping_by_air_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@mines_sweeping_by_air_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 508,
+      "key": "naval_strike_agility_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@naval_strike_agility_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 509,
+      "key": "port_strike",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@port_strike|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 510,
+      "key": "static_anti_air_damage_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@static_anti_air_damage_factor|+=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 511,
+      "key": "static_anti_air_hit_chance_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@static_anti_air_hit_chance_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 512,
+      "key": "tech_air_damage_factor",
+      "category": "空军",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@tech_air_damage_factor|-=%2]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 513,
+      "key": "agency_upgrade_time",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@agency_upgrade_time|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 514,
+      "key": "airforce_intel_factor",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@airforce_intel_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 515,
+      "key": "army_intel_factor",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_intel_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 516,
+      "key": "civilian_intel_factor",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@civilian_intel_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 517,
+      "key": "decryption_power_factor",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@decryption_power_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 518,
+      "key": "intelligence_agency_defense",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@intelligence_agency_defense|+=2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 519,
+      "key": "navy_intel_factor",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_intel_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 520,
+      "key": "operative_slot",
+      "category": "情报",
+      "priority": "P0",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@operative_slot|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 521,
+      "key": "airforce_intel_to_others",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@airforce_intel_to_others|-=%%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 522,
+      "key": "army_intel_to_others",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@army_intel_to_others|-=%%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 523,
+      "key": "civilian_intel_to_others",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@civilian_intel_to_others|-=%%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 524,
+      "key": "crypto_strength",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@crypto_strength|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 525,
+      "key": "decryption_power",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@decryption_power|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 526,
+      "key": "enemy_operative_capture_chance_factor",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@enemy_operative_capture_chance_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 527,
+      "key": "enemy_operative_detection_chance",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@enemy_operative_detection_chance|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 528,
+      "key": "enemy_operative_detection_chance_factor",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@enemy_operative_detection_chance_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 529,
+      "key": "enemy_operative_intel_extraction_rate",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@enemy_operative_intel_extraction_rate|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 530,
+      "key": "intel_network_gain",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@intel_network_gain|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 531,
+      "key": "intel_network_gain_factor",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@intel_network_gain_factor|+=0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 532,
+      "key": "navy_intel_to_others",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@navy_intel_to_others|-=%%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 533,
+      "key": "new_operative_slot_bonus",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@new_operative_slot_bonus|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 534,
+      "key": "operation_cost",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@operation_cost|-=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 535,
+      "key": "own_operative_capture_chance_factor",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@own_operative_capture_chance_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 536,
+      "key": "own_operative_detection_chance",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@own_operative_detection_chance|-=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 537,
+      "key": "own_operative_detection_chance_factor",
+      "category": "情报",
+      "priority": "P1",
+      "columns": 3,
+      "expression": "[?ROOT.modifier@own_operative_detection_chance_factor|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 538,
+      "key": "boost_ideology_mission_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@boost_ideology_mission_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 539,
+      "key": "boost_resistance_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@boost_resistance_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 540,
+      "key": "commando_trait_chance_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@commando_trait_chance_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 541,
+      "key": "decryption",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@decryption|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 542,
+      "key": "decryption_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@decryption_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 543,
+      "key": "encryption",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@encryption|+=0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 544,
+      "key": "encryption_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@encryption_factor|+=%2]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 545,
+      "key": "intel_from_combat_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@intel_from_combat_factor|+=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 546,
+      "key": "intel_from_operatives_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@intel_from_operatives_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 547,
+      "key": "occupied_operative_recruitment_chance",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@occupied_operative_recruitment_chance|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 548,
+      "key": "operation_boost_resistance_outcome",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_boost_resistance_outcome|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 549,
+      "key": "operation_coordinated_strike_outcome",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_coordinated_strike_outcome|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 550,
+      "key": "operation_infiltrate_outcome",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_infiltrate_outcome|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 551,
+      "key": "operation_make_resistance_contacts_outcome",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_make_resistance_contacts_outcome|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 552,
+      "key": "operation_steal_tech_outcome",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_steal_tech_outcome|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 553,
+      "key": "operation_steal_tech_risk",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operation_steal_tech_risk|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 554,
+      "key": "operative_death_on_capture_chance",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@operative_death_on_capture_chance|Y=%0]",
+      "format_confidence": "unresolved",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 555,
+      "key": "propaganda_mission_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@propaganda_mission_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 556,
+      "key": "root_out_resistance_effectiveness_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@root_out_resistance_effectiveness_factor|+=%0]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 557,
+      "key": "subversive_activites_upkeep",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@subversive_activites_upkeep|-=%1]",
+      "format_confidence": "confirmed",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 558,
+      "key": "target_sabotage_cost",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@target_sabotage_cost|-=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    },
+    {
+      "id": 559,
+      "key": "target_sabotage_factor",
+      "category": "情报",
+      "priority": "P2",
+      "columns": 4,
+      "expression": "[?ROOT.modifier@target_sabotage_factor|+=%0]",
+      "format_confidence": "source_inferred",
+      "runtime_read_validated": true
+    }
+  ],
+  "index_sha256": "01a80a16f0e227b2ff8ff700eee88adaef8b8815507fac847ebe787a9e14b14b",
+  "bindings_sha256": "9ef10d3ba255bc010bc8693c93722422bd83e2ec731def07a8b14afcad515ecc",
+  "icon_bindings_sha256": "af1fb5bc3d5a17f1a1ca75569f0b9ee5ef584af3e6f74a7cc87706c29f6253d7"
+}
