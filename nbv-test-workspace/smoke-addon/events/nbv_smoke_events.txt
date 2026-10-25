@@ -1,0 +1,7 @@
+add_namespace = nbv_smoke
+country_event = {
+ id = nbv_smoke.1
+ hidden = yes
+ is_triggered_only = yes
+ immediate = { nbv_smoke_run = yes }
+}

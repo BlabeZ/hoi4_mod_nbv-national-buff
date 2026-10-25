@@ -1,0 +1,7 @@
+{
+  "completed": false,
+  "playset_unchanged": true,
+  "launcher_restored": true,
+  "completed_log_verified_after_stop": true,
+  "monitor_note": "The runner could not read the active writer with File.ReadAllText and timed out after the engine had completed. NBV_SMOKE_END and all checks were verified from the closed log. Runner now uses FileShare.ReadWrite."
+}

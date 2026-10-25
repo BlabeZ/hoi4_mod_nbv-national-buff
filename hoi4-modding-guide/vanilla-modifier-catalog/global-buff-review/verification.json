@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-25",
+  "checks": {
+    "all_original_keys_partitioned": true,
+    "only_three_groups": true,
+    "A_has_strong_source": true,
+    "B_has_no_strong_source": true,
+    "all_requested_keys_registered": true,
+    "requested_global_keys_selected": true,
+    "four_explicit_removals_excluded": true,
+    "unnamed_not_selected": true,
+    "unnamed_all_classified": true,
+    "local_and_designer_research_boundaries": true,
+    "selection_delta_balances": true,
+    "boolean_or_ai_not_in_numeric_list": true,
+    "state_templates_excluded": true,
+    "core_attack_defence_retained": true,
+    "no_runtime_success_claim": true,
+    "all_have_reasons": true,
+    "evidence_files_exist": true
+  },
+  "all_passed": true,
+  "statistics": {
+    "total": 4484,
+    "groups": {
+      "C": 3925,
+      "A": 521,
+      "B": 38
+    },
+    "selected": 559,
+    "categories": {
+      "政治": {
+        "A": 92,
+        "B": 2,
+        "C": 56
+      },
+      "工业": {
+        "A": 105,
+        "B": 4,
+        "C": 2714
+      },
+      "陆军": {
+        "A": 160,
+        "B": 6,
+        "C": 562
+      },
+      "海军": {
+        "A": 78,
+        "B": 14,
+        "C": 361
+      },
+      "空军": {
+        "A": 48,
+        "B": 3,
+        "C": 76
+      },
+      "情报": {
+        "A": 38,
+        "B": 9,
+        "C": 156
+      }
+    },
+    "exclusion_classes": {
+      "unobserved": 2625,
+      "pending": 146,
+      "low_value": 65,
+      "unnamed": 79,
+      "scope_excluded": 1006,
+      "user_excluded": 4
+    },
+    "strong_source_keys_total": 602,
+    "old_p0_p1_removed": 21,
+    "old_buff_keys_removed": 15,
+    "new_selected_without_buff_mods": 446
+  },
+  "input_manifest": [
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\data\\catalog.json",
+      "sha256": "298d98a49402452514a85c7b1dd87c72273b3bc66d5e32ced5530a5601fb0444"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\tools\\global_buff_review_policy.json",
+      "sha256": "e36187b19353e4b7adfc86262fbe5c712dd136177593f8978408993899bfbe92"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\tools\\global_buff_scope_notes.json",
+      "sha256": "5801a665eda0ea80d0d6e91f1abcac75ed7ff84636a802415ca8ea622979a3fc"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\tools\\global_buff_user_overrides.json",
+      "sha256": "f83ff98dddc13d4d8257164de96acda329de945d16ca825daadac05257d52bdf"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\tools\\user_revision_designer_candidates.json",
+      "sha256": "b76f1365e1e6fb8c651c0e59c3bc64b8a62608ba16cec5c1d189a9b7a0e87b6b"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\data\\before-user-revision-2026-10-25.json",
+      "sha256": "a93dd9bf57da6a07461941896f1fba7c6f51b4b05a2e6b718c91373c9ea17c5a"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\data\\focus-spirit-summary.json",
+      "sha256": "f0daac919d93bfcfd76ac050ba89ffe3946ea07a36595132304db3bbaa742a77"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\data\\manual-source-supplements.json",
+      "sha256": "29eea21e5b42dfc4c84e97015b2632c0d23995b5a29d3cb7d8bfee5dce100e33"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-25",
+  "all_passed": true,
+  "checks": {
+    "catalog_verification_passed": true,
+    "selected_count_unchanged": true,
+    "source_grade_counts_unchanged": true,
+    "priority_counts": true,
+    "vertical_three_then_four_columns": true,
+    "no_obsolete_single_row_recommendation": true,
+    "confirmed_source_and_interaction_ids_present": true,
+    "confirmed_source_scope_present": true,
+    "current_country_and_memory_contract": true,
+    "new_and_index_links_resolve": true,
+    "six_pages_top_button_navigation": true
+  },
+  "links_checked": 69,
+  "broken_links": [],
+  "files": [
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/README.md",
+      "sha256": "102cea34a6125204e743b55482c7a0a6706a068be6bc7b7765af0c807d4c0c92"
+    },
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/01-buff-catalog.md",
+      "sha256": "401add9841d28763f61677be4091d85b5294bdb299dbd9d1b6ccf805f818dfd7"
+    },
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/02-mod-requirements.md",
+      "sha256": "2e7982c1a0330f42c71837eebed6220e5fecd3b3e4aa4d18dbd13004429c76be"
+    },
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/data/buff-display-whitelist.json",
+      "sha256": "200498c85c0273bcc72c294cb74a157ae95470c8dfb60c1903e62621f1b8a548"
+    }
+  ]
+}

@@ -1,0 +1,5793 @@
+{
+  "records": [
+    {
+      "id": 3,
+      "key": "political_power_factor",
+      "name": "政治点数",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 5
+    },
+    {
+      "id": 4,
+      "key": "political_power_gain",
+      "name": "每日政治点数获取",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 6
+    },
+    {
+      "id": 23,
+      "key": "political_advisor_cost_factor",
+      "name": "政治顾问花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 7
+    },
+    {
+      "id": 89,
+      "key": "theorist_cost_factor",
+      "name": "理论家花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 8
+    },
+    {
+      "id": 255,
+      "key": "army_advisor_cost_factor",
+      "name": "陆军顾问花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 9
+    },
+    {
+      "id": 440,
+      "key": "navy_advisor_cost_factor",
+      "name": "海军顾问花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 10
+    },
+    {
+      "id": 489,
+      "key": "air_advisor_cost_factor",
+      "name": "空军顾问花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 11
+    },
+    {
+      "id": 62,
+      "key": "high_command_cost_factor",
+      "name": "总司令花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 12
+    },
+    {
+      "id": 18,
+      "key": "mobilization_laws_cost_factor",
+      "name": "征兵法案花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 13
+    },
+    {
+      "id": 32,
+      "key": "trade_laws_cost_factor",
+      "name": "贸易法案花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 14
+    },
+    {
+      "id": 13,
+      "key": "economy_cost_factor",
+      "name": "经济法案花费",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 15
+    },
+    {
+      "id": 1,
+      "key": "conscription",
+      "name": "可征募人口",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 18
+    },
+    {
+      "id": 21,
+      "key": "non_core_manpower",
+      "name": "非核心人力",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 13,
+      "source_line": 19
+    },
+    {
+      "id": 35,
+      "key": "weekly_manpower",
+      "name": "每周人力",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 14,
+      "source_line": 20
+    },
+    {
+      "id": 69,
+      "key": "monthly_population",
+      "name": "每月人口",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 15,
+      "source_line": 21
+    },
+    {
+      "id": 19,
+      "key": "mobilization_speed",
+      "name": "动员速度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 16,
+      "source_line": 22
+    },
+    {
+      "id": 5,
+      "key": "stability_factor",
+      "name": "稳定度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 17,
+      "source_line": 25
+    },
+    {
+      "id": 30,
+      "key": "stability_weekly",
+      "name": "每周稳定度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 18,
+      "source_line": 26
+    },
+    {
+      "id": 90,
+      "key": "war_stability_factor",
+      "name": "战争对稳定度惩罚修正",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 19,
+      "source_line": 27
+    },
+    {
+      "id": 71,
+      "key": "offensive_war_stability_factor",
+      "name": "侵略战争对稳定度修正",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 20,
+      "source_line": 28
+    },
+    {
+      "id": 46,
+      "key": "defensive_war_stability_factor",
+      "name": "防御战争对稳定度修正",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 21,
+      "source_line": 29
+    },
+    {
+      "id": 22,
+      "key": "party_popularity_stability_factor",
+      "name": "党派支持度对稳定度修正",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 22,
+      "source_line": 30
+    },
+    {
+      "id": 6,
+      "key": "war_support_factor",
+      "name": "战争支持度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 23,
+      "source_line": 32
+    },
+    {
+      "id": 34,
+      "key": "war_support_weekly",
+      "name": "每周战争支持度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 24,
+      "source_line": 33
+    },
+    {
+      "id": 92,
+      "key": "weekly_bombing_war_support",
+      "name": "每周战争支持度（敌军轰炸）",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 25,
+      "source_line": 34
+    },
+    {
+      "id": 93,
+      "key": "weekly_casualties_war_support",
+      "name": "每周战争支持度（战斗伤亡）",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 26,
+      "source_line": 35
+    },
+    {
+      "id": 94,
+      "key": "weekly_convoys_war_support",
+      "name": "每周战争支持度（运输船沉没）",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 27,
+      "source_line": 36
+    },
+    {
+      "id": 9,
+      "key": "compliance_gain",
+      "name": "每日顺从度增长",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 28,
+      "source_line": 38
+    },
+    {
+      "id": 10,
+      "key": "compliance_growth",
+      "name": "顺从度增长速度",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 29,
+      "source_line": 39
+    },
+    {
+      "id": 15,
+      "key": "join_faction_tension",
+      "name": "加入阵营的紧张度限制",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 30,
+      "source_line": 44
+    },
+    {
+      "id": 16,
+      "key": "justify_war_goal_time",
+      "name": "正当化战争目标所需时间",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 31,
+      "source_line": 45
+    },
+    {
+      "id": 64,
+      "key": "justify_war_goal_when_in_major_war_time",
+      "name": "与主要国家交战时正当化战争目标所需时间",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 32,
+      "source_line": 46
+    },
+    {
+      "id": 28,
+      "key": "send_volunteer_size",
+      "name": "志愿军陆军师数量上限",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 33,
+      "source_line": 49
+    },
+    {
+      "id": 31,
+      "key": "surrender_limit",
+      "name": "投降界限",
+      "category": "政治",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 34,
+      "source_line": 51
+    },
+    {
+      "id": 36,
+      "key": "annex_cost_factor",
+      "name": "吞并花费",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 67
+    },
+    {
+      "id": 78,
+      "key": "puppet_cost_factor",
+      "name": "傀儡花费",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 68
+    },
+    {
+      "id": 7,
+      "key": "autonomy_gain",
+      "name": "每日自治度进程增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 70
+    },
+    {
+      "id": 37,
+      "key": "autonomy_gain_global_factor",
+      "name": "全局自治度增加",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 71
+    },
+    {
+      "id": 38,
+      "key": "autonomy_gain_ll_to_overlord_factor",
+      "name": "向宗主国租借自治度增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 72
+    },
+    {
+      "id": 39,
+      "key": "autonomy_gain_trade_factor",
+      "name": "贸易自治度增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 73
+    },
+    {
+      "id": 40,
+      "key": "autonomy_gain_warscore",
+      "name": "战争贡献度自治度增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 74
+    },
+    {
+      "id": 42,
+      "key": "autonomy_manpower_share",
+      "name": "附属国人力要求",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 76
+    },
+    {
+      "id": 24,
+      "key": "resistance_damage_to_garrison",
+      "name": "驻军所受伤害",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 79
+    },
+    {
+      "id": 25,
+      "key": "resistance_growth",
+      "name": "抵抗增长速度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 80
+    },
+    {
+      "id": 26,
+      "key": "resistance_growth_on_our_occupied_states",
+      "name": "我们被敌人占领地区的抵抗增长速度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 81
+    },
+    {
+      "id": 27,
+      "key": "resistance_target",
+      "name": "抵抗目标",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 82
+    },
+    {
+      "id": 80,
+      "key": "required_garrison_factor",
+      "name": "驻军需求",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 83
+    },
+    {
+      "id": 81,
+      "key": "resistance_activity",
+      "name": "抵抗活动几率",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 84
+    },
+    {
+      "id": 82,
+      "key": "resistance_decay",
+      "name": "抵抗下降速度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 85
+    },
+    {
+      "id": 83,
+      "key": "resistance_decay_on_our_occupied_states",
+      "name": "我们被敌人占领地区的抵抗下降速度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 86
+    },
+    {
+      "id": 84,
+      "key": "resistance_garrison_penetration_chance",
+      "name": "驻军渗透机率",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 87
+    },
+    {
+      "id": 85,
+      "key": "resistance_target_on_our_occupied_states",
+      "name": "我们被敌人占领地区的抵抗目标",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 88
+    },
+    {
+      "id": 45,
+      "key": "compliance_growth_on_our_occupied_states",
+      "name": "我们被敌人占领地区的顺从度增长速度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 89
+    },
+    {
+      "id": 48,
+      "key": "embargo_cost_factor",
+      "name": "禁运花费修正",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 92
+    },
+    {
+      "id": 49,
+      "key": "embargo_threshold_factor",
+      "name": "实施禁运的紧张度限制",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 93
+    },
+    {
+      "id": 50,
+      "key": "enemy_declare_war_tension",
+      "name": "敌国对我国宣战产生的全球紧张度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 94
+    },
+    {
+      "id": 51,
+      "key": "enemy_justify_war_goal_time",
+      "name": "敌国对我国正当化战争目标所需时间",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 95
+    },
+    {
+      "id": 17,
+      "key": "lend_lease_tension",
+      "name": "租借法案的紧张度限制",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 24,
+      "source_line": 96
+    },
+    {
+      "id": 52,
+      "key": "exile_manpower_factor",
+      "name": "流亡到东道国的人力",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 25,
+      "source_line": 98
+    },
+    {
+      "id": 53,
+      "key": "exiled_government_weekly_manpower",
+      "name": "每周流亡人力",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 26,
+      "source_line": 99
+    },
+    {
+      "id": 65,
+      "key": "legitimacy_daily",
+      "name": "每日正统性增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 27,
+      "source_line": 100
+    },
+    {
+      "id": 66,
+      "key": "legitimacy_gain_factor",
+      "name": "正统性增长",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 28,
+      "source_line": 101
+    },
+    {
+      "id": 54,
+      "key": "extra_trade_to_overlord_factor",
+      "name": "对宗主国额外贸易",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 29,
+      "source_line": 103
+    },
+    {
+      "id": 33,
+      "key": "trade_opinion_factor",
+      "name": "贸易影响力系数",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 30,
+      "source_line": 104
+    },
+    {
+      "id": 55,
+      "key": "faction_influence_contribution_factor",
+      "name": "阵营影响贡献系数",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 31,
+      "source_line": 106
+    },
+    {
+      "id": 56,
+      "key": "faction_influence_war_score_factor",
+      "name": "阵营影响战争分数系数",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 32,
+      "source_line": 107
+    },
+    {
+      "id": 57,
+      "key": "faction_trade_opinion_factor",
+      "name": "阵营贸易影响力系数",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 33,
+      "source_line": 108
+    },
+    {
+      "id": 12,
+      "key": "drift_defence_factor",
+      "name": "意识形态变化抵制力度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 34,
+      "source_line": 110
+    },
+    {
+      "id": 47,
+      "key": "democratic_acceptance",
+      "name": "民主主义外交接纳度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 35,
+      "source_line": 111
+    },
+    {
+      "id": 44,
+      "key": "communism_acceptance",
+      "name": "共产主义外交接纳度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 36,
+      "source_line": 112
+    },
+    {
+      "id": 58,
+      "key": "fascism_acceptance",
+      "name": "法西斯主义外交接纳度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 37,
+      "source_line": 113
+    },
+    {
+      "id": 70,
+      "key": "neutrality_acceptance",
+      "name": "中立主义外交接纳度",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 38,
+      "source_line": 114
+    },
+    {
+      "id": 59,
+      "key": "forced_surrender_limit",
+      "name": "投降界限（强制阈值）",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 39,
+      "source_line": 115
+    },
+    {
+      "id": 60,
+      "key": "guarantee_cost",
+      "name": "保障独立花费",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 40,
+      "source_line": 116
+    },
+    {
+      "id": 61,
+      "key": "guarantee_tension",
+      "name": "保障独立的紧张度限制",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 41,
+      "source_line": 117
+    },
+    {
+      "id": 63,
+      "key": "improve_relations_maintain_cost_factor",
+      "name": "改善关系持续花费",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 42,
+      "source_line": 119
+    },
+    {
+      "id": 67,
+      "key": "master_ideology_drift",
+      "name": "主要意识形态变化",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 43,
+      "source_line": 122
+    },
+    {
+      "id": 68,
+      "key": "max_surrender_limit_offset",
+      "name": "最低投降界限",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 44,
+      "source_line": 123
+    },
+    {
+      "id": 72,
+      "key": "opinion_gain_monthly",
+      "name": "改善关系获得的评价",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 45,
+      "source_line": 127
+    },
+    {
+      "id": 74,
+      "key": "opinion_gain_monthly_same_ideology",
+      "name": "相同意识形态每月评价",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 46,
+      "source_line": 129
+    },
+    {
+      "id": 76,
+      "key": "overlord_trade_cost_factor",
+      "name": "宗主国贸易花费",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 47,
+      "source_line": 131
+    },
+    {
+      "id": 77,
+      "key": "political_power_cost",
+      "name": "每日消耗的政治点数",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 48,
+      "source_line": 132
+    },
+    {
+      "id": 29,
+      "key": "send_volunteers_tension",
+      "name": "派遣志愿军的紧张度限制",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 49,
+      "source_line": 137
+    },
+    {
+      "id": 88,
+      "key": "subjects_autonomy_gain",
+      "name": "附属国自治度获取",
+      "category": "政治",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 50,
+      "source_line": 139
+    },
+    {
+      "id": 95,
+      "key": "consumer_goods_factor",
+      "name": "生活消费品工厂系数",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 147
+    },
+    {
+      "id": 132,
+      "key": "consumer_goods_expected_value",
+      "name": "用于生产生活消费品的期望工厂数量",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 148
+    },
+    {
+      "id": 109,
+      "key": "global_building_slots_factor",
+      "name": "地区最大工厂数",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 149
+    },
+    {
+      "id": 103,
+      "key": "production_speed_buildings_factor",
+      "name": "建设速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 150
+    },
+    {
+      "id": 102,
+      "key": "production_speed_arms_factory_factor",
+      "name": "军用工厂建设速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 151
+    },
+    {
+      "id": 104,
+      "key": "production_speed_industrial_complex_factor",
+      "name": "民用工厂建设速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 152
+    },
+    {
+      "id": 120,
+      "key": "production_speed_dockyard_factor",
+      "name": "海军船坞建设速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 153
+    },
+    {
+      "id": 121,
+      "key": "production_speed_infrastructure_factor",
+      "name": "基础设施建设速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 154
+    },
+    {
+      "id": 105,
+      "key": "research_speed_factor",
+      "name": "科研速度",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 157
+    },
+    {
+      "id": 100,
+      "key": "production_factory_efficiency_gain_factor",
+      "name": "生产效率增长",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 158
+    },
+    {
+      "id": 101,
+      "key": "production_factory_max_efficiency_factor",
+      "name": "生产效率上限",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 159
+    },
+    {
+      "id": 116,
+      "key": "production_factory_start_efficiency_factor",
+      "name": "基础生产效率",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 160
+    },
+    {
+      "id": 114,
+      "key": "line_change_production_efficiency_factor",
+      "name": "生产效率保持",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 13,
+      "source_line": 161
+    },
+    {
+      "id": 98,
+      "key": "industrial_capacity_factory",
+      "name": "工厂产出",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 14,
+      "source_line": 162
+    },
+    {
+      "id": 97,
+      "key": "industrial_capacity_dockyard",
+      "name": "海军船坞产出",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 15,
+      "source_line": 163
+    },
+    {
+      "id": 99,
+      "key": "local_resources_factor",
+      "name": "战略资源获取效率",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 16,
+      "source_line": 165
+    },
+    {
+      "id": 117,
+      "key": "production_lack_of_resource_penalty_factor",
+      "name": "缺乏战略资源惩罚",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 17,
+      "source_line": 166
+    },
+    {
+      "id": 108,
+      "key": "fuel_gain_factor_from_states",
+      "name": "从炼油厂获得的燃油",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 18,
+      "source_line": 167
+    },
+    {
+      "id": 115,
+      "key": "min_export",
+      "name": "出口资源",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 19,
+      "source_line": 168
+    },
+    {
+      "id": 169,
+      "key": "military_factory_donations",
+      "name": "军用工厂捐赠",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 20,
+      "source_line": 171
+    },
+    {
+      "id": 144,
+      "key": "industrial_factory_donations",
+      "name": "民用工厂捐赠",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 21,
+      "source_line": 172
+    },
+    {
+      "id": 203,
+      "key": "dockyard_donations",
+      "name": "海军船坞捐赠",
+      "category": "工业",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 22,
+      "source_line": 173
+    },
+    {
+      "id": 143,
+      "key": "industrial_concern_cost_factor",
+      "name": "工业企业花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 179
+    },
+    {
+      "id": 202,
+      "key": "tank_manufacturer_cost_factor",
+      "name": "坦克设计商花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 180
+    },
+    {
+      "id": 171,
+      "key": "naval_manufacturer_cost_factor",
+      "name": "海军设计商花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 181
+    },
+    {
+      "id": 125,
+      "key": "aircraft_manufacturer_cost_factor",
+      "name": "飞机设计商花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 182
+    },
+    {
+      "id": 166,
+      "key": "materiel_manufacturer_cost_factor",
+      "name": "军需品设计花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 183
+    },
+    {
+      "id": 170,
+      "key": "military_industrial_organization_funds_gain",
+      "name": "军工机构经费获取",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 184
+    },
+    {
+      "id": 107,
+      "key": "factory_energy_consumption",
+      "name": "工厂能源消耗",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 188
+    },
+    {
+      "id": 110,
+      "key": "industrial_capacity_dockyard_powered",
+      "name": "已供能的船坞产出",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 189
+    },
+    {
+      "id": 111,
+      "key": "industrial_capacity_factory_powered",
+      "name": "已供能的工厂产出",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 190
+    },
+    {
+      "id": 96,
+      "key": "fuel_gain_factor",
+      "name": "从石油获得的燃油",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 191
+    },
+    {
+      "id": 126,
+      "key": "base_fuel_gain_factor",
+      "name": "基础燃油增长",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 192
+    },
+    {
+      "id": 127,
+      "key": "bunker_max_level_terrain_limit",
+      "name": "最高陆上要塞等级",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 193
+    },
+    {
+      "id": 128,
+      "key": "cic_construction_boost",
+      "name": "基础建设队列速度加成",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 194
+    },
+    {
+      "id": 129,
+      "key": "cic_construction_boost_factor",
+      "name": "市场建设加成乘数",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 195
+    },
+    {
+      "id": 168,
+      "key": "mic_to_overlord_factor",
+      "name": "贡献给宗主国的军用工厂",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 196
+    },
+    {
+      "id": 130,
+      "key": "cic_to_overlord_factor",
+      "name": "贡献给宗主国的民用工厂",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 197
+    },
+    {
+      "id": 131,
+      "key": "coastal_bunker_max_level_terrain_limit",
+      "name": "最高海岸要塞等级",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 198
+    },
+    {
+      "id": 133,
+      "key": "conversion_cost_civ_to_mil_factor",
+      "name": "民用工厂转军用工厂花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 200
+    },
+    {
+      "id": 134,
+      "key": "conversion_cost_mil_to_civ_factor",
+      "name": "军用工厂转民用工厂花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 201
+    },
+    {
+      "id": 106,
+      "key": "civilian_factory_use",
+      "name": "民用工厂占用",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 202
+    },
+    {
+      "id": 140,
+      "key": "energy_gain_factor",
+      "name": "从煤炭获得的能量",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 204
+    },
+    {
+      "id": 141,
+      "key": "equipment_conversion_speed",
+      "name": "装备改装速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 205
+    },
+    {
+      "id": 145,
+      "key": "industry_air_damage_factor",
+      "name": "工厂受轰炸易损性",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 209
+    },
+    {
+      "id": 146,
+      "key": "license_air_purchase_cost",
+      "name": "空军装备生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 24,
+      "source_line": 210
+    },
+    {
+      "id": 147,
+      "key": "license_anti_tank_eq_cost_factor",
+      "name": "反坦克装备生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 25,
+      "source_line": 211
+    },
+    {
+      "id": 148,
+      "key": "license_anti_tank_eq_production_speed_factor",
+      "name": "反坦克装备许可生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 26,
+      "source_line": 212
+    },
+    {
+      "id": 150,
+      "key": "license_armor_purchase_cost",
+      "name": "装甲车辆生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 27,
+      "source_line": 214
+    },
+    {
+      "id": 151,
+      "key": "license_artillery_eq_cost_factor",
+      "name": "炮兵装备生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 28,
+      "source_line": 215
+    },
+    {
+      "id": 152,
+      "key": "license_artillery_eq_production_speed_factor",
+      "name": "炮兵装备许可生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 29,
+      "source_line": 216
+    },
+    {
+      "id": 154,
+      "key": "license_infantry_eq_cost_factor",
+      "name": "步兵装备生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 30,
+      "source_line": 218
+    },
+    {
+      "id": 155,
+      "key": "license_infantry_eq_production_speed_factor",
+      "name": "步兵装备许可生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 31,
+      "source_line": 219
+    },
+    {
+      "id": 157,
+      "key": "license_light_tank_eq_cost_factor",
+      "name": "轻型坦克生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 32,
+      "source_line": 221
+    },
+    {
+      "id": 158,
+      "key": "license_light_tank_eq_production_speed_factor",
+      "name": "轻型坦克装备许可生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 33,
+      "source_line": 222
+    },
+    {
+      "id": 160,
+      "key": "license_production_speed",
+      "name": "许可装备生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 34,
+      "source_line": 224
+    },
+    {
+      "id": 161,
+      "key": "license_purchase_cost",
+      "name": "生产许可购买花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 35,
+      "source_line": 225
+    },
+    {
+      "id": 162,
+      "key": "license_subject_master_purchase_cost",
+      "name": "宗主国和附属国间生产许可花费",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 36,
+      "source_line": 226
+    },
+    {
+      "id": 164,
+      "key": "local_resources_coal_factor",
+      "name": "煤获取效率",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 37,
+      "source_line": 228
+    },
+    {
+      "id": 165,
+      "key": "local_resources_oil_factor",
+      "name": "石油获取效率",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 38,
+      "source_line": 229
+    },
+    {
+      "id": 167,
+      "key": "max_fuel_factor",
+      "name": "燃油容量",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 39,
+      "source_line": 231
+    },
+    {
+      "id": 172,
+      "key": "nuclear_production_factor",
+      "name": "核弹生产速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 40,
+      "source_line": 235
+    },
+    {
+      "id": 173,
+      "key": "out_of_power_impact_factor",
+      "name": "降低缺乏电力的惩罚",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 41,
+      "source_line": 236
+    },
+    {
+      "id": 174,
+      "key": "production_oil_factor",
+      "name": "合成油",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 42,
+      "source_line": 237
+    },
+    {
+      "id": 112,
+      "key": "industry_free_repair_factor",
+      "name": "免费维修",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 43,
+      "source_line": 238
+    },
+    {
+      "id": 113,
+      "key": "industry_repair_factor",
+      "name": "工厂修复速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 44,
+      "source_line": 239
+    },
+    {
+      "id": 118,
+      "key": "production_speed_bunker_factor",
+      "name": "陆上要塞建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 45,
+      "source_line": 240
+    },
+    {
+      "id": 119,
+      "key": "production_speed_coastal_bunker_factor",
+      "name": "海岸要塞建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 46,
+      "source_line": 241
+    },
+    {
+      "id": 122,
+      "key": "production_speed_rail_way_factor",
+      "name": "铁路建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 47,
+      "source_line": 242
+    },
+    {
+      "id": 123,
+      "key": "production_speed_supply_node_factor",
+      "name": "补给中心建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 48,
+      "source_line": 243
+    },
+    {
+      "id": 124,
+      "key": "production_speed_synthetic_refinery_factor",
+      "name": "合成炼油厂建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 49,
+      "source_line": 244
+    },
+    {
+      "id": 175,
+      "key": "production_speed_air_base_factor",
+      "name": "空军基地建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 50,
+      "source_line": 245
+    },
+    {
+      "id": 176,
+      "key": "production_speed_air_facility_factor",
+      "name": "航空设施建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 51,
+      "source_line": 246
+    },
+    {
+      "id": 177,
+      "key": "production_speed_anti_air_building_factor",
+      "name": "防空阵地建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 52,
+      "source_line": 247
+    },
+    {
+      "id": 178,
+      "key": "production_speed_energy_infrastructure_factor",
+      "name": "强化电网建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 53,
+      "source_line": 248
+    },
+    {
+      "id": 179,
+      "key": "production_speed_facility_factor",
+      "name": "设施建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 54,
+      "source_line": 249
+    },
+    {
+      "id": 180,
+      "key": "production_speed_fuel_silo_factor",
+      "name": "储油罐建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 55,
+      "source_line": 250
+    },
+    {
+      "id": 181,
+      "key": "production_speed_industrial_infrastructure_factor",
+      "name": "大容量电网建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 56,
+      "source_line": 251
+    },
+    {
+      "id": 182,
+      "key": "production_speed_land_facility_factor",
+      "name": "陆地设施建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 57,
+      "source_line": 252
+    },
+    {
+      "id": 183,
+      "key": "production_speed_naval_base_factor",
+      "name": "海军基地建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 58,
+      "source_line": 253
+    },
+    {
+      "id": 184,
+      "key": "production_speed_naval_facility_factor",
+      "name": "海上设施建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 59,
+      "source_line": 254
+    },
+    {
+      "id": 185,
+      "key": "production_speed_naval_headquarters_factor",
+      "name": "海军指挥部建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 60,
+      "source_line": 255
+    },
+    {
+      "id": 186,
+      "key": "production_speed_naval_supply_hub_factor",
+      "name": "海军补给中心建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 61,
+      "source_line": 256
+    },
+    {
+      "id": 187,
+      "key": "production_speed_nuclear_facility_factor",
+      "name": "核设施建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 62,
+      "source_line": 257
+    },
+    {
+      "id": 188,
+      "key": "production_speed_nuclear_reactor_factor",
+      "name": "核反应堆建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 63,
+      "source_line": 258
+    },
+    {
+      "id": 189,
+      "key": "production_speed_radar_station_factor",
+      "name": "雷达站建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 64,
+      "source_line": 259
+    },
+    {
+      "id": 190,
+      "key": "production_speed_rocket_site_factor",
+      "name": "火箭基地建设速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 65,
+      "source_line": 260
+    },
+    {
+      "id": 191,
+      "key": "repair_speed_arms_factory_factor",
+      "name": "军用工厂修复速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 66,
+      "source_line": 261
+    },
+    {
+      "id": 192,
+      "key": "repair_speed_bunker_factor",
+      "name": "陆上要塞修复速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 67,
+      "source_line": 262
+    },
+    {
+      "id": 193,
+      "key": "repair_speed_industrial_complex_factor",
+      "name": "民用工厂修复速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 68,
+      "source_line": 263
+    },
+    {
+      "id": 194,
+      "key": "repair_speed_infrastructure_factor",
+      "name": "基础设施修复速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 69,
+      "source_line": 264
+    },
+    {
+      "id": 195,
+      "key": "repair_speed_rail_way_factor",
+      "name": "铁路维修速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 70,
+      "source_line": 265
+    },
+    {
+      "id": 196,
+      "key": "research_sharing_per_country_bonus_factor",
+      "name": "科技共享加成",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 71,
+      "source_line": 266
+    },
+    {
+      "id": 197,
+      "key": "resource_trade_cost_bonus_per_factory",
+      "name": "每座工厂交易额外资源",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 72,
+      "source_line": 267
+    },
+    {
+      "id": 198,
+      "key": "resources_to_overlord_factor",
+      "name": "向宗主国提供资源",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 73,
+      "source_line": 268
+    },
+    {
+      "id": 199,
+      "key": "special_project_facility_supply_consumption_factor",
+      "name": "设施补给消耗",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 74,
+      "source_line": 269
+    },
+    {
+      "id": 200,
+      "key": "special_project_speed_factor",
+      "name": "专项计划速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 75,
+      "source_line": 270
+    },
+    {
+      "id": 201,
+      "key": "specialization_nuclear_speed_factor",
+      "name": "核研究专项计划速度",
+      "category": "工业",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 76,
+      "source_line": 271
+    },
+    {
+      "id": 204,
+      "key": "army_attack_factor",
+      "name": "陆军师攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 279
+    },
+    {
+      "id": 205,
+      "key": "army_defence_factor",
+      "name": "陆军师防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 280
+    },
+    {
+      "id": 295,
+      "key": "land_night_attack",
+      "name": "陆战夜战攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 281
+    },
+    {
+      "id": 217,
+      "key": "army_core_attack_factor",
+      "name": "陆军师核心领土攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 282
+    },
+    {
+      "id": 218,
+      "key": "army_core_defence_factor",
+      "name": "陆军师核心领土防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 283
+    },
+    {
+      "id": 226,
+      "key": "breakthrough_factor",
+      "name": "突破",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 284
+    },
+    {
+      "id": 228,
+      "key": "combat_width_factor",
+      "name": "己方战场宽度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 285
+    },
+    {
+      "id": 242,
+      "key": "max_planning",
+      "name": "计划加成上限",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 287
+    },
+    {
+      "id": 298,
+      "key": "max_planning_factor",
+      "name": "计划加成上限系数",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 288
+    },
+    {
+      "id": 247,
+      "key": "planning_speed",
+      "name": "计划速度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 289
+    },
+    {
+      "id": 224,
+      "key": "army_org_regain",
+      "name": "陆军组织度恢复",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 292
+    },
+    {
+      "id": 206,
+      "key": "army_morale_factor",
+      "name": "陆军师组织度恢复速率",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 293
+    },
+    {
+      "id": 207,
+      "key": "army_org_factor",
+      "name": "陆军师组织度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 13,
+      "source_line": 294
+    },
+    {
+      "id": 208,
+      "key": "army_speed_factor",
+      "name": "陆军师速度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 14,
+      "source_line": 295
+    },
+    {
+      "id": 347,
+      "key": "recon_factor",
+      "name": "侦查",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 15,
+      "source_line": 296
+    },
+    {
+      "id": 209,
+      "key": "land_reinforce_rate",
+      "name": "增援率",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 16,
+      "source_line": 298
+    },
+    {
+      "id": 231,
+      "key": "coordination_bonus",
+      "name": "协同性",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 17,
+      "source_line": 299
+    },
+    {
+      "id": 210,
+      "key": "supply_consumption_factor",
+      "name": "补给消耗",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 18,
+      "source_line": 300
+    },
+    {
+      "id": 219,
+      "key": "army_fuel_consumption_factor",
+      "name": "陆军燃料消耗",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 19,
+      "source_line": 301
+    },
+    {
+      "id": 225,
+      "key": "attrition",
+      "name": "陆军师损耗",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 20,
+      "source_line": 302
+    },
+    {
+      "id": 211,
+      "key": "acclimatization_cold_climate_gain_factor",
+      "name": "寒冷适应度增长率",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 21,
+      "source_line": 303
+    },
+    {
+      "id": 212,
+      "key": "acclimatization_hot_climate_gain_factor",
+      "name": "炎热适应度增长率",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 22,
+      "source_line": 304
+    },
+    {
+      "id": 220,
+      "key": "army_infantry_attack_factor",
+      "name": "步兵师攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 23,
+      "source_line": 309
+    },
+    {
+      "id": 221,
+      "key": "army_infantry_defence_factor",
+      "name": "步兵师防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 24,
+      "source_line": 310
+    },
+    {
+      "id": 213,
+      "key": "army_armor_attack_factor",
+      "name": "装甲师攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 25,
+      "source_line": 311
+    },
+    {
+      "id": 214,
+      "key": "army_armor_defence_factor",
+      "name": "装甲师防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 26,
+      "source_line": 312
+    },
+    {
+      "id": 215,
+      "key": "army_artillery_attack_factor",
+      "name": "炮兵攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 27,
+      "source_line": 313
+    },
+    {
+      "id": 216,
+      "key": "army_artillery_defence_factor",
+      "name": "炮兵防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 28,
+      "source_line": 314
+    },
+    {
+      "id": 249,
+      "key": "special_forces_attack_factor",
+      "name": "特种攻击",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 29,
+      "source_line": 315
+    },
+    {
+      "id": 251,
+      "key": "special_forces_defence_factor",
+      "name": "特种防御",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 30,
+      "source_line": 316
+    },
+    {
+      "id": 260,
+      "key": "army_bonus_air_superiority_factor",
+      "name": "制空权",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 31,
+      "source_line": 318
+    },
+    {
+      "id": 227,
+      "key": "cas_damage_reduction",
+      "name": "承受密接支援伤害减免",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 32,
+      "source_line": 319
+    },
+    {
+      "id": 229,
+      "key": "command_power_gain",
+      "name": "每日指挥点数增长",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 33,
+      "source_line": 321
+    },
+    {
+      "id": 230,
+      "key": "command_power_gain_mult",
+      "name": "每日指挥点数增长乘数",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 34,
+      "source_line": 322
+    },
+    {
+      "id": 233,
+      "key": "experience_gain_army",
+      "name": "陆军经验增长",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 35,
+      "source_line": 326
+    },
+    {
+      "id": 235,
+      "key": "experience_gain_army_unit_factor",
+      "name": "陆军师经验增长",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 36,
+      "source_line": 327
+    },
+    {
+      "id": 236,
+      "key": "experience_loss_factor",
+      "name": "有经验的士兵的损失",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 37,
+      "source_line": 328
+    },
+    {
+      "id": 237,
+      "key": "initiative_factor",
+      "name": "主动性",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 38,
+      "source_line": 329
+    },
+    {
+      "id": 238,
+      "key": "land_doctrine_cost_factor",
+      "name": "陆军学说花费",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 39,
+      "source_line": 330
+    },
+    {
+      "id": 239,
+      "key": "max_command_power",
+      "name": "最大指挥点数提高",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 40,
+      "source_line": 331
+    },
+    {
+      "id": 240,
+      "key": "max_dig_in",
+      "name": "堑壕上限",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 41,
+      "source_line": 332
+    },
+    {
+      "id": 232,
+      "key": "dig_in_speed_factor",
+      "name": "堑壕速度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 42,
+      "source_line": 334
+    },
+    {
+      "id": 244,
+      "key": "org_loss_at_low_org_factor",
+      "name": "组织度低于25%时的损失",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 43,
+      "source_line": 336
+    },
+    {
+      "id": 245,
+      "key": "org_loss_when_moving",
+      "name": "移动中组织度损失",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 44,
+      "source_line": 337
+    },
+    {
+      "id": 246,
+      "key": "out_of_supply_factor",
+      "name": "非战斗补给耗尽惩罚",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 45,
+      "source_line": 338
+    },
+    {
+      "id": 250,
+      "key": "special_forces_cap",
+      "name": "特种部队容量上限乘数",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 46,
+      "source_line": 341
+    },
+    {
+      "id": 243,
+      "key": "minimum_training_level",
+      "name": "最低训练程度",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 47,
+      "source_line": 343
+    },
+    {
+      "id": 252,
+      "key": "special_forces_training_time_factor",
+      "name": "特种部队训练时间",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 48,
+      "source_line": 344
+    },
+    {
+      "id": 254,
+      "key": "training_time_factor",
+      "name": "训练时间",
+      "category": "陆军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 49,
+      "source_line": 345
+    },
+    {
+      "id": 257,
+      "key": "army_attack_against_major_factor",
+      "name": "对主要国家的攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 349
+    },
+    {
+      "id": 265,
+      "key": "army_defence_against_major_factor",
+      "name": "对主要国家的防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 350
+    },
+    {
+      "id": 261,
+      "key": "army_breakthrough_against_major_factor",
+      "name": "对主要国家的突破",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 351
+    },
+    {
+      "id": 258,
+      "key": "army_attack_against_minor_factor",
+      "name": "对次要国家的攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 352
+    },
+    {
+      "id": 222,
+      "key": "army_non_core_attack_factor",
+      "name": "陆军师非核心领土攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 353
+    },
+    {
+      "id": 223,
+      "key": "army_non_core_defence_factor",
+      "name": "陆军师非核心领土防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 354
+    },
+    {
+      "id": 263,
+      "key": "army_claim_attack_factor",
+      "name": "陆军师已宣称领土攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 355
+    },
+    {
+      "id": 264,
+      "key": "army_claim_defence_factor",
+      "name": "陆军师已宣称领土防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 356
+    },
+    {
+      "id": 256,
+      "key": "army_armor_speed_factor",
+      "name": "装甲速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 358
+    },
+    {
+      "id": 259,
+      "key": "army_attack_speed_factor",
+      "name": "陆军师进攻速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 360
+    },
+    {
+      "id": 262,
+      "key": "army_chief_cost_factor",
+      "name": "陆军部长花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 363
+    },
+    {
+      "id": 301,
+      "key": "military_leader_cost_factor",
+      "name": "指挥官花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 364
+    },
+    {
+      "id": 299,
+      "key": "mechanized_attack_factor",
+      "name": "机械化攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 367
+    },
+    {
+      "id": 300,
+      "key": "mechanized_defence_factor",
+      "name": "机械化防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 368
+    },
+    {
+      "id": 302,
+      "key": "modifier_army_sub_unit_armored_car_attack_factor",
+      "name": "装甲车攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 370
+    },
+    {
+      "id": 303,
+      "key": "modifier_army_sub_unit_armored_car_max_org_factor",
+      "name": "装甲车组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 371
+    },
+    {
+      "id": 304,
+      "key": "modifier_army_sub_unit_armored_car_recon_attack_factor",
+      "name": "装甲侦察连攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 372
+    },
+    {
+      "id": 305,
+      "key": "modifier_army_sub_unit_armored_car_recon_max_org_factor",
+      "name": "装甲侦察连组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 373
+    },
+    {
+      "id": 306,
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor",
+      "name": "黑衫军突击营防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 374
+    },
+    {
+      "id": 307,
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor",
+      "name": "黑衫军突击营组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 375
+    },
+    {
+      "id": 308,
+      "key": "modifier_army_sub_unit_category_special_forces_max_org_factor",
+      "name": "特种部队组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 376
+    },
+    {
+      "id": 279,
+      "key": "cavalry_attack_factor",
+      "name": "骑兵攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 377
+    },
+    {
+      "id": 280,
+      "key": "cavalry_defence_factor",
+      "name": "骑兵防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 378
+    },
+    {
+      "id": 311,
+      "key": "modifier_army_sub_unit_cavalry_speed_factor",
+      "name": "骑兵速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 24,
+      "source_line": 379
+    },
+    {
+      "id": 312,
+      "key": "modifier_army_sub_unit_infantry_attack_factor",
+      "name": "步兵攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 25,
+      "source_line": 380
+    },
+    {
+      "id": 313,
+      "key": "modifier_army_sub_unit_infantry_defence_factor",
+      "name": "步兵防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 26,
+      "source_line": 381
+    },
+    {
+      "id": 314,
+      "key": "modifier_army_sub_unit_infantry_speed_factor",
+      "name": "步兵速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 27,
+      "source_line": 382
+    },
+    {
+      "id": 315,
+      "key": "modifier_army_sub_unit_irregular_infantry_attack_factor",
+      "name": "非正规军攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 28,
+      "source_line": 383
+    },
+    {
+      "id": 316,
+      "key": "modifier_army_sub_unit_irregular_infantry_defence_factor",
+      "name": "非正规军防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 29,
+      "source_line": 384
+    },
+    {
+      "id": 317,
+      "key": "modifier_army_sub_unit_irregular_infantry_max_org_factor",
+      "name": "非正规军组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 30,
+      "source_line": 385
+    },
+    {
+      "id": 318,
+      "key": "modifier_army_sub_unit_irregular_infantry_speed_factor",
+      "name": "非正规军速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 31,
+      "source_line": 386
+    },
+    {
+      "id": 319,
+      "key": "modifier_army_sub_unit_long_range_patrol_support_attack_factor",
+      "name": "长程巡逻攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 32,
+      "source_line": 387
+    },
+    {
+      "id": 320,
+      "key": "modifier_army_sub_unit_long_range_patrol_support_defence_factor",
+      "name": "长程巡逻防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 33,
+      "source_line": 388
+    },
+    {
+      "id": 321,
+      "key": "modifier_army_sub_unit_marine_attack_factor",
+      "name": "海军陆战队攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 34,
+      "source_line": 389
+    },
+    {
+      "id": 322,
+      "key": "modifier_army_sub_unit_marine_defence_factor",
+      "name": "海军陆战队防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 35,
+      "source_line": 390
+    },
+    {
+      "id": 323,
+      "key": "modifier_army_sub_unit_marine_max_org_factor",
+      "name": "海军陆战队组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 36,
+      "source_line": 391
+    },
+    {
+      "id": 324,
+      "key": "modifier_army_sub_unit_military_police_defence_factor",
+      "name": "宪兵队防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 37,
+      "source_line": 392
+    },
+    {
+      "id": 325,
+      "key": "modifier_army_sub_unit_military_police_max_org_factor",
+      "name": "宪兵队组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 38,
+      "source_line": 393
+    },
+    {
+      "id": 326,
+      "key": "modifier_army_sub_unit_militia_attack_factor",
+      "name": "民兵攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 39,
+      "source_line": 394
+    },
+    {
+      "id": 327,
+      "key": "modifier_army_sub_unit_militia_defence_factor",
+      "name": "民兵防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 40,
+      "source_line": 395
+    },
+    {
+      "id": 328,
+      "key": "modifier_army_sub_unit_militia_max_org_factor",
+      "name": "民兵组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 41,
+      "source_line": 396
+    },
+    {
+      "id": 329,
+      "key": "modifier_army_sub_unit_militia_org_recovery_cap_factor",
+      "name": "民兵组织度恢复上限",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 42,
+      "source_line": 397
+    },
+    {
+      "id": 330,
+      "key": "modifier_army_sub_unit_militia_speed_factor",
+      "name": "民兵速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 43,
+      "source_line": 398
+    },
+    {
+      "id": 331,
+      "key": "modifier_army_sub_unit_mountaineers_attack_factor",
+      "name": "山地步兵攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 44,
+      "source_line": 399
+    },
+    {
+      "id": 332,
+      "key": "modifier_army_sub_unit_mountaineers_defence_factor",
+      "name": "山地步兵防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 45,
+      "source_line": 400
+    },
+    {
+      "id": 333,
+      "key": "modifier_army_sub_unit_mountaineers_max_org_factor",
+      "name": "山地步兵组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 46,
+      "source_line": 401
+    },
+    {
+      "id": 334,
+      "key": "modifier_army_sub_unit_mountaineers_speed_factor",
+      "name": "山地步兵速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 47,
+      "source_line": 402
+    },
+    {
+      "id": 335,
+      "key": "modifier_army_sub_unit_paratrooper_attack_factor",
+      "name": "空降伞兵攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 48,
+      "source_line": 403
+    },
+    {
+      "id": 336,
+      "key": "modifier_army_sub_unit_paratrooper_max_org_factor",
+      "name": "空降伞兵组织度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 49,
+      "source_line": 404
+    },
+    {
+      "id": 337,
+      "key": "motorized_attack_factor",
+      "name": "摩托化攻击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 50,
+      "source_line": 405
+    },
+    {
+      "id": 338,
+      "key": "motorized_defence_factor",
+      "name": "摩托化防御",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 51,
+      "source_line": 406
+    },
+    {
+      "id": 267,
+      "key": "army_fuel_capacity_factor",
+      "name": "陆军燃油容量",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 52,
+      "source_line": 408
+    },
+    {
+      "id": 268,
+      "key": "army_leader_cost_factor",
+      "name": "陆军指挥官花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 53,
+      "source_line": 409
+    },
+    {
+      "id": 269,
+      "key": "army_leader_start_attack_level",
+      "name": "新将领初始进攻技能等级",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 54,
+      "source_line": 410
+    },
+    {
+      "id": 270,
+      "key": "army_leader_start_defense_level",
+      "name": "新将领初始防御技能等级",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 55,
+      "source_line": 411
+    },
+    {
+      "id": 271,
+      "key": "army_leader_start_level",
+      "name": "新陆军指挥官初始等级",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 56,
+      "source_line": 412
+    },
+    {
+      "id": 272,
+      "key": "army_leader_start_logistics_level",
+      "name": "新将领初始后勤技能等级",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 57,
+      "source_line": 413
+    },
+    {
+      "id": 273,
+      "key": "army_leader_start_planning_level",
+      "name": "新将领初始规划技能等级",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 58,
+      "source_line": 414
+    },
+    {
+      "id": 276,
+      "key": "army_retreat_speed_factor",
+      "name": "陆军师撤退速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 59,
+      "source_line": 417
+    },
+    {
+      "id": 277,
+      "key": "army_speed_factor_for_controller",
+      "name": "部队速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 60,
+      "source_line": 418
+    },
+    {
+      "id": 278,
+      "key": "army_spirit_category_type_cost_factor",
+      "name": "陆军指挥精神花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 61,
+      "source_line": 419
+    },
+    {
+      "id": 281,
+      "key": "coastal_bunker_effectiveness_factor",
+      "name": "海岸要塞效率",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 62,
+      "source_line": 422
+    },
+    {
+      "id": 282,
+      "key": "command_abilities_cost_factor",
+      "name": "指挥官能力花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 63,
+      "source_line": 423
+    },
+    {
+      "id": 284,
+      "key": "enemy_army_bonus_air_superiority_factor",
+      "name": "敌方空中支援",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 64,
+      "source_line": 425
+    },
+    {
+      "id": 285,
+      "key": "equipment_capture",
+      "name": "装备缴获比例",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 65,
+      "source_line": 426
+    },
+    {
+      "id": 286,
+      "key": "equipment_capture_factor",
+      "name": "装备缴获比例系数",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 66,
+      "source_line": 427
+    },
+    {
+      "id": 287,
+      "key": "experience_gain_artillery_combat_factor",
+      "name": "战斗中获取的火炮经验",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 67,
+      "source_line": 428
+    },
+    {
+      "id": 288,
+      "key": "extra_marine_supply_grace",
+      "name": "海军陆战队携行补给",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 68,
+      "source_line": 429
+    },
+    {
+      "id": 289,
+      "key": "field_officer_promotion_penalty",
+      "name": "战地军官单位惩罚",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 69,
+      "source_line": 430
+    },
+    {
+      "id": 290,
+      "key": "grant_medal_cost_factor",
+      "name": "授勋花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 70,
+      "source_line": 431
+    },
+    {
+      "id": 291,
+      "key": "heat_attrition_factor",
+      "name": "炎热损耗（比例项）",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 71,
+      "source_line": 432
+    },
+    {
+      "id": 292,
+      "key": "land_bunker_effectiveness_factor",
+      "name": "陆上要塞效率",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 72,
+      "source_line": 433
+    },
+    {
+      "id": 293,
+      "key": "land_equipment_upgrade_xp_cost",
+      "name": "陆军装备经验花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 73,
+      "source_line": 434
+    },
+    {
+      "id": 294,
+      "key": "land_mastery_gain_factor",
+      "name": "学说精通增长系数：land",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 74,
+      "source_line": 435
+    },
+    {
+      "id": 296,
+      "key": "marines_special_forces_contribution_factor",
+      "name": "海军陆战队特种部队上限贡献",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 75,
+      "source_line": 437
+    },
+    {
+      "id": 248,
+      "key": "send_volunteer_divisions_required",
+      "name": "派遣志愿军需要的陆军师数量",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 76,
+      "source_line": 438
+    },
+    {
+      "id": 266,
+      "key": "army_experience_from_volunteers",
+      "name": "来自志愿军的陆军经验",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 77,
+      "source_line": 439
+    },
+    {
+      "id": 297,
+      "key": "max_command_power_mult",
+      "name": "最大指挥点数提高乘数",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 78,
+      "source_line": 441
+    },
+    {
+      "id": 339,
+      "key": "mountaineers_special_forces_contribution_factor",
+      "name": "山地步兵特种部队上限贡献",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 79,
+      "source_line": 444
+    },
+    {
+      "id": 340,
+      "key": "no_supply_grace",
+      "name": "携行补给",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 80,
+      "source_line": 445
+    },
+    {
+      "id": 341,
+      "key": "paratroopers_special_forces_contribution_factor",
+      "name": "空降兵特种部队上限贡献",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 81,
+      "source_line": 446
+    },
+    {
+      "id": 342,
+      "key": "pocket_penalty",
+      "name": "包围惩罚",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 82,
+      "source_line": 447
+    },
+    {
+      "id": 343,
+      "key": "promote_cost_factor",
+      "name": "晋升花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 83,
+      "source_line": 448
+    },
+    {
+      "id": 344,
+      "key": "railway_gun_bombardment_factor",
+      "name": "列车炮轰击",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 84,
+      "source_line": 449
+    },
+    {
+      "id": 345,
+      "key": "rangers_special_forces_contribution_factor",
+      "name": "游骑兵特种部队上限贡献",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 85,
+      "source_line": 450
+    },
+    {
+      "id": 346,
+      "key": "reassignment_duration_factor",
+      "name": "重新任命所需时间",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 86,
+      "source_line": 451
+    },
+    {
+      "id": 348,
+      "key": "recon_factor_while_entrenched",
+      "name": "堑壕中侦查加成",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 87,
+      "source_line": 453
+    },
+    {
+      "id": 349,
+      "key": "special_forces_cap_flat",
+      "name": "特种部队上限",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 88,
+      "source_line": 454
+    },
+    {
+      "id": 350,
+      "key": "special_forces_doctrine_cost_factor",
+      "name": "特种部队战术消耗",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 89,
+      "source_line": 455
+    },
+    {
+      "id": 351,
+      "key": "special_forces_min",
+      "name": "特种部队最低容量",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 90,
+      "source_line": 456
+    },
+    {
+      "id": 352,
+      "key": "special_forces_no_supply_grace",
+      "name": "特种部队携行补给",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 91,
+      "source_line": 457
+    },
+    {
+      "id": 353,
+      "key": "special_forces_out_of_supply_factor",
+      "name": "特种部队非战斗补给耗尽",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 92,
+      "source_line": 458
+    },
+    {
+      "id": 354,
+      "key": "supply_combat_penalties_on_core_factor",
+      "name": "核心领土战斗补给耗尽惩罚",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 93,
+      "source_line": 459
+    },
+    {
+      "id": 355,
+      "key": "supply_node_range",
+      "name": "补给范围",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 94,
+      "source_line": 460
+    },
+    {
+      "id": 356,
+      "key": "terrain_trait_xp_gain_factor",
+      "name": "地形特质经验增长速度",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 95,
+      "source_line": 461
+    },
+    {
+      "id": 357,
+      "key": "truck_attrition_factor",
+      "name": "补给卡车损耗",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 96,
+      "source_line": 462
+    },
+    {
+      "id": 358,
+      "key": "unit_cavalry_design_cost_factor",
+      "name": "骑兵单位编成花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 97,
+      "source_line": 463
+    },
+    {
+      "id": 359,
+      "key": "unit_infantry_design_cost_factor",
+      "name": "步兵单位编成花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 98,
+      "source_line": 464
+    },
+    {
+      "id": 360,
+      "key": "unit_leader_as_advisor_cp_cost_factor",
+      "name": "将领成为顾问花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 99,
+      "source_line": 465
+    },
+    {
+      "id": 361,
+      "key": "unit_mechanized_design_cost_factor",
+      "name": "机械化步兵单位编成花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 100,
+      "source_line": 466
+    },
+    {
+      "id": 362,
+      "key": "unit_medal_effectiveness",
+      "name": "单位勋章效率",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 101,
+      "source_line": 467
+    },
+    {
+      "id": 363,
+      "key": "unit_motorized_design_cost_factor",
+      "name": "摩托化步兵单位编成花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 102,
+      "source_line": 468
+    },
+    {
+      "id": 364,
+      "key": "unit_mountaineers_design_cost_factor",
+      "name": "山地步兵单位编成花费",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 103,
+      "source_line": 469
+    },
+    {
+      "id": 365,
+      "key": "winter_attrition",
+      "name": "冬季损耗（基础项）",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 104,
+      "source_line": 470
+    },
+    {
+      "id": 366,
+      "key": "winter_attrition_factor",
+      "name": "冬季损耗（比例项）",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 105,
+      "source_line": 471
+    },
+    {
+      "id": 367,
+      "key": "air_invasion_division_cap",
+      "name": "每项空降入侵计划的陆军师容量",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 106,
+      "source_line": 472
+    },
+    {
+      "id": 368,
+      "key": "air_invasion_plan_cap",
+      "name": "空降作战计划上限",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 107,
+      "source_line": 473
+    },
+    {
+      "id": 369,
+      "key": "training_time_army",
+      "name": "陆军师训练时间（基础项）",
+      "category": "陆军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 108,
+      "source_line": 474
+    },
+    {
+      "id": 423,
+      "key": "naval_invasion_capacity",
+      "name": "登陆作战上限",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 480
+    },
+    {
+      "id": 424,
+      "key": "naval_invasion_division_cap",
+      "name": "每项登陆作战计划的陆军师容量",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 481
+    },
+    {
+      "id": 425,
+      "key": "naval_invasion_penalty",
+      "name": "登陆惩罚",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 482
+    },
+    {
+      "id": 426,
+      "key": "naval_invasion_plan_cap",
+      "name": "登陆作战计划上限",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 483
+    },
+    {
+      "id": 370,
+      "key": "naval_damage_factor",
+      "name": "海军伤害",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 485
+    },
+    {
+      "id": 371,
+      "key": "naval_defense_factor",
+      "name": "海军防御",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 486
+    },
+    {
+      "id": 372,
+      "key": "naval_hit_chance",
+      "name": "海军命中率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 487
+    },
+    {
+      "id": 373,
+      "key": "positioning",
+      "name": "阵位",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 488
+    },
+    {
+      "id": 374,
+      "key": "repair_speed_factor",
+      "name": "船只修理速度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 489
+    },
+    {
+      "id": 375,
+      "key": "sortie_efficiency",
+      "name": "舰载机出击效率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 490
+    },
+    {
+      "id": 376,
+      "key": "carrier_capacity_penalty_reduction",
+      "name": "航母超载",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 491
+    },
+    {
+      "id": 377,
+      "key": "convoy_retreat_speed",
+      "name": "撤退时运输船速度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 492
+    },
+    {
+      "id": 378,
+      "key": "experience_gain_navy",
+      "name": "海军经验增长",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 13,
+      "source_line": 493
+    },
+    {
+      "id": 380,
+      "key": "naval_coordination",
+      "name": "舰队协同性",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 14,
+      "source_line": 495
+    },
+    {
+      "id": 381,
+      "key": "naval_critical_effect_factor",
+      "name": "持续致命一击的效果",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 15,
+      "source_line": 496
+    },
+    {
+      "id": 382,
+      "key": "naval_critical_score_chance_factor",
+      "name": "打出致命一击的几率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 16,
+      "source_line": 497
+    },
+    {
+      "id": 383,
+      "key": "naval_heavy_gun_hit_chance_factor",
+      "name": "重型火炮命中率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 17,
+      "source_line": 498
+    },
+    {
+      "id": 384,
+      "key": "naval_light_gun_hit_chance_factor",
+      "name": "轻型火炮命中率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 18,
+      "source_line": 499
+    },
+    {
+      "id": 385,
+      "key": "naval_night_attack",
+      "name": "夜间攻击",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 19,
+      "source_line": 500
+    },
+    {
+      "id": 386,
+      "key": "naval_retreat_speed",
+      "name": "撤退时的舰队速度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 20,
+      "source_line": 501
+    },
+    {
+      "id": 387,
+      "key": "naval_speed_factor",
+      "name": "海军速度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 21,
+      "source_line": 502
+    },
+    {
+      "id": 388,
+      "key": "naval_torpedo_hit_chance_factor",
+      "name": "鱼雷命中几率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 22,
+      "source_line": 503
+    },
+    {
+      "id": 389,
+      "key": "naval_torpedo_reveal_chance_factor",
+      "name": "鱼雷暴露几率",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 23,
+      "source_line": 504
+    },
+    {
+      "id": 390,
+      "key": "naval_torpedo_screen_penetration_factor",
+      "name": "鱼雷穿透屏卫舰",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 24,
+      "source_line": 505
+    },
+    {
+      "id": 391,
+      "key": "navy_capital_ship_attack_factor",
+      "name": "主力舰攻击",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 25,
+      "source_line": 506
+    },
+    {
+      "id": 392,
+      "key": "navy_capital_ship_defence_factor",
+      "name": "主力舰装甲",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 26,
+      "source_line": 507
+    },
+    {
+      "id": 393,
+      "key": "navy_fuel_consumption_factor",
+      "name": "海军燃料消耗",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 27,
+      "source_line": 508
+    },
+    {
+      "id": 394,
+      "key": "navy_org_factor",
+      "name": "海军组织度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 28,
+      "source_line": 509
+    },
+    {
+      "id": 395,
+      "key": "navy_screen_attack_factor",
+      "name": "屏卫舰攻击",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 29,
+      "source_line": 510
+    },
+    {
+      "id": 396,
+      "key": "navy_screen_defence_factor",
+      "name": "屏卫舰防御",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 30,
+      "source_line": 511
+    },
+    {
+      "id": 397,
+      "key": "navy_submarine_attack_factor",
+      "name": "潜艇攻击",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 31,
+      "source_line": 512
+    },
+    {
+      "id": 398,
+      "key": "navy_submarine_defence_factor",
+      "name": "潜艇防御",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 32,
+      "source_line": 513
+    },
+    {
+      "id": 399,
+      "key": "navy_weather_penalty",
+      "name": "恶劣天气惩罚（海军）",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 33,
+      "source_line": 514
+    },
+    {
+      "id": 400,
+      "key": "night_spotting_chance",
+      "name": "夜间索敌",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 34,
+      "source_line": 515
+    },
+    {
+      "id": 401,
+      "key": "spotting_chance",
+      "name": "索敌速度",
+      "category": "海军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 35,
+      "source_line": 516
+    },
+    {
+      "id": 402,
+      "key": "air_carrier_night_penalty_reduction_factor",
+      "name": "舰载机夜间惩罚降低",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 520
+    },
+    {
+      "id": 403,
+      "key": "amphibious_invasion",
+      "name": "两栖登陆速度",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 521
+    },
+    {
+      "id": 404,
+      "key": "carrier_night_traffic",
+      "name": "航母夜间起降能力",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 522
+    },
+    {
+      "id": 405,
+      "key": "carrier_sortie_hours_delay",
+      "name": "舰载空军联队出击延迟（小时）",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 523
+    },
+    {
+      "id": 406,
+      "key": "carrier_traffic",
+      "name": "航母起降能力",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 524
+    },
+    {
+      "id": 407,
+      "key": "convoy_escort_efficiency",
+      "name": "运输护航效率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 525
+    },
+    {
+      "id": 408,
+      "key": "convoy_raiding_efficiency_factor",
+      "name": "袭击运输船任务效率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 526
+    },
+    {
+      "id": 409,
+      "key": "experience_gain_destroyer_combat_factor",
+      "name": "驱逐舰战斗经验增长",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 527
+    },
+    {
+      "id": 410,
+      "key": "experience_gain_destroyer_training_factor",
+      "name": "驱逐舰训练经验增长",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 528
+    },
+    {
+      "id": 411,
+      "key": "experience_gain_navy_unit_factor",
+      "name": "舰艇经验增长",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 529
+    },
+    {
+      "id": 412,
+      "key": "mines_planting_by_fleets_factor",
+      "name": "海军布雷效率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 530
+    },
+    {
+      "id": 413,
+      "key": "mines_sweeping_by_fleets_factor",
+      "name": "海军扫雷效率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 531
+    },
+    {
+      "id": 414,
+      "key": "naval_accidents_chance",
+      "name": "事故几率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 532
+    },
+    {
+      "id": 415,
+      "key": "naval_detection",
+      "name": "海军探测",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 533
+    },
+    {
+      "id": 416,
+      "key": "naval_doctrine_cost_factor",
+      "name": "海军学说花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 534
+    },
+    {
+      "id": 417,
+      "key": "naval_enemy_fleet_size_ratio_penalty_factor",
+      "name": "敌人舰队规模惩罚",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 535
+    },
+    {
+      "id": 418,
+      "key": "naval_equipment_upgrade_xp_cost",
+      "name": "海军装备经验花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 536
+    },
+    {
+      "id": 419,
+      "key": "naval_general_support_factor",
+      "name": "支援舰-最大支援效果",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 537
+    },
+    {
+      "id": 420,
+      "key": "naval_general_support_value_factor",
+      "name": "支援舰-支援值",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 538
+    },
+    {
+      "id": 421,
+      "key": "naval_has_potf_in_combat_attack",
+      "name": "与舰队荣耀并肩作战时的攻击",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 539
+    },
+    {
+      "id": 422,
+      "key": "naval_has_potf_in_combat_defense",
+      "name": "陪同舰队荣耀作战时的防御",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 540
+    },
+    {
+      "id": 427,
+      "key": "naval_invasion_prep_speed",
+      "name": "入侵准备速度",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 542
+    },
+    {
+      "id": 428,
+      "key": "naval_mine_hit_chance",
+      "name": "水雷触发率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 543
+    },
+    {
+      "id": 429,
+      "key": "naval_mines_damage_factor",
+      "name": "水雷伤害",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 24,
+      "source_line": 544
+    },
+    {
+      "id": 430,
+      "key": "naval_mines_effect_reduction",
+      "name": "规避水雷",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 25,
+      "source_line": 545
+    },
+    {
+      "id": 431,
+      "key": "naval_morale",
+      "name": "海军组织度恢复速率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 26,
+      "source_line": 546
+    },
+    {
+      "id": 433,
+      "key": "naval_repair_support_factor",
+      "name": "维修舰-最大维修效果",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 27,
+      "source_line": 548
+    },
+    {
+      "id": 434,
+      "key": "naval_repair_support_value_factor",
+      "name": "维修舰-维修值",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 28,
+      "source_line": 549
+    },
+    {
+      "id": 435,
+      "key": "naval_retreat_chance",
+      "name": "撤退命令几率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 29,
+      "source_line": 550
+    },
+    {
+      "id": 436,
+      "key": "naval_retreat_chance_after_initial_combat",
+      "name": "初次接战后的撤退几率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 30,
+      "source_line": 551
+    },
+    {
+      "id": 437,
+      "key": "naval_retreat_speed_after_initial_combat",
+      "name": "初次接战后的撤退速度",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 31,
+      "source_line": 552
+    },
+    {
+      "id": 438,
+      "key": "naval_ship_recovery_chance",
+      "name": "舰船组织度恢复速率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 32,
+      "source_line": 553
+    },
+    {
+      "id": 439,
+      "key": "naval_supply_consumption_factor",
+      "name": "海军补给消耗",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 33,
+      "source_line": 554
+    },
+    {
+      "id": 441,
+      "key": "navy_anti_air_attack_factor",
+      "name": "海军对空攻击",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 34,
+      "source_line": 556
+    },
+    {
+      "id": 442,
+      "key": "navy_casualty_on_sink",
+      "name": "舰艇沉没造成的伤亡",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 35,
+      "source_line": 557
+    },
+    {
+      "id": 443,
+      "key": "navy_chief_cost_factor",
+      "name": "海军部长花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 36,
+      "source_line": 558
+    },
+    {
+      "id": 444,
+      "key": "navy_leader_cost_factor",
+      "name": "海军指挥官花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 37,
+      "source_line": 559
+    },
+    {
+      "id": 445,
+      "key": "navy_leader_start_attack_level",
+      "name": "新海军将领初始进攻技能等级",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 38,
+      "source_line": 560
+    },
+    {
+      "id": 446,
+      "key": "navy_leader_start_defense_level",
+      "name": "新海军将领初始防御技能等级",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 39,
+      "source_line": 561
+    },
+    {
+      "id": 447,
+      "key": "navy_leader_start_level",
+      "name": "新海军将领初始等级",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 40,
+      "source_line": 562
+    },
+    {
+      "id": 448,
+      "key": "navy_leader_start_maneuvering_level",
+      "name": "新海军将领初始机动技能等级",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 41,
+      "source_line": 563
+    },
+    {
+      "id": 449,
+      "key": "navy_max_range_factor",
+      "name": "海军最大航程系数",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 42,
+      "source_line": 564
+    },
+    {
+      "id": 451,
+      "key": "navy_spirit_category_type_cost_factor",
+      "name": "海军指挥精神花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 43,
+      "source_line": 566
+    },
+    {
+      "id": 452,
+      "key": "navy_submarine_detection_factor",
+      "name": "对潜探测",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 44,
+      "source_line": 567
+    },
+    {
+      "id": 453,
+      "key": "refit_ic_cost",
+      "name": "舰艇改装花费",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 45,
+      "source_line": 568
+    },
+    {
+      "id": 454,
+      "key": "refit_speed",
+      "name": "舰艇改装速度",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 46,
+      "source_line": 569
+    },
+    {
+      "id": 455,
+      "key": "screening_efficiency",
+      "name": "屏卫效率",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 47,
+      "source_line": 570
+    },
+    {
+      "id": 456,
+      "key": "screening_without_screens",
+      "name": "只使用主力舰时的屏卫加成",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 48,
+      "source_line": 571
+    },
+    {
+      "id": 457,
+      "key": "shore_bombardment_bonus",
+      "name": "对岸炮击加成",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 49,
+      "source_line": 572
+    },
+    {
+      "id": 458,
+      "key": "sub_retreat_speed",
+      "name": "撤退时的潜艇速度",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 50,
+      "source_line": 573
+    },
+    {
+      "id": 459,
+      "key": "transport_capacity",
+      "name": "部队运输船需求",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 51,
+      "source_line": 574
+    },
+    {
+      "id": 460,
+      "key": "underway_replenishment_convoy_cost",
+      "name": "海上补给运输船使用量",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 52,
+      "source_line": 575
+    },
+    {
+      "id": 461,
+      "key": "underway_replenishment_range",
+      "name": "海上补给距离",
+      "category": "海军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 53,
+      "source_line": 576
+    },
+    {
+      "id": 462,
+      "key": "air_agility_factor",
+      "name": "机动",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 582
+    },
+    {
+      "id": 463,
+      "key": "air_attack_factor",
+      "name": "对空攻击",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 583
+    },
+    {
+      "id": 464,
+      "key": "air_cas_efficiency",
+      "name": "密接支援任务效率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 584
+    },
+    {
+      "id": 465,
+      "key": "air_defence_factor",
+      "name": "空中防御",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 585
+    },
+    {
+      "id": 466,
+      "key": "air_mission_efficiency",
+      "name": "空军任务效率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 586
+    },
+    {
+      "id": 467,
+      "key": "air_range_factor",
+      "name": "空军航程",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 587
+    },
+    {
+      "id": 468,
+      "key": "air_superiority_efficiency",
+      "name": "夺取制空权任务效率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 588
+    },
+    {
+      "id": 469,
+      "key": "air_accidents_factor",
+      "name": "空军事故几率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 589
+    },
+    {
+      "id": 470,
+      "key": "air_ace_bonuses_factor",
+      "name": "空军王牌加成",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 590
+    },
+    {
+      "id": 471,
+      "key": "air_ace_generation_chance_factor",
+      "name": "王牌飞行员产生几率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 591
+    },
+    {
+      "id": 472,
+      "key": "air_bombing_targetting",
+      "name": "对地轰炸瞄准",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 592
+    },
+    {
+      "id": 473,
+      "key": "air_cas_present_factor",
+      "name": "地面支援",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 593
+    },
+    {
+      "id": 474,
+      "key": "air_close_air_support_org_damage_factor",
+      "name": "近距支援机组织度伤害系数",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 13,
+      "source_line": 594
+    },
+    {
+      "id": 475,
+      "key": "air_detection",
+      "name": "对空探测",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 14,
+      "source_line": 595
+    },
+    {
+      "id": 476,
+      "key": "air_fuel_consumption_factor",
+      "name": "空军燃料消耗",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 15,
+      "source_line": 596
+    },
+    {
+      "id": 477,
+      "key": "air_mission_xp_gain_factor",
+      "name": "空军联队任务经验增长",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 16,
+      "source_line": 597
+    },
+    {
+      "id": 478,
+      "key": "air_nav_efficiency",
+      "name": "对海任务效率",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 17,
+      "source_line": 598
+    },
+    {
+      "id": 479,
+      "key": "air_strategic_bomber_bombing_factor",
+      "name": "战略轰炸",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 18,
+      "source_line": 599
+    },
+    {
+      "id": 480,
+      "key": "air_superiority_detect_factor",
+      "name": "战斗机探测",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 19,
+      "source_line": 600
+    },
+    {
+      "id": 481,
+      "key": "air_training_xp_gain_factor",
+      "name": "空军联队训练经验增长",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 20,
+      "source_line": 601
+    },
+    {
+      "id": 482,
+      "key": "air_untrained_pilots_penalty_factor",
+      "name": "新空军联队未经训练的飞行员惩罚",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 21,
+      "source_line": 602
+    },
+    {
+      "id": 483,
+      "key": "air_wing_xp_loss_when_killed_factor",
+      "name": "空军联队受损时失去的经验",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 22,
+      "source_line": 603
+    },
+    {
+      "id": 484,
+      "key": "experience_gain_air_factor",
+      "name": "空军经验增长",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 23,
+      "source_line": 604
+    },
+    {
+      "id": 485,
+      "key": "naval_strike_attack_factor",
+      "name": "对海轰炸",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 24,
+      "source_line": 605
+    },
+    {
+      "id": 486,
+      "key": "naval_strike_targetting_factor",
+      "name": "对海瞄准",
+      "category": "空军",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 25,
+      "source_line": 606
+    },
+    {
+      "id": 487,
+      "key": "ace_effectiveness_factor",
+      "name": "王牌效率",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 610
+    },
+    {
+      "id": 490,
+      "key": "air_chief_cost_factor",
+      "name": "空军部长花费",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 613
+    },
+    {
+      "id": 491,
+      "key": "air_doctrine_cost_factor",
+      "name": "空军学说花费",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 614
+    },
+    {
+      "id": 492,
+      "key": "air_equipment_upgrade_xp_cost",
+      "name": "空军装备经验花费",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 615
+    },
+    {
+      "id": 493,
+      "key": "air_escort_efficiency",
+      "name": "空军护航效率",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 616
+    },
+    {
+      "id": 494,
+      "key": "air_home_defence_factor",
+      "name": "本地空域防卫修正系数",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 617
+    },
+    {
+      "id": 495,
+      "key": "air_intercept_efficiency",
+      "name": "拦截任务效率",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 618
+    },
+    {
+      "id": 496,
+      "key": "air_interception_detect_factor",
+      "name": "拦截任务探测",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 619
+    },
+    {
+      "id": 497,
+      "key": "air_manpower_requirement_factor",
+      "name": "空军人力要求",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 620
+    },
+    {
+      "id": 498,
+      "key": "air_night_penalty",
+      "name": "夜间行动惩罚",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 621
+    },
+    {
+      "id": 499,
+      "key": "air_power_projection_factor",
+      "name": "跨空域力量投射修正系数",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 622
+    },
+    {
+      "id": 500,
+      "key": "air_spirit_category_type_cost_factor",
+      "name": "空军指挥精神花费",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 623
+    },
+    {
+      "id": 501,
+      "key": "air_superiority_bonus_in_combat",
+      "name": "战斗中空优加成",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 624
+    },
+    {
+      "id": 502,
+      "key": "air_volunteer_cap",
+      "name": "志愿航空队上限",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 625
+    },
+    {
+      "id": 503,
+      "key": "air_weather_penalty",
+      "name": "恶劣天气惩罚（空军）",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 626
+    },
+    {
+      "id": 505,
+      "key": "ground_attack_factor",
+      "name": "对地攻击系数",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 628
+    },
+    {
+      "id": 506,
+      "key": "mines_planting_by_air_factor",
+      "name": "空中布雷效率",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 629
+    },
+    {
+      "id": 507,
+      "key": "mines_sweeping_by_air_factor",
+      "name": "空中扫雷效率",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 630
+    },
+    {
+      "id": 508,
+      "key": "naval_strike_agility_factor",
+      "name": "对海机动",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 631
+    },
+    {
+      "id": 509,
+      "key": "port_strike",
+      "name": "港口袭击",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 632
+    },
+    {
+      "id": 510,
+      "key": "static_anti_air_damage_factor",
+      "name": "防空阵地伤害系数",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 633
+    },
+    {
+      "id": 511,
+      "key": "static_anti_air_hit_chance_factor",
+      "name": "防空阵地命中几率系数",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 634
+    },
+    {
+      "id": 512,
+      "key": "tech_air_damage_factor",
+      "name": "防空阵地轰炸伤害降低",
+      "category": "空军",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 635
+    },
+    {
+      "id": 520,
+      "key": "operative_slot",
+      "name": "特工位",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 1,
+      "source_line": 641
+    },
+    {
+      "id": 518,
+      "key": "intelligence_agency_defense",
+      "name": "反间谍",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 2,
+      "source_line": 642
+    },
+    {
+      "id": 530,
+      "key": "intel_network_gain",
+      "name": "情报网强度增长",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 3,
+      "source_line": 643
+    },
+    {
+      "id": 531,
+      "key": "intel_network_gain_factor",
+      "name": "情报网强度增长率",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 4,
+      "source_line": 644
+    },
+    {
+      "id": 514,
+      "key": "airforce_intel_factor",
+      "name": "空军情报",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 5,
+      "source_line": 646
+    },
+    {
+      "id": 519,
+      "key": "navy_intel_factor",
+      "name": "海军情报",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 6,
+      "source_line": 647
+    },
+    {
+      "id": 515,
+      "key": "army_intel_factor",
+      "name": "陆军情报",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 7,
+      "source_line": 648
+    },
+    {
+      "id": 516,
+      "key": "civilian_intel_factor",
+      "name": "民政情报",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 8,
+      "source_line": 649
+    },
+    {
+      "id": 517,
+      "key": "decryption_power_factor",
+      "name": "破译能力修正",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 9,
+      "source_line": 650
+    },
+    {
+      "id": 533,
+      "key": "new_operative_slot_bonus",
+      "name": "特工招募选项",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 10,
+      "source_line": 656
+    },
+    {
+      "id": 534,
+      "key": "operation_cost",
+      "name": "行动花费",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 11,
+      "source_line": 657
+    },
+    {
+      "id": 513,
+      "key": "agency_upgrade_time",
+      "name": "情报机构升级时间",
+      "category": "情报",
+      "display_priority_band": "high",
+      "grid_columns": 3,
+      "display_order": 12,
+      "source_line": 659
+    },
+    {
+      "id": 541,
+      "key": "decryption",
+      "name": "解密",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 1,
+      "source_line": 663
+    },
+    {
+      "id": 543,
+      "key": "encryption",
+      "name": "加密",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 2,
+      "source_line": 665
+    },
+    {
+      "id": 521,
+      "key": "airforce_intel_to_others",
+      "name": "泄露给他国的空军情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 3,
+      "source_line": 666
+    },
+    {
+      "id": 532,
+      "key": "navy_intel_to_others",
+      "name": "泄露给他国的海军情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 4,
+      "source_line": 668
+    },
+    {
+      "id": 522,
+      "key": "army_intel_to_others",
+      "name": "泄露给他国的陆军情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 5,
+      "source_line": 669
+    },
+    {
+      "id": 523,
+      "key": "civilian_intel_to_others",
+      "name": "泄露给他国的民政情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 6,
+      "source_line": 670
+    },
+    {
+      "id": 524,
+      "key": "crypto_strength",
+      "name": "加密等级",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 7,
+      "source_line": 671
+    },
+    {
+      "id": 525,
+      "key": "decryption_power",
+      "name": "破译能力",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 8,
+      "source_line": 672
+    },
+    {
+      "id": 535,
+      "key": "own_operative_capture_chance_factor",
+      "name": "我方特工被捕几率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 9,
+      "source_line": 673
+    },
+    {
+      "id": 536,
+      "key": "own_operative_detection_chance",
+      "name": "我方特工被发现几率补正",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 10,
+      "source_line": 674
+    },
+    {
+      "id": 537,
+      "key": "own_operative_detection_chance_factor",
+      "name": "我方特工被发现几率系数",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 11,
+      "source_line": 675
+    },
+    {
+      "id": 526,
+      "key": "enemy_operative_capture_chance_factor",
+      "name": "敌方特工被捕几率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 12,
+      "source_line": 676
+    },
+    {
+      "id": 527,
+      "key": "enemy_operative_detection_chance",
+      "name": "敌方特工被发现几率补正",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 13,
+      "source_line": 677
+    },
+    {
+      "id": 528,
+      "key": "enemy_operative_detection_chance_factor",
+      "name": "敌方特工被发现几率系数",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 14,
+      "source_line": 678
+    },
+    {
+      "id": 529,
+      "key": "enemy_operative_intel_extraction_rate",
+      "name": "敌方特工情报获取率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 15,
+      "source_line": 679
+    },
+    {
+      "id": 538,
+      "key": "boost_ideology_mission_factor",
+      "name": "加强意识形态任务成果",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 16,
+      "source_line": 679
+    },
+    {
+      "id": 539,
+      "key": "boost_resistance_factor",
+      "name": "加强抵抗组织效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 17,
+      "source_line": 680
+    },
+    {
+      "id": 540,
+      "key": "commando_trait_chance_factor",
+      "name": "招募具有特战专家特质特工的几率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 18,
+      "source_line": 681
+    },
+    {
+      "id": 545,
+      "key": "intel_from_combat_factor",
+      "name": "从战斗获取的情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 19,
+      "source_line": 683
+    },
+    {
+      "id": 546,
+      "key": "intel_from_operatives_factor",
+      "name": "从特工与渗透线人获得情报",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 20,
+      "source_line": 684
+    },
+    {
+      "id": 547,
+      "key": "occupied_operative_recruitment_chance",
+      "name": "敌占区友方国籍特工招募几率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 21,
+      "source_line": 685
+    },
+    {
+      "id": 549,
+      "key": "operation_coordinated_strike_outcome",
+      "name": "协同打击效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 22,
+      "source_line": 687
+    },
+    {
+      "id": 550,
+      "key": "operation_infiltrate_outcome",
+      "name": "渗透效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 23,
+      "source_line": 688
+    },
+    {
+      "id": 551,
+      "key": "operation_make_resistance_contacts_outcome",
+      "name": "接触抵抗组织效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 24,
+      "source_line": 689
+    },
+    {
+      "id": 552,
+      "key": "operation_steal_tech_outcome",
+      "name": "窃取蓝图效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 25,
+      "source_line": 690
+    },
+    {
+      "id": 553,
+      "key": "operation_steal_tech_risk",
+      "name": "窃取蓝图风险",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 26,
+      "source_line": 691
+    },
+    {
+      "id": 554,
+      "key": "operative_death_on_capture_chance",
+      "name": "我方特工在被捕时死亡几率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 27,
+      "source_line": 692
+    },
+    {
+      "id": 555,
+      "key": "propaganda_mission_factor",
+      "name": "政治宣传任务成果",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 28,
+      "source_line": 693
+    },
+    {
+      "id": 556,
+      "key": "root_out_resistance_effectiveness_factor",
+      "name": "根除抵抗组织任务成果",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 29,
+      "source_line": 694
+    },
+    {
+      "id": 557,
+      "key": "subversive_activites_upkeep",
+      "name": "颠覆活动成本",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 30,
+      "source_line": 695
+    },
+    {
+      "id": 558,
+      "key": "target_sabotage_cost",
+      "name": "破坏活动花费",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 31,
+      "source_line": 696
+    },
+    {
+      "id": 559,
+      "key": "target_sabotage_factor",
+      "name": "目标破坏效率",
+      "category": "情报",
+      "display_priority_band": "low",
+      "grid_columns": 4,
+      "display_order": 32,
+      "source_line": 697
+    }
+  ],
+  "record_count": 519,
+  "categories": {
+    "政治": 84,
+    "工业": 98,
+    "陆军": 157,
+    "海军": 88,
+    "空军": 48,
+    "情报": 44
+  },
+  "bands": {
+    "high": 177,
+    "low": 342
+  },
+  "page_bands": {
+    "政治": {
+      "high": 34,
+      "low": 50
+    },
+    "工业": {
+      "high": 22,
+      "low": 76
+    },
+    "陆军": {
+      "high": 49,
+      "low": 108
+    },
+    "海军": {
+      "high": 35,
+      "low": 53
+    },
+    "空军": {
+      "high": 25,
+      "low": 23
+    },
+    "情报": {
+      "high": 12,
+      "low": 32
+    }
+  },
+  "ignored_empty_bullets": 111,
+  "duplicates": [
+    {
+      "name": "战争贡献度自治度增长",
+      "source_line": 75,
+      "first_source_line": 74,
+      "retained_id": 40
+    },
+    {
+      "name": "附属国人力要求",
+      "source_line": 77,
+      "first_source_line": 76,
+      "retained_id": 42
+    },
+    {
+      "name": "改善关系获得的评价",
+      "source_line": 128,
+      "first_source_line": 127,
+      "retained_id": 72
+    },
+    {
+      "name": "相同意识形态每月评价",
+      "source_line": 130,
+      "first_source_line": 129,
+      "retained_id": 74
+    },
+    {
+      "name": "堑壕上限",
+      "source_line": 333,
+      "first_source_line": 332,
+      "retained_id": 240
+    },
+    {
+      "name": "陆军师组织度恢复速率",
+      "source_line": 415,
+      "first_source_line": 293,
+      "retained_id": 206
+    },
+    {
+      "name": "陆军师组织度",
+      "source_line": 416,
+      "first_source_line": 294,
+      "retained_id": 207
+    },
+    {
+      "name": "骑兵攻击",
+      "source_line": 420,
+      "first_source_line": 377,
+      "retained_id": 279
+    },
+    {
+      "name": "骑兵防御",
+      "source_line": 421,
+      "first_source_line": 378,
+      "retained_id": 280
+    },
+    {
+      "name": "堑壕速度",
+      "source_line": 424,
+      "first_source_line": 334,
+      "retained_id": 232
+    },
+    {
+      "name": "海军经验增长",
+      "source_line": 494,
+      "first_source_line": 493,
+      "retained_id": 378
+    },
+    {
+      "name": "海军组织度恢复速率",
+      "source_line": 547,
+      "first_source_line": 546,
+      "retained_id": 431
+    },
+    {
+      "name": "海军组织度",
+      "source_line": 565,
+      "first_source_line": 509,
+      "retained_id": 394
+    },
+    {
+      "name": "空军事故几率",
+      "source_line": 611,
+      "first_source_line": 589,
+      "retained_id": 469
+    },
+    {
+      "name": "空军经验增长",
+      "source_line": 627,
+      "first_source_line": 604,
+      "retained_id": 484
+    },
+    {
+      "name": "加强抵抗组织效率",
+      "source_line": 686,
+      "first_source_line": 680,
+      "retained_id": 539
+    }
+  ],
+  "normalizations": [
+    {
+      "source_line": 679,
+      "original": "敌方特工情报获取率加强意识形态任务成果",
+      "entries": [
+        "敌方特工情报获取率",
+        "加强意识形态任务成果"
+      ],
+      "reason": "User-confirmed split of accidentally joined items."
+    }
+  ],
+  "same_name_bindings": [
+    {
+      "name": "可征募人口",
+      "retained_id": 1,
+      "retained_key": "conscription",
+      "other_ids": [
+        2,
+        79
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "志愿军陆军师数量上限",
+      "retained_id": 28,
+      "retained_key": "send_volunteer_size",
+      "other_ids": [
+        86
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "战争贡献度自治度增长",
+      "retained_id": 40,
+      "retained_key": "autonomy_gain_warscore",
+      "other_ids": [
+        41
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "附属国人力要求",
+      "retained_id": 42,
+      "retained_key": "autonomy_manpower_share",
+      "other_ids": [
+        43
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "改善关系获得的评价",
+      "retained_id": 72,
+      "retained_key": "opinion_gain_monthly",
+      "other_ids": [
+        73
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "相同意识形态每月评价",
+      "retained_id": 74,
+      "retained_key": "opinion_gain_monthly_same_ideology",
+      "other_ids": [
+        75
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "地区最大工厂数",
+      "retained_id": 109,
+      "retained_key": "global_building_slots_factor",
+      "other_ids": [
+        142
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "陆军师组织度恢复速率",
+      "retained_id": 206,
+      "retained_key": "army_morale_factor",
+      "other_ids": [
+        274
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "陆军师组织度",
+      "retained_id": 207,
+      "retained_key": "army_org_factor",
+      "other_ids": [
+        275
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "陆军经验增长",
+      "retained_id": 233,
+      "retained_key": "experience_gain_army",
+      "other_ids": [
+        234
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "堑壕上限",
+      "retained_id": 240,
+      "retained_key": "max_dig_in",
+      "other_ids": [
+        241
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "堑壕速度",
+      "retained_id": 232,
+      "retained_key": "dig_in_speed_factor",
+      "other_ids": [
+        283
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "骑兵攻击",
+      "retained_id": 279,
+      "retained_key": "cavalry_attack_factor",
+      "other_ids": [
+        309
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "骑兵防御",
+      "retained_id": 280,
+      "retained_key": "cavalry_defence_factor",
+      "other_ids": [
+        310
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "海军经验增长",
+      "retained_id": 378,
+      "retained_key": "experience_gain_navy",
+      "other_ids": [
+        379
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "海军组织度",
+      "retained_id": 394,
+      "retained_key": "navy_org_factor",
+      "other_ids": [
+        450
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "海军组织度恢复速率",
+      "retained_id": 431,
+      "retained_key": "naval_morale",
+      "other_ids": [
+        432
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "空军事故几率",
+      "retained_id": 469,
+      "retained_key": "air_accidents_factor",
+      "other_ids": [
+        488
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "空军经验增长",
+      "retained_id": 484,
+      "retained_key": "experience_gain_air_factor",
+      "other_ids": [
+        504
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "解密",
+      "retained_id": 541,
+      "retained_key": "decryption",
+      "other_ids": [
+        542
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "加密",
+      "retained_id": 543,
+      "retained_key": "encryption",
+      "other_ids": [
+        544
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    },
+    {
+      "name": "加强抵抗组织效率",
+      "retained_id": 539,
+      "retained_key": "boost_resistance_factor",
+      "other_ids": [
+        548
+      ],
+      "policy": "Keep the first binding in the original exported registry."
+    }
+  ],
+  "excluded_records": [
+    {
+      "id": 2,
+      "key": "conscription_factor",
+      "name": "可征募人口",
+      "category": "政治"
+    },
+    {
+      "id": 8,
+      "key": "communism_drift",
+      "name": "每日共产主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 11,
+      "key": "democratic_drift",
+      "name": "每日民主主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 14,
+      "key": "fascism_drift",
+      "name": "每日法西斯主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 20,
+      "key": "neutrality_drift",
+      "name": "每日中立主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 41,
+      "key": "autonomy_gain_warscore_factor",
+      "name": "战争贡献度自治度增长",
+      "category": "政治"
+    },
+    {
+      "id": 43,
+      "key": "autonomy_manpower_share_from_subjects",
+      "name": "附属国人力要求",
+      "category": "政治"
+    },
+    {
+      "id": 73,
+      "key": "opinion_gain_monthly_factor",
+      "name": "改善关系获得的评价",
+      "category": "政治"
+    },
+    {
+      "id": 75,
+      "key": "opinion_gain_monthly_same_ideology_factor",
+      "name": "相同意识形态每月评价",
+      "category": "政治"
+    },
+    {
+      "id": 79,
+      "key": "recruitable_population_factor",
+      "name": "可征募人口",
+      "category": "政治"
+    },
+    {
+      "id": 86,
+      "key": "send_volunteer_factor",
+      "name": "志愿军陆军师数量上限",
+      "category": "政治"
+    },
+    {
+      "id": 87,
+      "key": "stability_weekly_factor",
+      "name": "每周稳定度增长",
+      "category": "政治"
+    },
+    {
+      "id": 91,
+      "key": "war_support_weekly_factor",
+      "name": "每周战争支持度增长",
+      "category": "政治"
+    },
+    {
+      "id": 135,
+      "key": "country_resource_chromium",
+      "name": "铬",
+      "category": "工业"
+    },
+    {
+      "id": 136,
+      "key": "country_resource_oil",
+      "name": "石油",
+      "category": "工业"
+    },
+    {
+      "id": 137,
+      "key": "country_resource_rubber",
+      "name": "橡胶",
+      "category": "工业"
+    },
+    {
+      "id": 138,
+      "key": "country_resource_steel",
+      "name": "钢铁",
+      "category": "工业"
+    },
+    {
+      "id": 139,
+      "key": "country_resource_tungsten",
+      "name": "钨",
+      "category": "工业"
+    },
+    {
+      "id": 142,
+      "key": "global_building_slots",
+      "name": "地区最大工厂数",
+      "category": "工业"
+    },
+    {
+      "id": 149,
+      "key": "license_anti_tank_eq_tech_difference_speed_factor",
+      "name": "科技差导致的反坦克装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 153,
+      "key": "license_artillery_eq_tech_difference_speed_factor",
+      "name": "科技差导致的炮兵装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 156,
+      "key": "license_infantry_eq_tech_difference_speed_factor",
+      "name": "科技差导致的步兵装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 159,
+      "key": "license_light_tank_eq_tech_difference_speed_factor",
+      "name": "科技差导致的轻型坦克装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 163,
+      "key": "license_tech_difference_speed",
+      "name": "科技差导致的生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 234,
+      "key": "experience_gain_army_factor",
+      "name": "陆军经验增长",
+      "category": "陆军"
+    },
+    {
+      "id": 241,
+      "key": "max_dig_in_factor",
+      "name": "堑壕上限",
+      "category": "陆军"
+    },
+    {
+      "id": 253,
+      "key": "training_time_army_factor",
+      "name": "陆军师训练时间（比例项）",
+      "category": "陆军"
+    },
+    {
+      "id": 274,
+      "key": "army_morale",
+      "name": "陆军师组织度恢复速率",
+      "category": "陆军"
+    },
+    {
+      "id": 275,
+      "key": "army_org",
+      "name": "陆军师组织度",
+      "category": "陆军"
+    },
+    {
+      "id": 283,
+      "key": "dig_in_speed",
+      "name": "堑壕速度",
+      "category": "陆军"
+    },
+    {
+      "id": 309,
+      "key": "modifier_army_sub_unit_cavalry_attack_factor",
+      "name": "骑兵攻击",
+      "category": "陆军"
+    },
+    {
+      "id": 310,
+      "key": "modifier_army_sub_unit_cavalry_defence_factor",
+      "name": "骑兵防御",
+      "category": "陆军"
+    },
+    {
+      "id": 379,
+      "key": "experience_gain_navy_factor",
+      "name": "海军经验增长",
+      "category": "海军"
+    },
+    {
+      "id": 432,
+      "key": "naval_morale_factor",
+      "name": "海军组织度恢复速率",
+      "category": "海军"
+    },
+    {
+      "id": 450,
+      "key": "navy_org",
+      "name": "海军组织度",
+      "category": "海军"
+    },
+    {
+      "id": 488,
+      "key": "air_accidents",
+      "name": "空军事故几率",
+      "category": "空军"
+    },
+    {
+      "id": 504,
+      "key": "experience_gain_air",
+      "name": "空军经验增长",
+      "category": "空军"
+    },
+    {
+      "id": 542,
+      "key": "decryption_factor",
+      "name": "解密",
+      "category": "情报"
+    },
+    {
+      "id": 544,
+      "key": "encryption_factor",
+      "name": "加密",
+      "category": "情报"
+    },
+    {
+      "id": 548,
+      "key": "operation_boost_resistance_outcome",
+      "name": "加强抵抗组织效率",
+      "category": "情报"
+    }
+  ],
+  "schema_version": 1,
+  "registry_count": 559,
+  "source_markdown": "display-order.md",
+  "source_sha256": "710b1e22441c0e2ab91b4481296d4940550476aa6fa48c8fde2cf514a7604166",
+  "registry_sha256": "01a80a16f0e227b2ff8ff700eee88adaef8b8815507fac847ebe787a9e14b14b",
+  "policy": "Markdown page and band order; ignore empty bullets; first display-name occurrence wins; stable registry IDs are never renumbered.",
+  "imported_from": "D:\\projects\\hoi4_mod\\1\\outputs\\01a16e22-a52a-7261-ab67-2140c18d1964\\国家修正统计_词条排序.md"
+}

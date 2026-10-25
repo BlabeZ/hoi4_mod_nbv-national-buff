@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "method": "Node.js vm execution with a minimal DOM mock",
+  "limitation": "DOM 模拟功能测试；未进行真实浏览器视觉布局、无障碍或导航行为测试。",
+  "source": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\catalog.html",
+  "source_sha256": "437b6eecdee668084b23534930a9e38606340f2f8d0b0fe45a5f3b967fc02013",
+  "source_bytes": 10642752,
+  "node_version": "v24.16.0",
+  "verified_at_utc": "2026-10-24T15:40:03.381Z",
+  "catalog_snapshot_date": "2026-10-24",
+  "passed_checks": 27,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "name": "JavaScript syntax and initial render",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 政治",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 工业",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 陆军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 海军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 空军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter: 情报",
+      "status": "passed"
+    },
+    {
+      "name": "Priority filter: P0",
+      "status": "passed"
+    },
+    {
+      "name": "Priority filter: P1",
+      "status": "passed"
+    },
+    {
+      "name": "Priority filter: P2",
+      "status": "passed"
+    },
+    {
+      "name": "Priority filter: P3",
+      "status": "passed"
+    },
+    {
+      "name": "BUFF coverage filter: yes",
+      "status": "passed"
+    },
+    {
+      "name": "BUFF coverage filter: no",
+      "status": "passed"
+    },
+    {
+      "name": "Only modifiers with definition assignments",
+      "status": "passed"
+    },
+    {
+      "name": "Numeric descending order: definition_count",
+      "status": "passed"
+    },
+    {
+      "name": "Numeric descending order: file_count",
+      "status": "passed"
+    },
+    {
+      "name": "Key ascending order",
+      "status": "passed"
+    },
+    {
+      "name": "Priority then score order",
+      "status": "passed"
+    },
+    {
+      "name": "Text search: army_attack_factor",
+      "status": "passed"
+    },
+    {
+      "name": "Text search: 政治",
+      "status": "passed"
+    },
+    {
+      "name": "Text search:  ARMY_ATTACK_FACTOR ",
+      "status": "passed"
+    },
+    {
+      "name": "Text search: army attack",
+      "status": "passed"
+    },
+    {
+      "name": "Combined category/priority/coverage/used filters",
+      "status": "passed"
+    },
+    {
+      "name": "All 75 pages render without duplicate or missing keys",
+      "status": "passed"
+    },
+    {
+      "name": "Empty result state and disabled pagination",
+      "status": "passed"
+    },
+    {
+      "name": "Filter reset restores first page",
+      "status": "passed"
+    },
+    {
+      "name": "HTML special-character escaping",
+      "status": "passed"
+    }
+  ],
+  "total_keys": 4484,
+  "categories": {
+    "政治": 150,
+    "工业": 2810,
+    "陆军": 725,
+    "海军": 465,
+    "空军": 131,
+    "情报": 203
+  },
+  "used_count": 888,
+  "pagination": {
+    "rows_per_page": 60,
+    "pages": 75,
+    "last_page_rows": 44
+  },
+  "first_three_keys": [
+    "political_power_factor",
+    "production_speed_buildings_factor",
+    "production_speed_industrial_complex_factor"
+  ],
+  "local_link_targets": [
+    {
+      "path": "README.md",
+      "exists": true
+    },
+    {
+      "path": "important-modifiers.md",
+      "exists": true
+    },
+    {
+      "path": "data/catalog.json",
+      "exists": true
+    },
+    {
+      "path": "data/occurrences.jsonl",
+      "exists": true
+    }
+  ]
+}

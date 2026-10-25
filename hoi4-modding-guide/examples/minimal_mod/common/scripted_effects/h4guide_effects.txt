@@ -1,0 +1,7 @@
+# Requires country scope. The caller must check h4guide_can_receive_reward.
+h4guide_grant_reward = {
+    add_political_power = 25
+    add_ideas = h4guide_training_spirit
+    set_country_flag = h4guide_reward_received
+    log = "H4GUIDE: reward granted"
+}

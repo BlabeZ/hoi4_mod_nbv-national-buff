@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/cwtools/cwtools-hoi4-config",
+  "commit": "297dd69c42aabe10078a8b7ab7f2d07ee631d4ef",
+  "retrieved_date": "2026-10-24",
+  "license": "MIT",
+  "included": [
+    "Config/",
+    "README.md",
+    "LICENSE"
+  ],
+  "file_count": 116
+}

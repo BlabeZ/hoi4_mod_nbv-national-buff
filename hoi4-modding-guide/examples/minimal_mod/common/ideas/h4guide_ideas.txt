@@ -1,0 +1,13 @@
+ideas = {
+    country = {
+        h4guide_training_spirit = {
+            allowed = {
+                always = yes
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.10
+            }
+        }
+    }
+}

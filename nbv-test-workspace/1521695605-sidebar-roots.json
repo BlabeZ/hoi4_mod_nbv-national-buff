@@ -1,0 +1,38 @@
+{
+  "candidates": [
+    {
+      "name": "kr_intro_screen_button_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/00_intro_screen_gui.txt",
+      "sg_line": 2,
+      "file": "interface/kaiserreich/intro_screen.gui",
+      "line": 2,
+      "pos": {
+        "x": "-131",
+        "y": "62"
+      },
+      "size": {},
+      "orientation": "upper_right",
+      "origo": "upper_left"
+    },
+    {
+      "name": "mitteleuropa_open_button_window",
+      "parent": "raid_filter",
+      "sg_file": "common/scripted_guis/germany_mitteleuropa.txt",
+      "sg_line": 6,
+      "file": "interface/kaiserreich/gui_mitteleuropa.gui",
+      "line": 13,
+      "pos": {
+        "x": "0",
+        "y": "-115"
+      },
+      "size": {
+        "width": "77",
+        "height": "77"
+      },
+      "orientation": "upper_left",
+      "origo": "upper_left"
+    }
+  ],
+  "parse_failures": []
+}

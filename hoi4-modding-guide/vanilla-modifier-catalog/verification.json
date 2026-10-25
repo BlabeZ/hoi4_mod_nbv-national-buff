@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-24",
+  "checks": {
+    "unique_registry_keys": true,
+    "fixed_and_template_blocks": true,
+    "operation_risk_template_resolved": true,
+    "boolean_type_preserved": true,
+    "category_partition": true,
+    "all_have_effect_evidence_label": true,
+    "all_have_binding_advice": true,
+    "definition_total_consistent": true,
+    "priority_partition": true,
+    "related_keys_exist": true,
+    "local_sources_exist": true
+  },
+  "all_passed": true,
+  "runtime_validation": "not performed",
+  "statistics": {
+    "registry_keys": 4484,
+    "fixed_blocks": 722,
+    "template_blocks": 42,
+    "scanned_files": 4404,
+    "occurrences": {
+      "definition": 29684,
+      "other_assignment": 1629,
+      "reference": 6
+    },
+    "keys_with_definitions": 888,
+    "keys_with_any_occurrence": 891,
+    "categories": {
+      "政治": {
+        "total": 150,
+        "with_definitions": 132,
+        "p0": 6,
+        "p1": 30
+      },
+      "工业": {
+        "total": 2810,
+        "with_definitions": 221,
+        "p0": 11,
+        "p1": 20
+      },
+      "陆军": {
+        "total": 725,
+        "with_definitions": 256,
+        "p0": 7,
+        "p1": 47
+      },
+      "海军": {
+        "total": 465,
+        "with_definitions": 143,
+        "p0": 6,
+        "p1": 36
+      },
+      "空军": {
+        "total": 131,
+        "with_definitions": 59,
+        "p0": 7,
+        "p1": 19
+      },
+      "情报": {
+        "total": 203,
+        "with_definitions": 77,
+        "p0": 8,
+        "p1": 22
+      }
+    },
+    "priority_counts": {
+      "P3": 3591,
+      "P2": 674,
+      "P1": 174,
+      "P0": 45
+    },
+    "boolean_keys": 14
+  },
+  "localisation": {
+    "template_derived": 2973,
+    "has_chinese_name": 4405,
+    "exact_lowercase_prefix": 582,
+    "exact_key": 270,
+    "exact_modifier_prefix": 511,
+    "unmatched": 79,
+    "has_chinese_description": 210,
+    "explicit_tooltip_reference": 51,
+    "exact_modifiers_prefix": 15,
+    "reviewed_script_tooltip_chain": 2,
+    "exact_uppercase_key": 1
+  }
+}

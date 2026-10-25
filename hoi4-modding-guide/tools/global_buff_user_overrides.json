@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "authority": "用户在二次筛选后指定的增删要求；覆盖旧规则的天气、设计商及外交接纳度排除策略，但保留仅统计国家持有分量的约束。",
+  "exclude_unnamed": true,
+  "unnamed_definition": "当前完整目录没有已确认的中文或英文显示名称；不以技术键、自动猜测翻译或名称待核验占位符代替展示名称。当前79项的中英文名均为空。",
+  "scope_contract": {
+    "include": "国家持有的全局数值及核心/非核心等条件加成；领袖、法案/法律、顾问提供的国家修正同样统计，与国策、民族精神、科技等国家来源合并读取。明确保留指定的天气/气候适应、四种主义外交接纳度、设计商通用聘用费用及军工机构经费获取。只读取当前玩家国家存储分量，切换tag后刷新。",
+    "exclude": "无已确认名称的词条、用户指定的4项；州/省/战略区域/地形/具体单位/装备/生产线/MIO本体的对象分量，及领袖本人技能或仅作用于麾下单位的局部分量；设计商相关的具体对象和科技修正。领袖/顾问提供国家加成不是排除理由。",
+    "label": "展示国家修正分量；同名不同键分列，不将基础值与比例项相加，不称为单位/州/装备的最终属性。",
+    "runtime_status": "词条入库与国家读取成功分开记录；所有ROOT.modifier@路径仍待游戏内逐项验证。缺少国家来源的明确指定项以候选状态入库，不采集地区对象值补足。"
+  },
+  "exclude_keys": [
+    "civil_war_involvement_tension",
+    "control_trade_mission_factor",
+    "diplomatic_pressure_mission_factor",
+    "enemy_operative_recruitment_chance"
+  ],
+  "include_sets": [
+    {
+      "request": "设计商修正（不包括具体对象/科技修正）",
+      "keys": ["aircraft_manufacturer_cost_factor", "industrial_concern_cost_factor", "naval_manufacturer_cost_factor", "tank_manufacturer_cost_factor", "materiel_manufacturer_cost_factor", "military_industrial_organization_funds_gain"],
+      "category": "工业",
+      "reason": "用户指定加入国家面向设计商的通用管理修正：五类聘用费用及军工机构经费获取；有国家精神来源。",
+      "conditions": ["只读国家持有的费用/经费修正，不读取具体MIO、装备或生产线对象；旧设计商机制受DLC分支影响。"]
+    },
+    {
+      "request": "所有主义外交接纳度",
+      "keys": ["communism_acceptance", "democratic_acceptance", "fascism_acceptance", "neutrality_acceptance"],
+      "category": "政治",
+      "reason": "用户指定展示原版四种意识形态的外交接纳度；本轮覆盖旧的外交接受倾向排除规则。",
+      "conditions": ["按对方意识形态分列，不汇总为一个外交接纳度；接纳度不等于外交行动成功概率。"]
+    },
+    {
+      "request": "冬季损耗、炎热损耗",
+      "keys": ["winter_attrition", "winter_attrition_factor", "heat_attrition_factor"],
+      "category": "陆军",
+      "reason": "用户指定恢复天气损耗词条，仅纳入国家持有分量的展示候选，不累计地图天气对象的数值。",
+      "conditions": ["冬季损耗基础项与_factor比例项分列，不直接相加；炎热损耗只纳入有国家来源的比例项，基础项仅检出地方天气来源。"]
+    },
+    {
+      "request": "炎热适应度增长率、寒冷适应度增长率",
+      "keys": ["acclimatization_hot_climate_gain_factor", "acclimatization_cold_climate_gain_factor"],
+      "category": "陆军",
+      "reason": "用户指定保留国家持有的炎热/寒冷适应度增长修正。",
+      "conditions": ["展示国家增长率修正，不展示各部队当前适应度或当地温度。"]
+    },
+    {
+      "request": "恶劣天气惩罚（空军）",
+      "keys": ["air_weather_penalty"],
+      "category": "空军",
+      "reason": "用户指定保留国家持有的空军恶劣天气惩罚修正。",
+      "conditions": ["与海军天气惩罚分列，不加入实际空域天气惩罚值。"]
+    },
+    {
+      "request": "恶劣天气惩罚（海军）",
+      "keys": ["navy_weather_penalty"],
+      "category": "海军",
+      "reason": "用户指定保留国家持有的海军恶劣天气惩罚修正。",
+      "conditions": ["与空军天气惩罚分列，不加入实际海域天气惩罚值。"]
+    },
+    {
+      "request": "投降界限",
+      "keys": ["surrender_limit", "forced_surrender_limit"],
+      "category": "政治",
+      "reason": "用户指定展示投降界限，保留常规项并补入有国家精神来源的强制投降阈值项。",
+      "conditions": ["常规surrender_limit与forced_surrender_limit分列，后者标注强制阈值；不能相加或互相替代。"]
+    },
+    {
+      "request": "跨空域力量投射修正系数",
+      "keys": ["air_power_projection_factor"],
+      "category": "空军",
+      "reason": "用户指定展示国家持有的跨空域力量投射修正系数。",
+      "conditions": ["展示国家系数，不读取某一空域的实际投射力量。"]
+    },
+    {
+      "request": "每项空降入侵计划的陆军师容量、空降作战计划上限",
+      "keys": ["air_invasion_division_cap", "air_invasion_plan_cap"],
+      "category": "陆军",
+      "reason": "用户指定展示空降师容量与计划上限；注册表中存在，但本次未检出原版定义赋值，按明确需求加入待运行核验候选。",
+      "conditions": ["容量项与计划数上限分列；未确认基值，不把修正分量直接标为最终容量。"]
+    },
+    {
+      "request": "陆军师损耗",
+      "keys": ["attrition"],
+      "category": "陆军",
+      "reason": "用户指定展示陆军师损耗，使用已有国家来源的全局attrition；同名attrition_for_controller的州/地方对象值仍排除。",
+      "conditions": ["只读国家attrition，不将州或具体部队实际损耗混入。"]
+    },
+    {
+      "request": "己方战场宽度",
+      "keys": ["combat_width_factor"],
+      "category": "陆军",
+      "reason": "用户指定展示己方战场宽度修正；本次未检出原版定义赋值，保留国家读取待实测标记。",
+      "conditions": ["仅为修正候选，不等于单个师或某次战斗的最终战场宽度。"]
+    },
+    {
+      "request": "军用/民用工厂/船坞捐赠",
+      "keys": ["military_factory_donations", "industrial_factory_donations", "dockyard_donations"],
+      "category": "工业",
+      "reason": "用户指定展示军用工厂、民用工厂和海军船坞捐赠的国家修正。",
+      "conditions": ["按三种工业设施分别显示修正分量，不与地图上实际设施总数混算。"]
+    },
+    {
+      "request": "军用/民用工厂/船坞/基础设施建设速度",
+      "keys": ["production_speed_arms_factory_factor", "production_speed_industrial_complex_factor", "production_speed_dockyard_factor", "production_speed_infrastructure_factor"],
+      "category": "工业",
+      "reason": "用户确认保留四种设施的国家建设速度；这些词条已在A档，无需重复新增，同名state_版本仍排除。",
+      "conditions": ["全国修正分量，不含某州的建设速度、地形或建筑槽位影响。"]
+    },
+    {
+      "request": "陆军师训练时间",
+      "keys": ["training_time_army", "training_time_army_factor"],
+      "category": "陆军",
+      "reason": "用户指定展示陆军师训练时间；保留已有比例项，补入已注册的基础项读取候选。",
+      "conditions": ["基础项与比例项分列，不直接相加；基础项本次未检出定义赋值，单位与读取须实测。"]
+    }
+  ],
+  "boundary_rules": {
+    "heat_attrition": {
+      "decision": "exclude",
+      "scope_reason": "state_or_local_object",
+      "reason": "炎热损耗基础项本次只检出Province天气对象赋值，未检出国家来源；国家炎热损耗使用heat_attrition_factor。不能把地方基础损耗值并入全局BUFF；不据此断言引擎禁止国家使用此键。",
+      "evidence": [{"file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/modifiers/00_static_modifiers.txt", "line": 113, "note": "weather_very_hot及weather_extreme_hot为Province天气效果"}]
+    },
+    "attrition_for_controller": {
+      "decision": "exclude",
+      "scope_reason": "state_or_local_object",
+      "reason": "中文同为陆军师损耗，但当前证据指向state_modifier及地区动态修正，不能作为已确认国家全局值；使用国家attrition满足损耗展示需求。",
+      "evidence": [{"file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/resistance_compliance_modifiers/resistance_modifiers.txt", "line": 87, "note": "抵抗效果的state_modifier内使用attrition_for_controller"}]
+    },
+    "military_industrial_organization_research_bonus": {
+      "decision": "exclude",
+      "scope_reason": "designer_research_excluded",
+      "reason": "军工机构研究加成属于设计商相关科研修正，按本次“不包括科技修正”的口径继续排除；不影响其他普通国家科研加成。"
+    }
+  },
+  "display_labels": {
+    "winter_attrition": "冬季损耗（基础项）",
+    "winter_attrition_factor": "冬季损耗（比例项）",
+    "heat_attrition": "炎热损耗（基础项）",
+    "heat_attrition_factor": "炎热损耗（比例项）",
+    "air_weather_penalty": "恶劣天气惩罚（空军）",
+    "navy_weather_penalty": "恶劣天气惩罚（海军）",
+    "forced_surrender_limit": "投降界限（强制阈值）",
+    "training_time_army": "陆军师训练时间（基础项）",
+    "training_time_army_factor": "陆军师训练时间（比例项）",
+    "military_industrial_organization_funds_gain": "军工机构经费获取"
+  }
+}

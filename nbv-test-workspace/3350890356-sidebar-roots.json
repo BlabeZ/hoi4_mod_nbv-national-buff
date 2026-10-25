@@ -1,0 +1,155 @@
+{
+  "candidates": [
+    {
+      "name": "money_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/money_top_bar_resource.txt",
+      "sg_line": 3,
+      "file": "interface/TFR_interface_economy.gui",
+      "line": 2,
+      "pos": {
+        "x": "-655",
+        "y": "4"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "money_debt_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/money_top_bar_resource.txt",
+      "sg_line": 21,
+      "file": "interface/TFR_interface_economy.gui",
+      "line": 30,
+      "pos": {
+        "x": "-525",
+        "y": "4"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "money_small_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/money_top_bar_resource.txt",
+      "sg_line": 39,
+      "file": "interface/TFR_interface_economy.gui",
+      "line": 59,
+      "pos": {
+        "x": "-457",
+        "y": "4"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "money_debt_small_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/money_top_bar_resource.txt",
+      "sg_line": 55,
+      "file": "interface/TFR_interface_economy.gui",
+      "line": 78,
+      "pos": {
+        "x": "-427",
+        "y": "4"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "money_element_size_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/money_top_bar_resource.txt",
+      "sg_line": 71,
+      "file": "interface/TFR_interface_economy.gui",
+      "line": 97,
+      "pos": {
+        "x": "-400",
+        "y": "20"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "death_certificate_letter_closed",
+      "parent": "screen",
+      "sg_file": "common/scripted_guis/TFR_super_events.txt",
+      "sg_line": 1574,
+      "file": "interface/TFR_Super_Events.gui",
+      "line": 4752,
+      "pos": {
+        "x": "-1500",
+        "y": "-250"
+      },
+      "size": {
+        "width": "1000",
+        "height": "755"
+      },
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_right"
+    },
+    {
+      "name": "death_certificate_letter_open",
+      "parent": "screen",
+      "sg_file": "common/scripted_guis/TFR_super_events.txt",
+      "sg_line": 1588,
+      "file": "interface/TFR_Super_Events.gui",
+      "line": 4770,
+      "pos": {
+        "x": "-700",
+        "y": "-250"
+      },
+      "size": {
+        "width": "1000",
+        "height": "755"
+      },
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_right"
+    },
+    {
+      "name": "death_certificate_nikolai",
+      "parent": "screen",
+      "sg_file": "common/scripted_guis/TFR_super_events.txt",
+      "sg_line": 1596,
+      "file": "interface/TFR_Super_Events.gui",
+      "line": 4790,
+      "pos": {
+        "x": "-700",
+        "y": "-250"
+      },
+      "size": {
+        "width": "1000",
+        "height": "755"
+      },
+      "orientation": "UPPER_RIGHT",
+      "origo": "UPPER_RIGHT"
+    },
+    {
+      "name": "death_certificate_valintin",
+      "parent": "screen",
+      "sg_file": "common/scripted_guis/TFR_super_events.txt",
+      "sg_line": 1613,
+      "file": "interface/TFR_Super_Events.gui",
+      "line": 4832,
+      "pos": {
+        "x": "-700",
+        "y": "-250"
+      },
+      "size": {
+        "width": "1000",
+        "height": "755"
+      },
+      "orientation": "UPPER_RIGHT",
+      "origo": "UPPER_RIGHT"
+    }
+  ],
+  "parse_failures": [
+    "E:\\Steam\\steamapps\\workshop\\content\\394360\\3350890356\\interface\\sov_propaganda_campaigns_scripted_gui.gui: unclosed block",
+    "E:\\Steam\\steamapps\\workshop\\content\\394360\\3350890356\\interface\\TFR_interface_subideogly_notice.gui:37: unexpected closing brace"
+  ]
+}

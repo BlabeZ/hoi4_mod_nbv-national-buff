@@ -1,0 +1,8 @@
+Resetting game
+Resetting gamestate. Total time: 1.54987
+Destroying HistoryDatabase. Time: 0.0070898
+Reseting IDs. Time: 1.7e-06
+Loading HistoryDatabase. Time: 0.322147
+Executing HistoryEntries. Time: 0.495832
+Refreshing knowledge. Time: 0.0297176
+CGraphicalMap ResetGame. Time: 1.7e-06

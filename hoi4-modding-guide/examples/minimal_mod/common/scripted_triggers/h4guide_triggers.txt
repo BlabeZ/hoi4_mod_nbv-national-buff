@@ -1,0 +1,6 @@
+# Requires country scope. Checks whether the one-time reward is still available.
+h4guide_can_receive_reward = {
+    NOT = {
+        has_country_flag = h4guide_reward_received
+    }
+}

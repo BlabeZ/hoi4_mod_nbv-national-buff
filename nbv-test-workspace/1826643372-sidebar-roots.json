@@ -1,0 +1,104 @@
+{
+  "candidates": [
+    {
+      "name": "CES_artifact_top_bar_window",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/eaw_CES_guis.txt",
+      "sg_line": 264,
+      "file": "interface/eaw_CES_gui.gui",
+      "line": 454,
+      "pos": {
+        "x": "@ARTIFACTS_TOP_WINDOW_POS_X",
+        "y": "@ARTIFACTS_TOP_WINDOW_POS_Y"
+      },
+      "size": {
+        "width": "@ARTIFACTS_TOP_WINDOW_SIZE_X",
+        "height": "@ARTIFACTS_TOP_WINDOW_SIZE_Y"
+      },
+      "orientation": "upper_right",
+      "origo": "upper_right"
+    },
+    {
+      "name": "eaw_diplo_popup_options_window",
+      "parent": "event_header",
+      "sg_file": "common/scripted_guis/eaw_diplo_popup.txt",
+      "sg_line": 2,
+      "file": "interface/eaw_diplo_popup.gui",
+      "line": 3,
+      "pos": {
+        "x": "235",
+        "y": "63"
+      },
+      "size": {},
+      "orientation": "upper_right",
+      "origo": "upper_left"
+    },
+    {
+      "name": "eaw_diplo_popup_window_new",
+      "parent": "screen",
+      "sg_file": "common/scripted_guis/eaw_diplo_popup.txt",
+      "sg_line": 59,
+      "file": "interface/eaw_diplo_popup.gui",
+      "line": 60,
+      "pos": {
+        "x": "-435",
+        "y": "-444"
+      },
+      "size": {},
+      "orientation": "lower_right",
+      "origo": "upper_left"
+    },
+    {
+      "name": "eaw_state_lore_mapicon_control_panel_gui",
+      "parent": "MapmodesInterface_Ingame",
+      "sg_file": "common/scripted_guis/eaw_state_lore_gui.txt",
+      "sg_line": 73,
+      "file": "interface/eaw_state_lore.gui",
+      "line": 128,
+      "pos": {
+        "x": "544",
+        "y": "-52"
+      },
+      "size": {
+        "width": "87",
+        "height": "66"
+      },
+      "orientation": "upper_left",
+      "origo": "upper_left"
+    },
+    {
+      "name": "eaw_help_button_container",
+      "parent": "top_bar",
+      "sg_file": "common/scripted_guis/eaw_welcome_screen.txt",
+      "sg_line": 3,
+      "file": "interface/eaw_welcome_screen.gui",
+      "line": 2,
+      "pos": {
+        "x": "0",
+        "y": "0"
+      },
+      "size": {},
+      "orientation": "UPPER_RIGHT",
+      "origo": "upper_left"
+    },
+    {
+      "name": "eaw_help_tab_container",
+      "parent": "time_control_window",
+      "sg_file": "common/scripted_guis/eaw_welcome_screen.txt",
+      "sg_line": 25,
+      "file": "interface/eaw_welcome_screen.gui",
+      "line": 21,
+      "pos": {
+        "x": "81",
+        "y": "38"
+      },
+      "size": {
+        "width": "42",
+        "height": "228"
+      },
+      "orientation": "upper_right",
+      "origo": "upper_left"
+    }
+  ],
+  "parse_failures": []
+}

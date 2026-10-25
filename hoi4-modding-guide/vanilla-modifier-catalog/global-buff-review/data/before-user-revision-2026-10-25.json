@@ -1,0 +1,3990 @@
+{
+  "captured_before_revision": "2026-10-25",
+  "statistics": {
+    "total": 4484,
+    "groups": {
+      "C": 3922,
+      "A": 525,
+      "B": 37
+    },
+    "selected": 562,
+    "categories": {
+      "政治": {
+        "A": 91,
+        "B": 3,
+        "C": 58
+      },
+      "工业": {
+        "A": 99,
+        "B": 1,
+        "C": 2719
+      },
+      "陆军": {
+        "A": 157,
+        "B": 3,
+        "C": 566
+      },
+      "海军": {
+        "A": 89,
+        "B": 15,
+        "C": 350
+      },
+      "空军": {
+        "A": 50,
+        "B": 3,
+        "C": 77
+      },
+      "情报": {
+        "A": 39,
+        "B": 12,
+        "C": 152
+      }
+    },
+    "exclusion_classes": {
+      "unobserved": 2649,
+      "pending": 161,
+      "scope_excluded": 1037,
+      "low_value": 75
+    },
+    "strong_source_keys_total": 602,
+    "old_p0_p1_removed": 14,
+    "old_buff_keys_removed": 10,
+    "new_selected_without_buff_mods": 444
+  },
+  "selected_records": [
+    {
+      "key": "bunker_max_level_terrain_limit",
+      "name_zh": "最高陆上要塞等级",
+      "name_en": "Maximum Land Fort level",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "coastal_bunker_max_level_terrain_limit",
+      "name_zh": "最高海岸要塞等级",
+      "name_en": "Maximum Coastal Fort level",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "land_mastery_gain_factor",
+      "name_zh": "学说精通增长系数：land",
+      "name_en": "Doctrine mastery gain factor：land",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "air_spirit_category_type_cost_factor",
+      "name_zh": "空军指挥精神花费",
+      "name_en": "Air Force Command Spirit Cost",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "army_spirit_category_type_cost_factor",
+      "name_zh": "陆军指挥精神花费",
+      "name_en": "Army Command Spirit Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "navy_spirit_category_type_cost_factor",
+      "name_zh": "海军指挥精神花费",
+      "name_en": "Navy Command Spirit Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "air_chief_cost_factor",
+      "name_zh": "空军部长花费",
+      "name_en": "Air Chief Cost",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "army_chief_cost_factor",
+      "name_zh": "陆军部长花费",
+      "name_en": "Army Chief Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "economy_cost_factor",
+      "name_zh": "经济法案花费",
+      "name_en": "Economy Laws Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "high_command_cost_factor",
+      "name_zh": "总司令花费",
+      "name_en": "High Command Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "mobilization_laws_cost_factor",
+      "name_zh": "征兵法案花费",
+      "name_en": "Conscription Laws Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "navy_chief_cost_factor",
+      "name_zh": "海军部长花费",
+      "name_en": "Navy Chief Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "political_advisor_cost_factor",
+      "name_zh": "政治顾问花费",
+      "name_en": "Political Advisor Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "theorist_cost_factor",
+      "name_zh": "理论家花费",
+      "name_en": "Theorist Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "trade_laws_cost_factor",
+      "name_zh": "贸易法案花费",
+      "name_en": "Trade Laws Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "communism_drift",
+      "name_zh": "每日共产主义支持率",
+      "name_en": "Daily Communism Support",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "democratic_drift",
+      "name_zh": "每日民主主义支持率",
+      "name_en": "Daily Democracy Support",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "fascism_drift",
+      "name_zh": "每日法西斯主义支持率",
+      "name_en": "Daily Fascism Support",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "neutrality_drift",
+      "name_zh": "每日中立主义支持率",
+      "name_en": "Daily Support for Unaligned",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "naval_general_support_factor",
+      "name_zh": "支援舰-最大支援效果",
+      "name_en": "Support Ships - Maximum Support Effect $RIGHT$",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_repair_support_factor",
+      "name_zh": "维修舰-最大维修效果",
+      "name_en": "Repair Ships - Maximum Repair Effect $RIGHT$",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_general_support_value_factor",
+      "name_zh": "支援舰-支援值",
+      "name_en": "Support Ships - Support Value $RIGHT$",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_repair_support_value_factor",
+      "name_zh": "维修舰-维修值",
+      "name_en": "Repair Ships - Repair Value $RIGHT$",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "target_sabotage_cost",
+      "name_zh": "破坏活动花费",
+      "name_en": "Sabotage cost",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "operation_boost_resistance_outcome",
+      "name_zh": "加强抵抗组织效率",
+      "name_en": "Strengthen Resistance effectiveness",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "operation_coordinated_strike_outcome",
+      "name_zh": "协同打击效率",
+      "name_en": "Coordinated Strike effectiveness",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "operation_make_resistance_contacts_outcome",
+      "name_zh": "接触抵抗组织效率",
+      "name_en": "Make Resistance Contacts effectiveness",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "operation_steal_tech_outcome",
+      "name_zh": "窃取蓝图效率",
+      "name_en": "Steal Blueprint effectiveness",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "operation_steal_tech_risk",
+      "name_zh": "窃取蓝图风险",
+      "name_en": "Steal Blueprint risk",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "specialization_nuclear_speed_factor",
+      "name_zh": "核研究专项计划速度",
+      "name_en": "Nuclear Research Special Projects Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "ace_effectiveness_factor",
+      "name_zh": "王牌效率",
+      "name_en": "Ace Effectiveness",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "additional_brigade_column_size",
+      "name_zh": "",
+      "name_en": "",
+      "group": "B",
+      "category": "陆军"
+    },
+    {
+      "key": "agency_upgrade_time",
+      "name_zh": "情报机构升级时间",
+      "name_en": "Agency upgrade time",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "air_accidents",
+      "name_zh": "空军事故几率",
+      "name_en": "Air Accidents Chance",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_accidents_factor",
+      "name_zh": "空军事故几率",
+      "name_en": "Air Accidents Chance",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_ace_bonuses_factor",
+      "name_zh": "空军王牌加成",
+      "name_en": "Air aces bonuses",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_ace_generation_chance_factor",
+      "name_zh": "王牌飞行员产生几率",
+      "name_en": "Ace generation chance",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_advisor_cost_factor",
+      "name_zh": "空军顾问花费",
+      "name_en": "Air Advisor Cost",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_agility_factor",
+      "name_zh": "机动",
+      "name_en": "Agility",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_attack_factor",
+      "name_zh": "对空攻击",
+      "name_en": "Air Attack",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_bombing_targetting",
+      "name_zh": "对地轰炸瞄准",
+      "name_en": "Ground Bombing Targeting",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_carrier_night_penalty_reduction_factor",
+      "name_zh": "舰载机夜间惩罚降低",
+      "name_en": "Carrier night penalty reduction",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "air_cas_efficiency",
+      "name_zh": "密接支援任务效率",
+      "name_en": "Air Support Mission Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_cas_present_factor",
+      "name_zh": "地面支援",
+      "name_en": "Ground support",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_close_air_support_org_damage_factor",
+      "name_zh": "近距支援机组织度伤害系数",
+      "name_en": "Close Air Support Organization Damage Factor",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_defence_factor",
+      "name_zh": "空中防御",
+      "name_en": "Air Defense",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_detection",
+      "name_zh": "对空探测",
+      "name_en": "Air Detection",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_doctrine_cost_factor",
+      "name_zh": "空军学说花费",
+      "name_en": "Air Doctrine Cost",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_equipment_upgrade_xp_cost",
+      "name_zh": "空军装备经验花费",
+      "name_en": "Air Equipment Experience Cost",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_escort_efficiency",
+      "name_zh": "空军护航效率",
+      "name_en": "Escort Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_fuel_consumption_factor",
+      "name_zh": "空军燃料消耗",
+      "name_en": "Air Fuel Consumption",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_home_defence_factor",
+      "name_zh": "本地空域防卫修正系数",
+      "name_en": "Air home defence factor",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_intercept_efficiency",
+      "name_zh": "拦截任务效率",
+      "name_en": "Interception Mission Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_interception_detect_factor",
+      "name_zh": "拦截任务探测",
+      "name_en": "Interception Detection",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_manpower_requirement_factor",
+      "name_zh": "空军人力要求",
+      "name_en": "Air manpower requirement",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_maximum_speed_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_mission_efficiency",
+      "name_zh": "空军任务效率",
+      "name_en": "Air Mission Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_mission_xp_gain_factor",
+      "name_zh": "空军联队任务经验增长",
+      "name_en": "Air Wing Mission Experience Gain",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_nav_efficiency",
+      "name_zh": "对海任务效率",
+      "name_en": "Naval Mission Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_night_penalty",
+      "name_zh": "夜间行动惩罚",
+      "name_en": "Night Operations Penalty",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_range_factor",
+      "name_zh": "空军航程",
+      "name_en": "Air Range",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_strategic_bomber_bombing_factor",
+      "name_zh": "战略轰炸",
+      "name_en": "Strategic Bombing",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_strategic_bomber_defence_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "B",
+      "category": "空军"
+    },
+    {
+      "key": "air_strategic_bomber_night_penalty",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_superiority_bonus_in_combat",
+      "name_zh": "战斗中空优加成",
+      "name_en": "Air Superiority Bonus in Combat",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_superiority_detect_factor",
+      "name_zh": "战斗机探测",
+      "name_en": "Fighter Detection",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_superiority_efficiency",
+      "name_zh": "夺取制空权任务效率",
+      "name_en": "Air Superiority Mission Efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_training_xp_gain_factor",
+      "name_zh": "空军联队训练经验增长",
+      "name_en": "Air Wing Training Experience Gain",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_untrained_pilots_penalty_factor",
+      "name_zh": "新空军联队未经训练的飞行员惩罚",
+      "name_en": "Untrained pilots penalty for new Air Wings",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_volunteer_cap",
+      "name_zh": "志愿航空队上限",
+      "name_en": "Air volunteer cap",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "air_wing_xp_loss_when_killed_factor",
+      "name_zh": "空军联队受损时失去的经验",
+      "name_en": "Air Wing Experience loss when killed",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "airforce_intel_factor",
+      "name_zh": "空军情报",
+      "name_en": "Air Intelligence",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "airforce_intel_to_others",
+      "name_zh": "泄露给他国的空军情报",
+      "name_en": "Air Force intelligence to others",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "amphibious_invasion",
+      "name_zh": "两栖登陆速度",
+      "name_en": "Amphibious Invasion Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "amphibious_invasion_defence",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "annex_cost_factor",
+      "name_zh": "吞并花费",
+      "name_en": "Annex cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "army_advisor_cost_factor",
+      "name_zh": "陆军顾问花费",
+      "name_en": "Army Advisor Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_armor_attack_factor",
+      "name_zh": "装甲师攻击",
+      "name_en": "Armor Division Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_armor_defence_factor",
+      "name_zh": "装甲师防御",
+      "name_en": "Armor Division Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_armor_speed_factor",
+      "name_zh": "装甲速度",
+      "name_en": "Armor speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_artillery_attack_factor",
+      "name_zh": "炮兵攻击",
+      "name_en": "Artillery Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_artillery_defence_factor",
+      "name_zh": "炮兵防御",
+      "name_en": "Artillery Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_attack_against_major_factor",
+      "name_zh": "对主要国家的攻击",
+      "name_en": "Attack against major countries",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_attack_against_minor_factor",
+      "name_zh": "对次要国家的攻击",
+      "name_en": "Attack against minor countries",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_attack_factor",
+      "name_zh": "陆军师攻击",
+      "name_en": "Division Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_attack_speed_factor",
+      "name_zh": "陆军师进攻速度",
+      "name_en": "Attacking divisions speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_bonus_air_superiority_factor",
+      "name_zh": "制空权",
+      "name_en": "Air Superiority",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_breakthrough_against_major_factor",
+      "name_zh": "对主要国家的突破",
+      "name_en": "Breakthrough against major countries",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_claim_attack_factor",
+      "name_zh": "陆军师已宣称领土攻击",
+      "name_en": "Division Attack on claimed territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_claim_defence_factor",
+      "name_zh": "陆军师已宣称领土防御",
+      "name_en": "Division Defense on claimed territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_core_attack_factor",
+      "name_zh": "陆军师核心领土攻击",
+      "name_en": "Division Attack on core territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_core_defence_factor",
+      "name_zh": "陆军师核心领土防御",
+      "name_en": "Division Defense on core territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_defence_against_major_factor",
+      "name_zh": "对主要国家的防御",
+      "name_en": "Defense against major countries",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_defence_factor",
+      "name_zh": "陆军师防御",
+      "name_en": "Division Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_experience_from_volunteers",
+      "name_zh": "来自志愿军的陆军经验",
+      "name_en": "Army Experience from Volunteers",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_fuel_capacity_factor",
+      "name_zh": "陆军燃油容量",
+      "name_en": "Army Fuel Capacity",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_fuel_consumption_factor",
+      "name_zh": "陆军燃料消耗",
+      "name_en": "Army Fuel Consumption",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_infantry_attack_factor",
+      "name_zh": "步兵师攻击",
+      "name_en": "Infantry Division Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_infantry_defence_factor",
+      "name_zh": "步兵师防御",
+      "name_en": "Infantry Division Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_intel_factor",
+      "name_zh": "陆军情报",
+      "name_en": "Army Intelligence",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "army_intel_to_others",
+      "name_zh": "泄露给他国的陆军情报",
+      "name_en": "Army intelligence to others",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "army_leader_cost_factor",
+      "name_zh": "陆军指挥官花费",
+      "name_en": "Army Leader Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_leader_start_attack_level",
+      "name_zh": "新将领初始进攻技能等级",
+      "name_en": "Starting Attack skill level of new army leaders",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_leader_start_defense_level",
+      "name_zh": "新将领初始防御技能等级",
+      "name_en": "Starting Defense skill level of new army leaders",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_leader_start_level",
+      "name_zh": "新陆军指挥官初始等级",
+      "name_en": "Starting level of new army leaders",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_leader_start_logistics_level",
+      "name_zh": "新将领初始后勤技能等级",
+      "name_en": "Starting Logistics skill level of new army leaders",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_leader_start_planning_level",
+      "name_zh": "新将领初始规划技能等级",
+      "name_en": "Starting Planning skill level of new army leaders",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_morale",
+      "name_zh": "陆军师组织度恢复速率",
+      "name_en": "Division Recovery Rate",
+      "group": "B",
+      "category": "陆军"
+    },
+    {
+      "key": "army_morale_factor",
+      "name_zh": "陆军师组织度恢复速率",
+      "name_en": "Division Recovery Rate",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_non_core_attack_factor",
+      "name_zh": "陆军师非核心领土攻击",
+      "name_en": "Division Attack on Non-Core territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_non_core_defence_factor",
+      "name_zh": "陆军师非核心领土防御",
+      "name_en": "Division Defense on Non-Core territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_org",
+      "name_zh": "陆军师组织度",
+      "name_en": "Division Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_org_factor",
+      "name_zh": "陆军师组织度",
+      "name_en": "Division Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_org_regain",
+      "name_zh": "陆军组织度恢复",
+      "name_en": "Army Organization Regain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_retreat_speed_factor",
+      "name_zh": "陆军师撤退速度",
+      "name_en": "Retreating Divisions Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_speed_factor",
+      "name_zh": "陆军师速度",
+      "name_en": "Divisions speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_speed_factor_for_controller",
+      "name_zh": "部队速度",
+      "name_en": "Divisions speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "army_strength_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "attrition",
+      "name_zh": "陆军师损耗",
+      "name_en": "Division Attrition",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "autonomy_gain",
+      "name_zh": "每日自治度进程增长",
+      "name_en": "Daily autonomy progress gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_gain_global_factor",
+      "name_zh": "全局自治度增加",
+      "name_en": "All autonomy gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_gain_ll_to_overlord_factor",
+      "name_zh": "向宗主国租借自治度增长",
+      "name_en": "Freedom gain by lend lease to overlord",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_gain_trade_factor",
+      "name_zh": "贸易自治度增长",
+      "name_en": "Freedom gain by trade",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_gain_warscore",
+      "name_zh": "战争贡献度自治度增长",
+      "name_en": "Freedom gain by war score",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_gain_warscore_factor",
+      "name_zh": "战争贡献度自治度增长",
+      "name_en": "Freedom gain by war score",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_manpower_share",
+      "name_zh": "附属国人力要求",
+      "name_en": "Subject manpower requirement",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "autonomy_manpower_share_from_subjects",
+      "name_zh": "附属国人力要求",
+      "name_en": "Manpower Requirement from Subjects",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "base_fuel_gain_factor",
+      "name_zh": "基础燃油增长",
+      "name_en": "Base Fuel Gain",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "boost_ideology_mission_factor",
+      "name_zh": "加强意识形态任务成果",
+      "name_en": "Boost Ideology mission effects",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "boost_resistance_factor",
+      "name_zh": "加强抵抗组织效率",
+      "name_en": "Strengthen Resistance efficiency",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "breakthrough_factor",
+      "name_zh": "突破",
+      "name_en": "Breakthrough",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "carrier_capacity_penalty_reduction",
+      "name_zh": "航母超载",
+      "name_en": "Carrier overcrowding",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "carrier_night_traffic",
+      "name_zh": "航母夜间起降能力",
+      "name_en": "Carrier Night Traffic",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "carrier_sortie_hours_delay",
+      "name_zh": "舰载空军联队出击延迟（小时）",
+      "name_en": "Carrier Air Wing sortie delay (hours)",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "carrier_traffic",
+      "name_zh": "航母起降能力",
+      "name_en": "Carrier Traffic",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "cas_damage_reduction",
+      "name_zh": "承受密接支援伤害减免",
+      "name_en": "Damage Reduction Against CAS",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "cavalry_attack_factor",
+      "name_zh": "骑兵攻击",
+      "name_en": "Cavalry Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "cavalry_defence_factor",
+      "name_zh": "骑兵防御",
+      "name_en": "Cavalry Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "cic_construction_boost",
+      "name_zh": "基础建设队列速度加成",
+      "name_en": "Base construction line speed boost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "cic_construction_boost_factor",
+      "name_zh": "市场建设加成乘数",
+      "name_en": "Market construction boost multiplier",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "cic_to_overlord_factor",
+      "name_zh": "贡献给宗主国的民用工厂",
+      "name_en": "Civilian industry to overlord",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "civil_war_involvement_tension",
+      "name_zh": "介入内战造成紧张度",
+      "name_en": "Civil war involvement tension",
+      "group": "B",
+      "category": "政治"
+    },
+    {
+      "key": "civilian_factory_use",
+      "name_zh": "民用工厂占用",
+      "name_en": "Civilian Factory Use",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "civilian_intel_factor",
+      "name_zh": "民政情报",
+      "name_en": "Civilian Intelligence",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "civilian_intel_to_others",
+      "name_zh": "泄露给他国的民政情报",
+      "name_en": "Civilian intelligence to others",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "coastal_bunker_effectiveness_factor",
+      "name_zh": "海岸要塞效率",
+      "name_en": "Coastal Fort effectiveness",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "command_abilities_cost_factor",
+      "name_zh": "指挥官能力花费",
+      "name_en": "Commander Abilities Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "command_power_gain",
+      "name_zh": "每日指挥点数增长",
+      "name_en": "Daily Command Power Gain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "command_power_gain_mult",
+      "name_zh": "每日指挥点数增长乘数",
+      "name_en": "Daily Command Power Gain Multiplier",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "commando_trait_chance_factor",
+      "name_zh": "招募具有特战专家特质特工的几率",
+      "name_en": "Chance of recruiting an Operative with the Commando trait",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "compliance_gain",
+      "name_zh": "每日顺从度增长",
+      "name_en": "Daily Compliance Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "compliance_growth",
+      "name_zh": "顺从度增长速度",
+      "name_en": "Compliance Growth Speed",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "compliance_growth_on_our_occupied_states",
+      "name_zh": "我们被敌人占领地区的顺从度增长速度",
+      "name_en": "Compliance Growth Speed in our states occupied by the enemy",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "conscription",
+      "name_zh": "可征募人口",
+      "name_en": "Recruitable Population",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "conscription_factor",
+      "name_zh": "可征募人口",
+      "name_en": "Recruitable Population",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "consumer_goods_expected_value",
+      "name_zh": "用于生产生活消费品的期望工厂数量",
+      "name_en": "Expected number of factories put on Consumer Goods",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "consumer_goods_factor",
+      "name_zh": "生活消费品工厂系数",
+      "name_en": "Consumer Goods Factories factor",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "control_trade_mission_factor",
+      "name_zh": "控制贸易任务成果",
+      "name_en": "Control Trade mission effects",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "conversion_cost_civ_to_mil_factor",
+      "name_zh": "民用工厂转军用工厂花费",
+      "name_en": "Civilian to Military Factory conversion cost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "conversion_cost_mil_to_civ_factor",
+      "name_zh": "军用工厂转民用工厂花费",
+      "name_en": "Military to Civilian Factory conversion cost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "convoy_escort_efficiency",
+      "name_zh": "运输护航效率",
+      "name_en": "Escort efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "convoy_raiding_efficiency_factor",
+      "name_zh": "袭击运输船任务效率",
+      "name_en": "Convoy Raiding Efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "convoy_retreat_speed",
+      "name_zh": "撤退时运输船速度",
+      "name_en": "Convoy speed while retreating",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "coordination_bonus",
+      "name_zh": "协同性",
+      "name_en": "Coordination",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "country_resource_chromium",
+      "name_zh": "铬",
+      "name_en": "Chromium",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "country_resource_oil",
+      "name_zh": "石油",
+      "name_en": "Oil",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "country_resource_rubber",
+      "name_zh": "橡胶",
+      "name_en": "Rubber",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "country_resource_steel",
+      "name_zh": "钢铁",
+      "name_en": "Steel",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "country_resource_tungsten",
+      "name_zh": "钨",
+      "name_en": "Tungsten",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "critical_receive_chance",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "crypto_strength",
+      "name_zh": "加密等级",
+      "name_en": "Cryptology Level",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "decryption",
+      "name_zh": "解密",
+      "name_en": "Decryption",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "decryption_factor",
+      "name_zh": "解密",
+      "name_en": "Decryption",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "decryption_power",
+      "name_zh": "破译能力",
+      "name_en": "Decryption Power",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "decryption_power_factor",
+      "name_zh": "破译能力修正",
+      "name_en": "Decryption Power Factor",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "defensive_war_stability_factor",
+      "name_zh": "防御战争对稳定度修正",
+      "name_en": "Defensive War Penalty Stability Modifier",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "dig_in_speed",
+      "name_zh": "堑壕速度",
+      "name_en": "Entrenchment speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "dig_in_speed_factor",
+      "name_zh": "堑壕速度",
+      "name_en": "Entrenchment speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "diplomatic_pressure_mission_factor",
+      "name_zh": "外交施压任务成果",
+      "name_en": "Diplomatic Pressure mission effects",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "drift_defence_factor",
+      "name_zh": "意识形态变化抵制力度",
+      "name_en": "Ideology drift defense",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "embargo_cost_factor",
+      "name_zh": "禁运花费修正",
+      "name_en": "Embargo Cost Modifier",
+      "group": "B",
+      "category": "政治"
+    },
+    {
+      "key": "embargo_threshold_factor",
+      "name_zh": "实施禁运的紧张度限制",
+      "name_en": "Embargo Tension Limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "encryption",
+      "name_zh": "加密",
+      "name_en": "Encryption",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "encryption_factor",
+      "name_zh": "加密",
+      "name_en": "Encryption",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "enemy_army_bonus_air_superiority_factor",
+      "name_zh": "敌方空中支援",
+      "name_en": "Enemy Air Support",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "enemy_declare_war_tension",
+      "name_zh": "敌国对我国宣战产生的全球紧张度",
+      "name_en": "Declare war tension on us",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "enemy_justify_war_goal_time",
+      "name_zh": "敌国对我国正当化战争目标所需时间",
+      "name_en": "Justify war goal time on us",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "enemy_operative_capture_chance_factor",
+      "name_zh": "敌方特工被捕几率",
+      "name_en": "Enemy operative capture chance",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "enemy_operative_detection_chance",
+      "name_zh": "敌方特工被发现几率补正",
+      "name_en": "Enemy operative detection chance offset",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "enemy_operative_detection_chance_factor",
+      "name_zh": "敌方特工被发现几率系数",
+      "name_en": "Enemy operative detection chance factor",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "enemy_operative_intel_extraction_rate",
+      "name_zh": "敌方特工情报获取率",
+      "name_en": "Enemy operative intel extraction rate",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "enemy_operative_recruitment_chance",
+      "name_zh": "敌国国籍特工招募几率",
+      "name_en": "Enemy nationality recruit chance",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "energy_gain_factor",
+      "name_zh": "从煤炭获得的能量",
+      "name_en": "Energy gain per coal",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "equipment_capture",
+      "name_zh": "装备缴获比例",
+      "name_en": "Equipment Capture Ratio",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "equipment_capture_factor",
+      "name_zh": "装备缴获比例系数",
+      "name_en": "Equipment Capture Ratio Factor",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "equipment_conversion_speed",
+      "name_zh": "装备改装速度",
+      "name_en": "Equipment Conversion Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "exile_manpower_factor",
+      "name_zh": "流亡到东道国的人力",
+      "name_en": "Exile Manpower to Host",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "exiled_government_weekly_manpower",
+      "name_zh": "每周流亡人力",
+      "name_en": "Weekly Exiled Government Manpower",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "experience_gain_artillery_combat_factor",
+      "name_zh": "战斗中获取的火炮经验",
+      "name_en": "Artillery experience gain from combat",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "experience_gain_destroyer_combat_factor",
+      "name_zh": "驱逐舰战斗经验增长",
+      "name_en": "Destroyer Combat Experience Gain",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "experience_gain_destroyer_training_factor",
+      "name_zh": "驱逐舰训练经验增长",
+      "name_en": "Destroyer Training Experience Gain",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "experience_gain_air",
+      "name_zh": "空军经验增长",
+      "name_en": "Air Experience Gain",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "experience_gain_air_factor",
+      "name_zh": "空军经验增长",
+      "name_en": "Air Experience Gain",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "experience_gain_army",
+      "name_zh": "陆军经验增长",
+      "name_en": "Army Experience Gain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "experience_gain_army_factor",
+      "name_zh": "陆军经验增长",
+      "name_en": "Army Experience Gain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "experience_gain_army_unit_factor",
+      "name_zh": "陆军师经验增长",
+      "name_en": "Division Experience Gain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "experience_gain_navy",
+      "name_zh": "海军经验增长",
+      "name_en": "Naval Experience Gain",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "experience_gain_navy_factor",
+      "name_zh": "海军经验增长",
+      "name_en": "Naval Experience Gain",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "experience_gain_navy_unit_factor",
+      "name_zh": "舰艇经验增长",
+      "name_en": "Ship Experience Gain",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "experience_loss_factor",
+      "name_zh": "有经验的士兵的损失",
+      "name_en": "Experienced soldier losses",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "extra_marine_supply_grace",
+      "name_zh": "海军陆战队携行补给",
+      "name_en": "Extra Marine Supply Grace",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "extra_trade_to_overlord_factor",
+      "name_zh": "对宗主国额外贸易",
+      "name_en": "Extra trade to overlord",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "faction_influence_contribution_factor",
+      "name_zh": "阵营影响贡献系数",
+      "name_en": "Faction Influence Contribution Factor",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "faction_influence_war_score_factor",
+      "name_zh": "阵营影响战争分数系数",
+      "name_en": "Faction Influence War Score Factor",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "faction_trade_opinion_factor",
+      "name_zh": "阵营贸易影响力系数",
+      "name_en": "Faction trade deal opinion factor",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "factory_energy_consumption",
+      "name_zh": "工厂能源消耗",
+      "name_en": "Factory Energy Consumption",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "field_officer_promotion_penalty",
+      "name_zh": "战地军官单位惩罚",
+      "name_en": "Field Officer Division Penalty",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "fighter_sortie_efficiency",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "foreign_subversive_activites",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "fuel_gain_factor",
+      "name_zh": "从石油获得的燃油",
+      "name_en": "Fuel gain per oil",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "fuel_gain_factor_from_states",
+      "name_zh": "从炼油厂获得的燃油",
+      "name_en": "Fuel gain from refineries",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "generate_wargoal_tension",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "global_building_slots",
+      "name_zh": "地区最大工厂数",
+      "name_en": "Max Factories in a State",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "global_building_slots_factor",
+      "name_zh": "地区最大工厂数",
+      "name_en": "Max Factories in a State",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "grant_medal_cost_factor",
+      "name_zh": "授勋花费",
+      "name_en": "Grant Medal Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "ground_attack_factor",
+      "name_zh": "对地攻击系数",
+      "name_en": "Ground attack factor",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "guarantee_cost",
+      "name_zh": "保障独立花费",
+      "name_en": "Guarantee Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "guarantee_tension",
+      "name_zh": "保障独立的紧张度限制",
+      "name_en": "Guarantee tension limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "improve_relations_maintain_cost_factor",
+      "name_zh": "改善关系持续花费",
+      "name_en": "Improve relations maintain cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "industrial_capacity_dockyard",
+      "name_zh": "海军船坞产出",
+      "name_en": "Dockyard Output",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industrial_capacity_dockyard_powered",
+      "name_zh": "已供能的船坞产出",
+      "name_en": "Powered Dockyard Output",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industrial_capacity_factory",
+      "name_zh": "工厂产出",
+      "name_en": "Factory Output",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industrial_capacity_factory_powered",
+      "name_zh": "已供能的工厂产出",
+      "name_en": "Powered Factory Output",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industry_air_damage_factor",
+      "name_zh": "工厂受轰炸易损性",
+      "name_en": "Factory Bomb Vulnerability",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industry_free_repair_factor",
+      "name_zh": "免费维修",
+      "name_en": "Free repair",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "industry_repair_factor",
+      "name_zh": "工厂修复速度",
+      "name_en": "Factory Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "initiative_factor",
+      "name_zh": "主动性",
+      "name_en": "Initiative",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "intel_from_combat_factor",
+      "name_zh": "从战斗获取的情报",
+      "name_en": "Intelligence gained from Combat",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "intel_from_operatives_factor",
+      "name_zh": "从特工与渗透线人获得情报",
+      "name_en": "Intelligence gained from Operatives and Infiltrated Assets",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "intel_network_gain",
+      "name_zh": "情报网强度增长",
+      "name_en": "Intel network strength gain",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "intel_network_gain_factor",
+      "name_zh": "情报网强度增长率",
+      "name_en": "Intel network strength gain factor",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "intelligence_agency_defense",
+      "name_zh": "反间谍",
+      "name_en": "Counter intelligence",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "invasion_preparation",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "join_faction_tension",
+      "name_zh": "加入阵营的紧张度限制",
+      "name_en": "Join faction tension limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "justify_war_goal_time",
+      "name_zh": "正当化战争目标所需时间",
+      "name_en": "Justify war goal time",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "justify_war_goal_when_in_major_war_time",
+      "name_zh": "与主要国家交战时正当化战争目标所需时间",
+      "name_en": "Justify war goal time when at war with a major",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "land_bunker_effectiveness_factor",
+      "name_zh": "陆上要塞效率",
+      "name_en": "Land Fort effectiveness",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "land_doctrine_cost_factor",
+      "name_zh": "陆军学说花费",
+      "name_en": "Land Doctrine Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "land_equipment_upgrade_xp_cost",
+      "name_zh": "陆军装备经验花费",
+      "name_en": "Land Equipment Experience Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "land_night_attack",
+      "name_zh": "陆战夜战攻击",
+      "name_en": "Land Night Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "land_reinforce_rate",
+      "name_zh": "增援率",
+      "name_en": "Reinforce Rate",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "legitimacy_daily",
+      "name_zh": "每日正统性增长",
+      "name_en": "Daily Legitimacy Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "legitimacy_gain_factor",
+      "name_zh": "正统性增长",
+      "name_en": "Legitimacy Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "lend_lease_tension",
+      "name_zh": "租借法案的紧张度限制",
+      "name_en": "Lend-lease tension limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "license_air_purchase_cost",
+      "name_zh": "空军装备生产许可购买花费",
+      "name_en": "Air license purchase cost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_anti_tank_eq_cost_factor",
+      "name_zh": "反坦克装备生产许可购买花费",
+      "name_en": "License purchase cost for Anti-Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_anti_tank_eq_production_speed_factor",
+      "name_zh": "反坦克装备许可生产速度",
+      "name_en": "License production speed for Anti-Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_anti_tank_eq_tech_difference_speed_factor",
+      "name_zh": "科技差导致的反坦克装备生产速度差距",
+      "name_en": "License production speed from technology difference for Anti-Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_armor_purchase_cost",
+      "name_zh": "装甲车辆生产许可购买花费",
+      "name_en": "Armor license purchase cost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_artillery_eq_cost_factor",
+      "name_zh": "炮兵装备生产许可购买花费",
+      "name_en": "License purchase cost for Artillery Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_artillery_eq_production_speed_factor",
+      "name_zh": "炮兵装备许可生产速度",
+      "name_en": "License production speed for Artillery Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_artillery_eq_tech_difference_speed_factor",
+      "name_zh": "科技差导致的炮兵装备生产速度差距",
+      "name_en": "License production speed from technology difference for Artillery Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_infantry_eq_cost_factor",
+      "name_zh": "步兵装备生产许可购买花费",
+      "name_en": "License purchase cost for Infantry Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_infantry_eq_production_speed_factor",
+      "name_zh": "步兵装备许可生产速度",
+      "name_en": "License production speed for Infantry Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_infantry_eq_tech_difference_speed_factor",
+      "name_zh": "科技差导致的步兵装备生产速度差距",
+      "name_en": "License production speed from technology difference for Infantry Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_light_tank_eq_cost_factor",
+      "name_zh": "轻型坦克生产许可购买花费",
+      "name_en": "License purchase cost for Light Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_light_tank_eq_production_speed_factor",
+      "name_zh": "轻型坦克装备许可生产速度",
+      "name_en": "License production speed for Light Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_light_tank_eq_tech_difference_speed_factor",
+      "name_zh": "科技差导致的轻型坦克装备生产速度差距",
+      "name_en": "License production speed from technology difference for Light Tank Equipment",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_production_speed",
+      "name_zh": "许可装备生产速度",
+      "name_en": "License production speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_purchase_cost",
+      "name_zh": "生产许可购买花费",
+      "name_en": "License purchase cost",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_subject_master_purchase_cost",
+      "name_zh": "宗主国和附属国间生产许可花费",
+      "name_en": "License cost between subject and master",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "license_tech_difference_speed",
+      "name_zh": "科技差导致的生产速度差距",
+      "name_en": "License production speed from technology difference",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "line_change_production_efficiency_factor",
+      "name_zh": "生产效率保持",
+      "name_en": "Production Efficiency Retention",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "local_resources_coal_factor",
+      "name_zh": "煤获取效率",
+      "name_en": "Coal Gain Efficiency",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "local_resources_oil_factor",
+      "name_zh": "石油获取效率",
+      "name_en": "Oil Gain Efficiency",
+      "group": "B",
+      "category": "工业"
+    },
+    {
+      "key": "local_resources_factor",
+      "name_zh": "战略资源获取效率",
+      "name_en": "Resource Gain Efficiency",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "marines_special_forces_contribution_factor",
+      "name_zh": "海军陆战队特种部队上限贡献",
+      "name_en": "Marine Special Forces Cap Contribution",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "master_ideology_drift",
+      "name_zh": "主要意识形态变化",
+      "name_en": "Master Ideology Drift",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "max_command_power",
+      "name_zh": "最大指挥点数提高",
+      "name_en": "Maximum Command Power Increase",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_command_power_mult",
+      "name_zh": "最大指挥点数提高乘数",
+      "name_en": "Maximum Command Power Increase Multiplier",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_dig_in",
+      "name_zh": "堑壕上限",
+      "name_en": "Max Entrenchment",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_dig_in_factor",
+      "name_zh": "堑壕上限",
+      "name_en": "Max Entrenchment",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_fuel_factor",
+      "name_zh": "燃油容量",
+      "name_en": "Fuel Capacity",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "max_planning",
+      "name_zh": "计划加成上限",
+      "name_en": "Max planning",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_planning_factor",
+      "name_zh": "计划加成上限系数",
+      "name_en": "Max planning factor",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "max_surrender_limit_offset",
+      "name_zh": "最低投降界限",
+      "name_en": "Minimum Surrender Limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "mechanized_attack_factor",
+      "name_zh": "机械化攻击",
+      "name_en": "Mechanized Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "mechanized_defence_factor",
+      "name_zh": "机械化防御",
+      "name_en": "Mechanized Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "mic_to_overlord_factor",
+      "name_zh": "贡献给宗主国的军用工厂",
+      "name_en": "Military industry to overlord",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "military_leader_cost_factor",
+      "name_zh": "指挥官花费",
+      "name_en": "Military Leader Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "min_export",
+      "name_zh": "出口资源",
+      "name_en": "Resources to Market",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "mines_planting_by_air_factor",
+      "name_zh": "空中布雷效率",
+      "name_en": "Aerial minelaying efficiency",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "mines_planting_by_fleets_factor",
+      "name_zh": "海军布雷效率",
+      "name_en": "Naval minelaying efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "mines_sweeping_by_air_factor",
+      "name_zh": "空中扫雷效率",
+      "name_en": "Aerial minesweeping efficiency",
+      "group": "B",
+      "category": "空军"
+    },
+    {
+      "key": "mines_sweeping_by_fleets_factor",
+      "name_zh": "海军扫雷效率",
+      "name_en": "Naval minesweeping efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "minimum_training_level",
+      "name_zh": "最低训练程度",
+      "name_en": "Minimum training level",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "mobilization_speed",
+      "name_zh": "动员速度",
+      "name_en": "Mobilization speed",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "modifier_army_sub_unit_armored_car_attack_factor",
+      "name_zh": "装甲车攻击",
+      "name_en": "Armored Car Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_armored_car_max_org_factor",
+      "name_zh": "装甲车组织度",
+      "name_en": "Armored Car Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_armored_car_recon_attack_factor",
+      "name_zh": "装甲侦察连攻击",
+      "name_en": "Armored Recon Company Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_armored_car_recon_max_org_factor",
+      "name_zh": "装甲侦察连组织度",
+      "name_en": "Armored Recon Company Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_defence_factor",
+      "name_zh": "黑衫军突击营防御",
+      "name_en": "Blackshirt Assault Battalion Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_blackshirt_assault_battalion_max_org_factor",
+      "name_zh": "黑衫军突击营组织度",
+      "name_en": "Blackshirt Assault Battalion Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_category_special_forces_max_org_factor",
+      "name_zh": "特种部队组织度",
+      "name_en": "Special Forces Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_cavalry_attack_factor",
+      "name_zh": "骑兵攻击",
+      "name_en": "Cavalry Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_cavalry_defence_factor",
+      "name_zh": "骑兵防御",
+      "name_en": "Cavalry Defence",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_cavalry_speed_factor",
+      "name_zh": "骑兵速度",
+      "name_en": "Cavalry Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_infantry_attack_factor",
+      "name_zh": "步兵攻击",
+      "name_en": "Infantry Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_infantry_defence_factor",
+      "name_zh": "步兵防御",
+      "name_en": "Infantry Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_infantry_speed_factor",
+      "name_zh": "步兵速度",
+      "name_en": "Infantry Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_irregular_infantry_attack_factor",
+      "name_zh": "非正规军攻击",
+      "name_en": "Irregular Infantry Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_irregular_infantry_defence_factor",
+      "name_zh": "非正规军防御",
+      "name_en": "Irregular Infantry Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_irregular_infantry_max_org_factor",
+      "name_zh": "非正规军组织度",
+      "name_en": "Irregular Infantry Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_irregular_infantry_speed_factor",
+      "name_zh": "非正规军速度",
+      "name_en": "Irregular Infantry Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_long_range_patrol_support_attack_factor",
+      "name_zh": "长程巡逻攻击",
+      "name_en": "Long-Range Patrol Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_long_range_patrol_support_defence_factor",
+      "name_zh": "长程巡逻防御",
+      "name_en": "Long-Range Patrol Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_marine_attack_factor",
+      "name_zh": "海军陆战队攻击",
+      "name_en": "Marines Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_marine_defence_factor",
+      "name_zh": "海军陆战队防御",
+      "name_en": "Marines Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_marine_max_org_factor",
+      "name_zh": "海军陆战队组织度",
+      "name_en": "Marines Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_military_police_defence_factor",
+      "name_zh": "宪兵队防御",
+      "name_en": "Military Police Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_military_police_max_org_factor",
+      "name_zh": "宪兵队组织度",
+      "name_en": "Military Police Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_militia_attack_factor",
+      "name_zh": "民兵攻击",
+      "name_en": "Militia Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_militia_defence_factor",
+      "name_zh": "民兵防御",
+      "name_en": "Militia Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_militia_max_org_factor",
+      "name_zh": "民兵组织度",
+      "name_en": "Militia Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_militia_org_recovery_cap_factor",
+      "name_zh": "民兵组织度恢复上限",
+      "name_en": "Militia Organization Recovery Cap",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_militia_speed_factor",
+      "name_zh": "民兵速度",
+      "name_en": "Militia Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_mountaineers_attack_factor",
+      "name_zh": "山地步兵攻击",
+      "name_en": "Mountaineers Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_mountaineers_defence_factor",
+      "name_zh": "山地步兵防御",
+      "name_en": "Mountaineers Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_mountaineers_max_org_factor",
+      "name_zh": "山地步兵组织度",
+      "name_en": "Mountaineers Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_mountaineers_speed_factor",
+      "name_zh": "山地步兵速度",
+      "name_en": "Mountaineers Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_paratrooper_attack_factor",
+      "name_zh": "空降伞兵攻击",
+      "name_en": "Paratroopers Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "modifier_army_sub_unit_paratrooper_max_org_factor",
+      "name_zh": "空降伞兵组织度",
+      "name_en": "Paratroopers Organization",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "monthly_population",
+      "name_zh": "每月人口",
+      "name_en": "Monthly Population",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "motorized_attack_factor",
+      "name_zh": "摩托化攻击",
+      "name_en": "Motorized Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "motorized_defence_factor",
+      "name_zh": "摩托化防御",
+      "name_en": "Motorized Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "mountaineers_special_forces_contribution_factor",
+      "name_zh": "山地步兵特种部队上限贡献",
+      "name_en": "Mountaineer Special Forces Cap Contribution",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "naval_accidents_chance",
+      "name_zh": "事故几率",
+      "name_en": "Accident chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_attrition",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_coordination",
+      "name_zh": "舰队协同性",
+      "name_en": "Fleet Coordination",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_critical_effect_factor",
+      "name_zh": "持续致命一击的效果",
+      "name_en": "Effects of sustained Critical Hits",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_critical_score_chance_factor",
+      "name_zh": "打出致命一击的几率",
+      "name_en": "Chance to score Critical Hit",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_damage_factor",
+      "name_zh": "海军伤害",
+      "name_en": "Naval Damage",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_defense_factor",
+      "name_zh": "海军防御",
+      "name_en": "Naval Defense",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_detection",
+      "name_zh": "海军探测",
+      "name_en": "Naval Detection",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_doctrine_cost_factor",
+      "name_zh": "海军学说花费",
+      "name_en": "Naval Doctrine Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_enemy_fleet_size_ratio_penalty_factor",
+      "name_zh": "敌人舰队规模惩罚",
+      "name_en": "Enemy fleet size penalty",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_equipment_upgrade_xp_cost",
+      "name_zh": "海军装备经验花费",
+      "name_en": "Naval Equipment Experience Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_has_potf_in_combat_attack",
+      "name_zh": "与舰队荣耀并肩作战时的攻击",
+      "name_en": "Attack when in combat alongside the Pride of the Fleet",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_has_potf_in_combat_defense",
+      "name_zh": "陪同舰队荣耀作战时的防御",
+      "name_en": "Defense when in combat alongside the Pride of the Fleet",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_heavy_gun_hit_chance_factor",
+      "name_zh": "重型火炮命中率",
+      "name_en": "Heavy Gun hit chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_hit_chance",
+      "name_zh": "海军命中率",
+      "name_en": "Naval Hit Chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_capacity",
+      "name_zh": "登陆作战上限",
+      "name_en": "Naval Invasion Capacity",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_division_cap",
+      "name_zh": "每项登陆作战计划的陆军师容量",
+      "name_en": "Division Capacity Per Naval Invasion",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_penalty",
+      "name_zh": "登陆惩罚",
+      "name_en": "Invasion Penalty",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_plan_cap",
+      "name_zh": "登陆作战计划上限",
+      "name_en": "Naval Invasion Plan Capacity",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_planning_bonus_speed",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_prep_days",
+      "name_zh": "",
+      "name_en": "",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_invasion_prep_speed",
+      "name_zh": "入侵准备速度",
+      "name_en": "Invasion Preparation Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_light_gun_hit_chance_factor",
+      "name_zh": "轻型火炮命中率",
+      "name_en": "Light Gun hit chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_mine_hit_chance",
+      "name_zh": "水雷触发率",
+      "name_en": "Chance to hit naval mine",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_mines_damage_factor",
+      "name_zh": "水雷伤害",
+      "name_en": "Naval mines damage",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_mines_effect_reduction",
+      "name_zh": "规避水雷",
+      "name_en": "Naval mines avoidance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_morale",
+      "name_zh": "海军组织度恢复速率",
+      "name_en": "Ship Recovery Rate",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_morale_factor",
+      "name_zh": "海军组织度恢复速率",
+      "name_en": "Ship Recovery Rate",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_night_attack",
+      "name_zh": "夜间攻击",
+      "name_en": "Night-time Attack",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_retreat_chance",
+      "name_zh": "撤退命令几率",
+      "name_en": "Retreat Decision Chance",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_retreat_chance_after_initial_combat",
+      "name_zh": "初次接战后的撤退几率",
+      "name_en": "Retreat chance after initial stage:",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_retreat_speed",
+      "name_zh": "撤退时的舰队速度",
+      "name_en": "Fleet speed while retreating",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_retreat_speed_after_initial_combat",
+      "name_zh": "初次接战后的撤退速度",
+      "name_en": "Retreat Speed after initial stage:",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_ship_recovery_chance",
+      "name_zh": "舰船组织度恢复速率",
+      "name_en": "Ship Recovery Chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_speed_factor",
+      "name_zh": "海军速度",
+      "name_en": "Naval Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_strike_agility_factor",
+      "name_zh": "对海机动",
+      "name_en": "Naval Agility",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "naval_strike_attack_factor",
+      "name_zh": "对海轰炸",
+      "name_en": "Naval Bombing",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "naval_strike_targetting_factor",
+      "name_zh": "对海瞄准",
+      "name_en": "Naval Targeting",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "naval_supply_consumption_factor",
+      "name_zh": "海军补给消耗",
+      "name_en": "Naval Supply Consumption",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "naval_torpedo_hit_chance_factor",
+      "name_zh": "鱼雷命中几率",
+      "name_en": "Torpedo hit chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_torpedo_reveal_chance_factor",
+      "name_zh": "鱼雷暴露几率",
+      "name_en": "Torpedo reveal chance",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "naval_torpedo_screen_penetration_factor",
+      "name_zh": "鱼雷穿透屏卫舰",
+      "name_en": "Torpedo screen penetration",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_advisor_cost_factor",
+      "name_zh": "海军顾问花费",
+      "name_en": "Navy Advisor Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_anti_air_attack_factor",
+      "name_zh": "海军对空攻击",
+      "name_en": "Naval AA attack",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_capital_ship_attack_factor",
+      "name_zh": "主力舰攻击",
+      "name_en": "Capital Ship Attack",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_capital_ship_defence_factor",
+      "name_zh": "主力舰装甲",
+      "name_en": "Capital Ship Armor",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_carrier_air_agility_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_carrier_air_attack_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_carrier_air_targetting_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_casualty_on_sink",
+      "name_zh": "舰艇沉没造成的伤亡",
+      "name_en": "Casualties on sink",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_fuel_consumption_factor",
+      "name_zh": "海军燃料消耗",
+      "name_en": "Navy Fuel Consumption",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_intel_factor",
+      "name_zh": "海军情报",
+      "name_en": "Navy Intelligence",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "navy_intel_to_others",
+      "name_zh": "泄露给他国的海军情报",
+      "name_en": "Navy intelligence to others",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "navy_leader_cost_factor",
+      "name_zh": "海军指挥官花费",
+      "name_en": "Navy Leader Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_leader_start_attack_level",
+      "name_zh": "新海军将领初始进攻技能等级",
+      "name_en": "Starting Attack skill level of new navy leaders",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_leader_start_defense_level",
+      "name_zh": "新海军将领初始防御技能等级",
+      "name_en": "Starting Defense skill level of new navy leaders",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_leader_start_level",
+      "name_zh": "新海军将领初始等级",
+      "name_en": "Starting level of new navy leaders",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_leader_start_maneuvering_level",
+      "name_zh": "新海军将领初始机动技能等级",
+      "name_en": "Starting Maneuvering skill level of new navy leaders",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_max_range_factor",
+      "name_zh": "海军最大航程系数",
+      "name_en": "Naval Max Range Factor",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_org",
+      "name_zh": "海军组织度",
+      "name_en": "Navy Organization",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_org_factor",
+      "name_zh": "海军组织度",
+      "name_en": "Navy Organization",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_screen_attack_factor",
+      "name_zh": "屏卫舰攻击",
+      "name_en": "Screen Attack",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_screen_defence_factor",
+      "name_zh": "屏卫舰防御",
+      "name_en": "Screen Defense",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_submarine_attack_factor",
+      "name_zh": "潜艇攻击",
+      "name_en": "Submarine Attack",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_submarine_defence_factor",
+      "name_zh": "潜艇防御",
+      "name_en": "Submarine Defense",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_submarine_detection_factor",
+      "name_zh": "对潜探测",
+      "name_en": "Submarine Detection",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "navy_visibility",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "new_operative_slot_bonus",
+      "name_zh": "特工招募选项",
+      "name_en": "Operative recruitment choices",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "night_spotting_chance",
+      "name_zh": "夜间索敌",
+      "name_en": "Night-time Spotting",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "no_supply_grace",
+      "name_zh": "携行补给",
+      "name_en": "Supply Grace",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "non_core_manpower",
+      "name_zh": "非核心人力",
+      "name_en": "Non-core Manpower",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "nuclear_production_factor",
+      "name_zh": "核弹生产速度",
+      "name_en": "Nuclear Bomb Production Rate",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "occupied_operative_recruitment_chance",
+      "name_zh": "敌占区友方国籍特工招募几率",
+      "name_en": "Occupied friendly nationality recruit chance",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "offensive_war_stability_factor",
+      "name_zh": "侵略战争对稳定度修正",
+      "name_en": "Offensive War Penalty Stability Modifier",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "operation_cost",
+      "name_zh": "行动花费",
+      "name_en": "Operation cost",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "operation_infiltrate_outcome",
+      "name_zh": "渗透效率",
+      "name_en": "Infiltration effectiveness",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "operative_death_on_capture_chance",
+      "name_zh": "我方特工在被捕时死亡几率",
+      "name_en": "Death chance of our Operative on capture",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "operative_slot",
+      "name_zh": "特工位",
+      "name_en": "Operative slots",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "opinion_gain_monthly",
+      "name_zh": "改善关系获得的评价",
+      "name_en": "Improve relations opinion",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "opinion_gain_monthly_factor",
+      "name_zh": "改善关系获得的评价",
+      "name_en": "Improve relations opinion",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "opinion_gain_monthly_same_ideology",
+      "name_zh": "相同意识形态每月评价",
+      "name_en": "Same ideology monthly opinion",
+      "group": "B",
+      "category": "政治"
+    },
+    {
+      "key": "opinion_gain_monthly_same_ideology_factor",
+      "name_zh": "相同意识形态每月评价",
+      "name_en": "Same ideology monthly opinion",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "org_loss_at_low_org_factor",
+      "name_zh": "组织度低于25%时的损失",
+      "name_en": "Organization loss when below 25%",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "org_loss_when_moving",
+      "name_zh": "移动中组织度损失",
+      "name_en": "Org Loss when Moving",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "out_of_power_impact_factor",
+      "name_zh": "降低缺乏电力的惩罚",
+      "name_en": "Reduces the penalties from lack of power",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "out_of_supply_factor",
+      "name_zh": "非战斗补给耗尽惩罚",
+      "name_en": "Non-Combat Out of Supply Penalties",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "overlord_trade_cost_factor",
+      "name_zh": "宗主国贸易花费",
+      "name_en": "Overlord trade cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "own_operative_capture_chance_factor",
+      "name_zh": "我方特工被捕几率",
+      "name_en": "Own operative capture chance",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "own_operative_detection_chance",
+      "name_zh": "我方特工被发现几率补正",
+      "name_en": "Own operative detection chance offset",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "own_operative_detection_chance_factor",
+      "name_zh": "我方特工被发现几率系数",
+      "name_en": "Own operative detection chance factor",
+      "group": "B",
+      "category": "情报"
+    },
+    {
+      "key": "paratroopers_special_forces_contribution_factor",
+      "name_zh": "空降兵特种部队上限贡献",
+      "name_en": "Paratrooper Special Forces Cap Contribution",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "party_popularity_stability_factor",
+      "name_zh": "党派支持度对稳定度修正",
+      "name_en": "Party Popularity Stability Modifier",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "planning_speed",
+      "name_zh": "计划速度",
+      "name_en": "Planning Speed",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "pocket_penalty",
+      "name_zh": "包围惩罚",
+      "name_en": "Encirclement penalty",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "political_power_cost",
+      "name_zh": "每日消耗的政治点数",
+      "name_en": "Daily Political Power Cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "political_power_factor",
+      "name_zh": "政治点数",
+      "name_en": "Political Power Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "political_power_gain",
+      "name_zh": "每日政治点数获取",
+      "name_en": "Daily Political Power Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "port_strike",
+      "name_zh": "港口袭击",
+      "name_en": "Port strikes",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "positioning",
+      "name_zh": "阵位",
+      "name_en": "Positioning",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "production_factory_efficiency_gain_factor",
+      "name_zh": "生产效率增长",
+      "name_en": "Production Efficiency growth",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_factory_max_efficiency_factor",
+      "name_zh": "生产效率上限",
+      "name_en": "Production Efficiency Cap",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_factory_start_efficiency_factor",
+      "name_zh": "基础生产效率",
+      "name_en": "Production Efficiency Base",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_lack_of_resource_penalty_factor",
+      "name_zh": "缺乏战略资源惩罚",
+      "name_en": "Lack of Resources Penalty",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_oil_factor",
+      "name_zh": "合成油",
+      "name_en": "Synthetic Oil",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_air_base_factor",
+      "name_zh": "空军基地建设速度",
+      "name_en": "Air Base construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_air_facility_factor",
+      "name_zh": "航空设施建设速度",
+      "name_en": "Air Facility construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_anti_air_building_factor",
+      "name_zh": "防空阵地建设速度",
+      "name_en": "Anti Air construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_arms_factory_factor",
+      "name_zh": "军用工厂建设速度",
+      "name_en": "Military Factory construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_bunker_factor",
+      "name_zh": "陆上要塞建设速度",
+      "name_en": "Land Fort construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_coastal_bunker_factor",
+      "name_zh": "海岸要塞建设速度",
+      "name_en": "Coastal Fort construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_dockyard_factor",
+      "name_zh": "海军船坞建设速度",
+      "name_en": "Dockyard construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_energy_infrastructure_factor",
+      "name_zh": "强化电网建设速度",
+      "name_en": "Reinforced Electrical Grid construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_fuel_silo_factor",
+      "name_zh": "储油罐建设速度",
+      "name_en": "Fuel Silo construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_industrial_complex_factor",
+      "name_zh": "民用工厂建设速度",
+      "name_en": "Civilian Factory construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_industrial_infrastructure_factor",
+      "name_zh": "大容量电网建设速度",
+      "name_en": "High Capacity Electrical Grid construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_infrastructure_factor",
+      "name_zh": "基础设施建设速度",
+      "name_en": "Infrastructure construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_land_facility_factor",
+      "name_zh": "陆地设施建设速度",
+      "name_en": "Land Facility construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_naval_base_factor",
+      "name_zh": "海军基地建设速度",
+      "name_en": "Naval Base construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_naval_facility_factor",
+      "name_zh": "海上设施建设速度",
+      "name_en": "Naval Facility construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_naval_headquarters_factor",
+      "name_zh": "海军指挥部建设速度",
+      "name_en": "Naval Headquarters construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_naval_supply_hub_factor",
+      "name_zh": "海军补给中心建设速度",
+      "name_en": "Naval Supply Hub construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_nuclear_facility_factor",
+      "name_zh": "核设施建设速度",
+      "name_en": "Nuclear Facility construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_nuclear_reactor_factor",
+      "name_zh": "核反应堆建设速度",
+      "name_en": "Nuclear Reactor construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_radar_station_factor",
+      "name_zh": "雷达站建设速度",
+      "name_en": "Radar Station construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_rail_way_factor",
+      "name_zh": "铁路建设速度",
+      "name_en": "Railway construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_rocket_site_factor",
+      "name_zh": "火箭基地建设速度",
+      "name_en": "Rocket Site construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_supply_node_factor",
+      "name_zh": "补给中心建设速度",
+      "name_en": "Supply Hub construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_synthetic_refinery_factor",
+      "name_zh": "合成炼油厂建设速度",
+      "name_en": "Refinery construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_buildings_factor",
+      "name_zh": "建设速度",
+      "name_en": "Construction Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "production_speed_facility_factor",
+      "name_zh": "设施建设速度",
+      "name_en": "Facility construction speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "promote_cost_factor",
+      "name_zh": "晋升花费",
+      "name_en": "Promotion Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "propaganda_mission_factor",
+      "name_zh": "政治宣传任务成果",
+      "name_en": "Propaganda mission effects",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "puppet_cost_factor",
+      "name_zh": "傀儡花费",
+      "name_en": "Puppet cost",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "railway_gun_bombardment_factor",
+      "name_zh": "列车炮轰击",
+      "name_en": "Railway Gun Bombardment",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "rangers_special_forces_contribution_factor",
+      "name_zh": "游骑兵特种部队上限贡献",
+      "name_en": "Rangers Special Forces Cap Contribution",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "reassignment_duration_factor",
+      "name_zh": "重新任命所需时间",
+      "name_en": "Army reassignment duration",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "recon_factor",
+      "name_zh": "侦查",
+      "name_en": "Reconnaissance",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "recon_factor_while_entrenched",
+      "name_zh": "堑壕中侦查加成",
+      "name_en": "Recon Bonus While Entrenched",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "recruitable_population_factor",
+      "name_zh": "可征募人口",
+      "name_en": "Recruitable Population",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "refit_ic_cost",
+      "name_zh": "舰艇改装花费",
+      "name_en": "Ship Refitting Cost",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "refit_speed",
+      "name_zh": "舰艇改装速度",
+      "name_en": "Ship Refitting Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "repair_speed_arms_factory_factor",
+      "name_zh": "军用工厂修复速度",
+      "name_en": "Military Factory Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "repair_speed_bunker_factor",
+      "name_zh": "陆上要塞修复速度",
+      "name_en": "Land Fort Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "repair_speed_industrial_complex_factor",
+      "name_zh": "民用工厂修复速度",
+      "name_en": "Civilian Factory Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "repair_speed_infrastructure_factor",
+      "name_zh": "基础设施修复速度",
+      "name_en": "Infrastructure Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "repair_speed_rail_way_factor",
+      "name_zh": "铁路维修速度",
+      "name_en": "Railway Repair Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "repair_speed_factor",
+      "name_zh": "船只修理速度",
+      "name_en": "Ship Repair Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "request_lease_tension",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "required_garrison_factor",
+      "name_zh": "驻军需求",
+      "name_en": "Required Garrisons",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "research_sharing_per_country_bonus_factor",
+      "name_zh": "科技共享加成",
+      "name_en": "Technology sharing bonus",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "research_speed_factor",
+      "name_zh": "科研速度",
+      "name_en": "Research Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "resistance_activity",
+      "name_zh": "抵抗活动几率",
+      "name_en": "Resistance Activity Chance",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_damage_to_garrison",
+      "name_zh": "驻军所受伤害",
+      "name_en": "Damage to Garrisons",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_damage_to_garrison_on_our_occupied_states",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_decay",
+      "name_zh": "抵抗下降速度",
+      "name_en": "Resistance Decay Speed",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_decay_on_our_occupied_states",
+      "name_zh": "我们被敌人占领地区的抵抗下降速度",
+      "name_en": "Resistance Decay Speed in our states occupied by the enemy",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_garrison_penetration_chance",
+      "name_zh": "驻军渗透机率",
+      "name_en": "Garrison Penetration Chance",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_growth",
+      "name_zh": "抵抗增长速度",
+      "name_en": "Resistance Growth Speed",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_growth_on_our_occupied_states",
+      "name_zh": "我们被敌人占领地区的抵抗增长速度",
+      "name_en": "Resistance Growth Speed in our states occupied by the enemy",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_target",
+      "name_zh": "抵抗目标",
+      "name_en": "Resistance Target",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resistance_target_on_our_occupied_states",
+      "name_zh": "我们被敌人占领地区的抵抗目标",
+      "name_en": "Resistance Target in our states occupied by the enemy",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "resource_trade_cost_bonus_per_factory",
+      "name_zh": "每座工厂交易额外资源",
+      "name_en": "Trade extra resource per factory",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "resources_to_overlord_factor",
+      "name_zh": "向宗主国提供资源",
+      "name_en": "Resources to overlord",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "river_crossing_factor",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "root_out_resistance_effectiveness_factor",
+      "name_zh": "根除抵抗组织任务成果",
+      "name_en": "Root Out Resistance mission effects",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "screening_efficiency",
+      "name_zh": "屏卫效率",
+      "name_en": "Screening Efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "screening_without_screens",
+      "name_zh": "只使用主力舰时的屏卫加成",
+      "name_en": "Screening bonus when using only capital ships",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "send_volunteer_divisions_required",
+      "name_zh": "派遣志愿军需要的陆军师数量",
+      "name_en": "Divisions required for sending volunteer force",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "send_volunteer_factor",
+      "name_zh": "志愿军陆军师数量上限",
+      "name_en": "Max volunteer force divisions",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "send_volunteer_size",
+      "name_zh": "志愿军陆军师数量上限",
+      "name_en": "Max volunteer force divisions",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "send_volunteers_tension",
+      "name_zh": "派遣志愿军的紧张度限制",
+      "name_en": "Send volunteers tension limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "ships_at_battle_start",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "shore_bombardment_bonus",
+      "name_zh": "对岸炮击加成",
+      "name_en": "Shore Bombardment Bonus",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "sortie_efficiency",
+      "name_zh": "舰载机出击效率",
+      "name_en": "Sortie efficiency",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "special_forces_attack_factor",
+      "name_zh": "特种攻击",
+      "name_en": "Special forces Attack",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_cap",
+      "name_zh": "特种部队容量上限乘数",
+      "name_en": "Special Forces Capacity Multiplier",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_cap_flat",
+      "name_zh": "特种部队上限",
+      "name_en": "Special Forces Cap",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_defence_factor",
+      "name_zh": "特种防御",
+      "name_en": "Special forces Defense",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_doctrine_cost_factor",
+      "name_zh": "特种部队战术消耗",
+      "name_en": "Special Forces Doctrine Cost",
+      "group": "B",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_min",
+      "name_zh": "特种部队最低容量",
+      "name_en": "Special Forces Minimum Capacity",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_no_supply_grace",
+      "name_zh": "特种部队携行补给",
+      "name_en": "Special Forces Supply Grace",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_out_of_supply_factor",
+      "name_zh": "特种部队非战斗补给耗尽",
+      "name_en": "Special Forces Non-Combat Out of Supply",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_forces_training_time_factor",
+      "name_zh": "特种部队训练时间",
+      "name_en": "Special Forces Division training time",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "special_project_facility_supply_consumption_factor",
+      "name_zh": "设施补给消耗",
+      "name_en": "Facility Supply Consumption$FACTOR$",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "special_project_speed_factor",
+      "name_zh": "专项计划速度",
+      "name_en": "Special Project Speed",
+      "group": "A",
+      "category": "工业"
+    },
+    {
+      "key": "spotting_chance",
+      "name_zh": "索敌速度",
+      "name_en": "Spotting Speed",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "stability_factor",
+      "name_zh": "稳定度",
+      "name_en": "Stability",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "stability_weekly",
+      "name_zh": "每周稳定度",
+      "name_en": "Weekly Stability",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "stability_weekly_factor",
+      "name_zh": "每周稳定度增长",
+      "name_en": "Weekly Stability Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "starting_compliance",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "static_anti_air_damage_factor",
+      "name_zh": "防空阵地伤害系数",
+      "name_en": "Static Anti Air damage factor",
+      "group": "B",
+      "category": "空军"
+    },
+    {
+      "key": "static_anti_air_hit_chance_factor",
+      "name_zh": "防空阵地命中几率系数",
+      "name_en": "Static Anti Air hit chance factor",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "strategic_bomb_visibility",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "strike_force_movement_org_loss",
+      "name_zh": "",
+      "name_en": "",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "sub_retreat_speed",
+      "name_zh": "撤退时的潜艇速度",
+      "name_en": "Submarine speed while retreating",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "subjects_autonomy_gain",
+      "name_zh": "附属国自治度获取",
+      "name_en": "Subject Autonomy Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "subversive_activites_upkeep",
+      "name_zh": "颠覆活动成本",
+      "name_en": "Subversive activities cost",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "supply_combat_penalties_on_core_factor",
+      "name_zh": "核心领土战斗补给耗尽惩罚",
+      "name_en": "Supply Combat Penalties on Core Territory",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "supply_consumption_factor",
+      "name_zh": "补给消耗",
+      "name_en": "Supply Consumption",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "supply_node_range",
+      "name_zh": "补给范围",
+      "name_en": "Supply Range",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "surrender_limit",
+      "name_zh": "投降界限",
+      "name_en": "Surrender Limit",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "target_sabotage_factor",
+      "name_zh": "目标破坏效率",
+      "name_en": "Targeted Sabotage efficiency",
+      "group": "A",
+      "category": "情报"
+    },
+    {
+      "key": "tech_air_damage_factor",
+      "name_zh": "防空阵地轰炸伤害降低",
+      "name_en": "Anti-Air Bombing Damage Reduction",
+      "group": "A",
+      "category": "空军"
+    },
+    {
+      "key": "terrain_trait_xp_gain_factor",
+      "name_zh": "地形特质经验增长速度",
+      "name_en": "Terrain traits XP Gain",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "trade_opinion_factor",
+      "name_zh": "贸易影响力系数",
+      "name_en": "Trade deal opinion factor",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "training_time_army_factor",
+      "name_zh": "陆军师训练时间",
+      "name_en": "Division training time",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "training_time_factor",
+      "name_zh": "训练时间",
+      "name_en": "Training time",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "transport_capacity",
+      "name_zh": "部队运输船需求",
+      "name_en": "Troop convoy requirements",
+      "group": "A",
+      "category": "海军"
+    },
+    {
+      "key": "truck_attrition_factor",
+      "name_zh": "补给卡车损耗",
+      "name_en": "Supply Truck Attrition",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "underway_replenishment_convoy_cost",
+      "name_zh": "海上补给运输船使用量",
+      "name_en": "Underway Replenishment Convoy Usage",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "underway_replenishment_range",
+      "name_zh": "海上补给距离",
+      "name_en": "Underway Replenishment Range",
+      "group": "B",
+      "category": "海军"
+    },
+    {
+      "key": "unit_cavalry_design_cost_factor",
+      "name_zh": "骑兵单位编成花费",
+      "name_en": "Cavalry Unit Design Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_infantry_design_cost_factor",
+      "name_zh": "步兵单位编成花费",
+      "name_en": "Infantry Unit Design Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_mechanized_design_cost_factor",
+      "name_zh": "机械化步兵单位编成花费",
+      "name_en": "Mechanized Infantry Unit Design Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_motorized_design_cost_factor",
+      "name_zh": "摩托化步兵单位编成花费",
+      "name_en": "Motorized Infantry Unit Design Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_mountaineers_design_cost_factor",
+      "name_zh": "山地步兵单位编成花费",
+      "name_en": "Mountaineers Unit Design Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_leader_as_advisor_cp_cost_factor",
+      "name_zh": "将领成为顾问花费",
+      "name_en": "Commander as Advisor Cost",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "unit_medal_effectiveness",
+      "name_zh": "单位勋章效率",
+      "name_en": "Unit Medal Effectiveness",
+      "group": "A",
+      "category": "陆军"
+    },
+    {
+      "key": "war_stability_factor",
+      "name_zh": "战争对稳定度惩罚修正",
+      "name_en": "War Penalty Stability Modifier",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "war_support_factor",
+      "name_zh": "战争支持度",
+      "name_en": "War Support",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "war_support_weekly",
+      "name_zh": "每周战争支持度",
+      "name_en": "Weekly War Support",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "war_support_weekly_factor",
+      "name_zh": "每周战争支持度增长",
+      "name_en": "Weekly War Support Gain",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "weekly_bombing_war_support",
+      "name_zh": "每周战争支持度（敌军轰炸）",
+      "name_en": "Weekly War Support (Enemy Bombing)",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "weekly_casualties_war_support",
+      "name_zh": "每周战争支持度（战斗伤亡）",
+      "name_en": "Weekly War Support (Combat Casualties)",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "weekly_convoys_war_support",
+      "name_zh": "每周战争支持度（运输船沉没）",
+      "name_en": "Weekly War Support (Sunk Convoys)",
+      "group": "A",
+      "category": "政治"
+    },
+    {
+      "key": "weekly_manpower",
+      "name_zh": "每周人力",
+      "name_en": "Weekly Manpower",
+      "group": "A",
+      "category": "政治"
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "date": "2026-10-25",
+  "game_root": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV",
+  "scope_interpretation": "将设计商相关国家管理修正从原先全部排除改为按对象区分：纳入国家面向设计商/军工机构的通用费用与经费；排除具体机构、装备、模块、单位、特质和科技对象分量。本轮仍执行当前目录无已确认中文名称者全部排除。",
+  "recommend_include": [
+    "tank_manufacturer_cost_factor",
+    "naval_manufacturer_cost_factor",
+    "aircraft_manufacturer_cost_factor",
+    "materiel_manufacturer_cost_factor",
+    "industrial_concern_cost_factor",
+    "military_industrial_organization_funds_gain"
+  ],
+  "recommend_exclude": [
+    "military_industrial_organization_design_team_assign_cost",
+    "military_industrial_organization_design_team_change_cost",
+    "military_industrial_organization_industrial_manufacturer_assign_cost",
+    "military_industrial_organization_task_capacity",
+    "military_industrial_organization_size_up_requirement",
+    "military_industrial_organization_policy_cost",
+    "military_industrial_organization_policy_cooldown",
+    "military_industrial_organization_research_bonus"
+  ],
+  "records": [
+    {
+      "key": "tank_manufacturer_cost_factor",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "坦克设计商花费",
+      "localisation_key": "tank_manufacturer_cost_factor",
+      "reason": "国家对整个设计商/工业企业聘用类别的费用系数，不绑定某个具体设计商，也不是装备/模块/单位的对象设计费用。",
+      "conditions": [
+        "旧设计商/工业企业聘用机制；DLC和来源分支决定是否生效。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@tank_manufacturer_cost_factor]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3048,
+          "note": "RAJ_war_industry_no_aat国家精神的普通modifier授予该费用系数-0.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\india_goe.txt",
+          "line": 18819,
+          "note": "国策检查Arms Against Tyranny后分别授予RAJ_war_industry或RAJ_war_industry_no_aat"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 1010,
+          "note": "原版已确认中文名称"
+        }
+      ]
+    },
+    {
+      "key": "naval_manufacturer_cost_factor",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "海军设计商花费",
+      "localisation_key": "naval_manufacturer_cost_factor",
+      "reason": "国家对整个设计商/工业企业聘用类别的费用系数，不绑定某个具体设计商，也不是装备/模块/单位的对象设计费用。",
+      "conditions": [
+        "旧设计商/工业企业聘用机制；DLC和来源分支决定是否生效。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@naval_manufacturer_cost_factor]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3052,
+          "note": "RAJ_war_industry_no_aat国家精神的普通modifier授予该费用系数-0.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\india_goe.txt",
+          "line": 18819,
+          "note": "国策检查Arms Against Tyranny后分别授予RAJ_war_industry或RAJ_war_industry_no_aat"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 1013,
+          "note": "原版已确认中文名称"
+        }
+      ]
+    },
+    {
+      "key": "aircraft_manufacturer_cost_factor",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "飞机设计商花费",
+      "localisation_key": "aircraft_manufacturer_cost_factor",
+      "reason": "国家对整个设计商/工业企业聘用类别的费用系数，不绑定某个具体设计商，也不是装备/模块/单位的对象设计费用。",
+      "conditions": [
+        "旧设计商/工业企业聘用机制；DLC和来源分支决定是否生效。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@aircraft_manufacturer_cost_factor]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3051,
+          "note": "RAJ_war_industry_no_aat国家精神的普通modifier授予该费用系数-0.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\india_goe.txt",
+          "line": 18819,
+          "note": "国策检查Arms Against Tyranny后分别授予RAJ_war_industry或RAJ_war_industry_no_aat"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 1016,
+          "note": "原版已确认中文名称"
+        }
+      ]
+    },
+    {
+      "key": "materiel_manufacturer_cost_factor",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "军需品设计花费",
+      "localisation_key": "materiel_manufacturer_cost_factor",
+      "reason": "国家对整个设计商/工业企业聘用类别的费用系数，不绑定某个具体设计商，也不是装备/模块/单位的对象设计费用。",
+      "conditions": [
+        "旧设计商/工业企业聘用机制；DLC和来源分支决定是否生效。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@materiel_manufacturer_cost_factor]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3050,
+          "note": "RAJ_war_industry_no_aat国家精神的普通modifier授予该费用系数-0.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\india_goe.txt",
+          "line": 18819,
+          "note": "国策检查Arms Against Tyranny后分别授予RAJ_war_industry或RAJ_war_industry_no_aat"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 1019,
+          "note": "原版已确认中文名称"
+        }
+      ]
+    },
+    {
+      "key": "industrial_concern_cost_factor",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "工业企业花费",
+      "localisation_key": "industrial_concern_cost_factor",
+      "reason": "国家对整个设计商/工业企业聘用类别的费用系数，不绑定某个具体设计商，也不是装备/模块/单位的对象设计费用。",
+      "conditions": [
+        "旧设计商/工业企业聘用机制；DLC和来源分支决定是否生效。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@industrial_concern_cost_factor]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3049,
+          "note": "RAJ_war_industry_no_aat国家精神的普通modifier授予该费用系数-0.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\india_goe.txt",
+          "line": 18819,
+          "note": "国策检查Arms Against Tyranny后分别授予RAJ_war_industry或RAJ_war_industry_no_aat"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 1022,
+          "note": "原版已确认中文名称"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_funds_gain",
+      "previous_group": "C",
+      "decision": "include",
+      "category": "工业",
+      "name_zh": "经费获取",
+      "suggested_context_label": "军工机构经费获取",
+      "localisation_key": "MODIFIER_MIO_FUNDS_GAIN",
+      "reason": "国家精神和国家领袖提供面向军工机构的通用经费获取加成；只显示国家分量，单个MIO的组织特质/政策值不手动累加。",
+      "conditions": [
+        "军工机构机制；不显示单个机构经费余额或其最终增速。"
+      ],
+      "read_expression_candidate": "[?ROOT.modifier@military_industrial_organization_funds_gain]",
+      "runtime_read_validated": false,
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3024,
+          "note": "RAJ_war_industry国家精神普通modifier授予0.15"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 5901,
+          "note": "SWE_foreign_minister国家领袖特质同样授予此key"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2359,
+          "note": "MODIFIER_MIO_FUNDS_GAIN中文名称"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\policies\\_general_policies.txt",
+          "line": 6,
+          "note": "同名key也可用于单个MIO政策本体，须与国家分量区分"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_design_team_assign_cost",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": true,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。国家来源已有证据，排除理由不是作用域必然不符。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_DESIGN_TEAM_ASSIGN_COST",
+        "text": "指定设计团队花费",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2354,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13139,
+          "note": "GER_philipp_holzmann_trait_improved国家特质的通用管理费用"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_design_team_change_cost",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": false,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。同时当前目录未发现国家全局定义；注册或MIO本体支持不等于国家来源证据。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_DESIGN_TEAM_CHANGE_COST",
+        "text": "改变设计团队花费",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2355,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_industrial_manufacturer_assign_cost",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": true,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。国家来源已有证据，排除理由不是作用域必然不符。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_INDUSTRIAL_MANUFACTURER_ASSIGN_COST",
+        "text": "指定工业制造商花费",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2356,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13140,
+          "note": "GER_philipp_holzmann_trait_improved国家特质的通用管理费用"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_task_capacity",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": false,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。同时当前目录未发现国家全局定义；注册或MIO本体支持不等于国家来源证据。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_TASK_CAPACITY",
+        "text": "任务容量",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2357,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_size_up_requirement",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": true,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。国家来源已有证据，排除理由不是作用域必然不符。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_FUNDS_SIZE_UP_REQUIREMENT",
+        "text": "升级规模要求",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2358,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\czechoslovakia.txt",
+          "line": 1561,
+          "note": "CZE_kickstart_rapid_rearmanent_aat_idea普通国家modifier减少规模升级要求0.10"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_policy_cost",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": true,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。国家来源已有证据，排除理由不是作用域必然不符。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_POLICY_COST_FACTOR",
+        "text": "方针花费",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2361,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13138,
+          "note": "GER_philipp_holzmann_trait_improved国家特质的通用管理费用"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_policy_cooldown",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "",
+      "confirmed_national_source_present": false,
+      "reason": "按用户“无中文名项全部排除”：当前目录name_zh为空，继续保留C；不据候选别名自动扩大白名单。同时当前目录未发现国家全局定义；注册或MIO本体支持不等于国家来源证据。",
+      "original_chinese_label_candidate": {
+        "key": "MODIFIER_MIO_POLICY_COOLDOWN_FACTOR",
+        "text": "方针冷却",
+        "mapping_status": "candidate_not_added_to_catalog"
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2362,
+          "note": "此中文候选标签确实存在；当前目录尚未确认与脚本key的映射，本轮不自动补译"
+        }
+      ]
+    },
+    {
+      "key": "military_industrial_organization_research_bonus",
+      "previous_group": "C",
+      "decision": "exclude",
+      "category": "工业",
+      "name_zh": "军工机构研究加成",
+      "localisation_key": "MODIFIER_MIO_RESEARCH_BONUS",
+      "reason": "按用户“不包括科技修正”的保守口径，研究加成继续排除；国家来源真实存在，不写成只有MIO本体来源。",
+      "boundary_note": "若主任务将用户意图限定为排除具体单项科技模板，而允许全局MIO科研，本key可另审；本建议未自动采用较宽解释。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 3023,
+          "note": "国家精神普通modifier给予MIO研究加成0.15"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13927,
+          "note": "国家领袖特质也有此科研加成"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\simp_chinese\\modifiers_l_simp_chinese.yml",
+          "line": 2351,
+          "note": "原版中文名称"
+        }
+      ]
+    }
+  ],
+  "excluded_families": [
+    {
+      "family": "MIO organization_modifier",
+      "reason": "只作用所在组织；不能把组织政策自身加成混作国家总值。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+          "line": 169,
+          "note": "组织本体修正"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 1066,
+          "note": "MIO有独立modifier接口"
+        }
+      ]
+    },
+    {
+      "family": "MIO equipment_bonus / production_bonus",
+      "reason": "分别是所分配装备变体与生产线分量，仍排除。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+          "line": 156,
+          "note": "装备变体"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+          "line": 162,
+          "note": "生产线"
+        }
+      ]
+    },
+    {
+      "family": "<Equipment>_design_cost_factor / module_<EquipmentModule>_design_cost_factor / unit_<Unit>_design_cost_factor",
+      "reason": "具体装备、模块、单位对象的设计费用模板，不是全局设计商聘用管理费。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 1280,
+          "note": "Equipment对象"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 3715,
+          "note": "EquipmentModule对象"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 5087,
+          "note": "Unit对象"
+        }
+      ]
+    },
+    {
+      "family": "<Technology>_cost_factor / 单项科技科研参数",
+      "reason": "科技对象修正按用户要求排除。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 1376,
+          "note": "Technology成本模板"
+        }
+      ]
+    },
+    {
+      "family": "<Trait>_xp_gain_factor / trait_<Trait>_xp_gain_factor",
+      "reason": "具体特质对象经验模板不是通用MIO特质费用；本次未找到独立可确认的MIO特质成本国家键，不创造key。",
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 1384,
+          "note": "Trait经验模板"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 5054,
+          "note": "trait_经验模板"
+        }
+      ]
+    }
+  ],
+  "read_limitations": [
+    "只读取国家存储分量；同key在MIO本体中出现不构成把对象值加入国家值的授权。",
+    "全国来源与已确认中文名是本轮纳入条件；运行读取、显示单位、刷新仍未验证。",
+    "当前目录中文名为空不代表原版完全没有中文文本；候选标签明确另列，此次未修改映射。",
+    "5个聘用费用属于IdeaGroup类别模板，参数是整个设计商类别，不是一个具体设计商，因此不随装备/模块/单位对象模板一起排除。"
+  ],
+  "read_interface_evidence": {
+    "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+    "line": 496,
+    "note": "country的modifier读取接口"
+  }
+}

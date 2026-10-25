@@ -1,0 +1,1531 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-24",
+  "purpose": "人工分类与重要词条候选规则；频次、原版元数据和模组采纳数由扫描器合并。本表不构成运行读取有效性认证。",
+  "category_policy": {
+    "政治": "政治点数、稳定度、战争支持、外交法律、动员人口、占领治理、自治与AI政治。",
+    "工业": "建设、工厂和船坞产出、生产效率、资源贸易、科研、能源与燃油供给。",
+    "陆军": "陆战能力、补给后勤、兵种将领、陆军学说经验。",
+    "海军": "舰艇海战、舰载航空、舰队后勤修理、海军学说经验。",
+    "空军": "航空任务、飞机属性、空军学说经验；包含航空对海打击。",
+    "情报": "情报机构、特工密码、情报网、各军种情报获取泄露、秘密行动。"
+  },
+  "priority_policy": {
+    "P0": "核心页候选：通用玩家决策相关或补齐关键遗漏；不代表已证实ROOT.modifier@可完整读取。",
+    "P1": "分类页重点：专项或条件指标，按频次与内容覆盖证据排序。",
+    "P2": "长尾、高级或待核验，默认不占核心页，不代表无效无用。"
+  },
+  "evidence_scoring_suggestion": {
+    "separate_priority_and_evidence": true,
+    "frequency_points": "40*log(1+原版有效赋值数)/log(1+全语料最大赋值数)",
+    "breadth_points": "20*min(内容类型数,5)/5",
+    "mod_adoption_points": "10*读取该精确字符串的BUFF模组数，取0/10/20",
+    "curated_relevance_points": "P0=20，P1=10，P2或未审查=0",
+    "cautions": [
+      "源文件赋值频次不是运行发生率、触发率、持续时间、加成大小或战略价值。",
+      "含DLC文件不证明当前拥有DLC、进入某国策分支或在存档启用效果。",
+      "对数压缩防止重复模板主导；保留频次原数、文件数和内容类型数供审查。",
+      "高分AI倾向、对象专属项不能自动进入国家BUFF首页。",
+      "原样采纳与纠错后的概念覆盖分开计算，避免错拼错标签重复计分。"
+    ]
+  },
+  "relationship_policy": [
+    "不同修正键不能仅凭factor后缀假设相互连乘，也不能全部相加；同项适用来源由引擎合并。",
+    "固定增量、系数、百分点、上限、速度与最终结果分列，公式须有原版证据。",
+    "country/state/leader/unit/targeted对象分别统计；文档Categories混合机制类别，不是完整读取scope白名单。",
+    "国家modifier不是特定师舰机战斗目标的最终属性；地区装备条件修正单列。",
+    "主类用于检索，跨领域用related_keys和副标签表达。"
+  ],
+  "rules": {
+    "political_power_gain": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "每日政治点数固定增量，影响顾问、法律与决议节奏；须与增益系数分列。",
+      "related_keys": [
+        "political_power_factor",
+        "political_power_cost"
+      ]
+    },
+    "political_power_factor": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "政治点数获取系数，不能与每日固定增量混为一项。",
+      "related_keys": [
+        "political_power_gain",
+        "political_power_cost"
+      ]
+    },
+    "justify_war_goal_time": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "production_speed_buildings_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "全局建筑速度，须与民工军工等专项建筑速度分列。",
+      "related_keys": [
+        "production_speed_industrial_complex_factor",
+        "production_speed_arms_factory_factor",
+        "production_speed_dockyard_factor"
+      ]
+    },
+    "local_resources_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "资源获取修正连接资源供给与缺料生产惩罚；国家和州同名项须区分。",
+      "related_keys": [
+        "production_lack_of_resource_penalty_factor"
+      ]
+    },
+    "global_building_slots_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "production_speed_industrial_complex_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "民用工厂建设速度，直接影响早期工业扩张。",
+      "related_keys": [
+        "production_speed_buildings_factor"
+      ]
+    },
+    "fuel_gain_factor_from_states": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "repair_speed_factor": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "船只修理速度，影响舰队周转；两个BUFF模组误标为工厂修理，须纠正。",
+      "related_keys": [
+        "industry_repair_factor"
+      ]
+    },
+    "production_speed_arms_factory_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "军用工厂建设速度，直接影响军工扩张。",
+      "related_keys": [
+        "production_speed_buildings_factor",
+        "industrial_capacity_factory"
+      ]
+    },
+    "fuel_gain_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "燃油供给关联陆海空作战持续能力，放工业并关联军种燃油消耗。",
+      "related_keys": [
+        "fuel_gain_factor_from_states",
+        "army_fuel_consumption_factor",
+        "navy_fuel_consumption_factor",
+        "air_fuel_consumption_factor"
+      ]
+    },
+    "industry_free_repair_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "免费建筑修复修正，与投入工厂修复不同。",
+      "related_keys": [
+        "industry_repair_factor"
+      ]
+    },
+    "production_speed_dockyard_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "factory_energy_consumption": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "当前版本能源机制重点候选，源文件频次低不等于无用。",
+      "related_keys": [
+        "industrial_capacity_factory_powered",
+        "industrial_capacity_dockyard_powered"
+      ]
+    },
+    "production_speed_infrastructure_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "production_speed_synthetic_refinery_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_attack_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "陆军师通用攻击修正；读数不是特定师在战斗中的最终攻击。",
+      "related_keys": [
+        "army_infantry_attack_factor",
+        "army_armor_attack_factor",
+        "army_artillery_attack_factor",
+        "army_core_attack_factor",
+        "army_non_core_attack_factor"
+      ]
+    },
+    "army_core_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_non_core_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "非核心领土防御条件修正，不能标为攻击。",
+      "related_keys": [
+        "army_defence_factor",
+        "army_non_core_attack_factor"
+      ]
+    },
+    "army_defence_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "陆军师通用防御修正；与装备和具体战斗条件分别解释。",
+      "related_keys": [
+        "army_infantry_defence_factor",
+        "army_armor_defence_factor",
+        "army_core_defence_factor",
+        "army_non_core_defence_factor"
+      ]
+    },
+    "army_core_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_infantry_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_artillery_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_armor_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_infantry_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_artillery_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_armor_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "SPECIAL_FORCES_ATTACK_FACTOR": {
+      "category": "陆军",
+      "priority": "P2",
+      "reason": "模组保留的大写原始字符串，当前文档以小写登记；保留审计，不当作另一种独立修正。",
+      "related_keys": [
+        "special_forces_attack_factor"
+      ]
+    },
+    "coordination_bonus": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_org_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "陆军组织度系数，影响持续作战；区别于恢复速率。",
+      "related_keys": [
+        "army_org",
+        "army_morale_factor",
+        "army_org_regain"
+      ]
+    },
+    "SPECIAL_FORCES_DEFENCE_FACTOR": {
+      "category": "陆军",
+      "priority": "P2",
+      "reason": "模组保留的大写原始字符串，当前文档以小写登记；保留审计，不当作另一种独立修正。",
+      "related_keys": [
+        "special_forces_defence_factor"
+      ]
+    },
+    "initiative_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "当前文档登记的主动性系数；不要直接沿用普通版initiative字符串。",
+      "related_keys": [
+        "land_reinforce_rate",
+        "initiative"
+      ]
+    },
+    "army_morale_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "陆军师组织度恢复速率，和组织度上限及其他恢复项分列。",
+      "related_keys": [
+        "army_org_factor",
+        "army_morale",
+        "army_org_regain"
+      ]
+    },
+    "army_strength_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "cas_damage_reduction": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_org_regain": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "army_speed_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "陆军移动速度修正，最终速度仍受编制装备地形等约束。",
+      "related_keys": [
+        "army_armor_speed_factor"
+      ]
+    },
+    "combat_width_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "org_loss_at_low_org_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "training_time_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "special_forces_cap": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "experience_loss_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "training_time_army_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "special_forces_training_time_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "experience_gain_army_unit_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "minimum_training_level": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "acclimatization_cold_climate_gain_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "acclimatization_hot_climate_gain_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_capital_ship_attack_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_screen_attack_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_submarine_attack_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_capital_ship_defence_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_screen_defence_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_submarine_defence_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_night_attack": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_coordination": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_weather_penalty": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "ships_at_battle_start": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "positioning": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "海军阵位修正，关系舰队战斗效率；避免按泛称误归陆军。",
+      "related_keys": [
+        "naval_coordination"
+      ]
+    },
+    "spotting_chance": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "night_spotting_chance": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_visibility": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "convoy_retreat_speed": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_retreat_speed": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_hit_chance": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "通用海军命中，与轻炮重炮鱼雷专项命中分列。",
+      "related_keys": [
+        "naval_light_gun_hit_chance_factor",
+        "naval_heavy_gun_hit_chance_factor",
+        "naval_torpedo_hit_chance_factor"
+      ]
+    },
+    "naval_light_gun_hit_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_critical_score_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_heavy_gun_hit_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_critical_effect_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "critical_receive_chance": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_hit_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_screen_penetration_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_damage_reduction_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_cooldown_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_reveal_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_torpedo_enemy_critical_chance_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "carrier_capacity_penalty_reduction": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "fighter_sortie_efficiency": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "舰载战斗机出击效率，表示航母给舰载战斗机加油载弹的速度，须与陆基任务效率区分。",
+      "related_keys": [
+        "sortie_efficiency",
+        "navy_carrier_air_attack_factor"
+      ]
+    },
+    "navy_carrier_air_attack_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "sortie_efficiency": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "舰载机出击效率，航母舰队重点，交叉关联空军。",
+      "related_keys": [
+        "carrier_capacity_penalty_reduction",
+        "navy_carrier_air_attack_factor",
+        "fighter_sortie_efficiency"
+      ]
+    },
+    "navy_carrier_air_targetting_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "navy_carrier_air_agility_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_mission_efficiency": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "任务效率修正，不等同区域面板最终任务效率。",
+      "related_keys": [
+        "air_range_factor",
+        "air_superiority_efficiency",
+        "air_cas_efficiency"
+      ]
+    },
+    "air_wing_xp_loss_when_killed_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_attack_factor": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "空中攻击修正，国家读数不是机型最终空攻。",
+      "related_keys": [
+        "air_agility_factor",
+        "air_defence_factor"
+      ]
+    },
+    "air_ace_bonuses_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_untrained_pilots_penalty_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_defence_factor": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "空中防御修正，关系飞机生存。",
+      "related_keys": [
+        "air_attack_factor",
+        "air_agility_factor"
+      ]
+    },
+    "air_maximum_speed_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_range_factor": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "航程影响区域覆盖和部署自由度。",
+      "related_keys": [
+        "air_mission_efficiency"
+      ]
+    },
+    "air_agility_factor": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "空军机动修正，与空攻空防速度分列。",
+      "related_keys": [
+        "air_attack_factor",
+        "air_defence_factor",
+        "air_maximum_speed_factor"
+      ]
+    },
+    "air_mission_xp_gain_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_superiority_efficiency": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "制空任务专项效率，与全局任务效率分列。",
+      "related_keys": [
+        "air_mission_efficiency",
+        "air_superiority_detect_factor"
+      ]
+    },
+    "air_cas_efficiency": {
+      "category": "空军",
+      "priority": "P0",
+      "reason": "近距支援任务效率，不等于对陆军全部伤害总乘数。",
+      "related_keys": [
+        "air_close_air_support_org_damage_factor",
+        "air_cas_present_factor"
+      ]
+    },
+    "air_training_xp_gain_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_superiority_detect_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_cas_present_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_nav_efficiency": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "naval_strike_targetting_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "对海打击瞄准，虽含naval仍应归航空兵对海打击。",
+      "related_keys": [
+        "air_nav_efficiency",
+        "naval_strike_attack_factor"
+      ]
+    },
+    "air_close_air_support_org_damage_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "air_bombing_targetting": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "agency_upgrade_time": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "机构升级时间关系解锁节奏，显示着色须遵守原版正负收益。",
+      "related_keys": [
+        "intelligence_operation_speed"
+      ]
+    },
+    "civilian_intel_factor": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "民事情报修正，不是针对某一敌国的最终情报百分比。",
+      "related_keys": [
+        "army_intel_factor",
+        "navy_intel_factor",
+        "airforce_intel_factor"
+      ]
+    },
+    "civilian_intel_to_others": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "crypto_strength": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "密码强度，区别于本国主动破译能力。",
+      "related_keys": [
+        "decryption_power",
+        "decryption_power_factor"
+      ]
+    },
+    "army_intel_factor": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "陆军情报归情报主类，并关联陆军。",
+      "related_keys": [
+        "civilian_intel_factor",
+        "navy_intel_factor",
+        "airforce_intel_factor"
+      ]
+    },
+    "army_intel_to_others": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "decryption_power": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "固定破译能力，和系数分开显示。",
+      "related_keys": [
+        "decryption_power_factor",
+        "crypto_strength"
+      ]
+    },
+    "navy_intel_factor": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "海军情报归情报主类，并关联海军。",
+      "related_keys": [
+        "civilian_intel_factor",
+        "army_intel_factor",
+        "airforce_intel_factor"
+      ]
+    },
+    "navy_intel_to_others": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "decryption_power_factor": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "破译能力系数，与固定破译能力分列。",
+      "related_keys": [
+        "decryption_power",
+        "crypto_strength"
+      ]
+    },
+    "airforce_intel_factor": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "空军情报归情报主类，并关联空军。",
+      "related_keys": [
+        "civilian_intel_factor",
+        "army_intel_factor",
+        "navy_intel_factor"
+      ]
+    },
+    "airforce_intel_to_others": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "intel_network_gain": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "情报网增长增量，与系数分列；具体网络受目标地区条件影响。",
+      "related_keys": [
+        "intel_network_gain_factor"
+      ]
+    },
+    "intel_network_gain_factor": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "情报网增长系数，不能与增量项直接相加。",
+      "related_keys": [
+        "intel_network_gain"
+      ]
+    },
+    "operative_slot": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "特工位数量修正，决定可并行任务数量。",
+      "related_keys": [
+        "new_operative_slot_bonus"
+      ]
+    },
+    "operation_cost": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "情报行动成本修正，实际费用取决于行动类型。",
+      "related_keys": [
+        "operation_risk",
+        "operation_outcome"
+      ]
+    },
+    "own_operative_capture_chance_factor": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "new_operative_slot_bonus": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "operation_risk": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "行动风险修正，最终风险不只由此项决定。",
+      "related_keys": [
+        "operation_cost",
+        "operation_outcome"
+      ]
+    },
+    "own_operative_detection_chance": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "enemy_operative_capture_chance_factor": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "operation_outcome": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "行动结果修正，具体效果取决于行动类型。",
+      "related_keys": [
+        "operation_cost",
+        "operation_risk"
+      ]
+    },
+    "own_operative_detection_chance_factor": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "enemy_operative_detection_chance": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "own_operative_intel_extraction_rate": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "enemy_operative_detection_chance_factor": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "enemy_operative_intel_extraction_rate": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "UI版已选择的候选项，可进入所属分类页；模组采纳不保证读值作用域和标签正确。",
+      "related_keys": []
+    },
+    "stability_factor": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "稳定度修正关联政治和工业表现；该修正值不等于国家当前最终稳定度。",
+      "related_keys": [
+        "stability_weekly",
+        "war_stability_factor"
+      ]
+    },
+    "war_support_factor": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "战争支持度修正关系战争动员和政策条件；该修正值不等于最终战争支持度。",
+      "related_keys": [
+        "war_support_weekly",
+        "war_support_reduction_on_damage"
+      ]
+    },
+    "conscription": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "国家可征募人口修正，应与可征募人口系数分开。",
+      "related_keys": [
+        "conscription_factor",
+        "mobilization_speed",
+        "recruitable_population"
+      ]
+    },
+    "conscription_factor": {
+      "category": "政治",
+      "priority": "P0",
+      "reason": "可征募人口系数，不能与conscription直接相加。",
+      "related_keys": [
+        "conscription",
+        "mobilization_speed",
+        "recruitable_population_factor"
+      ]
+    },
+    "mobilization_speed": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "动员速度影响人力进入可用池的速度；人口修正高不意味着立即得到人力。",
+      "related_keys": [
+        "conscription",
+        "conscription_factor"
+      ]
+    },
+    "surrender_limit": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "投降阈值，战略价值高但并非各局都有非零修正。",
+      "related_keys": [
+        "max_surrender_limit_offset"
+      ]
+    },
+    "resistance_target": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "占领治理的抵抗目标修正，不等于当前抵抗度。",
+      "related_keys": [
+        "resistance_growth",
+        "compliance_gain"
+      ]
+    },
+    "compliance_gain": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "占领治理的顺从度相关修正，国家读数不等于各州当前顺从度。",
+      "related_keys": [
+        "compliance_growth",
+        "resistance_target"
+      ]
+    },
+    "compliance_growth": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "顺从度增长相关修正，与当前顺从度和其他增长项区分。",
+      "related_keys": [
+        "compliance_gain",
+        "resistance_target"
+      ]
+    },
+    "research_speed_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "全局科研速度，影响工业与各军种升级；两个BUFF模组均遗漏。",
+      "related_keys": [
+        "research_sharing_per_country_bonus_factor"
+      ]
+    },
+    "industrial_capacity_factory": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "军工产出，区别于军用工厂建设速度；两个BUFF模组均遗漏。",
+      "related_keys": [
+        "production_speed_arms_factory_factor",
+        "production_factory_max_efficiency_factor",
+        "production_lack_of_resource_penalty_factor"
+      ]
+    },
+    "industrial_capacity_dockyard": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "船坞产出，属于工业并交叉关联海军；区别于船坞建设速度。",
+      "related_keys": [
+        "production_speed_dockyard_factor"
+      ]
+    },
+    "production_factory_max_efficiency_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "生产效率上限决定成熟生产线效率空间；两个BUFF模组均遗漏。",
+      "related_keys": [
+        "production_factory_efficiency_gain_factor",
+        "production_factory_start_efficiency_factor"
+      ]
+    },
+    "production_factory_efficiency_gain_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "生产效率增长决定生产线爬升速度；与上限和起始效率分列。",
+      "related_keys": [
+        "production_factory_max_efficiency_factor",
+        "production_factory_start_efficiency_factor"
+      ]
+    },
+    "consumer_goods_factor": {
+      "category": "工业",
+      "priority": "P0",
+      "reason": "消费品工厂系数影响可用民工；不是直接减少同数值百分点的总需求。",
+      "related_keys": [
+        "consumer_goods_expected_value"
+      ]
+    },
+    "production_factory_start_efficiency_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "新生产线的起始效率，和效率上限、增长率分列。",
+      "related_keys": [
+        "production_factory_max_efficiency_factor",
+        "production_factory_efficiency_gain_factor"
+      ]
+    },
+    "production_lack_of_resource_penalty_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "缺资源惩罚修正可解释工厂产出为何低于预期。",
+      "related_keys": [
+        "industrial_capacity_factory",
+        "local_resources_factor"
+      ]
+    },
+    "industry_repair_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "建筑工厂修复相关项；应取代两个BUFF模组误标为工厂修理的船只修理键。",
+      "related_keys": [
+        "industry_free_repair_factor",
+        "repair_speed_factor"
+      ]
+    },
+    "industrial_capacity_factory_powered": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "供能条件下的军工产出，必须说明条件而不能合并为无条件产出。",
+      "related_keys": [
+        "industrial_capacity_factory",
+        "factory_energy_consumption"
+      ]
+    },
+    "industrial_capacity_dockyard_powered": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "供能条件下的船坞产出，必须说明条件。",
+      "related_keys": [
+        "industrial_capacity_dockyard",
+        "factory_energy_consumption"
+      ]
+    },
+    "production_speed_buildings_powered_factor": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "供能条件下的建设速度，必须说明条件。",
+      "related_keys": [
+        "production_speed_buildings_factor",
+        "factory_energy_consumption"
+      ]
+    },
+    "supply_consumption_factor": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "补给消耗关系后勤压力；两个BUFF模组均遗漏。",
+      "related_keys": [
+        "supply_factor",
+        "supply_node_range",
+        "army_fuel_consumption_factor"
+      ]
+    },
+    "land_reinforce_rate": {
+      "category": "陆军",
+      "priority": "P0",
+      "reason": "战斗增援率影响预备队进入战斗，不是装备补充速度。",
+      "related_keys": [
+        "initiative_factor"
+      ]
+    },
+    "army_non_core_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "非核心领土攻击条件修正；UI版对应标签误读defence键，需更正。",
+      "related_keys": [
+        "army_attack_factor",
+        "army_non_core_defence_factor"
+      ]
+    },
+    "breakthrough_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "突破修正，是进攻时的重要生存属性维度。",
+      "related_keys": [
+        "army_attack_factor",
+        "army_defence_factor"
+      ]
+    },
+    "max_planning": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "计划加成上限增量，与计划速度和系数分开。",
+      "related_keys": [
+        "max_planning_factor",
+        "planning_speed"
+      ]
+    },
+    "max_dig_in": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "堑壕上限增量，与堑壕速度和系数分开。",
+      "related_keys": [
+        "max_dig_in_factor",
+        "dig_in_speed_factor"
+      ]
+    },
+    "planning_speed": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "计划准备速度，适合使用作战计划的陆军。",
+      "related_keys": [
+        "max_planning",
+        "max_planning_factor"
+      ]
+    },
+    "experience_gain_army_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "陆军经验获取系数，关系学说与设计。",
+      "related_keys": [
+        "experience_gain_army",
+        "experience_gain_army_unit_factor"
+      ]
+    },
+    "army_fuel_consumption_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "陆军燃油消耗，和供油补给一起解释。",
+      "related_keys": [
+        "fuel_gain_factor",
+        "supply_consumption_factor"
+      ]
+    },
+    "initiative": {
+      "category": "陆军",
+      "priority": "P2",
+      "reason": "普通版使用但当前文档未登记的原始字符串；保留审计，不推荐直接复用。",
+      "related_keys": [
+        "initiative_factor"
+      ]
+    },
+    "naval_damage_factor": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "通用海军伤害，概括海战输出并与炮种命中分列。",
+      "related_keys": [
+        "naval_hit_chance",
+        "naval_defense_factor"
+      ]
+    },
+    "naval_defense_factor": {
+      "category": "海军",
+      "priority": "P0",
+      "reason": "海军防御修正影响受到的伤害，不是舰船装甲最终值。",
+      "related_keys": [
+        "naval_damage_factor"
+      ]
+    },
+    "naval_speed_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "海军速度修正，影响部署作战，不是具体舰队最终航速。",
+      "related_keys": [
+        "naval_retreat_speed",
+        "navy_fuel_consumption_factor"
+      ]
+    },
+    "navy_fuel_consumption_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "海军燃油消耗，连接舰队活动和燃油预算。",
+      "related_keys": [
+        "fuel_gain_factor"
+      ]
+    },
+    "navy_org_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "海军组织度系数，补充持续作战维度。",
+      "related_keys": [
+        "navy_org",
+        "naval_morale_factor"
+      ]
+    },
+    "experience_gain_navy_factor": {
+      "category": "海军",
+      "priority": "P1",
+      "reason": "海军经验获取系数，关系学说与设计。",
+      "related_keys": [
+        "experience_gain_navy",
+        "experience_gain_navy_unit_factor"
+      ]
+    },
+    "naval_strike_attack_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "航空兵对海打击攻击修正，空军主类并关联海军。",
+      "related_keys": [
+        "air_nav_efficiency",
+        "naval_strike_targetting_factor"
+      ]
+    },
+    "air_strategic_bomber_bombing_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "战略轰炸专项修正，适合空军分类页。",
+      "related_keys": [
+        "air_bombing_targetting"
+      ]
+    },
+    "air_detection": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "对空探测，与任务专项探测分列。",
+      "related_keys": [
+        "air_superiority_detect_factor",
+        "air_interception_detect_factor"
+      ]
+    },
+    "air_fuel_consumption_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "空军燃油消耗，与工业供油关联。",
+      "related_keys": [
+        "fuel_gain_factor"
+      ]
+    },
+    "experience_gain_air_factor": {
+      "category": "空军",
+      "priority": "P1",
+      "reason": "空军经验获取系数，关系学说设计。",
+      "related_keys": [
+        "experience_gain_air",
+        "air_training_xp_gain_factor",
+        "air_mission_xp_gain_factor"
+      ]
+    },
+    "intelligence_agency_defense": {
+      "category": "情报",
+      "priority": "P0",
+      "reason": "反间谍能力，国家情报安全核心概览。",
+      "related_keys": [
+        "enemy_operative_detection_chance",
+        "enemy_operative_capture_chance_factor"
+      ]
+    },
+    "intelligence_operation_speed": {
+      "category": "情报",
+      "priority": "P1",
+      "reason": "情报行动速度，关系任务周转。",
+      "related_keys": [
+        "operation_cost",
+        "agency_upgrade_time"
+      ]
+    },
+    "special_forces_attack_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "特种部队攻击专项项，采用当前文档的小写规范键。",
+      "related_keys": [
+        "special_forces_defence_factor",
+        "special_forces_cap"
+      ]
+    },
+    "special_forces_defence_factor": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "特种部队防御专项项，采用当前文档的小写规范键。",
+      "related_keys": [
+        "special_forces_attack_factor",
+        "special_forces_cap"
+      ]
+    },
+    "stability_weekly": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "稳定度每周变化，频次高；与稳定度总修正及当前最终值分列。",
+      "related_keys": [
+        "stability_factor",
+        "stability_weekly_factor"
+      ]
+    },
+    "war_support_weekly": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "战争支持度每周变化，和当前最终值及总修正分列。",
+      "related_keys": [
+        "war_support_factor",
+        "war_support_weekly_factor"
+      ]
+    },
+    "communism_drift": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "共产主义支持度变化；高频但路线相关，放政治分类页而非通用首页。",
+      "related_keys": [
+        "fascism_drift",
+        "democratic_drift",
+        "neutrality_drift",
+        "drift_defence_factor"
+      ]
+    },
+    "fascism_drift": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "法西斯主义支持度变化；高频但路线相关，放政治分类页。",
+      "related_keys": [
+        "communism_drift",
+        "democratic_drift",
+        "neutrality_drift",
+        "drift_defence_factor"
+      ]
+    },
+    "democratic_drift": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "民主主义支持度变化；高频但路线相关，放政治分类页。",
+      "related_keys": [
+        "communism_drift",
+        "fascism_drift",
+        "neutrality_drift",
+        "drift_defence_factor"
+      ]
+    },
+    "neutrality_drift": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "中立主义支持度变化；高频但路线相关，放政治分类页。",
+      "related_keys": [
+        "communism_drift",
+        "fascism_drift",
+        "democratic_drift",
+        "drift_defence_factor"
+      ]
+    },
+    "drift_defence_factor": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "意识形态变化抵御相关修正，与各意识形态增长分列。",
+      "related_keys": [
+        "communism_drift",
+        "fascism_drift",
+        "democratic_drift",
+        "neutrality_drift"
+      ]
+    },
+    "political_advisor_cost_factor": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "政治顾问费用修正，原版频次高且直接关联政治点数支出。",
+      "related_keys": [
+        "political_power_gain"
+      ]
+    },
+    "economy_cost_factor": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "经济法案费用修正，经济制度切换的重要成本。",
+      "related_keys": [
+        "political_power_gain",
+        "trade_laws_cost_factor",
+        "mobilization_laws_cost_factor"
+      ]
+    },
+    "mobilization_laws_cost_factor": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "征兵法案费用修正，关联人力动员决策。",
+      "related_keys": [
+        "conscription",
+        "conscription_factor",
+        "economy_cost_factor"
+      ]
+    },
+    "trade_laws_cost_factor": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "贸易法案费用修正，关联政治点数支出与资源政策。",
+      "related_keys": [
+        "economy_cost_factor",
+        "political_power_gain"
+      ]
+    },
+    "weekly_manpower": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "每周人力增量，不能与人口比例类修正直接相加。",
+      "related_keys": [
+        "conscription",
+        "conscription_factor",
+        "mobilization_speed"
+      ]
+    },
+    "non_core_manpower": {
+      "category": "政治",
+      "priority": "P1",
+      "reason": "非核心人力修正，必须说明适用领土条件。",
+      "related_keys": [
+        "conscription",
+        "conscription_factor"
+      ]
+    },
+    "civilian_factory_use": {
+      "category": "工业",
+      "priority": "P1",
+      "reason": "占用民用工厂数量，可解释决议等持续效果占用民工；不是消费品比例。",
+      "related_keys": [
+        "consumer_goods_factor"
+      ]
+    },
+    "experience_gain_army": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "陆军经验固定增量，须与获取系数和部队经验区分。",
+      "related_keys": [
+        "experience_gain_army_factor",
+        "experience_gain_army_unit_factor"
+      ]
+    },
+    "command_power_gain_mult": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "指挥点数获取系数，影响指挥能力使用节奏。",
+      "related_keys": [
+        "command_power_gain",
+        "max_command_power"
+      ]
+    },
+    "attack_bonus_against": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "针对指定对象的攻击修正，高频但必须保留目标；不合并为国家无条件攻击。",
+      "related_keys": [
+        "army_attack_factor",
+        "defense_bonus_against"
+      ]
+    },
+    "defense_bonus_against": {
+      "category": "陆军",
+      "priority": "P1",
+      "reason": "针对指定对象的防御修正，高频但必须保留目标。",
+      "related_keys": [
+        "army_defence_factor",
+        "attack_bonus_against"
+      ]
+    }
+  }
+}

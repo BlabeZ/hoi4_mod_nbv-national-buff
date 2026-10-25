@@ -1,0 +1,150 @@
+{
+  "file_count": 11,
+  "definition_count": 679,
+  "registry": {
+    "bindings": 4495,
+    "sources": 552,
+    "accepted_bindings": 4245,
+    "runtime_bindings": 4245,
+    "missing_bindings": 250,
+    "missing_sources": 107,
+    "missing_by_reason": {
+      "only_non_country_additions": 73,
+      "targeted_instances_cannot_be_counted": 169,
+      "missing_or_ambiguous_chinese_name": 8
+    }
+  },
+  "displayed": {
+    "bindings": 4145,
+    "sources": 534,
+    "accepted_bindings": 3917,
+    "runtime_bindings": 3917,
+    "missing_bindings": 228,
+    "missing_sources": 103,
+    "missing_by_reason": {
+      "only_non_country_additions": 66,
+      "targeted_instances_cannot_be_counted": 155,
+      "missing_or_ambiguous_chinese_name": 7
+    }
+  },
+  "accepted_missing_runtime": [],
+  "displayed_missing_dispositions": {
+    "country_source_gap_same_country_scope_overexcluded": {
+      "bindings": 5,
+      "sources": 1
+    },
+    "excluded_no_chinese_name": {
+      "bindings": 7,
+      "sources": 4
+    },
+    "excluded_state_object": {
+      "bindings": 216,
+      "sources": 98
+    }
+  },
+  "runtime_records_missing_generated_function": []
+}
+UNBOUND DISPLAYED SOURCES
+yellow_river_blown ['only_non_country_additions'] 1 {'state': 1}
+skirmishes_against_imro ['only_non_country_additions'] 1 {'state': 4}
+unity_propaganda ['only_non_country_additions'] 1 {'state': 1}
+military_appeasement ['only_non_country_additions'] 1 {'state': 1}
+POL_anti_soviet_offensive ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1}
+POL_anti_german_offensive ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1}
+unplanned_offensive ['only_non_country_additions'] 4 {'state': 2}
+SOV_defend_moscow ['targeted_instances_cannot_be_counted'] 1 {'state': 2}
+SOV_seraya_loshad_battery ['targeted_instances_cannot_be_counted'] 4 {'state': 1}
+SOV_krasnaya_gorka_battery ['targeted_instances_cannot_be_counted'] 4 {'state': 1}
+SOV_armored_battery_35 ['targeted_instances_cannot_be_counted'] 4 {'state': 1}
+SOV_factory_worker_militias_raised ['targeted_instances_cannot_be_counted'] 1 {'unknown': 1}
+SOV_civilian_labor_in_defense_mod ['targeted_instances_cannot_be_counted'] 1 {'unknown': 1}
+SOV_soviet_military_offensive ['targeted_instances_cannot_be_counted'] 2 {'unknown': 1}
+PAR_protected_by_humaita ['missing_or_ambiguous_chinese_name'] 1 {}
+NOR_defend_state_dmod ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1}
+SWE_sami_trackers ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+DEN_pan_scandinavianism_modifier ['only_non_country_additions'] 6 {'state': 4}
+FIN_mannerheim_line_expansion_modifier ['targeted_instances_cannot_be_counted'] 3 {'state': 1}
+FIN_confederation_of_finno_russian_republics_dm ['targeted_instances_cannot_be_counted'] 1 {'country': 1, 'state': 1, 'unknown': 1}
+NORDIC_military_industry_hub_leader_dmod ['targeted_instances_cannot_be_counted'] 1 {'state': 2}
+NORDIC_military_industry_hub_member_dmod ['targeted_instances_cannot_be_counted'] 1 {'state': 2}
+ETH_state_decentralization_dynamic_modifier ['targeted_instances_cannot_be_counted'] 4 {'state': 9}
+ETH_state_local_offensive_dynamic_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 4}
+ETH_state_local_retreat_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 1}
+ETH_state_last_stand_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 1}
+ETH_state_supporting_resistance_modifier ['targeted_instances_cannot_be_counted'] 5 {'unknown': 1, 'state': 1}
+ETH_operative_modifier ['missing_or_ambiguous_chinese_name'] 1 {'country': 1}
+ITA_libyan_railway_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+ITA_pacified_italian_east_africa_modifier ['only_non_country_additions'] 1 {'state': 1}
+ITA_fronte_militare_clandestino_modifier ['targeted_instances_cannot_be_counted'] 4 {'state': 1}
+ITA_anti_colonialism_sentiment ['only_non_country_additions'] 2 {'state': 3}
+ITA_novus_ordo_modifier ['only_non_country_additions'] 2 {'state': 1}
+ITA_expanded_corporatism_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+SWI_dormant_citizen_militia ['targeted_instances_cannot_be_counted'] 5 {'country': 3}
+SWI_attack_from_the_mountains ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+SWI_frontier_defense ['targeted_instances_cannot_be_counted'] 1 {'state': 2}
+SWI_heer_und_haus_mod ['only_non_country_additions'] 3 {'state': 1}
+SWI_Ortswehren_dynamic_mod ['targeted_instances_cannot_be_counted'] 3 {'state': 1}
+SWI_alpine_redoubt_dynamic_modifier ['targeted_instances_cannot_be_counted'] 4 {'state': 1}
+AFG_disgruntled_minority ['only_non_country_additions'] 1 {'state': 1}
+PER_state_local_defensive_dynamic_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 2}
+idea_RAJ_epidemic ['missing_or_ambiguous_chinese_name'] 2 {}
+idea_RAJ_aden_treaty_port ['only_non_country_additions'] 2 {'state': 2}
+IRQ_river_navy ['only_non_country_additions'] 3 {'state': 1}
+CZE_sudetenland_german_state_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 1}
+CZE_hungarian_state_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+CZE_sudetenland_paramilitaries_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 4}
+CZE_river_monitor_fleet ['only_non_country_additions'] 2 {'state': 1}
+CZE_nationalist_protests ['only_non_country_additions'] 1 {'state': 2}
+CZE_rut_comprise_agreement_modifier ['only_non_country_additions'] 1 {'state': 1}
+JAP_operation_MO_military_offensive ['targeted_instances_cannot_be_counted'] 2 {'state': 1}
+JAP_chinese_offensive_military_offensive ['targeted_instances_cannot_be_counted'] 2 {'unknown': 2}
+KOR_resistance_against_colonial_rule_dm ['only_non_country_additions'] 2 {'state': 1}
+JAP_state_supporting_resistance_modifier ['targeted_instances_cannot_be_counted'] 5 {'unknown': 1}
+JAP_pro_japanese_sentiment_in_state ['targeted_instances_cannot_be_counted'] 2 {'unknown': 1}
+CHI_unstructured_logistics ['missing_or_ambiguous_chinese_name'] 3 {}
+CHI_bog_defensive_modifier ['targeted_instances_cannot_be_counted'] 1 {'unknown': 1, 'state': 2}
+CHI_declared_war_zone_idea ['targeted_instances_cannot_be_counted'] 6 {'unknown': 1}
+CHI_infiltrated_state_1 ['targeted_instances_cannot_be_counted'] 1 {'unknown': 2}
+CHI_infiltrated_state_2 ['targeted_instances_cannot_be_counted'] 2 {'unknown': 2, 'state': 5}
+CHI_infiltrated_state_3 ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1}
+PRC_infiltrated_state_1 ['targeted_instances_cannot_be_counted'] 1 {'unknown': 2}
+PRC_infiltrated_state_2 ['targeted_instances_cannot_be_counted'] 3 {'unknown': 2}
+PRC_infiltrated_state_3 ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1, 'country': 2}
+PRC_probed_border_defenses ['targeted_instances_cannot_be_counted'] 2 {'unknown': 1}
+PRC_probed_border_defenses_victim ['targeted_instances_cannot_be_counted'] 1 {'unknown': 1}
+PRC_probed_border_defenses_victim_massive ['targeted_instances_cannot_be_counted'] 1 {'unknown': 1}
+PRC_infiltrated_border_defenses ['targeted_instances_cannot_be_counted'] 2 {'unknown': 1}
+PRC_sabotaged_border_defenses ['targeted_instances_cannot_be_counted'] 3 {'unknown': 1}
+PHI_strong_guerrilla_presence ['only_non_country_additions'] 1 {'state': 2}
+PHI_no_gtd_concrete_battleship ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+PRC_the_yulin_garrison ['only_non_country_additions'] 1 {'state': 1}
+INS_diverted_funding ['only_non_country_additions'] 1 {'state': 1}
+idea_SIA_unity_propaganda ['only_non_country_additions'] 1 {'state': 16}
+AST_standing_with_canberra_state_modifier ['only_non_country_additions'] 3 {'state': 1}
+CHL_protecting_mapuche_lands_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 1}
+CHL_state_supporting_resistance_modifier ['targeted_instances_cannot_be_counted'] 5 {'unknown': 1}
+ARG_military_owned_state ['only_non_country_additions'] 1 {'state': 1}
+idea_PAR_river_navy ['only_non_country_additions'] 5 {'state': 1}
+idea_URG_ruralism_good ['only_non_country_additions'] 1 {'state': 2}
+idea_URG_ruralism_good_2 ['only_non_country_additions'] 1 {'state': 2}
+dam_blown_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 1, 'unknown': 3}
+GER_motor_and_mech_attack_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 4}
+GER_blitzkrieg_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 2, 'country': 1}
+GER_blitzkrieg_modifier_lvl_2 ['targeted_instances_cannot_be_counted'] 2 {'state': 2}
+GER_blitzkrieg_modifier_lvl_3 ['targeted_instances_cannot_be_counted'] 2 {'state': 2}
+GER_bewegungskrieg_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 2, 'country': 1}
+GER_bewegungskrieg_modifier_lvl_2 ['targeted_instances_cannot_be_counted'] 2 {'state': 2}
+GER_bewegungskrieg_modifier_lvl_3 ['targeted_instances_cannot_be_counted'] 3 {'state': 2}
+GER_bewegungskrieg_modifier_lvl_4 ['targeted_instances_cannot_be_counted'] 3 {'state': 2}
+GER_state_supporting_resistance_modifier ['targeted_instances_cannot_be_counted'] 5 {'unknown': 1}
+BEL_austrian_resistance_active_state_dynamic_modifier ['only_non_country_additions'] 1 {'state': 1}
+BEL_belgian_resistance_state_dynamic_modifier ['only_non_country_additions'] 3 {'state': 1}
+BEL_flooded_tank_barriers_dynamic_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 1}
+COG_rwandan_separatism_modifier ['only_non_country_additions'] 3 {'state': 1}
+COG_burundian_separatism_modifier ['only_non_country_additions'] 3 {'state': 1}
+COG_kasai_separatism_modifier ['only_non_country_additions'] 1 {'state': 2}
+COG_katanga_separatism_modifier ['only_non_country_additions'] 1 {'state': 3}
+idea_COG_river_navy ['only_non_country_additions'] 5 {'state': 3}
+COG_urban_area_investments_modifier ['targeted_instances_cannot_be_counted'] 1 {'state': 2}
+COG_state_supporting_resistance_modifier ['targeted_instances_cannot_be_counted'] 5 {'unknown': 1}
+GER_lokot_autonomy_modifier ['targeted_instances_cannot_be_counted'] 2 {'state': 2}

@@ -1,0 +1,78 @@
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\migration-update-rename\project\nbv-national-buff
+EXPECTED=True
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\migration-update-rename
+\project\nbv-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\id-conflict\project\nbv-national-buff
+EXPECTED=True
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\id-conflict\project\nbv
+-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\other-descriptor\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\other-descriptor\projec
+t\nbv-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\other-directory\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\other-directory\project
+\nbv-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\outside-manifest-path\project\nbv-national-buff
+EXPECTED=True
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\outside-manifest-path\p
+roject\nbv-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\duplicate-installations\project\nbv-national-buff
+EXPECTED=True
+EXIT=1
+descriptor.mod must contain a display name.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173816\duplicate-installations
+\project\nbv-national-buff\install-local.ps1:27 char:44
++ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException
+    + FullyQualifiedErrorId : descriptor.mod must contain a display name.
+ 
+

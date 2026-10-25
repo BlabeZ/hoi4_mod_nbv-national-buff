@@ -1,0 +1,2767 @@
+{
+  "analysed_date": "2026-10-24",
+  "method": "Read-only local source audit; modifier expressions counted from Simplified Chinese localisation, not tested in game",
+  "basic": {
+    "root": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297",
+    "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3440479297",
+    "readings": [
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "political_power_gain",
+        "format": "+",
+        "expression": "[?This.modifier@political_power_gain|+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "political_power_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@political_power_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "justify_war_goal_time",
+        "format": "%0-",
+        "expression": "[?This.modifier@justify_war_goal_time|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "local_resources_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@local_resources_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_buildings_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_buildings_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_industrial_complex_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_industrial_complex_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_arms_factory_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_arms_factory_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_dockyard_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_dockyard_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_infrastructure_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_infrastructure_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "production_speed_synthetic_refinery_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@production_speed_synthetic_refinery_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "fuel_gain_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@fuel_gain_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "fuel_gain_factor_from_states",
+        "format": "%0+",
+        "expression": "[?This.modifier@fuel_gain_factor_from_states|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "global_building_slots_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@global_building_slots_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "repair_speed_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@repair_speed_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "industry_free_repair_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@industry_free_repair_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "factory_energy_consumption",
+        "format": "%0-",
+        "expression": "[?This.modifier@factory_energy_consumption|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_attack_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_defence_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_core_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_core_attack_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_core_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_core_defence_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_armor_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_armor_attack_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_armor_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_armor_defence_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_artillery_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_artillery_attack_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_artillery_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_artillery_defence_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_infantry_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_infantry_attack_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_infantry_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_infantry_defence_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "SPECIAL_FORCES_ATTACK_FACTOR",
+        "format": "%0+",
+        "expression": "[?This.modifier@SPECIAL_FORCES_ATTACK_FACTOR|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "SPECIAL_FORCES_DEFENCE_FACTOR",
+        "format": "%0+",
+        "expression": "[?This.modifier@SPECIAL_FORCES_DEFENCE_FACTOR|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "coordination_bonus",
+        "format": "%0+",
+        "expression": "[?This.modifier@coordination_bonus|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "initiative",
+        "format": "%0+",
+        "expression": "[?This.modifier@initiative|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_morale_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_morale_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_org_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_org_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_org_regain",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_org_regain|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_strength_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_strength_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "army_speed_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_speed_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "experience_gain_army_unit_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@experience_gain_army_unit_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "org_loss_at_low_org_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@org_loss_at_low_org_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "cas_damage_reduction",
+        "format": "%0+",
+        "expression": "[?This.modifier@cas_damage_reduction|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "training_time_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@training_time_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "minimum_training_level",
+        "format": "%0Y",
+        "expression": "[?This.modifier@minimum_training_level|%0Y]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "training_time_army_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@training_time_army_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "special_forces_cap",
+        "format": "%0Y",
+        "expression": "[?This.modifier@special_forces_cap|%0Y]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "special_forces_training_time_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@special_forces_training_time_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "combat_width_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@combat_width_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "experience_loss_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@experience_loss_factor|%0-]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "acclimatization_cold_climate_gain_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@acclimatization_cold_climate_gain_factor|%0+]"
+      },
+      {
+        "line": 4,
+        "scope": "This",
+        "modifier": "acclimatization_hot_climate_gain_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@acclimatization_hot_climate_gain_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_mission_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_mission_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_ace_bonuses_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_ace_bonuses_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_wing_xp_loss_when_killed_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@air_wing_xp_loss_when_killed_factor|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_untrained_pilots_penalty_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@air_untrained_pilots_penalty_factor|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_attack_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_defence_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_agility_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_agility_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_maximum_speed_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_maximum_speed_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_range_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_range_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_mission_xp_gain_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_mission_xp_gain_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_training_xp_gain_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_training_xp_gain_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_superiority_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_superiority_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_superiority_detect_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_superiority_detect_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_cas_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_cas_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_cas_present_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_cas_present_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_close_air_support_org_damage_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_close_air_support_org_damage_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_bombing_targetting",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_bombing_targetting|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "air_nav_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@air_nav_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_strike_targetting_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_strike_targetting_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_capital_ship_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_capital_ship_attack_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_capital_ship_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_capital_ship_defence_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_screen_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_screen_attack_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_screen_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_screen_defence_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_submarine_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_submarine_attack_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_submarine_defence_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_submarine_defence_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_night_attack",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_night_attack|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_visibility",
+        "format": "%0-",
+        "expression": "[?This.modifier@navy_visibility|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_weather_penalty",
+        "format": "%0-",
+        "expression": "[?This.modifier@navy_weather_penalty|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "ships_at_battle_start",
+        "format": "%0+",
+        "expression": "[?This.modifier@ships_at_battle_start|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "positioning",
+        "format": "%0+",
+        "expression": "[?This.modifier@positioning|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_coordination",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_coordination|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "spotting_chance",
+        "format": "%0+",
+        "expression": "[?This.modifier@spotting_chance|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "night_spotting_chance",
+        "format": "%0+",
+        "expression": "[?This.modifier@night_spotting_chance|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_retreat_speed",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_retreat_speed|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "convoy_retreat_speed",
+        "format": "%0+",
+        "expression": "[?This.modifier@convoy_retreat_speed|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_hit_chance",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_hit_chance|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_critical_score_chance_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_critical_score_chance_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_critical_effect_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@naval_critical_effect_factor|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "critical_receive_chance",
+        "format": "%0-",
+        "expression": "[?This.modifier@critical_receive_chance|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_light_gun_hit_chance_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_light_gun_hit_chance_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_heavy_gun_hit_chance_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_heavy_gun_hit_chance_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_hit_chance_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_torpedo_hit_chance_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_cooldown_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@naval_torpedo_cooldown_factor|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_reveal_chance_factor",
+        "format": "%0-",
+        "expression": "[?This.modifier@naval_torpedo_reveal_chance_factor|%0-]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_screen_penetration_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_torpedo_screen_penetration_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_damage_reduction_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_torpedo_damage_reduction_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "naval_torpedo_enemy_critical_chance_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@naval_torpedo_enemy_critical_chance_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "sortie_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@sortie_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "sortie_efficiency",
+        "format": "%0+",
+        "expression": "[?This.modifier@sortie_efficiency|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_carrier_air_targetting_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_carrier_air_targetting_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_carrier_air_attack_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_carrier_air_attack_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "navy_carrier_air_agility_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_carrier_air_agility_factor|%0+]"
+      },
+      {
+        "line": 6,
+        "scope": "This",
+        "modifier": "carrier_capacity_penalty_reduction",
+        "format": "%0-",
+        "expression": "[?This.modifier@carrier_capacity_penalty_reduction|%0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "agency_upgrade_time",
+        "format": "%0-",
+        "expression": "[?This.modifier@agency_upgrade_time|%0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "civilian_intel_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@civilian_intel_factor|%0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "army_intel_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@army_intel_factor|%0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "navy_intel_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@navy_intel_factor|%0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "airforce_intel_factor",
+        "format": "%0+",
+        "expression": "[?This.modifier@airforce_intel_factor|%0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "civilian_intel_to_others",
+        "format": "0-",
+        "expression": "[?This.modifier@civilian_intel_to_others|0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "army_intel_to_others",
+        "format": "0-",
+        "expression": "[?This.modifier@army_intel_to_others|0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "navy_intel_to_others",
+        "format": "0-",
+        "expression": "[?This.modifier@navy_intel_to_others|0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "airforce_intel_to_others",
+        "format": "0-",
+        "expression": "[?This.modifier@airforce_intel_to_others|0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "intel_network_gain",
+        "format": "0+",
+        "expression": "[?This.modifier@intel_network_gain|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "intel_network_gain_factor",
+        "format": "0%+",
+        "expression": "[?This.modifier@intel_network_gain_factor|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "crypto_strength",
+        "format": "0+",
+        "expression": "[?This.modifier@crypto_strength|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "decryption_power",
+        "format": "0+",
+        "expression": "[?This.modifier@decryption_power|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "decryption_power_factor",
+        "format": "0%+",
+        "expression": "[?This.modifier@decryption_power_factor|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "operative_slot",
+        "format": "0+",
+        "expression": "[?This.modifier@operative_slot|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "new_operative_slot_bonus",
+        "format": "0+",
+        "expression": "[?This.modifier@new_operative_slot_bonus|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "operation_cost",
+        "format": "0%-",
+        "expression": "[?This.modifier@operation_cost|0%-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "operation_risk",
+        "format": "0%-",
+        "expression": "[?This.modifier@operation_risk|0%-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "operation_outcome",
+        "format": "0%+",
+        "expression": "[?This.modifier@operation_outcome|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "own_operative_capture_chance_factor",
+        "format": "0%-",
+        "expression": "[?This.modifier@own_operative_capture_chance_factor|0%-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "enemy_operative_capture_chance_factor",
+        "format": "0%+",
+        "expression": "[?This.modifier@enemy_operative_capture_chance_factor|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "own_operative_detection_chance",
+        "format": "0-",
+        "expression": "[?This.modifier@own_operative_detection_chance|0-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "enemy_operative_detection_chance",
+        "format": "0+",
+        "expression": "[?This.modifier@enemy_operative_detection_chance|0+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "own_operative_detection_chance_factor",
+        "format": "0%-",
+        "expression": "[?This.modifier@own_operative_detection_chance_factor|0%-]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "enemy_operative_detection_chance_factor",
+        "format": "0%+",
+        "expression": "[?This.modifier@enemy_operative_detection_chance_factor|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "own_operative_intel_extraction_rate",
+        "format": "0%+",
+        "expression": "[?This.modifier@own_operative_intel_extraction_rate|0%+]"
+      },
+      {
+        "line": 8,
+        "scope": "This",
+        "modifier": "enemy_operative_intel_extraction_rate",
+        "format": "0%-",
+        "expression": "[?This.modifier@enemy_operative_intel_extraction_rate|0%-]"
+      }
+    ],
+    "unique_keys": [
+      "acclimatization_cold_climate_gain_factor",
+      "acclimatization_hot_climate_gain_factor",
+      "agency_upgrade_time",
+      "air_ace_bonuses_factor",
+      "air_agility_factor",
+      "air_attack_factor",
+      "air_bombing_targetting",
+      "air_cas_efficiency",
+      "air_cas_present_factor",
+      "air_close_air_support_org_damage_factor",
+      "air_defence_factor",
+      "air_maximum_speed_factor",
+      "air_mission_efficiency",
+      "air_mission_xp_gain_factor",
+      "air_nav_efficiency",
+      "air_range_factor",
+      "air_superiority_detect_factor",
+      "air_superiority_efficiency",
+      "air_training_xp_gain_factor",
+      "air_untrained_pilots_penalty_factor",
+      "air_wing_xp_loss_when_killed_factor",
+      "airforce_intel_factor",
+      "airforce_intel_to_others",
+      "army_armor_attack_factor",
+      "army_armor_defence_factor",
+      "army_artillery_attack_factor",
+      "army_artillery_defence_factor",
+      "army_attack_factor",
+      "army_core_attack_factor",
+      "army_core_defence_factor",
+      "army_defence_factor",
+      "army_infantry_attack_factor",
+      "army_infantry_defence_factor",
+      "army_intel_factor",
+      "army_intel_to_others",
+      "army_morale_factor",
+      "army_org_factor",
+      "army_org_regain",
+      "army_speed_factor",
+      "army_strength_factor",
+      "carrier_capacity_penalty_reduction",
+      "cas_damage_reduction",
+      "civilian_intel_factor",
+      "civilian_intel_to_others",
+      "combat_width_factor",
+      "convoy_retreat_speed",
+      "coordination_bonus",
+      "critical_receive_chance",
+      "crypto_strength",
+      "decryption_power",
+      "decryption_power_factor",
+      "enemy_operative_capture_chance_factor",
+      "enemy_operative_detection_chance",
+      "enemy_operative_detection_chance_factor",
+      "enemy_operative_intel_extraction_rate",
+      "experience_gain_army_unit_factor",
+      "experience_loss_factor",
+      "factory_energy_consumption",
+      "fuel_gain_factor",
+      "fuel_gain_factor_from_states",
+      "global_building_slots_factor",
+      "industry_free_repair_factor",
+      "initiative",
+      "intel_network_gain",
+      "intel_network_gain_factor",
+      "justify_war_goal_time",
+      "local_resources_factor",
+      "minimum_training_level",
+      "naval_coordination",
+      "naval_critical_effect_factor",
+      "naval_critical_score_chance_factor",
+      "naval_heavy_gun_hit_chance_factor",
+      "naval_hit_chance",
+      "naval_light_gun_hit_chance_factor",
+      "naval_night_attack",
+      "naval_retreat_speed",
+      "naval_strike_targetting_factor",
+      "naval_torpedo_cooldown_factor",
+      "naval_torpedo_damage_reduction_factor",
+      "naval_torpedo_enemy_critical_chance_factor",
+      "naval_torpedo_hit_chance_factor",
+      "naval_torpedo_reveal_chance_factor",
+      "naval_torpedo_screen_penetration_factor",
+      "navy_capital_ship_attack_factor",
+      "navy_capital_ship_defence_factor",
+      "navy_carrier_air_agility_factor",
+      "navy_carrier_air_attack_factor",
+      "navy_carrier_air_targetting_factor",
+      "navy_intel_factor",
+      "navy_intel_to_others",
+      "navy_screen_attack_factor",
+      "navy_screen_defence_factor",
+      "navy_submarine_attack_factor",
+      "navy_submarine_defence_factor",
+      "navy_visibility",
+      "navy_weather_penalty",
+      "new_operative_slot_bonus",
+      "night_spotting_chance",
+      "operation_cost",
+      "operation_outcome",
+      "operation_risk",
+      "operative_slot",
+      "org_loss_at_low_org_factor",
+      "own_operative_capture_chance_factor",
+      "own_operative_detection_chance",
+      "own_operative_detection_chance_factor",
+      "own_operative_intel_extraction_rate",
+      "political_power_factor",
+      "political_power_gain",
+      "positioning",
+      "production_speed_arms_factory_factor",
+      "production_speed_buildings_factor",
+      "production_speed_dockyard_factor",
+      "production_speed_industrial_complex_factor",
+      "production_speed_infrastructure_factor",
+      "production_speed_synthetic_refinery_factor",
+      "repair_speed_factor",
+      "ships_at_battle_start",
+      "sortie_efficiency",
+      "SPECIAL_FORCES_ATTACK_FACTOR",
+      "special_forces_cap",
+      "SPECIAL_FORCES_DEFENCE_FACTOR",
+      "special_forces_training_time_factor",
+      "spotting_chance",
+      "training_time_army_factor",
+      "training_time_factor"
+    ]
+  },
+  "ui": {
+    "root": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002",
+    "launcher_name": "buff display ui",
+    "workshop_url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3795966002",
+    "slots": [
+      {
+        "id": 1,
+        "line": 12,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "political_power_gain",
+        "format": "+=.2",
+        "localisation": "$MODIFIER_POLITICAL_POWER_GAIN$: [?ROOT.modifier@political_power_gain|+=.2]"
+      },
+      {
+        "id": 2,
+        "line": 13,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "political_power_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_POLITICAL_POWER_FACTOR$: [?ROOT.modifier@political_power_factor|+=0%]"
+      },
+      {
+        "id": 3,
+        "line": 14,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "justify_war_goal_time",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_JUSTIFY_WAR_GOAL_TIME$: [?ROOT.modifier@justify_war_goal_time|-=0%]"
+      },
+      {
+        "id": 4,
+        "line": 15,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_buildings_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?ROOT.modifier@production_speed_buildings_factor|+=0%]"
+      },
+      {
+        "id": 5,
+        "line": 16,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "local_resources_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?ROOT.modifier@local_resources_factor|+=0%]"
+      },
+      {
+        "id": 6,
+        "line": 17,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "global_building_slots_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: [?ROOT.modifier@global_building_slots_factor|+=0%]"
+      },
+      {
+        "id": 7,
+        "line": 18,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_industrial_complex_factor",
+        "format": "+=0%",
+        "localisation": "$modifier_production_speed_industrial_complex_factor$: [?ROOT.modifier@production_speed_industrial_complex_factor|+=0%]"
+      },
+      {
+        "id": 8,
+        "line": 19,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "fuel_gain_factor_from_states",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_FUEL_GAIN_FACTOR_FROM_STATES$: [?ROOT.modifier@fuel_gain_factor_from_states|+=0%]"
+      },
+      {
+        "id": 9,
+        "line": 20,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "repair_speed_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_INDUSTRY_REPAIR_FACTOR$: [?ROOT.modifier@repair_speed_factor|+=0%]"
+      },
+      {
+        "id": 10,
+        "line": 21,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_arms_factory_factor",
+        "format": "+=0%",
+        "localisation": "$modifier_state_production_speed_arms_factory_factor$: [?ROOT.modifier@production_speed_arms_factory_factor|+=0%]"
+      },
+      {
+        "id": 11,
+        "line": 22,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "fuel_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_FUEL_GAIN_FACTOR$: [?ROOT.modifier@fuel_gain_factor|+=0%]"
+      },
+      {
+        "id": 12,
+        "line": 23,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "industry_free_repair_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_INDUSTRY_FREE_REPAIR_FACTOR$: [?ROOT.modifier@industry_free_repair_factor|+=0%]"
+      },
+      {
+        "id": 13,
+        "line": 24,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_dockyard_factor",
+        "format": "+=0%",
+        "localisation": "$modifier_production_speed_dockyard_factor$: [?ROOT.modifier@production_speed_dockyard_factor|+=0%]"
+      },
+      {
+        "id": 14,
+        "line": 25,
+        "category": "政治和工业",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 15,
+        "line": 26,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "factory_energy_consumption",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_FACTORY_ENERGY_CONSUMPTION$: [?ROOT.modifier@factory_energy_consumption|-=0%]"
+      },
+      {
+        "id": 16,
+        "line": 27,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_infrastructure_factor",
+        "format": "+=0%",
+        "localisation": "$modifier_production_speed_infrastructure_factor$: [?ROOT.modifier@production_speed_infrastructure_factor|+=0%]"
+      },
+      {
+        "id": 17,
+        "line": 28,
+        "category": "政治和工业",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 18,
+        "line": 29,
+        "category": "政治和工业",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 19,
+        "line": 30,
+        "category": "政治和工业",
+        "kind": "modifier",
+        "modifier": "production_speed_synthetic_refinery_factor",
+        "format": "+=0%",
+        "localisation": "$modifier_production_speed_synthetic_refinery_factor$: [?ROOT.modifier@production_speed_synthetic_refinery_factor|+=0%]"
+      },
+      {
+        "id": 20,
+        "line": 31,
+        "category": "政治和工业",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 21,
+        "line": 32,
+        "category": "政治和工业",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 101,
+        "line": 33,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_ATTACK_FACTOR$: [?ROOT.modifier@army_attack_factor|+=0%]"
+      },
+      {
+        "id": 102,
+        "line": 34,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_core_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_CORE_ATTACK_FACTOR$: [?ROOT.modifier@army_core_attack_factor|+=0%]"
+      },
+      {
+        "id": 103,
+        "line": 35,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_non_core_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_NON_CORE_ATTACK_FACTOR$: [?ROOT.modifier@army_non_core_defence_factor|+=0%]"
+      },
+      {
+        "id": 104,
+        "line": 36,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_DEFENCE_FACTOR$: [?ROOT.modifier@army_defence_factor|+=0%]"
+      },
+      {
+        "id": 105,
+        "line": 37,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_core_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_CORE_DEFENCE_FACTOR$: [?ROOT.modifier@army_core_defence_factor|+=0%]"
+      },
+      {
+        "id": 106,
+        "line": 38,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_non_core_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_NON_CORE_DEFENCE_FACTOR$: [?ROOT.modifier@army_non_core_defence_factor|+=0%]"
+      },
+      {
+        "id": 107,
+        "line": 39,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_infantry_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_INFANTRY_ATTACK_FACTOR$: [?ROOT.modifier@army_infantry_attack_factor|+=0%]"
+      },
+      {
+        "id": 108,
+        "line": 40,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_artillery_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_ARTILLERY_ATTACK_FACTOR$: [?ROOT.modifier@army_artillery_attack_factor|+=0%]"
+      },
+      {
+        "id": 109,
+        "line": 41,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_armor_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_ARMOR_ATTACK_FACTOR$: [?ROOT.modifier@army_armor_attack_factor|+=0%]"
+      },
+      {
+        "id": 110,
+        "line": 42,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_infantry_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_INFANTRY_DEFENCE_FACTOR$: [?ROOT.modifier@army_infantry_defence_factor|+=0%]"
+      },
+      {
+        "id": 111,
+        "line": 43,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_artillery_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_ARTILLERY_DEFENCE_FACTOR$: [?ROOT.modifier@army_artillery_defence_factor|+=0%]"
+      },
+      {
+        "id": 112,
+        "line": 44,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_armor_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIERS_ARMY_ARMOR_DEFENCE_FACTOR$: [?ROOT.modifier@army_armor_defence_factor|+=0%]"
+      },
+      {
+        "id": 113,
+        "line": 45,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "SPECIAL_FORCES_ATTACK_FACTOR",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_SPECIAL_FORCES_ATTACK_FACTOR$: [?ROOT.modifier@SPECIAL_FORCES_ATTACK_FACTOR|+=0%]"
+      },
+      {
+        "id": 114,
+        "line": 46,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "coordination_bonus",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_COORDINATION_BONUS$: [?ROOT.modifier@coordination_bonus|+=0%]"
+      },
+      {
+        "id": 115,
+        "line": 47,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_org_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_ORG_FACTOR$: [?ROOT.modifier@army_org_factor|+=0%]"
+      },
+      {
+        "id": 116,
+        "line": 48,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "SPECIAL_FORCES_DEFENCE_FACTOR",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_SPECIAL_FORCES_DEFENCE_FACTOR$: [?ROOT.modifier@SPECIAL_FORCES_DEFENCE_FACTOR|+=0%]"
+      },
+      {
+        "id": 117,
+        "line": 49,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "initiative_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_INITIATIVE_FACTOR$: [?ROOT.modifier@initiative_factor|+=0%]"
+      },
+      {
+        "id": 118,
+        "line": 50,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_morale_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_MORALE_FACTOR$: [?ROOT.modifier@army_morale_factor|+=0%]"
+      },
+      {
+        "id": 119,
+        "line": 51,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_strength_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_STRENGTH$: [?ROOT.modifier@army_strength_factor|+=0%]"
+      },
+      {
+        "id": 120,
+        "line": 52,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "cas_damage_reduction",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_CAS_DAMAGE_REDUCTION$: [?ROOT.modifier@cas_damage_reduction|+=0%]"
+      },
+      {
+        "id": 121,
+        "line": 53,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_org_regain",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_ORG_REGAIN$: [?ROOT.modifier@army_org_regain|+=0%]"
+      },
+      {
+        "id": 122,
+        "line": 54,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "army_speed_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_SPEED_FACTOR$: [?ROOT.modifier@army_speed_factor|+=0%]"
+      },
+      {
+        "id": 123,
+        "line": 55,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "combat_width_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_COMBAT_WIDTH_FACTOR$: [?ROOT.modifier@combat_width_factor|-=0%]"
+      },
+      {
+        "id": 124,
+        "line": 56,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "org_loss_at_low_org_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ORG_LOSS_AT_LOW_ORG_FACTOR$: [?ROOT.modifier@org_loss_at_low_org_factor|+=0%]"
+      },
+      {
+        "id": 125,
+        "line": 57,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "training_time_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_TRAINING_TIME_FACTOR$: [?ROOT.modifier@training_time_factor|-=0%]"
+      },
+      {
+        "id": 126,
+        "line": 58,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "special_forces_cap",
+        "format": "%0Y",
+        "localisation": "$MODIFIER_SPECIAL_FORCES_CAP$: [?ROOT.modifier@special_forces_cap|%0Y]"
+      },
+      {
+        "id": 127,
+        "line": 59,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "experience_loss_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_EXPERIENCE_LOSS_FACTOR$: [?ROOT.modifier@experience_loss_factor|-=0%]"
+      },
+      {
+        "id": 128,
+        "line": 60,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "training_time_army_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_TRAINING_TIME_ARMY_FACTOR$: [?ROOT.modifier@training_time_army_factor|-=0%]"
+      },
+      {
+        "id": 129,
+        "line": 61,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "special_forces_training_time_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_SPECIAL_FORCES_TRAINING_TIME_FACTOR$: [?ROOT.modifier@special_forces_training_time_factor|-=0%]"
+      },
+      {
+        "id": 130,
+        "line": 62,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "experience_gain_army_unit_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_XP_GAIN_ARMY_UNIT_FACTOR$: [?ROOT.modifier@experience_gain_army_unit_factor|-=0%]"
+      },
+      {
+        "id": 131,
+        "line": 63,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "minimum_training_level",
+        "format": "%0Y",
+        "localisation": "$MODIFIER_MINIMUM_TRAINING_LEVEL$: [?ROOT.modifier@minimum_training_level|%0Y]"
+      },
+      {
+        "id": 132,
+        "line": 64,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "acclimatization_cold_climate_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ACCLIMATIZATION_COLD_CLIMATE_GAIN_FACTOR$: [?ROOT.modifier@acclimatization_cold_climate_gain_factor|+=0%]"
+      },
+      {
+        "id": 133,
+        "line": 65,
+        "category": "陆军",
+        "kind": "modifier",
+        "modifier": "acclimatization_hot_climate_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ACCLIMATIZATION_HOT_CLIMATE_GAIN_FACTOR$: [?ROOT.modifier@acclimatization_hot_climate_gain_factor|+=0%]"
+      },
+      {
+        "id": 201,
+        "line": 66,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_capital_ship_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_CAPITAL_SHIP_ATTACK_FACTOR$: [?ROOT.modifier@navy_capital_ship_attack_factor|+=0%]"
+      },
+      {
+        "id": 202,
+        "line": 67,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_screen_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_SCREEN_ATTACK_FACTOR$: [?ROOT.modifier@navy_screen_attack_factor|+=0%]"
+      },
+      {
+        "id": 203,
+        "line": 68,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_submarine_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_SUBMARINE_ATTACK_FACTOR$: [?ROOT.modifier@navy_submarine_attack_factor|+=0%]"
+      },
+      {
+        "id": 204,
+        "line": 69,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_capital_ship_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_CAPITAL_SHIP_DEFENCE_FACTOR$: [?ROOT.modifier@navy_capital_ship_defence_factor|+=0%]"
+      },
+      {
+        "id": 205,
+        "line": 70,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_screen_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_SCREEN_DEFENCE_FACTOR$: [?ROOT.modifier@navy_screen_defence_factor|+=0%]"
+      },
+      {
+        "id": 206,
+        "line": 71,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_submarine_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_SUBMARINE_DEFENCE_FACTOR$: [?ROOT.modifier@navy_submarine_defence_factor|+=0%]"
+      },
+      {
+        "id": 207,
+        "line": 72,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_night_attack",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_NIGHT_ATTACK$: [?ROOT.modifier@naval_night_attack|+=0%]"
+      },
+      {
+        "id": 208,
+        "line": 73,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_coordination",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_COORDINATION$: [?ROOT.modifier@naval_coordination|+=0%]"
+      },
+      {
+        "id": 209,
+        "line": 74,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_weather_penalty",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVY_WEATHER_PENALTY$: [?ROOT.modifier@navy_weather_penalty|-=0%]"
+      },
+      {
+        "id": 210,
+        "line": 75,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "ships_at_battle_start",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_SHIPS_AT_BATTLE_START_FACTOR$: [?ROOT.modifier@ships_at_battle_start|+=0%]"
+      },
+      {
+        "id": 211,
+        "line": 76,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "positioning",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_POSITIONING$: [?ROOT.modifier@positioning|+=0%]"
+      },
+      {
+        "id": 212,
+        "line": 77,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 213,
+        "line": 78,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "spotting_chance",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_SPOTTING_CHANCE$: [?ROOT.modifier@spotting_chance|+=0%]"
+      },
+      {
+        "id": 214,
+        "line": 79,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "night_spotting_chance",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NIGHT_SPOTTING_CHANCE$: [?ROOT.modifier@night_spotting_chance|+=0%]"
+      },
+      {
+        "id": 215,
+        "line": 80,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_visibility",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVAL_VISIBILITY_FACTOR$: [?ROOT.modifier@navy_visibility|-=0%]"
+      },
+      {
+        "id": 216,
+        "line": 81,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "convoy_retreat_speed",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_CONVOY_RETREAT_SPEED$: [?ROOT.modifier@convoy_retreat_speed|+=0%]"
+      },
+      {
+        "id": 217,
+        "line": 82,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_retreat_speed",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_RETREAT_SPEED$: [?ROOT.modifier@naval_retreat_speed|+=0%]"
+      },
+      {
+        "id": 218,
+        "line": 83,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 219,
+        "line": 84,
+        "category": "海军",
+        "kind": "heading",
+        "modifier": "",
+        "format": "",
+        "localisation": "§3火炮§!"
+      },
+      {
+        "id": 220,
+        "line": 85,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 221,
+        "line": 86,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 222,
+        "line": 87,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_hit_chance",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_HIT_CHANCE$: [?ROOT.modifier@naval_hit_chance|+=0%]"
+      },
+      {
+        "id": 223,
+        "line": 88,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_light_gun_hit_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_LIGHT_GUN_HIT_CHANCE_FACTOR$: [?ROOT.modifier@naval_light_gun_hit_chance_factor|+=0%]"
+      },
+      {
+        "id": 224,
+        "line": 89,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_critical_score_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_CRITICAL_SCORE_CHANCE_FACTOR$: [?ROOT.modifier@naval_critical_score_chance_factor|+=0%]"
+      },
+      {
+        "id": 225,
+        "line": 90,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 226,
+        "line": 91,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_heavy_gun_hit_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_HEAVY_GUN_HIT_CHANCE_FACTOR$: [?ROOT.modifier@naval_heavy_gun_hit_chance_factor|+=0%]"
+      },
+      {
+        "id": 227,
+        "line": 92,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_critical_effect_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVAL_CRITICAL_EFFECT_FACTOR$: [?ROOT.modifier@naval_critical_effect_factor|-=0%]"
+      },
+      {
+        "id": 228,
+        "line": 93,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 229,
+        "line": 94,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 230,
+        "line": 95,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "critical_receive_chance",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVAL_CRITICAL_RECEIVE_CHANCE_FACTOR$: [?ROOT.modifier@critical_receive_chance|-=0%]"
+      },
+      {
+        "id": 231,
+        "line": 96,
+        "category": "海军",
+        "kind": "heading",
+        "modifier": "",
+        "format": "",
+        "localisation": "§3鱼雷§!"
+      },
+      {
+        "id": 232,
+        "line": 97,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 233,
+        "line": 98,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 234,
+        "line": 99,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_hit_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_HIT_CHANCE_FACTOR$: [?ROOT.modifier@naval_torpedo_hit_chance_factor|+=0%]"
+      },
+      {
+        "id": 235,
+        "line": 100,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_screen_penetration_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_SCREEN_PENETRATION_FACTOR$: [?ROOT.modifier@naval_torpedo_screen_penetration_factor|+=0%]"
+      },
+      {
+        "id": 236,
+        "line": 101,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_damage_reduction_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_DAMAGE_REDUCTION_FACTOR$: [?ROOT.modifier@naval_torpedo_damage_reduction_factor|+=0%]"
+      },
+      {
+        "id": 237,
+        "line": 102,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_cooldown_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_COOLDOWN_FACTOR$: [?ROOT.modifier@naval_torpedo_cooldown_factor|-=0%]"
+      },
+      {
+        "id": 238,
+        "line": 103,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_reveal_chance_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_REVEAL_CHANCE_FACTOR$: [?ROOT.modifier@naval_torpedo_reveal_chance_factor|-=0%]"
+      },
+      {
+        "id": 239,
+        "line": 104,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "naval_torpedo_enemy_critical_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_TORPEDO_ENEMY_CRITICAL_CHANCE_FACTOR$: [?ROOT.modifier@naval_torpedo_enemy_critical_chance_factor|+=0%]"
+      },
+      {
+        "id": 240,
+        "line": 105,
+        "category": "海军",
+        "kind": "heading",
+        "modifier": "",
+        "format": "",
+        "localisation": "§3舰载机§!"
+      },
+      {
+        "id": 241,
+        "line": 106,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 242,
+        "line": 107,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 243,
+        "line": 108,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "carrier_capacity_penalty_reduction",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_CARRIER_CAPACITY_PENALTY_REDUCTION$: [?ROOT.modifier@carrier_capacity_penalty_reduction|-=0%]"
+      },
+      {
+        "id": 244,
+        "line": 109,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "fighter_sortie_efficiency",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_CARRIER_FIGHTER_SORTIE_EFFICIENCY_FACTOR$: [?ROOT.modifier@fighter_sortie_efficiency|+=0%]"
+      },
+      {
+        "id": 245,
+        "line": 110,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_carrier_air_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_CARRIER_AIR_ATTACK_FACTOR$: [?ROOT.modifier@navy_carrier_air_attack_factor|+=0%]"
+      },
+      {
+        "id": 246,
+        "line": 111,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 247,
+        "line": 112,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "sortie_efficiency",
+        "format": "+=0%",
+        "localisation": "$CARRIER_SORTIE_EFFICIENCY_FACTOR$: [?ROOT.modifier@sortie_efficiency|+=0%]"
+      },
+      {
+        "id": 248,
+        "line": 113,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_carrier_air_targetting_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_CARRIER_AIR_TARGETTING_FACTOR$: [?ROOT.modifier@navy_carrier_air_targetting_factor|+=0%]"
+      },
+      {
+        "id": 249,
+        "line": 114,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 250,
+        "line": 115,
+        "category": "海军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 251,
+        "line": 116,
+        "category": "海军",
+        "kind": "modifier",
+        "modifier": "navy_carrier_air_agility_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_CARRIER_AIR_AGILITY_FACTOR$: [?ROOT.modifier@navy_carrier_air_agility_factor|+=0%]"
+      },
+      {
+        "id": 301,
+        "line": 117,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_mission_efficiency",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_MISSION_EFFICIENCY$: [?ROOT.modifier@air_mission_efficiency|+=0%]"
+      },
+      {
+        "id": 302,
+        "line": 118,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_wing_xp_loss_when_killed_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_AIR_WING_XP_LOSS_WHEN_KILLED_FACTOR$: [?ROOT.modifier@air_wing_xp_loss_when_killed_factor|-=0%]"
+      },
+      {
+        "id": 303,
+        "line": 119,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_attack_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_ATTACK_FACTOR$: [?ROOT.modifier@air_attack_factor|+=0%]"
+      },
+      {
+        "id": 304,
+        "line": 120,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_ace_bonuses_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ACE_BONUSES_FACTOR$: [?ROOT.modifier@air_ace_bonuses_factor|+=0%]"
+      },
+      {
+        "id": 305,
+        "line": 121,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_untrained_pilots_penalty_factor",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_AIR_UNTRAINED_PILOTS_PENALTY_FACTOR$: [?ROOT.modifier@air_untrained_pilots_penalty_factor|-=0%]"
+      },
+      {
+        "id": 306,
+        "line": 122,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_defence_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_DEFENCE_FACTOR$: [?ROOT.modifier@air_defence_factor|+=0%]"
+      },
+      {
+        "id": 307,
+        "line": 123,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_maximum_speed_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_MAX_SPEED_FACTOR$: [?ROOT.modifier@air_maximum_speed_factor|+=0%]"
+      },
+      {
+        "id": 308,
+        "line": 124,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_range_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_RANGE_FACTOR$: [?ROOT.modifier@air_range_factor|+=0%]"
+      },
+      {
+        "id": 309,
+        "line": 125,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_agility_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_AGILITY_FACTOR$: [?ROOT.modifier@air_agility_factor|+=0%]"
+      },
+      {
+        "id": 310,
+        "line": 126,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_mission_xp_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_MISSION_XP_FACTOR$: [?ROOT.modifier@air_mission_xp_gain_factor|+=0%]"
+      },
+      {
+        "id": 311,
+        "line": 127,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_superiority_efficiency",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_SUPERIORITY_EFFICIENCY$: [?ROOT.modifier@air_superiority_efficiency|+=0%]"
+      },
+      {
+        "id": 312,
+        "line": 128,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_cas_efficiency",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_CAS_EFFICIENCY$: [?ROOT.modifier@air_cas_efficiency|+=0%]"
+      },
+      {
+        "id": 313,
+        "line": 129,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_training_xp_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_TRAINING_XP_GAIN_FACTOR$: [?ROOT.modifier@air_training_xp_gain_factor|+=0%]"
+      },
+      {
+        "id": 314,
+        "line": 130,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_superiority_detect_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_SUPERIORITY_DETECT_FACTOR$: [?ROOT.modifier@air_superiority_detect_factor|+=0%]"
+      },
+      {
+        "id": 315,
+        "line": 131,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_cas_present_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_CAS_PRESENT_FACTOR$: [?ROOT.modifier@air_cas_present_factor|+=0%]"
+      },
+      {
+        "id": 316,
+        "line": 132,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_nav_efficiency",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_NAV_EFFICIENCY$: [?ROOT.modifier@air_nav_efficiency|+=0%]"
+      },
+      {
+        "id": 317,
+        "line": 133,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "naval_strike_targetting_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVAL_STRIKE_TARGETTING_FACTOR$: [?ROOT.modifier@naval_strike_targetting_factor|+=0%]"
+      },
+      {
+        "id": 318,
+        "line": 134,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_close_air_support_org_damage_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_CLOSE_AIR_SUPPORT_ORG_DAMAGE_FACTOR$: [?ROOT.modifier@air_close_air_support_org_damage_factor|+=0%]"
+      },
+      {
+        "id": 319,
+        "line": 135,
+        "category": "空军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 320,
+        "line": 136,
+        "category": "空军",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 321,
+        "line": 137,
+        "category": "空军",
+        "kind": "modifier",
+        "modifier": "air_bombing_targetting",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIR_BOMBING_TARGETTING$: [?ROOT.modifier@air_bombing_targetting|+=0%]"
+      },
+      {
+        "id": 401,
+        "line": 138,
+        "category": "情报",
+        "kind": "heading",
+        "modifier": "",
+        "format": "",
+        "localisation": "§3情报§!"
+      },
+      {
+        "id": 402,
+        "line": 139,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 403,
+        "line": 140,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 404,
+        "line": 141,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "agency_upgrade_time",
+        "format": "-=0%",
+        "localisation": "$MODIFIER_AGENCY_UPGRADE_TIME$: [?ROOT.modifier@agency_upgrade_time|-=0%]"
+      },
+      {
+        "id": 405,
+        "line": 142,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "civilian_intel_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_CIVILIAN_INTEL_FACTOR$: [?ROOT.modifier@civilian_intel_factor|+=0%]"
+      },
+      {
+        "id": 406,
+        "line": 143,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "civilian_intel_to_others",
+        "format": "-=0",
+        "localisation": "$MODIFIER_CIVILIAN_INTEL_TO_OTHERS$: [?ROOT.modifier@civilian_intel_to_others|-=0]%"
+      },
+      {
+        "id": 407,
+        "line": 144,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "crypto_strength",
+        "format": "+=0",
+        "localisation": "$MODIFIER_CRYPTO_STRENGTH$: [?ROOT.modifier@crypto_strength|+=0]"
+      },
+      {
+        "id": 408,
+        "line": 145,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "army_intel_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ARMY_INTEL_FACTOR$: [?ROOT.modifier@army_intel_factor|+=0%]"
+      },
+      {
+        "id": 409,
+        "line": 146,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "army_intel_to_others",
+        "format": "-=0",
+        "localisation": "$MODIFIER_ARMY_INTEL_TO_OTHERS$: [?ROOT.modifier@army_intel_to_others|-=0]%"
+      },
+      {
+        "id": 410,
+        "line": 147,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "decryption_power",
+        "format": "+=0",
+        "localisation": "$MODIFIER_DECRYPTION_POWER$: [?ROOT.modifier@decryption_power|+=0]"
+      },
+      {
+        "id": 411,
+        "line": 148,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "navy_intel_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_NAVY_INTEL_FACTOR$: [?ROOT.modifier@navy_intel_factor|+=0%]"
+      },
+      {
+        "id": 412,
+        "line": 149,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "navy_intel_to_others",
+        "format": "-=0",
+        "localisation": "$MODIFIER_NAVY_INTEL_TO_OTHERS$: [?ROOT.modifier@navy_intel_to_others|-=0]%"
+      },
+      {
+        "id": 413,
+        "line": 150,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "decryption_power_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_DECRYPTION_POWER_FACTOR$: [?ROOT.modifier@decryption_power_factor|+=0%]"
+      },
+      {
+        "id": 414,
+        "line": 151,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "airforce_intel_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_AIRFORCE_INTEL_FACTOR$: [?ROOT.modifier@airforce_intel_factor|+=0%]"
+      },
+      {
+        "id": 415,
+        "line": 152,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "airforce_intel_to_others",
+        "format": "-=0",
+        "localisation": "$MODIFIER_AIRFORCE_INTEL_TO_OTHERS$: [?ROOT.modifier@airforce_intel_to_others|-=0]%"
+      },
+      {
+        "id": 416,
+        "line": 153,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "intel_network_gain",
+        "format": "+=0",
+        "localisation": "$MODIFIER_INTEL_NETWORK_GAIN$: [?ROOT.modifier@intel_network_gain|+=0]"
+      },
+      {
+        "id": 417,
+        "line": 154,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "intel_network_gain_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_INTEL_NETWORK_GAIN_FACTOR$: [?ROOT.modifier@intel_network_gain_factor|+=0%]"
+      },
+      {
+        "id": 418,
+        "line": 155,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 419,
+        "line": 156,
+        "category": "情报",
+        "kind": "heading",
+        "modifier": "",
+        "format": "",
+        "localisation": "§3特工§!"
+      },
+      {
+        "id": 420,
+        "line": 157,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 421,
+        "line": 158,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      },
+      {
+        "id": 422,
+        "line": 159,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "operative_slot",
+        "format": "+=0",
+        "localisation": "$MODIFIER_OPERATIVE_SLOT$: [?ROOT.modifier@operative_slot|+=0]"
+      },
+      {
+        "id": 423,
+        "line": 160,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "operation_cost",
+        "format": "0%-",
+        "localisation": "$operation_cost$: [?ROOT.modifier@operation_cost|0%-]"
+      },
+      {
+        "id": 424,
+        "line": 161,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "own_operative_capture_chance_factor",
+        "format": "0%-",
+        "localisation": "$MODIFIER_OWN_OPERATIVE_CAPTURE_CHANCE_FACTOR$: [?ROOT.modifier@own_operative_capture_chance_factor|0%-]"
+      },
+      {
+        "id": 425,
+        "line": 162,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "new_operative_slot_bonus",
+        "format": "+=0",
+        "localisation": "$MODIFIER_NEW_OPERATIVE_SLOT_BONUS$: [?ROOT.modifier@new_operative_slot_bonus|+=0]"
+      },
+      {
+        "id": 426,
+        "line": 163,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "operation_risk",
+        "format": "0%-",
+        "localisation": "$operation_risk$: [?ROOT.modifier@operation_risk|0%-]"
+      },
+      {
+        "id": 427,
+        "line": 164,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "own_operative_detection_chance",
+        "format": "-=0",
+        "localisation": "$MODIFIER_OWN_OPERATIVE_DETECTION_CHANCE$: [?ROOT.modifier@own_operative_detection_chance|-=0]"
+      },
+      {
+        "id": 428,
+        "line": 165,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "enemy_operative_capture_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ENEMY_OPERATIVE_CAPTURE_CHANCE_FACTOR$: [?ROOT.modifier@enemy_operative_capture_chance_factor|+=0%]"
+      },
+      {
+        "id": 429,
+        "line": 166,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "operation_outcome",
+        "format": "+=0%",
+        "localisation": "$operation_outcome$: [?ROOT.modifier@operation_outcome|+=0%]"
+      },
+      {
+        "id": 430,
+        "line": 167,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "own_operative_detection_chance_factor",
+        "format": "0%-",
+        "localisation": "$MODIFIER_OWN_OPERATIVE_DETECTION_CHANCE_FACTOR$: [?ROOT.modifier@own_operative_detection_chance_factor|0%-]"
+      },
+      {
+        "id": 431,
+        "line": 168,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "enemy_operative_detection_chance",
+        "format": "+=0",
+        "localisation": "$MODIFIER_ENEMY_OPERATIVE_DETECTION_CHANCE$: [?ROOT.modifier@enemy_operative_detection_chance|+=0]"
+      },
+      {
+        "id": 432,
+        "line": 169,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "own_operative_intel_extraction_rate",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_OWN_OPERATIVE_INTEL_EXTRACTION_RATE$: [?ROOT.modifier@own_operative_intel_extraction_rate|+=0%]"
+      },
+      {
+        "id": 433,
+        "line": 170,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "own_operative_detection_chance_factor",
+        "format": "0%-",
+        "localisation": "$MODIFIER_OWN_OPERATIVE_DETECTION_CHANCE_FACTOR$: [?ROOT.modifier@own_operative_detection_chance_factor|0%-]"
+      },
+      {
+        "id": 434,
+        "line": 171,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "enemy_operative_detection_chance_factor",
+        "format": "+=0%",
+        "localisation": "$MODIFIER_ENEMY_OPERATIVE_DETECTION_CHANCE_FACTOR$: [?ROOT.modifier@enemy_operative_detection_chance_factor|+=0%]"
+      },
+      {
+        "id": 435,
+        "line": 172,
+        "category": "情报",
+        "kind": "modifier",
+        "modifier": "enemy_operative_intel_extraction_rate",
+        "format": "0%-",
+        "localisation": "$MODIFIER_ENEMY_OPERATIVE_INTEL_EXTRACTION_RATE$: [?ROOT.modifier@enemy_operative_intel_extraction_rate|0%-]"
+      },
+      {
+        "id": 436,
+        "line": 173,
+        "category": "情报",
+        "kind": "blank",
+        "modifier": "",
+        "format": "",
+        "localisation": ""
+      }
+    ],
+    "unique_keys": [
+      "acclimatization_cold_climate_gain_factor",
+      "acclimatization_hot_climate_gain_factor",
+      "agency_upgrade_time",
+      "air_ace_bonuses_factor",
+      "air_agility_factor",
+      "air_attack_factor",
+      "air_bombing_targetting",
+      "air_cas_efficiency",
+      "air_cas_present_factor",
+      "air_close_air_support_org_damage_factor",
+      "air_defence_factor",
+      "air_maximum_speed_factor",
+      "air_mission_efficiency",
+      "air_mission_xp_gain_factor",
+      "air_nav_efficiency",
+      "air_range_factor",
+      "air_superiority_detect_factor",
+      "air_superiority_efficiency",
+      "air_training_xp_gain_factor",
+      "air_untrained_pilots_penalty_factor",
+      "air_wing_xp_loss_when_killed_factor",
+      "airforce_intel_factor",
+      "airforce_intel_to_others",
+      "army_armor_attack_factor",
+      "army_armor_defence_factor",
+      "army_artillery_attack_factor",
+      "army_artillery_defence_factor",
+      "army_attack_factor",
+      "army_core_attack_factor",
+      "army_core_defence_factor",
+      "army_defence_factor",
+      "army_infantry_attack_factor",
+      "army_infantry_defence_factor",
+      "army_intel_factor",
+      "army_intel_to_others",
+      "army_morale_factor",
+      "army_non_core_defence_factor",
+      "army_org_factor",
+      "army_org_regain",
+      "army_speed_factor",
+      "army_strength_factor",
+      "carrier_capacity_penalty_reduction",
+      "cas_damage_reduction",
+      "civilian_intel_factor",
+      "civilian_intel_to_others",
+      "combat_width_factor",
+      "convoy_retreat_speed",
+      "coordination_bonus",
+      "critical_receive_chance",
+      "crypto_strength",
+      "decryption_power",
+      "decryption_power_factor",
+      "enemy_operative_capture_chance_factor",
+      "enemy_operative_detection_chance",
+      "enemy_operative_detection_chance_factor",
+      "enemy_operative_intel_extraction_rate",
+      "experience_gain_army_unit_factor",
+      "experience_loss_factor",
+      "factory_energy_consumption",
+      "fighter_sortie_efficiency",
+      "fuel_gain_factor",
+      "fuel_gain_factor_from_states",
+      "global_building_slots_factor",
+      "industry_free_repair_factor",
+      "initiative_factor",
+      "intel_network_gain",
+      "intel_network_gain_factor",
+      "justify_war_goal_time",
+      "local_resources_factor",
+      "minimum_training_level",
+      "naval_coordination",
+      "naval_critical_effect_factor",
+      "naval_critical_score_chance_factor",
+      "naval_heavy_gun_hit_chance_factor",
+      "naval_hit_chance",
+      "naval_light_gun_hit_chance_factor",
+      "naval_night_attack",
+      "naval_retreat_speed",
+      "naval_strike_targetting_factor",
+      "naval_torpedo_cooldown_factor",
+      "naval_torpedo_damage_reduction_factor",
+      "naval_torpedo_enemy_critical_chance_factor",
+      "naval_torpedo_hit_chance_factor",
+      "naval_torpedo_reveal_chance_factor",
+      "naval_torpedo_screen_penetration_factor",
+      "navy_capital_ship_attack_factor",
+      "navy_capital_ship_defence_factor",
+      "navy_carrier_air_agility_factor",
+      "navy_carrier_air_attack_factor",
+      "navy_carrier_air_targetting_factor",
+      "navy_intel_factor",
+      "navy_intel_to_others",
+      "navy_screen_attack_factor",
+      "navy_screen_defence_factor",
+      "navy_submarine_attack_factor",
+      "navy_submarine_defence_factor",
+      "navy_visibility",
+      "navy_weather_penalty",
+      "new_operative_slot_bonus",
+      "night_spotting_chance",
+      "operation_cost",
+      "operation_outcome",
+      "operation_risk",
+      "operative_slot",
+      "org_loss_at_low_org_factor",
+      "own_operative_capture_chance_factor",
+      "own_operative_detection_chance",
+      "own_operative_detection_chance_factor",
+      "own_operative_intel_extraction_rate",
+      "political_power_factor",
+      "political_power_gain",
+      "positioning",
+      "production_speed_arms_factory_factor",
+      "production_speed_buildings_factor",
+      "production_speed_dockyard_factor",
+      "production_speed_industrial_complex_factor",
+      "production_speed_infrastructure_factor",
+      "production_speed_synthetic_refinery_factor",
+      "repair_speed_factor",
+      "ships_at_battle_start",
+      "sortie_efficiency",
+      "SPECIAL_FORCES_ATTACK_FACTOR",
+      "special_forces_cap",
+      "SPECIAL_FORCES_DEFENCE_FACTOR",
+      "special_forces_training_time_factor",
+      "spotting_chance",
+      "training_time_army_factor",
+      "training_time_factor"
+    ]
+  },
+  "statistics": {
+    "basic_expressions": 127,
+    "basic_unique_keys": 126,
+    "ui_slots": 162,
+    "ui_expressions": 130,
+    "ui_unique_keys": 128,
+    "ui_blank_slots": 27,
+    "ui_heading_slots": 5,
+    "ui_categories": [
+      {
+        "category": "海军",
+        "slots": 51,
+        "expressions": 34
+      },
+      {
+        "category": "空军",
+        "slots": 21,
+        "expressions": 19
+      },
+      {
+        "category": "陆军",
+        "slots": 33,
+        "expressions": 33
+      },
+      {
+        "category": "情报",
+        "slots": 36,
+        "expressions": 28
+      },
+      {
+        "category": "政治和工业",
+        "slots": 21,
+        "expressions": 16
+      }
+    ]
+  },
+  "key_differences": {
+    "basic_only": [
+      "initiative"
+    ],
+    "ui_only": [
+      "army_non_core_defence_factor",
+      "fighter_sortie_efficiency",
+      "initiative_factor"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\descriptor.mod",
+      "lines": 7,
+      "sha256": "83AA0B41DB61D715B421D8D94B022F16F8DC0A77EF249242927E0F3CDFFD5AE7"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\common\\decisions\\we_common.txt",
+      "lines": 126,
+      "sha256": "58FA4AE37D9F2F8D1A59CBD204389CDCD85B06D990C93138E9EF34C20DD6BB12"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\common\\decisions\\categories\\common_dicision_categories.txt",
+      "lines": 38,
+      "sha256": "FE36A63393DA755E9117210CD8903FC209AEB0F82314A006CD1114B933061997"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3440479297\\localisation\\simp_chinese\\we_l_simp_chinese.yml",
+      "lines": 19,
+      "sha256": "E5E471ABE148D631863EF8781225E93765B842BEA62560D3DFF5D5B24EA46069"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\desc.txt",
+      "lines": 13,
+      "sha256": "E3EF56F06969D35BE9ACD03013BC4A2614DF63733B8E3920FEFCB9AA74C310B1"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\descriptor.mod",
+      "lines": 10,
+      "sha256": "06553D1F173D78FA1C3B1372DE794783A46988DD1D340AF2282E72DD2695BA87"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\common\\scripted_effects\\BDUI_scripted_effects.txt",
+      "lines": 62,
+      "sha256": "D3F4695028A6129DB3E9D8BD6ACF4F18AB57BC06370CC41263775A8D398E3364"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\common\\scripted_guis\\BDUI_scripted_gui.txt",
+      "lines": 135,
+      "sha256": "61D1E137DE672B29BCB0CD7BBF7429BA50D4474EBB2431739BD23483D2693F6D"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\common\\scripted_localisation\\BDUI_scripted_localisation.txt",
+      "lines": 80,
+      "sha256": "E202E90A1EF03D7085D48310C2CD60FBEF62A016BD0466F7E58968D10EBFABF3"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\interface\\BDUI_gui_tools.gfx",
+      "lines": 36,
+      "sha256": "7E066BE15D3418660FC713CE7CB184CA7E517071CC3A78D43B425DB27B19710F"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\interface\\BDUI_gui_tools.gui",
+      "lines": 211,
+      "sha256": "0BBEDA8F85E61BF0FE21A41A120577AF6955E38BE01E841196D07C0B29CA6454"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\localisation\\english\\BDUI_l_english.yml",
+      "lines": 175,
+      "sha256": "80EC906DEB8B477860E73F1A74BD73D079A7073CBB325C56240CEBCAA3652CC3"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\3795966002\\localisation\\simp_chinese\\BDUI_l_simp_chinese.yml",
+      "lines": 175,
+      "sha256": "2C9DE5B01B9204C7CAC216FBB5138E89E4B0440CB429C750583EC8C68CF2F23F"
+    }
+  ],
+  "engine_and_launcher_references": [
+    {
+      "path": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\ugc_3440479297.mod",
+      "lines": 8,
+      "sha256": "7A3DC5F5A963CBD7486A758ED19E47513EE88E0CCEB76AC7CE6F9BBCDD36BD20"
+    },
+    {
+      "path": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\ugc_3795966002.mod",
+      "lines": 11,
+      "sha256": "2275B33E36889C91F0AC771E551C83290157CB310FF12864DEB8E4AA0D39BB0A"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+      "lines": 1384,
+      "sha256": "538525747F0C285062C9CE8DB14B4E07C3CF6BAC1013115FA4F57291CB4EBDDA"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+      "lines": 5169,
+      "sha256": "00A0ECA6D2B3A70CE4B8A0D38997DD609AA0C9349DDCD04C8CAC92849425BE7E"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_guis\\_documentation.md",
+      "lines": 145,
+      "sha256": "43CE647FC5FDE27488855B060B5463C790E5E356149FCEB010D36B960B40F838"
+    },
+    {
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\decisions\\_documentation.md",
+      "lines": 45,
+      "sha256": "5E7E686B5582F32C38D898D805E17171E88F3BFEEE4A030DEB1884F9726DE019"
+    }
+  ]
+}

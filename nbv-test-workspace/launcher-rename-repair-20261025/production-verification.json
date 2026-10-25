@@ -1,0 +1,18 @@
+{
+  "launcher_row": {
+    "id": "a35f6b06-091c-460e-ba23-5493ffbcb291",
+    "gameRegistryId": "mod/nbv_national_buff.mod",
+    "displayName": "国家BUFF统计 UI",
+    "dirPath": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv-national-buff",
+    "status": "ready_to_play",
+    "source": "local"
+  },
+  "playset_memberships_preserved": 2,
+  "identical_runtime_files": 354,
+  "launcher_restarted": true,
+  "actual_ui_rename_tested": false,
+  "installation_directory": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv-national-buff",
+  "source_directory": "D:\\projects\\hoi4_mod\\1\\nbv-national-buff",
+  "installer_sha256": "b226f0f2cdfd9f33506cdf88e45d56ed58a8d77a3c5a3805a67aef04f187dae4",
+  "fixture_report": "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\launcher-rename-repair-20261025\\fixture-run-173925\\results.json"
+}

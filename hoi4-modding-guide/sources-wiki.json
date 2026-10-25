@@ -1,0 +1,399 @@
+[
+  {
+    "id": "Modding",
+    "url": "https://hoi4.paradoxwikis.com/Modding",
+    "retrieved_at_utc": "2026-10-24T13:43:53.304405+00:00",
+    "http_status": 200,
+    "title": "Modding - Hearts of Iron 4 Wiki",
+    "revision_id": 105601,
+    "revision_url": "https://hoi4.paradoxwikis.com/index.php?title=Modding&oldid=105601",
+    "history_url": "https://hoi4.paradoxwikis.com/index.php?title=Modding&action=history",
+    "last_modified_text": "This page was last edited on 17 October 2026, at 11:05.",
+    "license": "CC BY-SA 3.0; exceptions may apply as noted in source",
+    "external_links": [
+      "http://en.wikipedia.org/wiki/.dds",
+      "http://en.wikipedia.org/wiki/ASCII",
+      "http://en.wikipedia.org/wiki/ASCII#Printable_characters",
+      "http://en.wikipedia.org/wiki/Escape_character",
+      "http://en.wikipedia.org/wiki/Regular_expression",
+      "http://en.wikipedia.org/wiki/SQLite",
+      "http://notepad-plus-plus.org/",
+      "http://steamcommunity.com/app/394360/workshop/",
+      "http://winmerge.org/",
+      "https://code.visualstudio.com/Download",
+      "https://discord.com",
+      "https://discord.gg/4DczT9pVtH",
+      "https://discord.gg/8p7PSbR",
+      "https://docs.google.com/document/d/1bQdOVMY6FTu-2AKXZblYp6bF2-_W2JMUtXc5a0nZ8Ls",
+      "https://forum.paradoxplaza.com/forum/index.php?forums/hearts-of-iron-4-user-mods.950/",
+      "https://forum.paradoxplaza.com/forum/index.php?threads/1157324",
+      "https://forum.paradoxplaza.com/forum/index.php?threads/947435",
+      "https://forum.paradoxplaza.com/forum/index.php?threads/995985",
+      "https://forum.paradoxplaza.com/forum/index.php?threads/information-and-faq.924764/",
+      "https://forum.paradoxplaza.com/forum/index.php?threads/sublime-tools-for-imperator.1274246/",
+      "https://git-scm.com/",
+      "https://github.com/",
+      "https://gitlab.com",
+      "https://marketplace.visualstudio.com/items?itemName=ryu1kn.partial-diff",
+      "https://support.microsoft.com/en-gb/windows/common-file-name-extensions-in-windows-da4a4430-8e76-89c5-59f7-1cdbbc75cb01",
+      "https://www.sublimetext.com/",
+      "https://www.youtube.com/playlist?list=PL6EAZcF5cWbg57Srq6BTVvguMl6YfP9pG",
+      "https://www.youtube.com/playlist?list=PL6EAZcF5cWbiwdGsdZs-C3o6-uwgD4RKs"
+    ],
+    "local_path": "references/wiki/Modding.txt",
+    "status": "full_article_text_retrieved",
+    "sha256": "39c24c11f6e7748bd817bbce2aaabff1cccb955e85b4187a60261c88a0852930",
+    "characters": 79151,
+    "normalized_text_sha256": "eb71bd0d2d80c8c792a1d953f8ae1779dd98ef383a69e9684785a43db137a5aa",
+    "sha256_note": "Hash of on-disk bytes, including Windows line endings. normalized_text_sha256 hashes LF-normalized UTF-8 text."
+  },
+  {
+    "id": "Mod_structure",
+    "url": "https://hoi4.paradoxwikis.com/Mod_structure",
+    "retrieved_at_utc": "2026-10-24T13:43:53.304405+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Localisation",
+    "url": "https://hoi4.paradoxwikis.com/Localisation",
+    "retrieved_at_utc": "2026-10-24T13:43:53.304405+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Scopes",
+    "url": "https://hoi4.paradoxwikis.com/Scopes",
+    "retrieved_at_utc": "2026-10-24T13:43:53.305397+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Conditions",
+    "url": "https://hoi4.paradoxwikis.com/Conditions",
+    "retrieved_at_utc": "2026-10-24T13:43:53.593337+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Triggers",
+    "url": "https://hoi4.paradoxwikis.com/Triggers",
+    "retrieved_at_utc": "2026-10-24T13:43:53.610642+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Effect",
+    "url": "https://hoi4.paradoxwikis.com/Effect",
+    "retrieved_at_utc": "2026-10-24T13:43:53.660966+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Modifiers",
+    "url": "https://hoi4.paradoxwikis.com/Modifiers",
+    "retrieved_at_utc": "2026-10-24T13:43:53.685439+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Variables",
+    "url": "https://hoi4.paradoxwikis.com/Variables",
+    "retrieved_at_utc": "2026-10-24T13:43:53.962183+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Arrays",
+    "url": "https://hoi4.paradoxwikis.com/Arrays",
+    "retrieved_at_utc": "2026-10-24T13:43:54.061118+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Scripted_effects",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_effects",
+    "retrieved_at_utc": "2026-10-24T13:43:54.132354+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Scripted_triggers",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_triggers",
+    "retrieved_at_utc": "2026-10-24T13:43:54.139562+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "On_actions",
+    "url": "https://hoi4.paradoxwikis.com/On_actions",
+    "retrieved_at_utc": "2026-10-24T13:43:54.273396+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Event_modding",
+    "url": "https://hoi4.paradoxwikis.com/Event_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:54.412412+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Decision_modding",
+    "url": "https://hoi4.paradoxwikis.com/Decision_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:54.432726+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "National_focus_modding",
+    "url": "https://hoi4.paradoxwikis.com/National_focus_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:54.442425+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Idea_modding",
+    "url": "https://hoi4.paradoxwikis.com/Idea_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:54.638938+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Country_creation",
+    "url": "https://hoi4.paradoxwikis.com/Country_creation",
+    "retrieved_at_utc": "2026-10-24T13:43:54.880359+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Character_modding",
+    "url": "https://hoi4.paradoxwikis.com/Character_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.101236+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Technology_modding",
+    "url": "https://hoi4.paradoxwikis.com/Technology_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.215585+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Equipment_modding",
+    "url": "https://hoi4.paradoxwikis.com/Equipment_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.374596+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Unit_modding",
+    "url": "https://hoi4.paradoxwikis.com/Unit_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.452733+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Map_modding",
+    "url": "https://hoi4.paradoxwikis.com/Map_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.606905+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "State_modding",
+    "url": "https://hoi4.paradoxwikis.com/State_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.699772+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Interface_modding",
+    "url": "https://hoi4.paradoxwikis.com/Interface_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:55.760491+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Scripted_GUI",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_GUI",
+    "retrieved_at_utc": "2026-10-24T13:43:55.901270+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Graphical_asset_modding",
+    "url": "https://hoi4.paradoxwikis.com/Graphical_asset_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:56.014145+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "AI_modding",
+    "url": "https://hoi4.paradoxwikis.com/AI_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:56.031204+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Defines",
+    "url": "https://hoi4.paradoxwikis.com/Defines",
+    "retrieved_at_utc": "2026-10-24T13:43:56.058989+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Console_commands",
+    "url": "https://hoi4.paradoxwikis.com/Console_commands",
+    "retrieved_at_utc": "2026-10-24T13:43:56.257095+00:00",
+    "http_status": 200,
+    "title": "Console commands - Hearts of Iron 4 Wiki",
+    "revision_id": 105588,
+    "revision_url": "https://hoi4.paradoxwikis.com/index.php?title=Console_commands&oldid=105588",
+    "history_url": "https://hoi4.paradoxwikis.com/index.php?title=Console_commands&action=history",
+    "last_modified_text": "This page was last edited on 17 October 2026, at 11:02.",
+    "license": "CC BY-SA 3.0; exceptions may apply as noted in source",
+    "external_links": [
+      "https://www.reddit.com/r/hoi4/comments/6cb8vh/the_secrets_of_hoi4/dhtdr4x/"
+    ],
+    "local_path": "references/wiki/Console_commands.txt",
+    "status": "full_article_text_retrieved",
+    "sha256": "c8ea88df47f9dea308e6de33633dd1bc09fa79a6eca0118ac8e712fcd5df485e",
+    "characters": 31753,
+    "normalized_text_sha256": "9267700019834fc0c0a147f85a0d3b9db7cb7b588495fec8dddb2c61045f5c8a",
+    "sha256_note": "Hash of on-disk bytes, including Windows line endings. normalized_text_sha256 hashes LF-normalized UTF-8 text."
+  },
+  {
+    "id": "Troubleshooting",
+    "url": "https://hoi4.paradoxwikis.com/Troubleshooting",
+    "retrieved_at_utc": "2026-10-24T13:43:56.333961+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Music_modding",
+    "url": "https://hoi4.paradoxwikis.com/Music_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:56.336499+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Sound_modding",
+    "url": "https://hoi4.paradoxwikis.com/Sound_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:56.339931+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Military_industrial_organization_modding",
+    "url": "https://hoi4.paradoxwikis.com/Military_industrial_organization_modding",
+    "retrieved_at_utc": "2026-10-24T13:43:56.506955+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Missing wiki revision or expected CC BY-SA notice; inspect manually",
+    "note": "HTTP 200 challenge/unsupported response is not a successful article retrieval; the page itself is unconfirmed."
+  },
+  {
+    "id": "Effects",
+    "url": "https://hoi4.paradoxwikis.com/Effects",
+    "retrieved_at_utc": "2026-10-24T13:57:06.782760+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Client Challenge returned instead of article; page contents and existence not verified"
+  },
+  {
+    "id": "Data_structures",
+    "url": "https://hoi4.paradoxwikis.com/Data_structures",
+    "retrieved_at_utc": "2026-10-24T13:57:06.783766+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Client Challenge returned instead of article; page contents and existence not verified"
+  },
+  {
+    "id": "Scripted_effect",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_effect",
+    "retrieved_at_utc": "2026-10-24T13:57:06.783766+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Client Challenge returned instead of article; page contents and existence not verified"
+  },
+  {
+    "id": "Scripted_trigger",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_trigger",
+    "retrieved_at_utc": "2026-10-24T13:57:07.097267+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Client Challenge returned instead of article; page contents and existence not verified"
+  },
+  {
+    "id": "Scripted_GUI_modding",
+    "url": "https://hoi4.paradoxwikis.com/Scripted_GUI_modding",
+    "retrieved_at_utc": "2026-10-24T13:57:07.155328+00:00",
+    "http_status": 200,
+    "status": "not_retrieved",
+    "error": "Client Challenge returned instead of article; page contents and existence not verified"
+  }
+]

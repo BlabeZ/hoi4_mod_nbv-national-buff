@@ -1,164 +1,37 @@
-# 国家修正统计 UI
+# HOI4 模组制作资料
 
-[GitHub 源码仓库](https://github.com/BlabeZ/hoi4_mod_nbv-national-buff) · [Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3826858105)
+[GitHub 仓库](https://github.com/BlabeZ/hoi4_mod_nbv-national-buff) · [Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3826858105)
 
-本仓库包含游戏运行文件、封面、构建工具及统计数据。游戏安装目录、测试存档和外层研究资料不随仓库上传；日常游玩可直接订阅工坊版本。打包脚本排除 Git 历史和 Python 缓存。
+Git 管理范围是整个工作区根目录，本机位置为 `D:\projects\hoi4_mod\1`。仓库包括 `nbv-national-buff/` 模组源码、`hoi4-modding-guide/` 研究资料、`outputs/` 排序文档、`nbv-test-workspace/` 测试脚本和证据、`dist/` 发布包及根目录图片。依赖缓存、隔离游戏运行目录和本机启动器数据库由 `.gitignore` 排除，保留在本机。
 
-本地测试版 **0.1.11**，针对本机 HOI4 **1.19.3.0** 制作。按用户编辑的 Markdown 展示 **528 项**国家修正，复用并适配两版 BUFF 模组的取数与列表结构、KR 中欧同盟的右侧入口和独立窗口结构。
-
-0.1.11 按用户指定补入 8 个独立修正，并将已有的空军经验增长百分比从“常用”移至“其他修正”。政治页新增可征募人口比例加成、宗主国对附属国的人力要求；陆军页新增组织度固定值、经验增长百分比、堑壕上限百分比；海军页新增经验增长百分比；情报页新增旧版加密／解密百分比。全部位于各页“其他修正”末尾，并用明确名称区分同名键。用户排序 Markdown 已同步，其余词条相对顺序保持一致。
-
-0.1.10 在工业“其他修正”末尾增加“地区最大工厂数（固定值）”，读取 `global_building_slots`，显示整数；原有百分比词条继续读取 `global_building_slots_factor`。其余 519 项分类及顺序保持一致。显示名称通过独立别名区分，名单按修正键去重，稳定注册表、格式、图标及来源绑定不变。本次没有自动恢复其他同名键或用户删去的词条；同名复核记录见 `tools/data/same-name-modifier-audit.json`。
-
-0.1.9 将右侧入口的 55×41 图标下移 10 像素，在 71×71 按钮内居中，悬停仍显示“修正统计”。保留正常启动方式，按已核实的 KR、EAW、TFR、BUFF UI 布局预留位置：构建界面时若与登记的占位过近，则向上寻找满足间距的位置。当前默认位置已与 KR 中欧同盟相隔 10 个 GUI 单位，EAW 入口更靠下，另外两者入口不在该侧栏，所以本版无需进一步上移。此机制是已知布局的静态预留，不是运行时探测任意第三方按钮。**TNO 及其子模组不在适配范围。** 记录见 `tools/data/sidebar-placement.json`；其他模组或布局更新需另行核查。
-
-0.1.8 修复原版苏联、波斯和瑞士民族精神文件在末尾缺少最外层闭合而被整文件跳过的问题，仅对核实过的原版文件哈希在内存中恢复，不改游戏文件。补回 252 个民族精神、755 条来源绑定，包括“托洛茨基的阴谋？”与“政治化的军队”。另补回 12 条顾问与 9 条潜艇学说绑定，并接入 15 条经过测试的稳定度／战争支持度曲线及和平状态来源。奇观、舰队荣耀和沿岸保护的来源明细仍未接入。
-
-0.1.7 应用用户调整后的页面分类、常用／其他分组和词条顺序；忽略 111 个空条目，16 次重复出现仅保留第一次的位置。情报页粘连的一行按用户确认拆为“敌方特工情报获取率”和“加强意识形态任务成果”。原始 559 个修正 ID 保留，未选中的 40 个 ID 不再进入页面列表；同名但键不同的旧记录沿用原名单中首次出现的绑定。导入快照、去重位置及绑定选择记录见 `tools/data/display-order.md` 和 `display-layout.json`。
-
-0.1.6 为六页全部词条的名称和悬停标题加入“数据图标”，移植自 [Modifier Icons 汉化版](https://steamcommunity.com/sharedfiles/filedetails/?id=2671396187)。图标与名称保持同一行，数值仍在右侧；来源明细的名称与数值格式不变。素材采用独立 `nbv_mi_` 名称和目录，无需另行启用原图标模组。右侧入口仅保留图标，悬停显示“修正统计”。详细映射和素材出处见 [移植说明](REFERENCE-AND-PORTING.md)。
-
-0.1.5 修复动态民族精神来源大批遗漏的问题：旧解析器不支持原版 `optional_assets` 中的匿名嵌套块，导致苏联、日本等国家历史文件解析失败，作用域审计随之误排这些文件引用的动态修正。本版修复解析器，并接入当前可核实的原版启用条件及国家动态名称。领袖来源改为“领袖名：特质名：数值”；其他来源仍只显示修正名称和数值，不加类别前缀。零值和未拆分差额继续省略。
-
-变量型动态来源读取原版当前输入变量，并按当前原版 `enable` 条件决定是否显示；它并非引擎逐来源缓存的导出。变量或启用条件变化后、引擎每日更新前，来源行与国家合计可能暂时不同。正式模组不调用强制重算，也不修改玩法变量。
-
-0.1.2 根据实机截图修补滚动视口缺少背景、裁剪及标题栏拦截拖动的问题：视口有独立背景与常显滚动条，主窗和视口均裁剪边界；标题装饰改为根级鼠标穿透图层，拖动标题栏由主窗接收。窗口标题改为“国家修正统计”，侧边按钮改为“修正统计”。本轮已核对原版及 KR 结构并静态检查，尚待重启后的鼠标交互验收。
-
-## 安装与使用
-
-项目源码目录和发布包的顶层目录使用 **`nbv-national-buff`**。启动器使用单独的安装副本：先退出游戏和启动器，运行 `install-local.ps1`，脚本将游戏文件部署到“文档/Paradox Interactive/Hearts of Iron IV/mod/nbv-national-buff”，并将同级的 `nbv_national_buff.mod` 指向这个安装副本。更新源码后需要再次运行安装脚本；不会修改播放集。
-
-启动器的“重命名 MOD”会同时改变安装目录、外部 `.mod` 文件名和显示名。这是本机 Launcher 2026.13 的实际行为，不能把它理解为只修改 `name`。旧安装方式将源码目录直接注册到启动器，导致重命名时在项目目录寻找 `.mod`，第二步失败且没有回滚。新安装方式使安装目录与 `.mod` 同级，重命名只影响安装副本，不再改动项目源码。
-
-安装副本中的 `.nbv-install.json` 用于识别本模组。安装器会寻找已重命名的安装副本，继续使用其目录、注册文件名、显示名、封面和工坊 ID；发现重复安装或冲突工坊 ID 时停止覆盖。请保留该标记。首次安装显示名取自源码 `descriptor.mod`，目前为 **国家BUFF统计 UI**。若只想改显示名而保留安装目录名，可退出启动器后运行 `install-local.ps1 -DisplayName '新名称'`。
-
-构建时仅更新源码描述文件的版本字段，保留其名称、封面、工坊 ID 等字段。源码与安装副本的元数据可以独立；工坊上传和启动器操作使用安装副本。
-
-在 Paradox 启动器的已安装模组中找到 **国家BUFF统计 UI**，加入需要使用的播放集。进入游戏后，点击右侧入口图标（悬停显示 **修正统计**）。无需同时启用普通 BUFF、BUFF UI、KR、TNO 或 Modifier Icons。更新后完整退出并重新启动游戏加载新界面。
-
-- 顶部六页：政治、工业、陆军、海军、空军、情报。
-- 每页使用一个连续滚动列表，先显示“常用”三列，再显示“其他修正”四列；通过滚轮或右侧滚动条浏览下方内容。
-- 每格名称在左、数值在右，放在同一行。每格高 30，行步长 34；长名称在格内裁切，悬停可查看完整名称。
-- 页面只保留标题、分类名、分区名、词条及操作按钮；已删除上下方说明文字。“全部词条／隐藏词条”和“刷新”按钮没有解释提示框。
-- 词条提示只显示完整名称、当前数值，以及可以核实的非零来源，每个来源一行。领袖来源使用“当前领袖名：特质名：数值”，其他来源使用“修正名 数值”；不显示类别、作用、公式或解释。未能拆分的部分与零值来源均不标注。
-- 第一次打开为政治页。X、Esc 或再次点击入口关闭；再次打开恢复该国家上次页面。
-- 默认展示全部。筛选按钮在“全部词条”和“隐藏词条”状态之间切换；后者隐藏已经验证为零的读数，未核验项目不会当作零隐藏。
-- “刷新”重新准备当前国家的当前页；平时通过 Scripted GUI 默认更新和动态本地化读取数值。
-
-## 统计口径
-
-| 分类 | 常用（三列） | 其他（四列） | 合计 |
-|---|---:|---:|---:|
-| 政治 | 34 | 52 | 86 |
-| 工业 | 22 | 77 | 99 |
-| 陆军 | 49 | 111 | 160 |
-| 海军 | 35 | 54 | 89 |
-| 空军 | 24 | 24 | 48 |
-| 情报 | 12 | 34 | 46 |
-| 合计 | 176 | 352 | 528 |
-
-直接读取当前玩家国家 `ROOT.modifier@修正键` 的引擎合计。国策、民族精神、领袖、法案、顾问、科技等来源，只要进入该国家修正，就由引擎合并体现。来源明细仅用于提示，不参与合计计算，也不会写入修正或改变玩法数值。
-
-保留国家持有的核心／非核心等条件加成，以及确认名单中指定的天气适应、损耗、主义接纳度、通用设计商费用等项目。排除州／地方对象、具体部队和装备、制造商对象属性、全部无名称项目及用户指定的四项。具体兵种的**国家加成**与该兵种单个单位自身的属性不是同一对象。
-
-切换 tag 后，`player_context` 和读数绑定当前国家。开关与页面记录也属于各自国家：**切换到尚未打开过窗口的国家时，窗口会关闭，需要再次点击“修正统计”**；不会继续显示上一国家的数据。目前没有实现跨 tag 始终维持同一个客户端窗口状态。
-
-## 来源明细的范围
-
-当前根据本机原版源码生成的 **31803 条来源映射**联合覆盖完整注册表中的 **545/559** 个修正键；页面只展示用户选定的 528 项，其中 **514 项**有候选来源映射，共 **28931 条**候选贡献。“覆盖”指存在可识别的候选来源，不表示这些来源已在当前国家生效，也不表示该词条的全部来源都能拆分。
-
-| 来源 | 候选贡献数 | 生效判断 |
-|---|---:|---|
-| 民族精神、法案、军官团精神等 idea | 11365 | 当前持有 |
-| 国家领袖特质 | 5362 | 当前执政领袖持有该特质 |
-| 顾问、军种部长、最高统帅部、理论家 | 9231 | 对应角色实际任职且持有该特质 |
-| 主／子学说、阶段奖励、轨道里程碑 | 379 | 学说当前启用，阶段或轨道已完成 |
-| 科技 | 173 | 当前国家已研发 |
-| 固定数值国家动态修正 | 200 | 当前国家持有，当前原版启用条件成立／缺省 |
-| 活动决议 | 872 | 决议当前生效 |
-| 变量型国家动态修正／民族精神 | 4045 | 当前国家持有，当前原版启用条件成立／缺省，读取原版明确引用的当前输入变量；零值不列 |
-| 当前政体 | 34 | 当前执政意识形态组，包含其隐藏国家修正 |
-| 阵营章程、宗旨及领袖政体 | 127 | 当前有效章程／宗旨、原版进度及阶段，以及阵营领袖政体的阵营修正 |
-| 国家稳定度／战争支持度曲线与和平状态 | 15 | 当前有效状态及原版条件；零贡献不显示 |
-
-来源按最多八个分支逐层展开，避免超长本地化字符串遗漏后段来源。来源名自身的换行改为空格；微小的非零贡献增加必要小数位，避免显示成零，保留原有单位、正负号及颜色方向。顶部合计仍使用原格式。
-
-两类动态来源合计覆盖 445 个不同的国家动态修正定义，形成 4245 条贡献映射；其中 223 条带当前非恒定启用条件，17 个不同来源保留原版动态名称。该数量表示适配范围，不表示已逐一完成引擎测试。
-
-固定来源读取源码中可核实的直接数值常量或唯一常量定义。变量型动态来源另有明确映射，读取原版引用的国家／全局输入变量，不根据合计差额倒推。动态修正在当前国家持有之外，还原样求值其原版 `enable` 条件；缺省条件视为启用。依赖 `FROM`、`PREV`、`THIS` 等无法保留的调用上下文、重复定义、目标实例数量不明或名称不明确的来源仍省略。
-
-动态来源名称保留原版国家本地化：支持当前国家／明确国家的 `GetAdjective`，以及已核对的 `NORDIC_get_adjective`、`NORDIC_get_alliance_name`、`IRQ_navy_modifier_key` 三个原版名称函数；任意函数、州／单位上下文、缺失或歧义名称仍不显示。领袖姓名通过 `[ROOT.GetLeader]` 在显示时读取，切换国家或执政领袖后使用当前姓名；顾问只显示特质名，学说奖励保留学说与阶段名称，均不添加类别说明。
-
-政体来源使用当前执政意识形态的国家 `modifiers`，不把党派支持率或领袖子意识形态当成另一份来源。阵营来源统计当前国家适用的章程和宗旨国家修正；宗旨比例使用引擎的完成度，阶段奖励核对当前区间。民主阵营贸易加成由阵营领袖政体决定，作用于领袖与成员，已按引擎测试结果接入。阵营战区指挥官的单位属性、共享人力池、研究对象属性等不在国家统计口径内。
-
-动态来源的输入即时值或启用条件可能领先于引擎每日更新的合计，当前列表无法读取每个动态来源已经缓存的贡献或启用状态。正式模组不会调用 `force_update_dynamic_modifier`，也不通过修改输入值来消除显示差异。
-
-决议只列其当前活动期间的直接修正。决议或国策授予民族精神、动态修正等对象时，由实际生效对象列出，不再以历史决议／国策重复记账。无法确定历史授予来源时，不推测授予者。无法拆分的差额完全省略，**不会出现“其他来源”或“未解析来源”行**；因此可见来源行之和不保证等于顶部合计。
-
-明细适配的前提是游戏实际加载的来源定义与扫描的原版定义一致。其他模组若改写同名来源，现有映射不能保证正确，需另外适配；原版文件更新后也应重新生成并核验。完整取数范围与来源明细范围是两回事，不能以明细未列出推断该来源没有参与国家合计。
-
-奇观的 26 条国家效果候选全部保留为未接入记录，不生成来源行。三轮引擎测试表明，已测试的建筑健康度查询（包括“国家无受损建筑”门槛）不能可靠判断省级奇观是否损坏，会在效果已失效时仍显示贡献。国会大厦样例的稳定度合计随实际建筑状态增减 0.05 已验证；这不等于奇观来源已能可靠拆分，也不代表其他奇观逐座通过测试。
-
-舰队荣耀原版定义给予战争支持度 +5%，沿岸核心地区保护的稳定度上限为 +10%；目前未找到能核实当前舰队荣耀状态、沉没计时或沿岸实际保护比例的公开脚本查询，因此仍不输出这些来源。沿岸保护是否进入 `modifier@stability_factor` 尚未单独实测，不能断言其已计入或未计入当前合计；不使用固定上限或合计差额代替实时来源。
-
-## 实现与验证边界
-
-界面、六页列表、页面状态、名称、数值表达式与工具提示均已生成。静态验证和游戏引擎验证见 [TEST-REPORT.md](TEST-REPORT.md)。
-
-数值格式采用原版格式标记，保留正负利弊方向及原版固定色，而不是统一“正绿负红”。559 项中，373 项有精确原版格式依据，179 项依据同族模板或旧模组推断，7 项的精度、单位或方向仍有未决部分。完整依据见 [modifier-format-bindings.json](tools/data/modifier-format-bindings.json)；这些研发说明仅保留在文档中，不再写入游戏词条提示。格式证据与实际读数验证是两件事。
-
-0.1.4 将四项 `civilian/army/navy/airforce_intel_to_others` 和 `subjects_autonomy_gain` 的 `%%` 与普通 `%` 分开：`%%` 原值附加百分号，`%` 乘 100 后显示百分比。前者记录为 `percentage_points`，避免把情报原值 15 显示成 1500%。当前格式分类为百分比 483 项、普通数值 71 项、百分点 5 项；本版实际引擎验证结果以测试报告为准。
-
-窗口为 1000×650，按 100% GUI 缩放布局。0.1.1 已用统一行列表替换两组动态定位网格，以处理截图中的覆盖与滚动范围问题。实际鼠标拖动、滚动到最后一行、按钮命中、Esc、长中文名称及其他 GUI 缩放仍需视觉交互验收；静态检查和引擎日志不能代替这些操作。未宣称联机、成就兼容或全部大型模组合用通过。
-
-## 源码和重建
-
-- `interface/nbv.gui`、`nbv.gfx`：窗口和原版纹理别名。
-- `interface/nbv_modifier_icons.gfx`、`gfx/nbv_modifier_icons/`：独立名称的数据图标和移植素材。
-- `tools/data/modifier-icon-bindings.json`：559 个词条的图标绑定、逐项映射依据与素材哈希。
-- `common/scripted_guis/nbv_scripted_gui.txt`：入口、按钮、动态列表与当前国家上下文。
-- `common/scripted_effects/nbv_effects.txt`：开关、分页、刷新及诊断后备列表。
-- `common/scripted_triggers/nbv_triggers.txt`：当前页列表、零值筛选、统一显示行及单元格编号解析。
-- `common/scripted_localisation/nbv_scripted_localisation.txt`：编号到名称／数值／tooltip 的分发。
-- `common/scripted_localisation/nbv_source_localisation.txt`：按当前激活条件输出非零来源行。
-- `common/synchronized_dynamic_tokens/nbv_tokens.txt`：本机引擎要求预注册的动态修正 token。
-- `localisation/`：简体中文与英文文本，UTF-8 BOM。
-- `tools/data/metric-index.json`：固定 1–559 编号、原始分类及优先级、读数验证状态；不随页面排序重新编号。
-- `tools/data/display-order.md`：用户编辑名单的导入快照；空条目和重复项保留在快照中供复核。
-- `tools/data/display-layout.json`：当前 528 项的页面、分组、顺序及去重记录，决定实际列表。
-- `tools/display_names.py`：按修正键设置明确的显示别名，区分原版中文同名但不同的修正。
-- `tools/data/source-bindings.json`、`leader-source-bindings.json`、`advisor-source-bindings.json`、`doctrine-technology-source-bindings.json`、`dynamic-source-bindings.json`、`dynamic-spirit-source-bindings.json`、`ideology-source-bindings.json`、`faction-source-bindings.json`、`special-source-bindings.json`：原版来源定义、激活条件、常量或运行时输入表达式、排除原因及源文件哈希。
-- `tools/data/source-display-manifest.json`：实际生成的来源提示条目。
-- [REFERENCE-AND-PORTING.md](REFERENCE-AND-PORTING.md)：具体来源、原代码行号和移植改造说明。
-
-在本目录用 Python 3.9+ 重建：
+大型研究 JSON 与 `dist/` 中的 ZIP 使用 Git LFS。完整获取工作区时，在安装 Git LFS 后执行：
 
 ```powershell
-python tools/build_source_bindings.py
-python tools/build_leader_source_bindings.py
-python tools/build_advisor_source_bindings.py
-python tools/build_doctrine_technology_source_bindings.py
-python tools/build_dynamic_source_bindings.py
-python tools/build_dynamic_spirit_source_bindings.py
-python tools/build_ideology_source_bindings.py
-python tools/build_faction_source_bindings.py
-python tools/build_special_source_bindings.py
-python tools/build_format_bindings.py
-python tools/build_icon_bindings.py
-python tools/build_interface.py
-python tools/display_layout.py
-python tools/build_backend.py
-python tools/build_mod.py
-python tools/test_script_parser.py
-python tools/test_display_layout.py
-python tools/test_idea_sources.py
-python tools/test_doctrine_eof.py
-python tools/test_special_source_bindings.py
-python tools/validate_mod.py
+git lfs install
+git clone https://github.com/BlabeZ/hoi4_mod_nbv-national-buff.git
+cd hoi4_mod_nbv-national-buff
+git lfs pull
 ```
 
-来源生成器读取本机原版安装目录；领袖来源生成器还读取项目研究目录中的修正注册表。`build_format_bindings.py` 重做格式研究时需要研究目录及本机原版／Workshop 源码；只改布局或文案时，可保留已有绑定表，从 `build_interface.py` 开始重建。`build_source_probe_specs.py` 生成隔离测试的来源生命周期样例，`prepare_smoke_test.py` 只准备外部测试目录，**不会启动游戏**。测试注入 addon 位于项目外层 `nbv-test-workspace`，不属于这个模组，也不进入发布包。
+模组安装和打包命令从工作区根目录运行：
 
-再次导入编辑过的名单时，先运行 `python tools/display_layout.py --source "完整的 Markdown 路径"`，再运行 `build_backend.py` 和 `validate_mod.py`。导入先解析明确别名，再按修正键首次出现去重；未区分的原版同名文本沿用首次绑定。空条目忽略，未知名称会中止并指出所在行；保留原来的稳定 ID，不修改数值、图标及来源绑定。修改 `display_names.py` 后需重新导入并运行 `build_mod.py` 更新本地化。当前确认的情报粘连行会在导入时拆分；其他不明确的文字不会自动猜测。
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\nbv-national-buff\install-local.ps1
+python .\nbv-national-buff\tools\package_mod.py
+```
 
-本模组使用 `nbv_` 前缀，不覆盖原有模组文件，不使用 `replace_path`。公共变量、flags 和数组只保存界面状态；纯临时的列表计算采用 TNO 已有的透明 calculator 控件模式。
+本地整理入口：[HOI4 模组制作指南](hoi4-modding-guide/README.md)。
+
+当前模组：[国家 BUFF 统计 UI](nbv-national-buff/README.md)，当前展示 528 项修正，基础注册表保留 559 项；提供右侧独立窗口、六页导航、常用三列／其他四列布局和国家页面记忆。源码目录固定为 `nbv-national-buff`。运行安装脚本后，启动器使用游戏文档 `mod` 目录中的独立副本；启动器重命名会同步改安装副本及外部 `.mod` 名称，不影响项目源码。更新源码后需重新安装。安装、源码和验证边界见模组说明与测试报告。
+
+需求与研究依据：[BUFF 修正清单与统计模组需求](hoi4-modding-guide/buff-statistics-mod/README.md)，包括最终 559 项六类清单、配套 JSON，以及统计取数、刷新与验收要求。
+
+检索与整理日期：2026-10-24。包括中文制作规范、脚本接口、入门示例、专题导航、调试发布流程、来源核验记录，以及可离线检索的 Wiki 正文与 CWTools 规则快照。
+
+本机 Kaiserreich 截图对应的 [中欧同盟 GUI 源码分析](hoi4-modding-guide/07-kaiserreich-mitteleuropa-gui.md)：右侧入口挂载、独立窗口开关、动态列表和议程交互的源码位置及调用链。
+
+[BUFF 数值可视化两版源码分析](hoi4-modding-guide/08-buff-visualization-mods.md)：普通版与 UI 版目录、修正读取方式、指标覆盖和刷新边界，以及政治界面入口与独立统计页面的实现。
+
+[原版修正完整目录与重要词条分析](hoi4-modding-guide/vanilla-modifier-catalog/README.md)：本机原版 4,484 个具体修正键、政治／工业／陆军／海军／空军／情报六类目录、静态源码使用频次，以及结合两种 BUFF 模组的重点候选。可使用[离线检索页](hoi4-modding-guide/vanilla-modifier-catalog/catalog.html)搜索和筛选。
+
+[国家全局 BUFF 二次筛选](hoi4-modding-guide/vanilla-modifier-catalog/global-buff-review/README.md)：按国策／国家民族精神来源、其他全国来源及用户指定候选、不展示项目分为 A／B／C。已按 [2026-10-25 增删要求](hoi4-modding-guide/vanilla-modifier-catalog/global-buff-review/user-revision-2026-10-25.md)修订：隐藏全部无名词条，纳入指定的天气、主义接纳度、设计商国家费用/经费等项目；持续排除州／地方对象与具体单位属性。后续 BUFF UI 词条选择以当前白名单为准。

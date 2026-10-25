@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-25",
+  "read_only_inventory": true,
+  "dlc_load": {
+    "enabled_mods": [
+      "mod/nbv_national_buff.mod"
+    ],
+    "disabled_dlcs": []
+  },
+  "active_playset_enabled_mods": [
+    {
+      "playset": "test",
+      "position": 0,
+      "gameRegistryId": "mod/nbv_national_buff.mod",
+      "dirPath": "D:\\projects\\hoi4_mod\\1\\hoi4-national-buff"
+    }
+  ],
+  "current_nbviewer": {
+    "parent_window_name": "raid_filter",
+    "container_position": [
+      0,
+      -202
+    ],
+    "container_size": [
+      77,
+      77
+    ],
+    "button_position": [
+      3,
+      3
+    ],
+    "button_size": [
+      71,
+      71
+    ],
+    "icon_position_before": [
+      11,
+      8
+    ],
+    "icon_sprite_dimensions": [
+      55,
+      41
+    ],
+    "recommended_icon_position": [
+      11,
+      18
+    ]
+  },
+  "installed_relevant_mods": [
+    {
+      "id": "1521695605",
+      "name": "Kaiserreich",
+      "entry": "mitteleuropa_open_button_window",
+      "parent_window_name": "raid_filter",
+      "position": [
+        0,
+        -115
+      ],
+      "size": [
+        77,
+        77
+      ],
+      "visible": "GER_is_in_mitteleuropa = yes",
+      "expanded_visible": "has_dynamic_modifier = { modifier = MIT_mitteleuropa_modifier }",
+      "gui_file": "interface/kaiserreich/gui_mitteleuropa.gui:14",
+      "scripted_gui_file": "common/scripted_guis/germany_mitteleuropa.txt:6",
+      "visible_definition_file": "common/scripted_triggers/GER triggers (Germany).txt:95",
+      "current_nbviewer_no_overlap": true,
+      "vertical_gap": 10,
+      "safe_native_markers": [
+        {
+          "trigger": "has_country_flag = MIT_was_in_mitteleuropa",
+          "precision": "ever-member; persists after departure; conservative reservation only",
+          "source": "common/scripted_effects/MIT effects (Mitteleuropa).txt:4"
+        },
+        {
+          "trigger": "has_global_flag = KR_CURRENT_VERSION_1.7",
+          "precision": "whole mod, version-specific; safe absent flag lookup",
+          "source": "common/on_actions/00_on_actions_global.txt:278"
+        }
+      ]
+    },
+    {
+      "id": "3795966002",
+      "name": "buff display ui",
+      "entry": "BDUI_tools_box",
+      "parent_window_token": "politics_tab",
+      "outer_position": [
+        185,
+        0
+      ],
+      "inner_position": [
+        12,
+        0
+      ],
+      "button_position": [
+        10,
+        7
+      ],
+      "visible": "always = yes",
+      "right_sidebar_entry": false,
+      "gui_file": "interface/BDUI_gui_tools.gui:3",
+      "scripted_gui_file": "common/scripted_guis/BDUI_scripted_gui.txt:3"
+    },
+    {
+      "id": "3440479297",
+      "name": "BUFF visualization original",
+      "installed_now": false,
+      "note": "Directory and launcher descriptor absent; prior local research describes decision entry, not sidebar"
+    },
+    {
+      "id": "2438003901",
+      "name": "The New Order: Last Days of Europe",
+      "entry": "ledger_open_container",
+      "parent_window_name": "MapmodesInterface_Ingame",
+      "position": [
+        274,
+        -36
+      ],
+      "orientation": "upper_right",
+      "origo": "upper_right",
+      "button_position": [
+        -2,
+        0
+      ],
+      "visible": "is_ai = no",
+      "gui_file": "interface/ledger.gui:3",
+      "scripted_gui_file": "common/scripted_guis/ledger_scripted_gui.txt:3",
+      "parent_position": [
+        -631,
+        -244
+      ],
+      "parent_size": [
+        314,
+        31
+      ],
+      "parent_orientation": "lower_right",
+      "other_entry": {
+        "name": "Antarctica_GUI_Flags_Open",
+        "parent_window_name": "MapmodesInterface_Ingame",
+        "button_position": [
+          561,
+          -18
+        ],
+        "visible": "is_Antarctic_nation = yes; is_debug = yes"
+      },
+      "sprite_dimensions": {
+        "ledger_open_button.dds": [
+          40,
+          40
+        ],
+        "Antarctica_GUI_Flags_Open_Button.dds": [
+          22,
+          21
+        ]
+      }
+    }
+  ],
+  "raid_filter_anchor_overrides": [
+    {
+      "mod": "vanilla",
+      "position": [
+        -76,
+        -235
+      ],
+      "orientation": "lower_right",
+      "size": [
+        78,
+        0
+      ],
+      "file": "interface/military_raids/country_raids_view.gui:1019"
+    },
+    {
+      "mod": "2438003901",
+      "name": "The New Order",
+      "position": [
+        -76,
+        75
+      ],
+      "orientation": "upper_right",
+      "size": [
+        78,
+        0
+      ],
+      "file": "interface/military_raids/country_raids_view.gui:1034",
+      "risk": "Current NBV child y=-202 would resolve above top of screen at y=-127; moving upward cannot fix it"
+    },
+    {
+      "mod": "1826643372",
+      "name": "Equestria at War",
+      "position": [
+        -76,
+        -300
+      ],
+      "orientation": "lower_right",
+      "file": "interface/military_raids/country_raids_view.gui:1031"
+    },
+    {
+      "mod": "3350890356",
+      "name": "The Fire Rises",
+      "position": [
+        -76,
+        -235
+      ],
+      "file": "interface/military_raids/country_raids_view.gui:1020"
+    }
+  ],
+  "scan_design_recommendations": [
+    "Scan enabled playset only and honor file overwrite/load order, replace_path and descriptor paths; currently only NBV is enabled.",
+    "Resolve complete parent hierarchy, orientation, origo, percent sizes, sprite frame dimensions and scripted position properties; sibling-only raid_filter scanning is insufficient.",
+    "Conservatively reserve every potentially visible button when its visibility cannot be safely evaluated; do not claim exact runtime collision detection.",
+    "Generate safe coordinates before game start; when playset changes rescan. Runtime universal foreign GUI enumeration/bounds is not established by this inventory.",
+    "Use native flag/variable lookup only for audited known-mod adapters; do not reference missing foreign scripted trigger names.",
+    "If upward search crosses screen top, report unresolved or use known stable screen anchor; never push target offscreen."
+  ]
+}

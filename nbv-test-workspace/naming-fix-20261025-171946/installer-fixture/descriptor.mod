@@ -1,0 +1,6 @@
+name="自定义中文显示名"
+version="0.1.12"
+supported_version="1.19.*"
+picture="preview.png"
+tags={ "Utilities" }
+remote_file_id="1234567890"

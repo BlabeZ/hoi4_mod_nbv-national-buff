@@ -1,0 +1,1235 @@
+add_namespace = nbv_special_probe
+country_event = { id = nbv_special_probe.1 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=3026 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@stability_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=3026 phase=native text=[NBVSource3026] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_ROW kind=sov index=3026 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=3026 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=1253 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=1253 phase=native text=[NBVSource1253] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=sov index=1253 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=1253 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  remove_ideas = trotskyite_plot_nsb
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=3026 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@stability_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=3026 phase=removed text=[NBVSource3026] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_ROW kind=sov index=3026 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=3026 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=1253 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=1253 phase=removed text=[NBVSource1253] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=sov index=1253 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=1253 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  add_ideas = trotskyite_plot_nsb
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=3026 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@stability_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=3026 phase=restored text=[NBVSource3026] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_ROW kind=sov index=3026 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=3026 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=1253 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=1253 phase=restored text=[NBVSource1253] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=sov index=1253 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=1253 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=24565 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_abilities_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=24565 phase=native text=[NBVSource24565] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 282 }
+  log = "NBV_SPECIAL_ROW kind=sov index=24565 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=24565 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=22707 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@land_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=22707 phase=native text=[NBVSource22707] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 238 }
+  log = "NBV_SPECIAL_ROW kind=sov index=22707 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=22707 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=27852 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@naval_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=27852 phase=native text=[NBVSource27852] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 416 }
+  log = "NBV_SPECIAL_ROW kind=sov index=27852 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=27852 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=29738 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@air_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=29738 phase=native text=[NBVSource29738] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 491 }
+  log = "NBV_SPECIAL_ROW kind=sov index=29738 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=29738 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=6333 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@drift_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=6333 phase=native text=[NBVSource6333] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 12 }
+  log = "NBV_SPECIAL_ROW kind=sov index=6333 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=6333 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=20567 phase=native country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=20567 phase=native text=[NBVSource20567] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=sov index=20567 phase=native text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=20567 phase=native text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  remove_ideas = SOV_politicized_military
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=24565 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_abilities_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=24565 phase=removed text=[NBVSource24565] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 282 }
+  log = "NBV_SPECIAL_ROW kind=sov index=24565 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=24565 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=22707 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@land_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=22707 phase=removed text=[NBVSource22707] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 238 }
+  log = "NBV_SPECIAL_ROW kind=sov index=22707 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=22707 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=27852 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@naval_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=27852 phase=removed text=[NBVSource27852] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 416 }
+  log = "NBV_SPECIAL_ROW kind=sov index=27852 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=27852 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=29738 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@air_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=29738 phase=removed text=[NBVSource29738] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 491 }
+  log = "NBV_SPECIAL_ROW kind=sov index=29738 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=29738 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=6333 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@drift_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=6333 phase=removed text=[NBVSource6333] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 12 }
+  log = "NBV_SPECIAL_ROW kind=sov index=6333 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=6333 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=20567 phase=removed country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=20567 phase=removed text=[NBVSource20567] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=sov index=20567 phase=removed text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=20567 phase=removed text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  add_ideas = SOV_politicized_military
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=24565 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_abilities_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=24565 phase=restored text=[NBVSource24565] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 282 }
+  log = "NBV_SPECIAL_ROW kind=sov index=24565 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=24565 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=22707 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@land_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=22707 phase=restored text=[NBVSource22707] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 238 }
+  log = "NBV_SPECIAL_ROW kind=sov index=22707 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=22707 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=27852 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@naval_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=27852 phase=restored text=[NBVSource27852] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 416 }
+  log = "NBV_SPECIAL_ROW kind=sov index=27852 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=27852 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=29738 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@air_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=29738 phase=restored text=[NBVSource29738] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 491 }
+  log = "NBV_SPECIAL_ROW kind=sov index=29738 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=29738 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=6333 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@drift_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=6333 phase=restored text=[NBVSource6333] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 12 }
+  log = "NBV_SPECIAL_ROW kind=sov index=6333 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=6333 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov index=20567 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov index=20567 phase=restored text=[NBVSource20567] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=sov index=20567 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov index=20567 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+ }
+}
+country_event = { id = nbv_special_probe.2 hidden = yes is_triggered_only = yes
+ immediate = {
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=3026 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@stability_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=3026 phase=absent text=[NBVSource3026] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=3026 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=3026 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = trotskyite_plot_nsb } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=1253 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=1253 phase=absent text=[NBVSource1253] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=1253 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=1253 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=24565 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_abilities_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=24565 phase=absent text=[NBVSource24565] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 282 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=24565 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=24565 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=22707 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@land_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=22707 phase=absent text=[NBVSource22707] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 238 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=22707 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=22707 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=27852 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@naval_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=27852 phase=absent text=[NBVSource27852] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 416 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=27852 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=27852 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=29738 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@air_doctrine_cost_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=29738 phase=absent text=[NBVSource29738] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 491 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=29738 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=29738 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=6333 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@drift_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=6333 phase=absent text=[NBVSource6333] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 12 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=6333 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=6333 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_idea = SOV_politicized_military } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=sov_wrong_root index=20567 phase=absent country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=sov_wrong_root index=20567 phase=absent text=[NBVSource20567] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=sov_wrong_root index=20567 phase=absent text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=sov_wrong_root index=20567 phase=absent text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+ }
+}
+country_event = { id = nbv_special_probe.3 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=native trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=native metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=native metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=native metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { damage_building = { type = landmark_berlin_reichstag province = 6521 damage = 0.5 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=partial_damage trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=partial_damage metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=partial_damage metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=partial_damage metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { damage_building = { type = landmark_berlin_reichstag province = 6521 damage = 1 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=full_damage trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=full_damage metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=full_damage metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=full_damage metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { set_building_level = { type = landmark_berlin_reichstag province = 6521 level = 0 } }
+  64 = { set_building_level = { type = landmark_berlin_reichstag province = 6521 level = 1 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=repaired trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=repaired metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=repaired metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=repaired metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { set_building_level = { type = landmark_berlin_reichstag province = 6521 level = 0 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=removed trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=removed metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=removed metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=removed metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { set_building_level = { type = landmark_berlin_reichstag province = 6521 level = 0 } }
+  64 = { set_building_level = { type = landmark_berlin_reichstag province = 6521 level = 1 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=restored trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=restored metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=restored metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=restored metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { damage_building = { type = arms_factory damage = 0.5 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=unrelated_factory_damage trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=unrelated_factory_damage metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=unrelated_factory_damage metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=unrelated_factory_damage metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+  64 = { set_building_level = { type = arms_factory level = 0 } }
+  64 = { set_building_level = { type = arms_factory level = 5 } }
+  force_update_dynamic_modifier = yes
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_gt0 result=no" }
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_lt2 result=no" }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag > 0 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=state_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=state_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { landmark_berlin_reichstag < 2 } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=state_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=state_lt2 result=no" }
+  }
+  if = { limit = { NOT = { has_damaged_buildings = yes } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_damage_free result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=country_damage_free result=no" }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level > 0 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=province_gt0 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=province_gt0 result=no" }
+  }
+  64 = {
+  if = { limit = { any_province_building_level = { province = { id = 6521 } building = landmark_berlin_reichstag level < 2 } } log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=province_lt2 result=yes" }
+  else = { log = "NBV_SPECIAL_BUILDING_TRIGGER phase=factory_repaired trigger=province_lt2 result=no" }
+  }
+  log = "NBV_SPECIAL_OMIT_VALUE phase=factory_repaired metric_id=5 country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|6] END_SPECIAL_OMIT_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_SPECIAL_OMIT_ROW phase=factory_repaired metric_id=5 text=[NBVRowValue] END_SPECIAL_OMIT_ROW"
+  log = "NBV_SPECIAL_OMIT_TOOLTIP phase=factory_repaired metric_id=5 text=[NBVRowTooltip] END_SPECIAL_OMIT_TOOLTIP"
+ }
+}
+country_event = { id = nbv_special_probe.4 hidden = yes is_triggered_only = yes
+ immediate = {
+  set_temp_variable = { nbv_special_saved_status = ROOT.has_stability }
+  if = { limit = { has_war = no } log = "NBV_SPECIAL_PEACE family=stability passed=yes" }
+  else = { log = "NBV_SPECIAL_PEACE family=stability passed=no" }
+  set_popularities = { neutrality = 100 }
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_saved_status = ROOT.has_stability }
+  set_stability = 0.5
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=neutral text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=neutral text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=neutral text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=neutral text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=neutral text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=neutral text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=neutral text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = 0
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=p000 text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=p000 text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=p000 text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=p000 text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=p000 text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=p000 text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=p000 text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = 0.25
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=p025 text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=p025 text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=p025 text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=p025 text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=p025 text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=p025 text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=p025 text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = 0.5
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=p050 text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=p050 text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=p050 text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=p050 text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=p050 text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=p050 text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=p050 text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = 0.75
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=p075 text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=p075 text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=p075 text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=p075 text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=p075 text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=p075 text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=p075 text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = 1
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=p100 text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=p100 text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=p100 text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=p100 text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=p100 text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=p100 text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=p100 text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_stability = nbv_special_saved_status
+  set_popularities = { democratic = 100 }
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13354 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13354 phase=restored text=[NBVSource13354] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13354 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13354 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12783 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12783 phase=restored text=[NBVSource12783] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12783 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12783 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2089 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2089 phase=restored text=[NBVSource2089] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2089 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2089 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=13355 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_factory|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=13355 phase=restored text=[NBVSource13355] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 98 }
+  log = "NBV_SPECIAL_ROW kind=stability index=13355 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=13355 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12784 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@industrial_capacity_dockyard|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12784 phase=restored text=[NBVSource12784] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 97 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12784 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12784 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=12426 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@consumer_goods_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=12426 phase=restored text=[NBVSource12426] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 95 }
+  log = "NBV_SPECIAL_ROW kind=stability index=12426 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=12426 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_stability > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=stability index=2090 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@political_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=stability index=2090 phase=restored text=[NBVSource2090] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 3 }
+  log = "NBV_SPECIAL_ROW kind=stability index=2090 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=stability index=2090 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+ }
+}
+country_event = { id = nbv_special_probe.5 hidden = yes is_triggered_only = yes
+ immediate = {
+  set_temp_variable = { nbv_special_saved_status = ROOT.has_war_support }
+  if = { limit = { has_war = no } log = "NBV_SPECIAL_PEACE family=war_support passed=yes" }
+  else = { log = "NBV_SPECIAL_PEACE family=war_support passed=no" }
+  set_war_support = 0.5
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=neutral text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=neutral text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=neutral text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=neutral text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=neutral text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=neutral text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=neutral country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=neutral text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=neutral text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=neutral text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = 0
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=p000 text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=p000 text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=p000 text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=p000 text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=p000 text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=p000 text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=p000 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=p000 text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=p000 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=p000 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = 0.25
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=p025 text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=p025 text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=p025 text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=p025 text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=p025 text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=p025 text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=p025 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=p025 text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=p025 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=p025 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = 0.5
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=p050 text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=p050 text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=p050 text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=p050 text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=p050 text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=p050 text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=p050 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=p050 text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=p050 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=p050 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = 0.75
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=p075 text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=p075 text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=p075 text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=p075 text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=p075 text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=p075 text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=p075 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=p075 text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=p075 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=p075 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = 1
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=p100 text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=p100 text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=p100 text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=p100 text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=p100 text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=p100 text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=p100 country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=p100 text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=p100 text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=p100 text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_war_support = nbv_special_saved_status
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7858 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7858 phase=restored text=[NBVSource7858] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7858 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7858 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21603 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21603 phase=restored text=[NBVSource21603] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21603 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21603 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support < 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=9576 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@surrender_limit|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=9576 phase=restored text=[NBVSource9576] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 31 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=9576 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=9576 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=7859 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@mobilization_speed|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=7859 phase=restored text=[NBVSource7859] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 19 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=7859 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=7859 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20410 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_attack_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20410 phase=restored text=[NBVSource20410] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 217 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20410 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20410 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=20832 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@army_core_defence_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=20832 phase=restored text=[NBVSource20832] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=20832 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=20832 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { AND = { has_war_support > 0.5 } } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=war_support index=21604 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@command_power_gain_mult|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=war_support index=21604 phase=restored text=[NBVSource21604] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 230 }
+  log = "NBV_SPECIAL_ROW kind=war_support index=21604 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=war_support index=21604 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+ }
+}
+country_event = { id = nbv_special_probe.6 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_war = no } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=peace index=31067 phase=peace country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@decryption_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=peace index=31067 phase=peace text=[NBVSource31067] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 517 }
+  log = "NBV_SPECIAL_ROW kind=peace index=31067 phase=peace text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=peace index=31067 phase=peace text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  declare_war_on = { target = HAI type = annex_everything }
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_war = no } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=peace index=31067 phase=war country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@decryption_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=peace index=31067 phase=war text=[NBVSource31067] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 517 }
+  log = "NBV_SPECIAL_ROW kind=peace index=31067 phase=war text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=peace index=31067 phase=war text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+  white_peace = HAI
+  force_update_dynamic_modifier = yes
+  set_temp_variable = { nbv_special_active = 0 }
+  if = { limit = { has_war = no } set_temp_variable = { nbv_special_active = 1 } }
+  log = "NBV_SPECIAL_VALUE kind=peace index=31067 phase=restored country=[ROOT.GetTag] active=[?nbv_special_active|0] total=[?ROOT.modifier@decryption_power_factor|6] stability=[?ROOT.has_stability|6] war_support=[?ROOT.has_war_support|6] END_SPECIAL_VALUE"
+  log = "NBV_SPECIAL_TEXT kind=peace index=31067 phase=restored text=[NBVSource31067] END_SPECIAL_TEXT"
+  set_temp_variable = { nbv_entry_id = 517 }
+  log = "NBV_SPECIAL_ROW kind=peace index=31067 phase=restored text=[NBVRowValue] END_SPECIAL_ROW"
+  log = "NBV_SPECIAL_TOOLTIP kind=peace index=31067 phase=restored text=[NBVRowTooltip] END_SPECIAL_TOOLTIP"
+ }
+}

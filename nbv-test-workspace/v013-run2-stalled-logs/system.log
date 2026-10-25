@@ -1,0 +1,171 @@
+[03:30:47][no_game_date][systemsettings.cpp:172]: OS: Windows 11 x86_64
+[03:30:47][no_game_date][systemsettings.cpp:173]: OS Lang: zh
+[03:30:47][no_game_date][systemsettings.cpp:174]: CPU Model: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+[03:30:47][no_game_date][systemsettings.cpp:175]: Number of cores: 8 (16)
+[03:30:47][no_game_date][systemsettings.cpp:177]: Estimated CPU speed: 0MHz
+[03:30:47][no_game_date][systemsettings.cpp:178]: System memory: 16163MB
+[03:30:47][no_game_date][gfx_dx11.cpp:3675]: GetGraphicsSettings for Adapter: 0
+[03:30:47][no_game_date][gfx_dx11.cpp:3708]: Found Adapter: NVIDIA GeForce RTX 3060 Laptop GPU
+[03:30:47][no_game_date][gfx_dx11.cpp:3731]: Using Adapter [0] to check for multi-sampling support:
+[03:30:47][no_game_date][gfx_dx11.cpp:3769]: Found available multisampling mode: 2 at Quality: 0
+[03:30:47][no_game_date][gfx_dx11.cpp:3769]: Found available multisampling mode: 4 at Quality: 0
+[03:30:47][no_game_date][gfx_dx11.cpp:3769]: Found available multisampling mode: 8 at Quality: 0
+[03:30:47][no_game_date][graphicssettings.cpp:172]: 	2 samples supported.
+[03:30:47][no_game_date][graphicssettings.cpp:172]: 	4 samples supported.
+[03:30:47][no_game_date][graphicssettings.cpp:172]: 	8 samples supported.
+[03:30:47][no_game_date][graphicssettings.cpp:210]: Video adapter: NVIDIA GeForce RTX 3060 Laptop GPU
+[03:30:47][no_game_date][graphicssettings.cpp:211]: Video driver: DirectX 11
+[03:30:47][no_game_date][graphicssettings.cpp:212]: Video driver version: 0.0.0.0
+[03:30:47][no_game_date][graphicssettings.cpp:213]: Video memory: 6010
+[03:30:47][no_game_date][graphicssettings.cpp:214]: Support for Anisotropic filtering found.
+[03:30:47][no_game_date][graphicssettings.cpp:218]: 	Max Anisotropic filtering supported: 16
+[03:30:47][no_game_date][graphicssettings.cpp:219]: 	Anisotropic filtering set to: 4
+[03:30:48][no_game_date][main.cpp:2136]: Creating application...
+[03:30:48][no_game_date][pdx_speech_stt_winsapi.cpp:42]: PdxSpeechToTextWinSAPI::Initialize: microphone was not found![03:30:48][no_game_date][gameapplication.cpp:1248]: Initializing application...
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "ui_menu_over" (28 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_default" (34 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_close" (33 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "menu_close_window" (172 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "menu_open_window" (59 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_main" (34 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_back" (33 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_submenu" (63 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_chat" (165 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_ok" (55 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_checkbox" (34 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_scroll" (40 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "click_close_window" (172 KB). Total audio cache: 0 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "event_popup_01" (360 KB). Total audio cache: 1 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "peace_summary_message_01" (458 KB). Total audio cache: 1 MB
+[03:30:49][no_game_date][pdx_audiosound_sdl.cpp:164]: Audio cached "move_order_army_04" (472 KB). Total audio cache: 2 MB
+[03:30:49][no_game_date][gameapplication.cpp:1254]: Done initializing application
+[03:30:49][no_game_date][gameapplication.cpp:1257]: Loading cursor...
+[03:30:49][no_game_date][graphicssettings.cpp:758]: Not using multisampling.
+[03:30:49][no_game_date][graphics.cpp:972]: Creating device with: HARDWARE_VERTEXPROCESSING
+	Fullscreen=no
+	Resolution=1366x768
+	Renderer=DirectX 11
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 640 480 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 480 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 720 576 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 800 600 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1024 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1152 864 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 600 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 720 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 800 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 960 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1280 1024 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1360 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 59
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 60
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 50
+[03:30:49][no_game_date][graphicssettings.cpp:715]: Usable res: 1366 768 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1400 1050 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 480 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 576 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1440 900 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1600 900 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1680 1050 50
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1920 1080 59
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1920 1080 60
+[03:30:50][no_game_date][graphicssettings.cpp:715]: Usable res: 1920 1080 50
+[03:30:50][no_game_date][graphics.cpp:1007]: Done creating device.

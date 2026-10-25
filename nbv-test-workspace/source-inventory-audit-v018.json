@@ -1,0 +1,423 @@
+{
+  "date": "2026-10-25",
+  "mod_version": "0.1.8",
+  "game_version": "1.19.3.0",
+  "scope": "Installed vanilla files and current generated source tables; not an all-source semantic completeness proof.",
+  "tables": {
+    "source-bindings.json": {
+      "table_sha256": "3128fe3affc6a34da534f3428a740e9f4040ca7d4b5aca00417df6f62bcffa7b",
+      "file_count": 213,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 491,
+        "binding_count": 11365,
+        "source_idea_count": 3879,
+        "scanned_file_count": 213,
+        "parsed_definition_count": 6508,
+        "parse_failure_count": 0,
+        "verified_eof_recovery_count": 3,
+        "excluded_by_reason": {
+          "category_not_adapted": 2009,
+          "conditional_or_unknown_idea_fields": 37,
+          "missing_or_ambiguous_chinese_name": 34,
+          "no_direct_modifier": 400,
+          "trait_contribution_not_adapted": 4,
+          "zero_value_not_displayed": 3
+        },
+        "ignored_non_direct_blocks": {
+          "equipment_bonus": 181,
+          "nested_or_object_modifier": 2,
+          "on_add": 51,
+          "on_remove": 115,
+          "research_bonus": 59,
+          "targeted_modifier": 144
+        }
+      }
+    },
+    "leader-source-bindings.json": {
+      "table_sha256": "f28c0ccd489adce4a16ba522bd1c2ea77161bba5838958ed11d6de561bb40091",
+      "file_count": 4,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 265,
+        "binding_count": 5362,
+        "source_trait_count": 1709,
+        "scanned_file_count": 4,
+        "parsed_definition_count": 2103,
+        "parse_failure_count": 0,
+        "excluded_by_reason": {
+          "conditional_nested_or_nonliteral_trait": 314,
+          "duplicate_or_unverifiable_trait_definition": 10,
+          "missing_or_ambiguous_chinese_name": 8,
+          "no_selected_nonzero_direct_modifier": 62
+        }
+      }
+    },
+    "advisor-source-bindings.json": {
+      "table_sha256": "a05dbf8f561aa2be478cc825ba3bca1e57efb729a06e211df4a69657700a8b7d",
+      "file_count": 301,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 252,
+        "binding_count": 9231,
+        "source_character_count": 2323,
+        "source_role_count": 2349,
+        "source_trait_count": 866,
+        "verified_dynamic_cross_role_exclusion_count": 15,
+        "parsed_role_definition_count": 3781,
+        "scripted_trait_addition_count": 93,
+        "scanned_file_count": 301,
+        "parse_failure_count": 0,
+        "excluded_by_reason": {
+          "ambiguous_character_or_idea_token": 23,
+          "conditional_or_unknown_role_fields": 224,
+          "dynamic_or_unresolved_effect_character": 161,
+          "missing_or_ambiguous_character_name": 1090,
+          "missing_or_duplicate_trait": 1,
+          "no_selected_nonzero_direct_modifier": 83,
+          "trait_ambiguous_between_character_roles": 24,
+          "unsupported_role_or_token": 1
+        }
+      }
+    },
+    "doctrine-technology-source-bindings.json": {
+      "table_sha256": "4efd9a69843fc4fe5cebd87ec85595388b9c4353c93cceb641bc8ad8e3f25ba1",
+      "file_count": 34,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 168,
+        "binding_count": 552,
+        "source_count": 377,
+        "source_count_by_type": {
+          "doctrine_milestone": 35,
+          "grand_doctrine": 11,
+          "subdoctrine": 50,
+          "subdoctrine_reward": 187,
+          "technology": 94
+        },
+        "binding_count_by_type": {
+          "doctrine_milestone": 53,
+          "grand_doctrine": 18,
+          "subdoctrine": 61,
+          "subdoctrine_reward": 247,
+          "technology": 173
+        },
+        "scanned_file_count": 34,
+        "parsed_definition_count": 659,
+        "parse_failure_count": 0,
+        "verified_eof_recovery_count": 1,
+        "excluded_by_reason": {
+          "missing_display_component_name": 3,
+          "missing_or_ambiguous_chinese_name": 170,
+          "no_selected_direct_nonzero_country_modifier": 627
+        },
+        "ignored_nested_blocks": {
+          "XOR": 5,
+          "ai_research_weights": 19,
+          "ai_will_do": 442,
+          "allow": 80,
+          "allow_branch": 43,
+          "amphibious_mechanized": 1,
+          "anti_air": 3,
+          "anti_air_battery": 3,
+          "anti_air_brigade": 1,
+          "anti_tank": 5,
+          "anti_tank_battery": 5,
+          "anti_tank_brigade": 7,
+          "armored_car": 19,
+          "armored_car_recon": 4,
+          "armored_engineer": 5,
+          "armored_maintenance": 4,
+          "armored_signal": 7,
+          "artillery": 11,
+          "artillery_brigade": 9,
+          "assault_engineer": 6,
+          "available": 104,
+          "battle_cruiser": 23,
+          "battleship": 25,
+          "bicycle_battalion": 1,
+          "carrier": 19,
+          "categories": 347,
+          "category_all_armor": 17,
+          "category_all_infantry": 27,
+          "category_anti_air": 4,
+          "category_anti_tank": 4,
+          "category_army": 11,
+          "category_artillery": 2,
+          "category_carrier_cas": 2,
+          "category_carrier_fighter": 1,
+          "category_carrier_nav_bomber": 3,
+          "category_cas": 7,
+          "category_cavalry": 15,
+          "category_fighter": 7,
+          "category_heavy_fighter": 7,
+          "category_helicopter_support_companies": 1,
+          "category_light_infantry": 14,
+          "category_line_artillery": 7,
+          "category_maritime_patrol_bomber": 6,
+          "category_mobile_and_mobile_combat_sup": 2,
+          "category_mountaineers": 6,
+          "category_nav_bomber": 9,
+          "category_paratroopers": 3,
+          "category_rangers": 3,
+          "category_recon": 9,
+          "category_regimental_support_artillery": 15,
+          "category_regimental_support_battalions": 4,
+          "category_rocket_artillery": 3,
+          "category_scout_plane": 2,
+          "category_self_propelled_anti_air": 8,
+          "category_self_propelled_anti_air_regimental_support": 9,
+          "category_self_propelled_artillery": 10,
+          "category_special_forces": 13,
+          "category_strat_bomber": 9,
+          "category_support_artillery": 6,
+          "category_support_battalions": 2,
+          "category_tac_bomber": 8,
+          "category_tank_destroyer_regimental_support": 12,
+          "category_tank_destroyers": 12,
+          "category_tanks": 12,
+          "category_vehicle_infantry": 11,
+          "dependencies": 4,
+          "destroyer": 36,
+          "effect": 64,
+          "enable_building": 11,
+          "enable_equipment_modules": 119,
+          "enable_equipments": 98,
+          "enable_subunits": 52,
+          "engineer": 11,
+          "equipment_bonus": 21,
+          "field_guns": 7,
+          "field_hospital": 7,
+          "fire_support": 13,
+          "folder": 343,
+          "guided_missile": 1,
+          "heavy_armor": 5,
+          "heavy_cruiser": 26,
+          "heavy_flame_tank": 4,
+          "heavy_sp_anti_air_brigade": 1,
+          "heavy_sp_anti_air_support": 1,
+          "heavy_sp_artillery_brigade": 1,
+          "heavy_tank_destroyer_brigade": 1,
+          "helicopter_brigade": 5,
+          "helicopter_field_hospital": 5,
+          "helicopter_recon": 4,
+          "helicopter_transport": 4,
+          "infantry": 11,
+          "irregular_infantry": 3,
+          "land_cruiser": 4,
+          "light_armor": 11,
+          "light_cruiser": 18,
+          "light_flame_tank": 4,
+          "light_tank_recon": 15,
+          "logistics_company": 9,
+          "maintenance_company": 8,
+          "marine": 10,
+          "marine_commando": 1,
+          "mastery": 10,
+          "mechanized": 10,
+          "medium_armor": 3,
+          "medium_flame_tank": 4,
+          "military_police": 4,
+          "militia": 9,
+          "modern_armor": 1,
+          "modern_sp_anti_air_brigade": 1,
+          "modern_sp_artillery_brigade": 1,
+          "modern_tank_destroyer_brigade": 1,
+          "mot_anti_tank_brigade": 4,
+          "mot_artillery_brigade": 9,
+          "mot_fire_support": 13,
+          "mot_recon": 7,
+          "mot_rocket_artillery_brigade": 4,
+          "mothership": 3,
+          "motorized": 4,
+          "motorized_military_police": 5,
+          "motorized_rocket_brigade": 5,
+          "mountaineers": 11,
+          "on_research_complete": 88,
+          "on_research_complete_limit": 11,
+          "paratrooper": 9,
+          "path": 301,
+          "pioneer_support": 5,
+          "ranger_battalion": 7,
+          "rangers_support": 5,
+          "recon": 11,
+          "repair_ship": 2,
+          "rocket_artillery": 1,
+          "rocket_artillery_brigade": 4,
+          "rocket_battery": 3,
+          "self_propelled_super_heavy_artillery": 7,
+          "signal_company": 7,
+          "special_project_specialization": 212,
+          "sub_technologies": 6,
+          "submarine": 25,
+          "super_heavy_armor": 3,
+          "super_heavy_artillery": 7,
+          "super_heavy_sp_anti_air_brigade": 1,
+          "super_heavy_sp_artillery_brigade": 1,
+          "super_heavy_tank_destroyer_brigade": 1,
+          "support_ship": 3,
+          "tac_bomber": 1,
+          "track": 8,
+          "tracks": 12,
+          "transport_plane": 1,
+          "visible": 47,
+          "xor": 10
+        }
+      }
+    },
+    "dynamic-source-bindings.json": {
+      "table_sha256": "addec2a3e5604883effed9959f761c3117a922608e3d3ad5a00719725364c34e",
+      "file_count": 265,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 136,
+        "binding_count": 1072,
+        "binding_count_by_type": {
+          "active_decision": 872,
+          "dynamic_modifier": 200
+        },
+        "source_count_by_type": {
+          "active_decision": 600,
+          "dynamic_modifier": 90
+        },
+        "scanned_definition_count": 4827,
+        "source_file_count": 265,
+        "definition_parse_failure_count": 0,
+        "addition_parse_failure_count": 0,
+        "unresolved_addition_count": 0,
+        "excluded_by_reason": {
+          "dynamic_variable_cached_contribution_not_exposed": 4045,
+          "missing_or_ambiguous_chinese_name": 18,
+          "nonliteral_decision_modifier": 31,
+          "only_non_country_additions": 98,
+          "source_name_not_static_single_line": 195,
+          "targeted_decision_instance_count_unknown": 161,
+          "targeted_instances_cannot_be_counted": 83
+        }
+      }
+    },
+    "ideology-source-bindings.json": {
+      "table_sha256": "9186fcdee6e0b20ed0e8af3d6bd8a11eacb525bc74cd72f62786acff16cb484b",
+      "file_count": 1,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 12,
+        "binding_count": 34,
+        "source_count": 4,
+        "hidden_modifier_binding_count": 2,
+        "scanned_file_count": 1,
+        "parsed_definition_count": 4,
+        "parse_failure_count": 0,
+        "excluded_by_reason": {
+          "modifier_not_in_selected_display_set": 2,
+          "non_country_scope_block": 1
+        }
+      }
+    },
+    "faction-source-bindings.json": {
+      "table_sha256": "d26f029632a08dbabd5e4f0cff2e8da6b7854b44d0ccd171c6046579978ff83f",
+      "file_count": 34,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 38,
+        "binding_count": 127,
+        "binding_count_by_type": {
+          "faction_ideology": 1,
+          "faction_manifest": 51,
+          "faction_manifest_section": 46,
+          "faction_rule": 29
+        },
+        "source_count_by_type": {
+          "faction_ideology": 1,
+          "faction_manifest": 36,
+          "faction_manifest_section": 31,
+          "faction_rule": 24
+        },
+        "runtime_binding_count": 51,
+        "source_file_count": 34,
+        "parse_failure_count": 0,
+        "excluded_by_reason": {
+          "goal_effects_use_actual_carrier_no_historical_double_count": 156,
+          "member_manpower_pool_bonus_not_country_modifier": 4,
+          "outside_selected_national_modifier_catalogue": 24,
+          "source_name_not_static_single_line": 4
+        }
+      }
+    },
+    "dynamic-spirit-source-bindings.json": {
+      "table_sha256": "f347b6527f401415183de6624f6f5066fb17326994ee8459643828bc0e2c7f17",
+      "file_count": 265,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 388,
+        "binding_count": 4045,
+        "source_count": 380,
+        "variable_count": 2332,
+        "binding_count_by_type": {
+          "dynamic_modifier_variable": 4045
+        },
+        "source_count_by_type": {
+          "dynamic_modifier_variable": 380
+        },
+        "variable_reference_count_by_scope": {
+          "current_country": 3919,
+          "explicit_country": 84,
+          "global": 42
+        },
+        "excluded_by_reason": {},
+        "fixed_binding_overlap_count": 0
+      }
+    },
+    "special-source-bindings.json": {
+      "table_sha256": "718c8d676be95c21c3f20da95ac32af8064c25ba3c5e4593cb322a65bd31044c",
+      "file_count": 3,
+      "mismatches": [],
+      "statistics": {
+        "selected_modifier_count": 559,
+        "covered_modifier_count": 10,
+        "binding_count": 15,
+        "source_count": 5,
+        "landmark_definition_count": 22,
+        "landmark_binding_count": 0,
+        "unavailable_landmark_binding_count": 26,
+        "unavailable_landmark_source_count": 21,
+        "status_binding_count": 15,
+        "parse_failure_count": 0,
+        "excluded_by_reason": {
+          "provincial_landmark_health_unverifiable_with_tested_documented_queries": 26
+        }
+      }
+    }
+  },
+  "inventory": {
+    "ideas": {
+      "actual_files": 213,
+      "recorded_files": 213,
+      "unscanned_files": [],
+      "obsolete_files": []
+    },
+    "dynamic_modifiers": {
+      "actual_files": 11,
+      "recorded_files": 11,
+      "unscanned_files": [],
+      "obsolete_files": []
+    }
+  },
+  "unique_source_files_hash_checked": 796,
+  "dlc_archives_checked": [
+    "dlc/dlc003_rocket_launcher_unit_pack/dlc003.zip",
+    "dlc/dlc004_famous_battleships_unit_pack/dlc004.zip",
+    "dlc/dlc005_heavy_cruisers_unit_pack/dlc005.zip"
+  ],
+  "dlc_archived_idea_dynamic_files": [],
+  "dlc_loose_idea_dynamic_files": [],
+  "generated_input_hash_mismatches": []
+}

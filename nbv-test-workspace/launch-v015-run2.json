@@ -1,0 +1,10 @@
+{
+  "pid": 28864,
+  "started": "2026-10-25T11:34:46.2190910+08:00",
+  "original_hash": "57F4CB119C9A90486394621CD6FB92F6D89A7DD9BB8887481935A9B2893A37CB",
+  "changed_hash": "DBEB34882FA3107B000EC754090863E788C96F50A966FD37C9F39F513FE2AE4A",
+  "config": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\launcher-settings.json",
+  "backup": "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\launcher-settings.v015-original.json",
+  "playset": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\dlc_load.json",
+  "playset_hash": "E10307D5B2FF2ACCDF3856FE6A32F29BCC54DC58178EA3080D381DC7C3CAA6DD"
+}

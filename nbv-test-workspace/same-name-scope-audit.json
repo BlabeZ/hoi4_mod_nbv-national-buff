@@ -1,0 +1,3153 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "summary": {
+    "baseline_version": "0.1.9",
+    "registry_count": 559,
+    "display_count": 519,
+    "same_name_groups": 22,
+    "same_name_group_keys": 45,
+    "same_name_omitted_keys": 23,
+    "same_name_omitted_keys_after_authorised_building_slot_addition": 22,
+    "absent_markdown_unique_name_keys": 17,
+    "excluded_total": 40,
+    "full_catalog_count": 4484,
+    "outside_registry_exact_name_matches": 40,
+    "outside_registry_matches_current_display_name": 32,
+    "outside_registry_original_exclusion_counts": {
+      "scope_excluded": 28,
+      "pending": 5,
+      "unobserved": 7
+    },
+    "outside_registry_new_country_candidates": [
+      "autonomy_gain_ll_to_overlord",
+      "fuel_gain_from_states"
+    ],
+    "outside_registry_selected_A_or_B_count": 0
+  },
+  "scope": "Exact Chinese display-name identity, distinct modifier keys. All 559 registry records and all 4484 catalog records were compared; semantic equivalence and runtime support of the outside-registry candidates are not asserted.",
+  "production_changes_made_by_this_audit": false,
+  "inputs": [
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\dist\\national-buff-ui-0.1.9.zip",
+      "sha256": "4b03faa088473cdb71f9bbe61df2e4a3aa8e518519f7a8bf620223eb434462ee"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\data\\catalog.json",
+      "sha256": "298d98a49402452514a85c7b1dd87c72273b3bc66d5e32ced5530a5601fb0444"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\data\\display-catalog.json",
+      "sha256": "a0664fd559d06bb911baceb0c6ff7463099f11a8f9c4eeb071729a183034515b"
+    }
+  ],
+  "baseline_same_name_groups": [
+    {
+      "name": "可征募人口",
+      "records": [
+        {
+          "id": 1,
+          "key": "conscription",
+          "name": "可征募人口",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "可以从各地征募的人力量。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 2,
+          "key": "conscription_factor",
+          "name": "可征募人口",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "可以从各地征募的人力量。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 79,
+          "key": "recruitable_population_factor",
+          "name": "可征募人口",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：可征募人口。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "志愿军陆军师数量上限",
+      "records": [
+        {
+          "id": 28,
+          "key": "send_volunteer_size",
+          "name": "志愿军陆军师数量上限",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：志愿军陆军师数量上限。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 86,
+          "key": "send_volunteer_factor",
+          "name": "志愿军陆军师数量上限",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：志愿军陆军师数量上限。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "战争贡献度自治度增长",
+      "records": [
+        {
+          "id": 40,
+          "key": "autonomy_gain_warscore",
+          "name": "战争贡献度自治度增长",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "战争贡献度带来的自治度增减",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 41,
+          "key": "autonomy_gain_warscore_factor",
+          "name": "战争贡献度自治度增长",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "战争贡献度带来的自治度增减",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "附属国人力要求",
+      "records": [
+        {
+          "id": 42,
+          "key": "autonomy_manpower_share",
+          "name": "附属国人力要求",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "附属国部队所需要的人力",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 43,
+          "key": "autonomy_manpower_share_from_subjects",
+          "name": "附属国人力要求",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "附属国部队所需要的人力",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "改善关系获得的评价",
+      "records": [
+        {
+          "id": 72,
+          "key": "opinion_gain_monthly",
+          "name": "改善关系获得的评价",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：改善关系获得的评价。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 73,
+          "key": "opinion_gain_monthly_factor",
+          "name": "改善关系获得的评价",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "增加在他国改善评价时评价提高的速度。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "相同意识形态每月评价",
+      "records": [
+        {
+          "id": 74,
+          "key": "opinion_gain_monthly_same_ideology",
+          "name": "相同意识形态每月评价",
+          "category": "政治",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "意识形态相同时评价的每月变化。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 75,
+          "key": "opinion_gain_monthly_same_ideology_factor",
+          "name": "相同意识形态每月评价",
+          "category": "政治",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "意识形态相同时评价的每月变化。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "地区最大工厂数",
+      "records": [
+        {
+          "id": 109,
+          "key": "global_building_slots_factor",
+          "name": "地区最大工厂数",
+          "category": "工业",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "改变所有地区共享建筑位的数量。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 142,
+          "key": "global_building_slots",
+          "name": "地区最大工厂数",
+          "category": "工业",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：地区最大工厂数。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": true
+        }
+      ]
+    },
+    {
+      "name": "陆军师组织度恢复速率",
+      "records": [
+        {
+          "id": 206,
+          "key": "army_morale_factor",
+          "name": "陆军师组织度恢复速率",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军师组织度恢复速率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 274,
+          "key": "army_morale",
+          "name": "陆军师组织度恢复速率",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军师组织度恢复速率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "陆军师组织度",
+      "records": [
+        {
+          "id": 207,
+          "key": "army_org_factor",
+          "name": "陆军师组织度",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军师组织度。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 275,
+          "key": "army_org",
+          "name": "陆军师组织度",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军师组织度。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "堑壕速度",
+      "records": [
+        {
+          "id": 232,
+          "key": "dig_in_speed_factor",
+          "name": "堑壕速度",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "我们部队建造临时防御工事来准备防御一个地点的速度。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 283,
+          "key": "dig_in_speed",
+          "name": "堑壕速度",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "我们部队建造临时防御工事来准备防御一个地点的速度。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "陆军经验增长",
+      "records": [
+        {
+          "id": 233,
+          "key": "experience_gain_army",
+          "name": "陆军经验增长",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 234,
+          "key": "experience_gain_army_factor",
+          "name": "陆军经验增长",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：陆军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "堑壕上限",
+      "records": [
+        {
+          "id": 240,
+          "key": "max_dig_in",
+          "name": "堑壕上限",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "我们部队临时防御工事的先进程度。级别越高，部队可用于改善防御的天数就越多。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 241,
+          "key": "max_dig_in_factor",
+          "name": "堑壕上限",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：堑壕上限。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "骑兵攻击",
+      "records": [
+        {
+          "id": 279,
+          "key": "cavalry_attack_factor",
+          "name": "骑兵攻击",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：骑兵攻击。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 309,
+          "key": "modifier_army_sub_unit_cavalry_attack_factor",
+          "name": "骑兵攻击",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：骑兵攻击。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "骑兵防御",
+      "records": [
+        {
+          "id": 280,
+          "key": "cavalry_defence_factor",
+          "name": "骑兵防御",
+          "category": "陆军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：骑兵防御。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 310,
+          "key": "modifier_army_sub_unit_cavalry_defence_factor",
+          "name": "骑兵防御",
+          "category": "陆军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：骑兵防御。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "海军经验增长",
+      "records": [
+        {
+          "id": 378,
+          "key": "experience_gain_navy",
+          "name": "海军经验增长",
+          "category": "海军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 379,
+          "key": "experience_gain_navy_factor",
+          "name": "海军经验增长",
+          "category": "海军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "海军组织度",
+      "records": [
+        {
+          "id": 394,
+          "key": "navy_org_factor",
+          "name": "海军组织度",
+          "category": "海军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军组织度。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 450,
+          "key": "navy_org",
+          "name": "海军组织度",
+          "category": "海军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军组织度。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "海军组织度恢复速率",
+      "records": [
+        {
+          "id": 431,
+          "key": "naval_morale",
+          "name": "海军组织度恢复速率",
+          "category": "海军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军组织度恢复速率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 432,
+          "key": "naval_morale_factor",
+          "name": "海军组织度恢复速率",
+          "category": "海军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：海军组织度恢复速率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "空军事故几率",
+      "records": [
+        {
+          "id": 469,
+          "key": "air_accidents_factor",
+          "name": "空军事故几率",
+          "category": "空军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：空军事故几率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 488,
+          "key": "air_accidents",
+          "name": "空军事故几率",
+          "category": "空军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：空军事故几率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "空军经验增长",
+      "records": [
+        {
+          "id": 484,
+          "key": "experience_gain_air_factor",
+          "name": "空军经验增长",
+          "category": "空军",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：空军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 1 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 504,
+          "key": "experience_gain_air",
+          "name": "空军经验增长",
+          "category": "空军",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：空军经验增长。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "加强抵抗组织效率",
+      "records": [
+        {
+          "id": 539,
+          "key": "boost_resistance_factor",
+          "name": "加强抵抗组织效率",
+          "category": "情报",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：加强抵抗组织效率。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 548,
+          "key": "operation_boost_resistance_outcome",
+          "name": "加强抵抗组织效率",
+          "category": "情报",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "加强抵抗组织效率。引擎模板说明：Operation outcome modifier.",
+          "registry_display": "Number with 0 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "解密",
+      "records": [
+        {
+          "id": 541,
+          "key": "decryption",
+          "name": "解密",
+          "category": "情报",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "解密能显示出其他国家部队在地图上的信息和国策树的进程。高于敌方的加密值能够提供战斗加成",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 542,
+          "key": "decryption_factor",
+          "name": "解密",
+          "category": "情报",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：解密。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    },
+    {
+      "name": "加密",
+      "records": [
+        {
+          "id": 543,
+          "key": "encryption",
+          "name": "加密",
+          "category": "情报",
+          "displayed_v019": true,
+          "registered_read_validated": true,
+          "effect_summary": "加密能够使部队在地图上的信息和国策树的进程对外国隐藏。高于敌方的解密值能够抵消其战斗加成",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        },
+        {
+          "id": 544,
+          "key": "encryption_factor",
+          "name": "加密",
+          "category": "情报",
+          "displayed_v019": false,
+          "registered_read_validated": true,
+          "effect_summary": "作用项：加密。本地原版未提供详细公式说明。",
+          "registry_display": "Number with 2 decimal places",
+          "authorised_to_add_this_turn": false
+        }
+      ]
+    }
+  ],
+  "baseline_collapsed_records": [
+    {
+      "id": 2,
+      "key": "conscription_factor",
+      "name": "可征募人口",
+      "category": "政治"
+    },
+    {
+      "id": 41,
+      "key": "autonomy_gain_warscore_factor",
+      "name": "战争贡献度自治度增长",
+      "category": "政治"
+    },
+    {
+      "id": 43,
+      "key": "autonomy_manpower_share_from_subjects",
+      "name": "附属国人力要求",
+      "category": "政治"
+    },
+    {
+      "id": 73,
+      "key": "opinion_gain_monthly_factor",
+      "name": "改善关系获得的评价",
+      "category": "政治"
+    },
+    {
+      "id": 75,
+      "key": "opinion_gain_monthly_same_ideology_factor",
+      "name": "相同意识形态每月评价",
+      "category": "政治"
+    },
+    {
+      "id": 79,
+      "key": "recruitable_population_factor",
+      "name": "可征募人口",
+      "category": "政治"
+    },
+    {
+      "id": 86,
+      "key": "send_volunteer_factor",
+      "name": "志愿军陆军师数量上限",
+      "category": "政治"
+    },
+    {
+      "id": 142,
+      "key": "global_building_slots",
+      "name": "地区最大工厂数",
+      "category": "工业"
+    },
+    {
+      "id": 234,
+      "key": "experience_gain_army_factor",
+      "name": "陆军经验增长",
+      "category": "陆军"
+    },
+    {
+      "id": 241,
+      "key": "max_dig_in_factor",
+      "name": "堑壕上限",
+      "category": "陆军"
+    },
+    {
+      "id": 274,
+      "key": "army_morale",
+      "name": "陆军师组织度恢复速率",
+      "category": "陆军"
+    },
+    {
+      "id": 275,
+      "key": "army_org",
+      "name": "陆军师组织度",
+      "category": "陆军"
+    },
+    {
+      "id": 283,
+      "key": "dig_in_speed",
+      "name": "堑壕速度",
+      "category": "陆军"
+    },
+    {
+      "id": 309,
+      "key": "modifier_army_sub_unit_cavalry_attack_factor",
+      "name": "骑兵攻击",
+      "category": "陆军"
+    },
+    {
+      "id": 310,
+      "key": "modifier_army_sub_unit_cavalry_defence_factor",
+      "name": "骑兵防御",
+      "category": "陆军"
+    },
+    {
+      "id": 379,
+      "key": "experience_gain_navy_factor",
+      "name": "海军经验增长",
+      "category": "海军"
+    },
+    {
+      "id": 432,
+      "key": "naval_morale_factor",
+      "name": "海军组织度恢复速率",
+      "category": "海军"
+    },
+    {
+      "id": 450,
+      "key": "navy_org",
+      "name": "海军组织度",
+      "category": "海军"
+    },
+    {
+      "id": 488,
+      "key": "air_accidents",
+      "name": "空军事故几率",
+      "category": "空军"
+    },
+    {
+      "id": 504,
+      "key": "experience_gain_air",
+      "name": "空军经验增长",
+      "category": "空军"
+    },
+    {
+      "id": 542,
+      "key": "decryption_factor",
+      "name": "解密",
+      "category": "情报"
+    },
+    {
+      "id": 544,
+      "key": "encryption_factor",
+      "name": "加密",
+      "category": "情报"
+    },
+    {
+      "id": 548,
+      "key": "operation_boost_resistance_outcome",
+      "name": "加强抵抗组织效率",
+      "category": "情报"
+    }
+  ],
+  "baseline_unique_names_absent_from_user_markdown": [
+    {
+      "id": 8,
+      "key": "communism_drift",
+      "name": "每日共产主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 11,
+      "key": "democratic_drift",
+      "name": "每日民主主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 14,
+      "key": "fascism_drift",
+      "name": "每日法西斯主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 20,
+      "key": "neutrality_drift",
+      "name": "每日中立主义支持率",
+      "category": "政治"
+    },
+    {
+      "id": 87,
+      "key": "stability_weekly_factor",
+      "name": "每周稳定度增长",
+      "category": "政治"
+    },
+    {
+      "id": 91,
+      "key": "war_support_weekly_factor",
+      "name": "每周战争支持度增长",
+      "category": "政治"
+    },
+    {
+      "id": 135,
+      "key": "country_resource_chromium",
+      "name": "铬",
+      "category": "工业"
+    },
+    {
+      "id": 136,
+      "key": "country_resource_oil",
+      "name": "石油",
+      "category": "工业"
+    },
+    {
+      "id": 137,
+      "key": "country_resource_rubber",
+      "name": "橡胶",
+      "category": "工业"
+    },
+    {
+      "id": 138,
+      "key": "country_resource_steel",
+      "name": "钢铁",
+      "category": "工业"
+    },
+    {
+      "id": 139,
+      "key": "country_resource_tungsten",
+      "name": "钨",
+      "category": "工业"
+    },
+    {
+      "id": 149,
+      "key": "license_anti_tank_eq_tech_difference_speed_factor",
+      "name": "科技差导致的反坦克装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 153,
+      "key": "license_artillery_eq_tech_difference_speed_factor",
+      "name": "科技差导致的炮兵装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 156,
+      "key": "license_infantry_eq_tech_difference_speed_factor",
+      "name": "科技差导致的步兵装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 159,
+      "key": "license_light_tank_eq_tech_difference_speed_factor",
+      "name": "科技差导致的轻型坦克装备生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 163,
+      "key": "license_tech_difference_speed",
+      "name": "科技差导致的生产速度差距",
+      "category": "工业"
+    },
+    {
+      "id": 253,
+      "key": "training_time_army_factor",
+      "name": "陆军师训练时间（比例项）",
+      "category": "陆军"
+    }
+  ],
+  "outside_registry_matching_names": [
+    {
+      "key": "attrition_for_controller",
+      "name": "陆军师损耗",
+      "category": "陆军",
+      "matching_registered_keys": [
+        "attrition"
+      ],
+      "matching_currently_displayed_keys": [
+        "attrition"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "中文同为陆军师损耗，但当前证据指向state_modifier及地区动态修正，不能作为已确认国家全局值；使用国家attrition满足损耗展示需求。",
+      "definition_count": 4,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 269,
+          "context": [
+            "skirmishes_against_imro"
+          ],
+          "context_lines": [
+            261
+          ],
+          "value": "1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 1169,
+          "context": [
+            "FIN_motti_tactics_modifier"
+          ],
+          "context_lines": [
+            1164
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\SEA_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/SEA_dynamic_modifiers.txt",
+          "line": 1393,
+          "context": [
+            "PRC_anti_japanese_base"
+          ],
+          "context_lines": [
+            1369
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\resistance_compliance_modifiers\\resistance_modifiers.txt",
+          "relative_file": "common/resistance_compliance_modifiers/resistance_modifiers.txt",
+          "line": 90,
+          "context": [
+            "resistance_75",
+            "state_modifier"
+          ],
+          "context_lines": [
+            81,
+            87
+          ],
+          "value": "0.3",
+          "classification_rule": "modifier_payload"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "中文同为陆军师损耗，但当前证据指向state_modifier及地区动态修正，不能作为已确认国家全局值；使用国家attrition满足损耗展示需求。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "autonomy_gain_ll_to_overlord",
+      "name": "向宗主国租借自治度增长",
+      "category": "政治",
+      "matching_registered_keys": [
+        "autonomy_gain_ll_to_overlord_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "autonomy_gain_ll_to_overlord_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "pending",
+      "original_reason": "尚未满足国家全局来源与展示价值两项审查条件；本轮不显示，不等于该键无效。",
+      "definition_count": 8,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "relative_file": "common/country_leader/00_traits.txt",
+          "line": 18812,
+          "context": [
+            "leader_traits",
+            "INS_staunch_imperialist"
+          ],
+          "context_lines": [
+            44,
+            18809
+          ],
+          "value": "-0.3",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 188,
+          "context": [
+            "leader_traits",
+            "sikh_activist"
+          ],
+          "context_lines": [
+            1,
+            183
+          ],
+          "value": "0.35",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 383,
+          "context": [
+            "leader_traits",
+            "staunch_imperialist"
+          ],
+          "context_lines": [
+            1,
+            381
+          ],
+          "value": "-0.3",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 390,
+          "context": [
+            "leader_traits",
+            "staunch_imperialist_alt"
+          ],
+          "context_lines": [
+            1,
+            388
+          ],
+          "value": "-0.15",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 397,
+          "context": [
+            "leader_traits",
+            "staunch_imperialist_alt_consult"
+          ],
+          "context_lines": [
+            1,
+            395
+          ],
+          "value": "-0.15",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 410,
+          "context": [
+            "leader_traits",
+            "aloof_authority"
+          ],
+          "context_lines": [
+            1,
+            409
+          ],
+          "value": "-0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 416,
+          "context": [
+            "leader_traits",
+            "aloof_authority_alt"
+          ],
+          "context_lines": [
+            1,
+            415
+          ],
+          "value": "-0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\goe_traits.txt",
+          "relative_file": "common/country_leader/goe_traits.txt",
+          "line": 423,
+          "context": [
+            "leader_traits",
+            "aloof_authority_alt_consult"
+          ],
+          "context_lines": [
+            1,
+            422
+          ],
+          "value": "-0.1",
+          "classification_rule": "typed_data_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "country_candidate_outside_original_whitelist",
+        "reason": "Eight direct country-leader trait definitions exist. Leader contributions are now explicitly in scope; this is a separately omitted whitelist candidate, not a Markdown deduplication loss.",
+        "runtime_read_validated": false,
+        "current_sources_checked": [
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/country_leader/goe_traits.txt",
+            "line": 188,
+            "trait": "sikh_activist",
+            "value": 0.35
+          },
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/country_leader/goe_traits.txt",
+            "line": 383,
+            "trait": "staunch_imperialist",
+            "value": -0.3
+          }
+        ]
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "autonomy_gain_trade",
+      "name": "贸易自治度增长",
+      "category": "政治",
+      "matching_registered_keys": [
+        "autonomy_gain_trade_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "autonomy_gain_trade_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "已登记但当前原版扫描未见定义赋值，暂缺可追溯的国家授予证据，不因名称猜测有效。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "已登记但当前原版扫描未见定义赋值，暂缺可追溯的国家授予证据，不因名称猜测有效。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "enemy_operative_detection_chance_factor_over_occupied_tag",
+      "name": "敌方特工被发现几率系数",
+      "category": "情报",
+      "matching_registered_keys": [
+        "enemy_operative_detection_chance_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "enemy_operative_detection_chance_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "pending",
+      "original_reason": "尚未满足国家全局来源与展示价值两项审查条件；本轮不显示，不等于该键无效。",
+      "definition_count": 3,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1388,
+          "context": [
+            "ITA_mafia_on_the_rise"
+          ],
+          "context_lines": [
+            1372
+          ],
+          "value": "-0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1419,
+          "context": [
+            "ITA_established_mafia"
+          ],
+          "context_lines": [
+            1406
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 431,
+          "context": [
+            "CZE_enemy_intelligence_collaborators"
+          ],
+          "context_lines": [
+            411
+          ],
+          "value": "-0.25",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "local_scope_exclusion_confirmed",
+        "reason": "Italy mafia and Czechoslovak collaborator definitions are applied to states; no verified country-wide source was found.",
+        "current_sources_checked": [
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/national_focus/italy.txt",
+            "line": 20602,
+            "scope": "every_controlled_state"
+          },
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/national_focus/czechoslovakia_mu.txt",
+            "line": 22575,
+            "scope": "state"
+          }
+        ]
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "enemy_operative_detection_chance_over_occupied_tag",
+      "name": "敌方特工被发现几率补正",
+      "category": "情报",
+      "matching_registered_keys": [
+        "enemy_operative_detection_chance"
+      ],
+      "matching_currently_displayed_keys": [
+        "enemy_operative_detection_chance"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "pending",
+      "original_reason": "尚未满足国家全局来源与展示价值两项审查条件；本轮不显示，不等于该键无效。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\occupation_laws\\occupation_laws.txt",
+          "relative_file": "common/occupation_laws/occupation_laws.txt",
+          "line": 243,
+          "context": [
+            "secret_police_oversight",
+            "state_modifier"
+          ],
+          "context_lines": [
+            232,
+            236
+          ],
+          "value": "1",
+          "classification_rule": "modifier_payload"
+        }
+      ],
+      "current_audit": {
+        "finding": "local_scope_exclusion_confirmed",
+        "reason": "The observed secret_police_oversight occupation-law contribution is inside state_modifier.",
+        "current_sources_checked": [
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/occupation_laws/occupation_laws.txt",
+            "line": 243,
+            "scope": "state_modifier"
+          }
+        ]
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "fuel_gain_from_states",
+      "name": "从炼油厂获得的燃油",
+      "category": "工业",
+      "matching_registered_keys": [
+        "fuel_gain_factor_from_states"
+      ],
+      "matching_currently_displayed_keys": [
+        "fuel_gain_factor_from_states"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "pending",
+      "original_reason": "尚未满足国家全局来源与展示价值两项审查条件；本轮不显示，不等于该键无效。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\buildings\\00_buildings.txt",
+          "relative_file": "common/buildings/00_buildings.txt",
+          "line": 273,
+          "context": [
+            "buildings",
+            "synthetic_refinery",
+            "country_modifiers",
+            "modifiers"
+          ],
+          "context_lines": [
+            1,
+            259,
+            271,
+            272
+          ],
+          "value": "2.0",
+          "classification_rule": "modifier_payload"
+        }
+      ],
+      "current_audit": {
+        "finding": "country_candidate_outside_original_whitelist",
+        "reason": "Synthetic refinery country_modifiers specifies a base contribution of 2.0 per hour, distinct from the displayed percentage factor. It is a country contribution, not a state modifier; its live read and final presentation unit need a separate engine check.",
+        "runtime_read_validated": false,
+        "current_sources_checked": [
+          {
+            "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/buildings/00_buildings.txt",
+            "line": 273,
+            "path": "buildings.synthetic_refinery.country_modifiers.modifiers",
+            "value": 2.0,
+            "comment": "per hour"
+          }
+        ]
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "license_infantry_purchase_cost",
+      "name": "步兵装备生产许可购买花费",
+      "category": "工业",
+      "matching_registered_keys": [
+        "license_infantry_eq_cost_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "license_infantry_eq_cost_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "modifier_army_sub_unit_light_tank_recon_attack_factor",
+      "name": "装甲侦察连攻击",
+      "category": "陆军",
+      "matching_registered_keys": [
+        "modifier_army_sub_unit_armored_car_recon_attack_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "modifier_army_sub_unit_armored_car_recon_attack_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "modifier_army_sub_unit_light_tank_recon_max_org_factor",
+      "name": "装甲侦察连组织度",
+      "category": "陆军",
+      "matching_registered_keys": [
+        "modifier_army_sub_unit_armored_car_recon_max_org_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "modifier_army_sub_unit_armored_car_recon_max_org_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "navy_anti_air_attack",
+      "name": "海军对空攻击",
+      "category": "海军",
+      "matching_registered_keys": [
+        "navy_anti_air_attack_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "navy_anti_air_attack_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "research_sharing_per_country_bonus",
+      "name": "科技共享加成",
+      "category": "工业",
+      "matching_registered_keys": [
+        "research_sharing_per_country_bonus_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "research_sharing_per_country_bonus_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "pending",
+      "original_reason": "90处命中来自technology_sharing_group定义的每成员基础系数，不能据此断言是国家modifier累加项；需要专项验证，暂不进展示。",
+      "definition_count": 90,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 9,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            2
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 25,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            18
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 40,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            33
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 56,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            49
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 71,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            64
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 87,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            80
+          ],
+          "value": "0.05",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 103,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            96
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technology_sharing\\00_tech_sharing_groups.txt",
+          "relative_file": "common/technology_sharing/00_tech_sharing_groups.txt",
+          "line": 145,
+          "context": [
+            "technology_sharing_group"
+          ],
+          "context_lines": [
+            138
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "mechanism_parameter_pending",
+        "reason": "Observed assignments specify a technology_sharing_group base coefficient. It has not been established that these are accumulated into the country modifier read.",
+        "runtime_read_validated": false
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_bunker_max_level_terrain_limit",
+      "name": "最高陆上要塞等级",
+      "category": "工业",
+      "matching_registered_keys": [
+        "bunker_max_level_terrain_limit"
+      ],
+      "matching_currently_displayed_keys": [
+        "bunker_max_level_terrain_limit"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 4,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\buildings\\00_buildings.txt",
+          "relative_file": "common/buildings/00_buildings.txt",
+          "line": 218,
+          "context": [
+            "buildings",
+            "stronghold_network",
+            "state_modifiers"
+          ],
+          "context_lines": [
+            1,
+            201,
+            216
+          ],
+          "value": "2",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 263,
+          "context": [
+            "CZE_first_sudetenland_fortification_program"
+          ],
+          "context_lines": [
+            259
+          ],
+          "value": "1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 278,
+          "context": [
+            "CZE_first_sudetenland_fortification_program_GD"
+          ],
+          "context_lines": [
+            274
+          ],
+          "value": "1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 34,
+          "context": [
+            "FRA_maginot_line_dynamic_modifier"
+          ],
+          "context_lines": [
+            30
+          ],
+          "value": "6",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_coastal_bunker_max_level_terrain_limit",
+      "name": "最高海岸要塞等级",
+      "category": "工业",
+      "matching_registered_keys": [
+        "coastal_bunker_max_level_terrain_limit"
+      ],
+      "matching_currently_displayed_keys": [
+        "coastal_bunker_max_level_terrain_limit"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\buildings\\00_buildings.txt",
+          "relative_file": "common/buildings/00_buildings.txt",
+          "line": 219,
+          "context": [
+            "buildings",
+            "stronghold_network",
+            "state_modifiers"
+          ],
+          "context_lines": [
+            1,
+            201,
+            216
+          ],
+          "value": "2",
+          "classification_rule": "typed_data_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_air_base_factor",
+      "name": "空军基地建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_air_base_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_air_base_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 3,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 139,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 973,
+          "context": [
+            "DEN_military_projects_state_modifier"
+          ],
+          "context_lines": [
+            963
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 1149,
+          "context": [
+            "GER_qingdao_reintegrated_modifier"
+          ],
+          "context_lines": [
+            1138
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_anti_air_building_factor",
+      "name": "防空阵地建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_anti_air_building_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_anti_air_building_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_arms_factory_factor",
+      "name": "军用工厂建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_arms_factory_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_arms_factory_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 6,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 122,
+          "context": [
+            "NOR_prep_his_dmod_2"
+          ],
+          "context_lines": [
+            105
+          ],
+          "value": "-0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 146,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "-0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 249,
+          "context": [
+            "NOR_royal_defenses"
+          ],
+          "context_lines": [
+            233
+          ],
+          "value": "-0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 971,
+          "context": [
+            "DEN_military_projects_state_modifier"
+          ],
+          "context_lines": [
+            963
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1429,
+          "context": [
+            "ITA_novus_ordo_modifier"
+          ],
+          "context_lines": [
+            1422
+          ],
+          "value": "0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 169,
+          "context": [
+            "CZE_czech_state_modifier"
+          ],
+          "context_lines": [
+            164
+          ],
+          "value": "-0.10",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_bunker_factor",
+      "name": "陆上要塞建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_bunker_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_bunker_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 11,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\buildings\\00_buildings.txt",
+          "relative_file": "common/buildings/00_buildings.txt",
+          "line": 221,
+          "context": [
+            "buildings",
+            "stronghold_network",
+            "state_modifiers"
+          ],
+          "context_lines": [
+            1,
+            201,
+            216
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 388,
+          "context": [
+            "POL_plan_modifier"
+          ],
+          "context_lines": [
+            383
+          ],
+          "value": "0.3",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 531,
+          "context": [
+            "SOV_civilian_labor_in_defense_mod"
+          ],
+          "context_lines": [
+            525
+          ],
+          "value": "0.6",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 101,
+          "context": [
+            "NOR_prep_his_dmod_1"
+          ],
+          "context_lines": [
+            89
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 120,
+          "context": [
+            "NOR_prep_his_dmod_2"
+          ],
+          "context_lines": [
+            105
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 144,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 245,
+          "context": [
+            "NOR_royal_defenses"
+          ],
+          "context_lines": [
+            233
+          ],
+          "value": "0.4",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1557,
+          "context": [
+            "SWI_attack_from_the_mountains"
+          ],
+          "context_lines": [
+            1554
+          ],
+          "value": "-0.35",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_coastal_bunker_factor",
+      "name": "海岸要塞建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_coastal_bunker_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_coastal_bunker_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 8,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\buildings\\00_buildings.txt",
+          "relative_file": "common/buildings/00_buildings.txt",
+          "line": 222,
+          "context": [
+            "buildings",
+            "stronghold_network",
+            "state_modifiers"
+          ],
+          "context_lines": [
+            1,
+            201,
+            216
+          ],
+          "value": "0.1",
+          "classification_rule": "typed_data_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 532,
+          "context": [
+            "SOV_civilian_labor_in_defense_mod"
+          ],
+          "context_lines": [
+            525
+          ],
+          "value": "0.6",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 102,
+          "context": [
+            "NOR_prep_his_dmod_1"
+          ],
+          "context_lines": [
+            89
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 121,
+          "context": [
+            "NOR_prep_his_dmod_2"
+          ],
+          "context_lines": [
+            105
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 145,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "-0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 246,
+          "context": [
+            "NOR_royal_defenses"
+          ],
+          "context_lines": [
+            233
+          ],
+          "value": "0.4",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 1135,
+          "context": [
+            "GER_sentinels_of_the_pacific_modifier"
+          ],
+          "context_lines": [
+            1126
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 1147,
+          "context": [
+            "GER_qingdao_reintegrated_modifier"
+          ],
+          "context_lines": [
+            1138
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_dockyard_factor",
+      "name": "海军船坞建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_dockyard_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_dockyard_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 2,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 138,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 972,
+          "context": [
+            "DEN_military_projects_state_modifier"
+          ],
+          "context_lines": [
+            963
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_fuel_silo_factor",
+      "name": "储油罐建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_fuel_silo_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_fuel_silo_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_industrial_complex_factor",
+      "name": "民用工厂建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_industrial_complex_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_industrial_complex_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 8,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 98,
+          "context": [
+            "NOR_prep_his_dmod_1"
+          ],
+          "context_lines": [
+            89
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 115,
+          "context": [
+            "NOR_prep_his_dmod_2"
+          ],
+          "context_lines": [
+            105
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 135,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 248,
+          "context": [
+            "NOR_royal_defenses"
+          ],
+          "context_lines": [
+            233
+          ],
+          "value": "-0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 452,
+          "context": [
+            "SWE_hygenic_housing_output_bonus"
+          ],
+          "context_lines": [
+            449
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 941,
+          "context": [
+            "DEN_development_projects_state_modifier"
+          ],
+          "context_lines": [
+            933
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 956,
+          "context": [
+            "DEN_development_projects_mainland_state_modifier"
+          ],
+          "context_lines": [
+            948
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 168,
+          "context": [
+            "CZE_czech_state_modifier"
+          ],
+          "context_lines": [
+            164
+          ],
+          "value": "-0.10",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_infrastructure_factor",
+      "name": "基础设施建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_infrastructure_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_infrastructure_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 18,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 247,
+          "context": [
+            "NOR_royal_defenses"
+          ],
+          "context_lines": [
+            233
+          ],
+          "value": "-0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 943,
+          "context": [
+            "DEN_development_projects_state_modifier"
+          ],
+          "context_lines": [
+            933
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 958,
+          "context": [
+            "DEN_development_projects_mainland_state_modifier"
+          ],
+          "context_lines": [
+            948
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1268,
+          "context": [
+            "ITA_italian_highways_modifier"
+          ],
+          "context_lines": [
+            1264
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1284,
+          "context": [
+            "ITA_pacified_italian_east_africa_modifier"
+          ],
+          "context_lines": [
+            1279
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\GoE_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+          "line": 46,
+          "context": [
+            "AFG_economic_regionalism"
+          ],
+          "context_lines": [
+            41
+          ],
+          "value": "AFG_state_production_speed_infrastructure_factor",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\GoE_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+          "line": 67,
+          "context": [
+            "AFG_electrification_modifier"
+          ],
+          "context_lines": [
+            52
+          ],
+          "value": "0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 306,
+          "context": [
+            "CZE_economic_investment_in_state_modifier"
+          ],
+          "context_lines": [
+            302
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_naval_base_factor",
+      "name": "海军基地建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_naval_base_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_naval_base_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 3,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 974,
+          "context": [
+            "DEN_military_projects_state_modifier"
+          ],
+          "context_lines": [
+            963
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 1134,
+          "context": [
+            "GER_sentinels_of_the_pacific_modifier"
+          ],
+          "context_lines": [
+            1126
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+          "line": 1146,
+          "context": [
+            "GER_qingdao_reintegrated_modifier"
+          ],
+          "context_lines": [
+            1138
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_nuclear_reactor_factor",
+      "name": "核反应堆建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_nuclear_reactor_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_nuclear_reactor_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_radar_station_factor",
+      "name": "雷达站建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_radar_station_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_radar_station_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_rail_way_factor",
+      "name": "铁路建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_rail_way_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_rail_way_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 10,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 416,
+          "context": [
+            "POL_peasant_communities"
+          ],
+          "context_lines": [
+            411
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 116,
+          "context": [
+            "NOR_prep_his_dmod_2"
+          ],
+          "context_lines": [
+            105
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 136,
+          "context": [
+            "NOR_prep_his_dmod_3"
+          ],
+          "context_lines": [
+            125
+          ],
+          "value": "0.2",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 944,
+          "context": [
+            "DEN_development_projects_state_modifier"
+          ],
+          "context_lines": [
+            933
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 959,
+          "context": [
+            "DEN_development_projects_mainland_state_modifier"
+          ],
+          "context_lines": [
+            948
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1275,
+          "context": [
+            "ITA_libyan_railway_modifier"
+          ],
+          "context_lines": [
+            1271
+          ],
+          "value": "0.25",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1283,
+          "context": [
+            "ITA_pacified_italian_east_africa_modifier"
+          ],
+          "context_lines": [
+            1279
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\mun_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+          "line": 307,
+          "context": [
+            "CZE_economic_investment_in_state_modifier"
+          ],
+          "context_lines": [
+            302
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_rocket_site_factor",
+      "name": "火箭基地建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_rocket_site_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_rocket_site_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_supply_node_factor",
+      "name": "补给中心建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_supply_node_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_supply_node_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 2,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 417,
+          "context": [
+            "POL_peasant_communities"
+          ],
+          "context_lines": [
+            411
+          ],
+          "value": "0.05",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 975,
+          "context": [
+            "DEN_military_projects_state_modifier"
+          ],
+          "context_lines": [
+            963
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_production_speed_synthetic_refinery_factor",
+      "name": "合成炼油厂建设速度",
+      "category": "工业",
+      "matching_registered_keys": [
+        "production_speed_synthetic_refinery_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "production_speed_synthetic_refinery_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 2,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 942,
+          "context": [
+            "DEN_development_projects_state_modifier"
+          ],
+          "context_lines": [
+            933
+          ],
+          "value": "0.15",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+          "line": 957,
+          "context": [
+            "DEN_development_projects_mainland_state_modifier"
+          ],
+          "context_lines": [
+            948
+          ],
+          "value": "0.1",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_resource_chromium",
+      "name": "铬",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_chromium"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 2,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 462,
+          "context": [
+            "SOV_increased_metals_production"
+          ],
+          "context_lines": [
+            454
+          ],
+          "value": "SOV_chromium_bonus",
+          "classification_rule": "modifier_definition_body"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 554,
+          "context": [
+            "SOV_soviet_imports"
+          ],
+          "context_lines": [
+            547
+          ],
+          "value": "2",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_resource_oil",
+      "name": "石油",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_oil"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 552,
+          "context": [
+            "SOV_soviet_imports"
+          ],
+          "context_lines": [
+            547
+          ],
+          "value": "16",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_resource_rubber",
+      "name": "橡胶",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_rubber"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 555,
+          "context": [
+            "SOV_soviet_imports"
+          ],
+          "context_lines": [
+            547
+          ],
+          "value": "2",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "state_resource_tungsten",
+      "name": "钨",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_tungsten"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 460,
+          "context": [
+            "SOV_increased_metals_production"
+          ],
+          "context_lines": [
+            454
+          ],
+          "value": "SOV_tungsten_bonus",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州/地方对象修正；即便多个州同时拥有也不汇总为国家BUFF。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "submarine_attack",
+      "name": "潜艇攻击",
+      "category": "海军",
+      "matching_registered_keys": [
+        "navy_submarine_attack_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "navy_submarine_attack_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "targeted_legitimacy_daily",
+      "name": "每日正统性增长",
+      "category": "政治",
+      "matching_registered_keys": [
+        "legitimacy_daily"
+      ],
+      "matching_currently_displayed_keys": [
+        "legitimacy_daily"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "针对指定目标国家或关系对象的值，本轮不建立目标对象列表。",
+      "definition_count": 3,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\decisions\\_exiled_governments_decisions.txt",
+          "relative_file": "common/decisions/_exiled_governments_decisions.txt",
+          "line": 71,
+          "context": [
+            "governments_in_exile",
+            "grant_parliamentary_audience",
+            "targeted_modifier"
+          ],
+          "context_lines": [
+            1,
+            40,
+            69
+          ],
+          "value": "0.05",
+          "classification_rule": "modifier_payload"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\decisions\\_exiled_governments_decisions.txt",
+          "relative_file": "common/decisions/_exiled_governments_decisions.txt",
+          "line": 191,
+          "context": [
+            "governments_in_exile",
+            "public_support_for_from",
+            "targeted_modifier"
+          ],
+          "context_lines": [
+            1,
+            151,
+            189
+          ],
+          "value": "0.05",
+          "classification_rule": "modifier_payload"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\decisions\\_exiled_governments_decisions.txt",
+          "relative_file": "common/decisions/_exiled_governments_decisions.txt",
+          "line": 564,
+          "context": [
+            "category_exile_forces",
+            "unity_parade",
+            "targeted_modifier"
+          ],
+          "context_lines": [
+            465,
+            535,
+            562
+          ],
+          "value": "-0.5",
+          "classification_rule": "modifier_payload"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "针对指定目标国家或关系对象的值，本轮不建立目标对象列表。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "temporary_state_resource_chromium",
+      "name": "铬",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_chromium"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州／地方对象的专属修正，不进入国家全局统计。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 43,
+          "context": [
+            "sabotaged_resources"
+          ],
+          "context_lines": [
+            29
+          ],
+          "value": "sabotaged_chromium",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州／地方对象的专属修正，不进入国家全局统计。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "temporary_state_resource_oil",
+      "name": "石油",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_oil"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州／地方对象的专属修正，不进入国家全局统计。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 38,
+          "context": [
+            "sabotaged_resources"
+          ],
+          "context_lines": [
+            29
+          ],
+          "value": "sabotaged_oil",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州／地方对象的专属修正，不进入国家全局统计。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "temporary_state_resource_rubber",
+      "name": "橡胶",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_rubber"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州／地方对象的专属修正，不进入国家全局统计。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 40,
+          "context": [
+            "sabotaged_resources"
+          ],
+          "context_lines": [
+            29
+          ],
+          "value": "sabotaged_rubber",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州／地方对象的专属修正，不进入国家全局统计。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "temporary_state_resource_tungsten",
+      "name": "钨",
+      "category": "工业",
+      "matching_registered_keys": [
+        "country_resource_tungsten"
+      ],
+      "matching_currently_displayed_keys": [],
+      "original_group": "C",
+      "original_exclusion_class": "scope_excluded",
+      "original_reason": "州／地方对象的专属修正，不进入国家全局统计。",
+      "definition_count": 1,
+      "raw_examples": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\0_dynamic_modifiers.txt",
+          "relative_file": "common/dynamic_modifiers/0_dynamic_modifiers.txt",
+          "line": 41,
+          "context": [
+            "sabotaged_resources"
+          ],
+          "context_lines": [
+            29
+          ],
+          "value": "sabotaged_tungsten",
+          "classification_rule": "modifier_definition_body"
+        }
+      ],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "州／地方对象的专属修正，不进入国家全局统计。"
+      },
+      "added_to_production": false
+    },
+    {
+      "key": "truck_attrition",
+      "name": "补给卡车损耗",
+      "category": "陆军",
+      "matching_registered_keys": [
+        "truck_attrition_factor"
+      ],
+      "matching_currently_displayed_keys": [
+        "truck_attrition_factor"
+      ],
+      "original_group": "C",
+      "original_exclusion_class": "unobserved",
+      "original_reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。",
+      "definition_count": 0,
+      "raw_examples": [],
+      "current_audit": {
+        "finding": "preserve_original_exclusion",
+        "reason": "引擎已注册，但本机规则扫描未见定义赋值；本轮不为预留或未使用的模板变体设置展示行。"
+      },
+      "added_to_production": false
+    }
+  ],
+  "limitations": [
+    "Absence from the user-edited Markdown is observable; the audit does not claim to know the intention behind each absent name.",
+    "A distinct key is not proof of identical, active, or mutually exclusive mechanics; the semantic audit and engine tests should determine presentation.",
+    "The v0.1.9 delivery archive provides a stable pre-edit baseline while the parent agent edits the live files."
+  ]
+}

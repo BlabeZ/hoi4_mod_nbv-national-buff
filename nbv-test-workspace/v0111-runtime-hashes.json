@@ -1,0 +1,14 @@
+{
+  "common/scripted_effects/nbv_effects.txt": "0a0ec62da2d92ffa0bfcf1d0e37e417cec79f1a2f06006756956322aa118ca8c",
+  "common/scripted_guis/nbv_scripted_gui.txt": "75a742eaf23d81d7f7b6f64a68188af01808636201696b91c56647f823b0e779",
+  "common/scripted_localisation/nbv_scripted_localisation.txt": "daaccccb6bfcc1310f6e61d656b338eb79e78fef32f93579584f731af94d8791",
+  "common/scripted_localisation/nbv_source_localisation.txt": "805f0fd1f121b17aedc8b0910ee2cc39c83df1a6796cb4152914ccb5d3dd7c37",
+  "common/scripted_triggers/nbv_triggers.txt": "c2f07350c3dd8371afd887ea53c4296d3410b9caa1bf955a810bad90195a8ef2",
+  "common/synchronized_dynamic_tokens/nbv_tokens.txt": "35fc5da60beedf7df440564f6a16759620f24116d38f957f9c647e20b46b45af",
+  "descriptor.mod": "f7b1c6e729f53ae9946e6569232fad6d573f820c936d37e59d035f03fa2a0ba4",
+  "interface/nbv.gfx": "83d87e3f75b9c25e4845e639a510ac4d5ba089b7a5d5a54577698c88625213a1",
+  "interface/nbv.gui": "2d894bbd0e48637d4a3e1806e4aaf3e18c5a9bb0ac3b861f42c2cc128d618142",
+  "interface/nbv_modifier_icons.gfx": "b1edfedc7d94ac0fa381877b7362f0486297d43114c42bafeb0afd306d209420",
+  "localisation/english/nbv_l_english.yml": "7c157e259533aeb705085c858c920e2a6872752d488266aafba04abb8295ecb8",
+  "localisation/simp_chinese/nbv_l_simp_chinese.yml": "3660eaa12f4aba568e3f708ffe310b752a618567613bc91e18e976bcb5610aaa"
+}

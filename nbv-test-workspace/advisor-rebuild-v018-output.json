@@ -1,0 +1,23 @@
+{
+  "selected_modifier_count": 559,
+  "covered_modifier_count": 252,
+  "binding_count": 9231,
+  "source_character_count": 2323,
+  "source_role_count": 2349,
+  "source_trait_count": 866,
+  "verified_dynamic_cross_role_exclusion_count": 15,
+  "parsed_role_definition_count": 3781,
+  "scripted_trait_addition_count": 93,
+  "scanned_file_count": 301,
+  "parse_failure_count": 0,
+  "excluded_by_reason": {
+    "ambiguous_character_or_idea_token": 23,
+    "conditional_or_unknown_role_fields": 224,
+    "dynamic_or_unresolved_effect_character": 161,
+    "missing_or_ambiguous_character_name": 1090,
+    "missing_or_duplicate_trait": 1,
+    "no_selected_nonzero_direct_modifier": 83,
+    "trait_ambiguous_between_character_roles": 24,
+    "unsupported_role_or_token": 1
+  }
+}

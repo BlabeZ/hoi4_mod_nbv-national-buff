@@ -1,0 +1,24 @@
+# Python build caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local credentials and temporary output
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+dist/
+nbv-test-workspace/

@@ -1,0 +1,163 @@
+add_namespace = nbv_faction_probe
+country_event = { id = nbv_faction_probe.1 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=rule role=member phase=inactive text=[NBVSource3852] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=rule role=member phase=inactive country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_3852|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_FACTION_TOOLTIP probe=rule role=member phase=inactive text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.2 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=rule role=member phase=active text=[NBVSource3852] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=rule role=member phase=active country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_3852|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_FACTION_TOOLTIP probe=rule role=member phase=active text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.3 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=rule role=member phase=removed text=[NBVSource3852] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=rule role=member phase=removed country=[ROOT.GetTag] total=[?ROOT.modifier@stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_3852|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 5 }
+  log = "NBV_FACTION_TOOLTIP probe=rule role=member phase=removed text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.4 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=scale role=member phase=inactive text=[NBVSource10785] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=scale role=member phase=inactive country=[ROOT.GetTag] total=[?ROOT.modifier@offensive_war_stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_10785|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 71 }
+  log = "NBV_FACTION_TOOLTIP probe=scale role=member phase=inactive text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.5 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=scale role=member phase=active text=[NBVSource10785] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=scale role=member phase=active country=[ROOT.GetTag] total=[?ROOT.modifier@offensive_war_stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_10785|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 71 }
+  log = "NBV_FACTION_TOOLTIP probe=scale role=member phase=active text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.6 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=scale role=member phase=removed text=[NBVSource10785] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=scale role=member phase=removed country=[ROOT.GetTag] total=[?ROOT.modifier@offensive_war_stability_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_10785|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 71 }
+  log = "NBV_FACTION_TOOLTIP probe=scale role=member phase=removed text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.7 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=reversed role=member phase=inactive text=[NBVSource20762] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=reversed role=member phase=inactive country=[ROOT.GetTag] total=[?ROOT.modifier@army_core_defence_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_20762|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_FACTION_TOOLTIP probe=reversed role=member phase=inactive text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.8 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=reversed role=member phase=active text=[NBVSource20762] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=reversed role=member phase=active country=[ROOT.GetTag] total=[?ROOT.modifier@army_core_defence_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_20762|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_FACTION_TOOLTIP probe=reversed role=member phase=active text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.9 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=reversed role=member phase=removed text=[NBVSource20762] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=reversed role=member phase=removed country=[ROOT.GetTag] total=[?ROOT.modifier@army_core_defence_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_20762|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 218 }
+  log = "NBV_FACTION_TOOLTIP probe=reversed role=member phase=removed text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.10 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=section role=member phase=inactive text=[NBVSource11086] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=section role=member phase=inactive country=[ROOT.GetTag] total=[?ROOT.modifier@required_garrison_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_11086|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 80 }
+  log = "NBV_FACTION_TOOLTIP probe=section role=member phase=inactive text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.11 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=section role=member phase=active text=[NBVSource11086] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=section role=member phase=active country=[ROOT.GetTag] total=[?ROOT.modifier@required_garrison_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_11086|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 80 }
+  log = "NBV_FACTION_TOOLTIP probe=section role=member phase=active text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.12 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_TEXT probe=section role=member phase=removed text=[NBVSource11086] END_FACTION_TEXT"
+  log = "NBV_FACTION_VALUE probe=section role=member phase=removed country=[ROOT.GetTag] total=[?ROOT.modifier@required_garrison_factor|4] driver=[?ROOT.faction_manifest_fulfillment|4] source=[?nbv_source_value_11086|4] END_FACTION_VALUE"
+  set_temp_variable = { nbv_entry_id = 80 }
+  log = "NBV_FACTION_TOOLTIP probe=section role=member phase=removed text=[NBVRowTooltip] END_FACTION_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.13 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=both_fascist role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=both_fascist role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=both_fascist role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.14 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=leader_democratic role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=leader_democratic role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=leader_democratic role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.15 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=member_neutral role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=member_neutral role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=member_neutral role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.16 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=leader_fascist role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=leader_fascist role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=leader_fascist role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.17 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=member_democratic role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=member_democratic role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=member_democratic role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}
+country_event = { id = nbv_faction_probe.18 hidden = yes is_triggered_only = yes
+ immediate = {
+  force_update_dynamic_modifier = yes
+  log = "NBV_FACTION_LEGACY_TEXT phase=member_left role=member text=[NBVSource10371] END_FACTION_LEGACY_TEXT"
+  log = "NBV_FACTION_LEGACY phase=member_left role=member country=[ROOT.GetTag] value=[?ROOT.modifier@faction_trade_opinion_factor|4] source=[?nbv_source_value_10371|4] END_FACTION_LEGACY"
+  set_temp_variable = { nbv_entry_id = 57 }
+  log = "NBV_FACTION_LEGACY_TOOLTIP phase=member_left role=member text=[NBVRowTooltip] END_FACTION_LEGACY_TOOLTIP"
+ }
+}

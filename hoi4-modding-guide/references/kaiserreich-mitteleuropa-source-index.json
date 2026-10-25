@@ -1,0 +1,526 @@
+{
+  "analysed_date": "2026-10-24",
+  "method": "Local screenshot and static source inspection; no runtime test",
+  "mod_name": "Kaiserreich",
+  "workshop_id": "1521695605",
+  "declared_mod_version": "1.7",
+  "declared_supported_version": "1.19.3.*",
+  "screenshots": [
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\截图1.png",
+      "sha256": "0AF45848F9309FEAC16CC0CF7D5AA4AD9E623981BDE33D80BADB0EC0D9F0D883"
+    },
+    {
+      "path": "D:\\projects\\hoi4_mod\\1\\截图2.png",
+      "sha256": "2087A9FFF15C4F760F473FBEE11090EEB474F131A49E74D30F407E9A509F8697"
+    }
+  ],
+  "source_files": [
+    {
+      "role": "mod_descriptor",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\descriptor.mod",
+      "line_count": 86,
+      "bytes": 3005,
+      "sha256": "294921349C0BCE33C972B428D4E3C7A0352935247FD1118C2212BA5F3D85F6FC",
+      "symbols": [
+        {
+          "symbol": "version=",
+          "line": 83,
+          "text": "version=\"1.7\""
+        },
+        {
+          "symbol": "version=",
+          "line": 84,
+          "text": "supported_version=\"1.19.3.*\""
+        },
+        {
+          "symbol": "supported_version=",
+          "line": 84,
+          "text": "supported_version=\"1.19.3.*\""
+        },
+        {
+          "symbol": "remote_file_id=",
+          "line": 86,
+          "text": "remote_file_id=\"1521695605\""
+        }
+      ]
+    },
+    {
+      "role": "layout",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\interface\\kaiserreich\\gui_mitteleuropa.gui",
+      "line_count": 542,
+      "bytes": 13864,
+      "sha256": "0FB3C105D26412B659FE4DA87CE113FFCC25B89A02C8E633D03D617A2138E61C",
+      "symbols": [
+        {
+          "symbol": "name = \"mitteleuropa_open_button_window\"",
+          "line": 14,
+          "text": "name = \"mitteleuropa_open_button_window\""
+        },
+        {
+          "symbol": "name = \"mitteleuropa_open_button\"",
+          "line": 29,
+          "text": "name = \"mitteleuropa_open_button\""
+        },
+        {
+          "symbol": "name = \"mitteleuropa_window\"",
+          "line": 40,
+          "text": "name = \"mitteleuropa_window\""
+        },
+        {
+          "symbol": "name = \"button_close\"",
+          "line": 80,
+          "text": "name = \"button_close\""
+        },
+        {
+          "symbol": "name = \"agenda_list_grid\"",
+          "line": 349,
+          "text": "name = \"agenda_list_grid\""
+        },
+        {
+          "symbol": "name = \"agenda_entry\"",
+          "line": 407,
+          "text": "name = \"agenda_entry\""
+        }
+      ]
+    },
+    {
+      "role": "scripted_gui",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_guis\\germany_mitteleuropa.txt",
+      "line_count": 557,
+      "bytes": 17751,
+      "sha256": "26F5378CDA43AF8AE5E2F83CC2B92621B99709F6DCB9DF4DBD01DAF2F622AEAB",
+      "symbols": [
+        {
+          "symbol": "parent_window_name = raid_filter",
+          "line": 7,
+          "text": "parent_window_name = raid_filter"
+        },
+        {
+          "symbol": "mitteleuropa_open_button_click =",
+          "line": 29,
+          "text": "mitteleuropa_open_button_click = {"
+        },
+        {
+          "symbol": "mitteleuropa_open_button_click =",
+          "line": 49,
+          "text": "mitteleuropa_open_button_click = {"
+        },
+        {
+          "symbol": "mitteleuropa_window =",
+          "line": 55,
+          "text": "mitteleuropa_window = {"
+        },
+        {
+          "symbol": "dynamic_lists =",
+          "line": 70,
+          "text": "dynamic_lists = {"
+        },
+        {
+          "symbol": "button_close_click =",
+          "line": 376,
+          "text": "button_close_click = {"
+        },
+        {
+          "symbol": "button_close_click =",
+          "line": 514,
+          "text": "button_close_click = {"
+        },
+        {
+          "symbol": "agenda_button_click =",
+          "line": 83,
+          "text": "agenda_button_click = {"
+        },
+        {
+          "symbol": "agenda_button_click =",
+          "line": 422,
+          "text": "agenda_button_click = {"
+        },
+        {
+          "symbol": "properties =",
+          "line": 533,
+          "text": "properties = {"
+        }
+      ]
+    },
+    {
+      "role": "triggers",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_triggers\\MIT triggers (Mitteleuropa).txt",
+      "line_count": 45,
+      "bytes": 1041,
+      "sha256": "79AB0D3CB42E723D49D9EF6068CCF9FE0CD52C7EF69BC5DB2C29642018DD831E",
+      "symbols": [
+        {
+          "symbol": "MIT_is_active =",
+          "line": 1,
+          "text": "MIT_is_active = {"
+        },
+        {
+          "symbol": "MIT_interface_is_open =",
+          "line": 43,
+          "text": "MIT_interface_is_open = {"
+        }
+      ]
+    },
+    {
+      "role": "membership",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_triggers\\GER triggers (Germany).txt",
+      "line_count": 421,
+      "bytes": 10227,
+      "sha256": "5DA7B9E06E8412EFF65EB57D3B483CC3721557AA3018F392DC038E1C97126AEE",
+      "symbols": [
+        {
+          "symbol": "GER_is_in_mitteleuropa =",
+          "line": 95,
+          "text": "GER_is_in_mitteleuropa = {"
+        }
+      ]
+    },
+    {
+      "role": "effects",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_effects\\MIT effects (Mitteleuropa).txt",
+      "line_count": 1115,
+      "bytes": 31744,
+      "sha256": "66ADA39A8D0E1CD0D3C8F419CF04AB4BF9D338B246CEE37FDCADB35ADF2D61B7",
+      "symbols": [
+        {
+          "symbol": "MIT_update_gui = {",
+          "line": 819,
+          "text": "MIT_update_gui = {"
+        },
+        {
+          "symbol": "MIT_add_agenda_score = {",
+          "line": 823,
+          "text": "MIT_add_agenda_score = {"
+        },
+        {
+          "symbol": "MIT_subtract_agenda_score = {",
+          "line": 844,
+          "text": "MIT_subtract_agenda_score = {"
+        },
+        {
+          "symbol": "MIT_update_agenda_list = {",
+          "line": 981,
+          "text": "MIT_update_agenda_list = {"
+        },
+        {
+          "symbol": "MIT_open_mitteleuropa_panel = {",
+          "line": 1064,
+          "text": "MIT_open_mitteleuropa_panel = {"
+        },
+        {
+          "symbol": "MIT_close_mitteleuropa_panel = {",
+          "line": 1074,
+          "text": "MIT_close_mitteleuropa_panel = {"
+        },
+        {
+          "symbol": "MIT_apply_voting_cooldown = {",
+          "line": 1084,
+          "text": "MIT_apply_voting_cooldown = {"
+        },
+        {
+          "symbol": "MIT_support_agenda = {",
+          "line": 1089,
+          "text": "MIT_support_agenda = {"
+        },
+        {
+          "symbol": "MIT_stop_supporting_agenda = {",
+          "line": 1096,
+          "text": "MIT_stop_supporting_agenda = {"
+        }
+      ]
+    },
+    {
+      "role": "events",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\events\\MIT events (Mitteleuropa).txt",
+      "line_count": 1312,
+      "bytes": 36982,
+      "sha256": "63F823D5E82746F5DD8289F5B4F28EE0C9449F74BF0DF173A01EE7E1615C20A5",
+      "symbols": [
+        {
+          "symbol": "id = germany_mitteleuropa_events.1001",
+          "line": 1053,
+          "text": "id = germany_mitteleuropa_events.1001"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 805,
+          "text": "id = germany_mitteleuropa_events.10"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1019,
+          "text": "id = germany_mitteleuropa_events.1000"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1053,
+          "text": "id = germany_mitteleuropa_events.1001"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1080,
+          "text": "id = germany_mitteleuropa_events.1002"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1105,
+          "text": "id = germany_mitteleuropa_events.1003"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1130,
+          "text": "id = germany_mitteleuropa_events.1004"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1156,
+          "text": "id = germany_mitteleuropa_events.1005"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1182,
+          "text": "id = germany_mitteleuropa_events.1006"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1208,
+          "text": "id = germany_mitteleuropa_events.1007"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1233,
+          "text": "id = germany_mitteleuropa_events.1008"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1260,
+          "text": "id = germany_mitteleuropa_events.1009"
+        },
+        {
+          "symbol": "id = germany_mitteleuropa_events.10",
+          "line": 1287,
+          "text": "id = germany_mitteleuropa_events.1010"
+        },
+        {
+          "symbol": "set_global_flag = MIT_event_chain_ongoing",
+          "line": 25,
+          "text": "set_global_flag = MIT_event_chain_ongoing"
+        },
+        {
+          "symbol": "clr_global_flag = MIT_event_chain_ongoing",
+          "line": 813,
+          "text": "clr_global_flag = MIT_event_chain_ongoing"
+        }
+      ]
+    },
+    {
+      "role": "dynamic_text",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\scripted_localisation\\MIT scripted_loc (Mitteleuropa).txt",
+      "line_count": 171,
+      "bytes": 3935,
+      "sha256": "1D10140423DD598EA2FBDBD35889A22AC2574963C5A79506CA81B53459AF2223",
+      "symbols": [
+        {
+          "symbol": "GetMitteleuropaNextElection",
+          "line": 31,
+          "text": "name = GetMitteleuropaNextElection"
+        },
+        {
+          "symbol": "GetMitteleuropaAgendaScore",
+          "line": 64,
+          "text": "name = GetMitteleuropaAgendaScore"
+        }
+      ]
+    },
+    {
+      "role": "on_actions",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\on_actions\\on_actions_Germany.txt",
+      "line_count": 555,
+      "bytes": 14869,
+      "sha256": "412B5BD768561E7DD6E6913DBFCAADDFD4FABD58A84B6093F1462890930BB7C8",
+      "symbols": [
+        {
+          "symbol": "on_daily_GER",
+          "line": 532,
+          "text": "on_daily_GER = {"
+        },
+        {
+          "symbol": "MIT_update_gui",
+          "line": 539,
+          "text": "MIT_update_gui = yes"
+        }
+      ]
+    },
+    {
+      "role": "score_formula",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\mtth\\GER_mtth.txt",
+      "line_count": 23,
+      "bytes": 510,
+      "sha256": "EBA4C85BDA5C788D576A72E12C29EBB020093929480609ED74E4296722874977",
+      "symbols": [
+        {
+          "symbol": "mitteleuropa_agenda_score_calculation",
+          "line": 5,
+          "text": "mitteleuropa_agenda_score_calculation = {"
+        }
+      ]
+    },
+    {
+      "role": "agenda_objects",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\characters\\MIT characters.txt",
+      "line_count": 91,
+      "bytes": 1667,
+      "sha256": "812DA0F6EA34B33A09F3A1024E31CB094D17ED007D2DBA1AF33B2DE0693D5433",
+      "symbols": []
+    },
+    {
+      "role": "initialisation",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\history\\countries\\GER - Germany.txt",
+      "line_count": 1201,
+      "bytes": 39196,
+      "sha256": "0F4B6514580748CC6BA4CC849BAB8631405894AA4AB9C2BF0888E650913FD4DF",
+      "symbols": [
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1115,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1120,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1125,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1129,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1133,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1137,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        },
+        {
+          "symbol": "global.MIT_agendas",
+          "line": 1199,
+          "text": "add_to_array = { global.MIT_agendas = THIS }"
+        }
+      ]
+    },
+    {
+      "role": "chairman_alias",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\common\\country_tag_aliases\\tag_aliases.txt",
+      "line_count": 181,
+      "bytes": 3185,
+      "sha256": "472D1C303D6ADD5E2F309668DC1CE62F799EF60E58C16C2DF70CAC79867B31C1",
+      "symbols": [
+        {
+          "symbol": "GER.economic_sphere:members^0",
+          "line": 152,
+          "text": "variable = GER.economic_sphere:members^0"
+        }
+      ]
+    },
+    {
+      "role": "entrance_sprite",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\interface\\ideas.gfx",
+      "line_count": 7676,
+      "bytes": 237411,
+      "sha256": "DA39E495AEF9924E8C129C4ECC2079725B14015D331B2AB0DC0497986AAAD937",
+      "symbols": [
+        {
+          "symbol": "GFX_idea_ger_revive_the_kaiserreich",
+          "line": 179,
+          "text": "name = \"GFX_idea_ger_revive_the_kaiserreich\""
+        }
+      ]
+    },
+    {
+      "role": "window_sprites",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\interface\\kaiserreich\\gui_mitteleuropa.gfx",
+      "line_count": 127,
+      "bytes": 4349,
+      "sha256": "4BE86BDAEEF9A8FFF77A3098EB579127F093FE44889A8F2CEAA01197CC49D646",
+      "symbols": [
+        {
+          "symbol": "GFX_header_extra_wide_bg",
+          "line": 4,
+          "text": "name = \"GFX_header_extra_wide_bg\""
+        }
+      ]
+    },
+    {
+      "role": "english_text",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\1521695605\\localisation\\english\\KR_country_specific\\MIT - Mitteleuropa l_english.yml",
+      "line_count": 343,
+      "bytes": 43217,
+      "sha256": "AC8B493A4CB7DC9A6347FED34FF2A54FBD5D1106891A2F5ABFA90E8A9230A890",
+      "symbols": [
+        {
+          "symbol": "mitteleuropa_title:",
+          "line": 4,
+          "text": "mitteleuropa_title: \"Mitteleuropa\""
+        },
+        {
+          "symbol": "agenda_score_value_default:",
+          "line": 31,
+          "text": "agenda_score_value_default: \"[?MIT_supported_agenda:agenda_score]\""
+        },
+        {
+          "symbol": "agenda_score_value_fallback:",
+          "line": 32,
+          "text": "agenda_score_value_fallback: \"[?mtth:mitteleuropa_agenda_score_calculation]\""
+        }
+      ]
+    },
+    {
+      "role": "chinese_text",
+      "path": "E:\\Steam\\steamapps\\workshop\\content\\394360\\2946487287\\localisation\\simp_chinese\\KR_country_specific\\MIT - Mitteleuropa l_simp_chinese.yml",
+      "line_count": 246,
+      "bytes": 36619,
+      "sha256": "57EEF7928EC6EAFE21470FF4F743A70345A22B59AFBA3945BFBDEC7E1374B933",
+      "symbols": [
+        {
+          "symbol": "mitteleuropa_title:",
+          "line": 2,
+          "text": "mitteleuropa_title: \"中欧同盟\""
+        },
+        {
+          "symbol": "mitteleuropa_leader_title:",
+          "line": 5,
+          "text": "mitteleuropa_leader_title: \"主席\""
+        },
+        {
+          "symbol": "agenda_score_title:",
+          "line": 12,
+          "text": "agenda_score_title: \"议程分数\""
+        }
+      ]
+    },
+    {
+      "role": "vanilla_parent",
+      "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\interface\\military_raids\\country_raids_view.gui",
+      "line_count": 1061,
+      "bytes": 23690,
+      "sha256": "248E68D217E76B3FA8E015CFFC3748F5FEE3964A9E0A8B6F054969879369767D",
+      "symbols": [
+        {
+          "symbol": "name = \"raid_filter\"",
+          "line": 1019,
+          "text": "name = \"raid_filter\""
+        }
+      ]
+    }
+  ]
+}

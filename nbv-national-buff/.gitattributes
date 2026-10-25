@@ -1,0 +1,9 @@
+# Preserve original line endings and encoding, especially HOI4 UTF-8 BOM files.
+* -text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.dds binary
+*.tga binary
+*.zip binary

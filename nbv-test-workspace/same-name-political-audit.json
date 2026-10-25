@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "game_version": "1.19.3.0",
+  "read_only": true,
+  "scope": [
+    "政治",
+    "工业",
+    "情报"
+  ],
+  "collision_group_count": 10,
+  "omitted_key_count_before_current_change": 11,
+  "confirmed_distinct_global_omissions": 8,
+  "includes_requested_fixed_slots": true,
+  "remaining_confirmed_distinct_global_omissions_after_requested_add": 7,
+  "distinct_keys_needing_formula_validation": 2,
+  "out_of_scope_state_keys": 1,
+  "warning": "静态证据核查；未进行各修正独立注入／公式对照，不宣称所有显示格式与效果算法已引擎验证。",
+  "records": [
+    {
+      "name": "可征募人口",
+      "category": "政治",
+      "omitted_key": "conscription_factor",
+      "omitted_id": 2,
+      "displayed_key": "conscription",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct",
+      "distinction": "国家的征募人口比例乘数；conscription 是征募人口基础比例的直接增量。两者都显示百分号，但不能合并。",
+      "proposed_distinct_label": "可征募人口（比例加成）",
+      "format": {
+        "format_code": "+=%1",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 678,
+          "end_line": 683,
+          "excerpt": " MODIFIER_CONSCRIPTION_FACTOR: \"Recruitable Population\"\n MODIFIER_CONSCRIPTION_FACTOR_DESC: \"Modifies how much your manpower you can access from states.\"\n conscription_tt: \" $MODIFIER_CONSCRIPTION_FACTOR$: $RIGHT|Y=%1$\"\n MODIFIER_CONSCRIPTION_TOTAL_FACTOR: \"Recruitable Population Factor\"\n MODIFIER_CONSCRIPTION_TOTAL_FACTOR_DESC: \"Modifies how much your manpower you can access from states.\"\n conscription_factor_tt: \" $MODIFIER_CONSCRIPTION_TOTAL_FACTOR$: $RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\chile.txt",
+          "line": 525,
+          "end_line": 530,
+          "excerpt": "\t\t\tmodifier = {\n\t\t\t\tcommunism_drift = 0.02\n\t\t\t\tconscription_factor = 0.1\n\t\t\t\tconscription = 0.025\n\t\t\t\twar_support_factor = 0.05\n\t\t\t}"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2272,
+          "end_line": 2280,
+          "excerpt": "## conscription\n\n* Number with 2 decimal places\n* **Categories**: country, war_production\n\n## conscription_factor\n\n* Number with 0 decimal places\n* **Categories**: country, war_production"
+        }
+      ]
+    },
+    {
+      "name": "可征募人口",
+      "category": "政治",
+      "omitted_key": "recruitable_population_factor",
+      "omitted_id": 79,
+      "displayed_key": "conscription",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "out_of_scope_state",
+      "distinction": "州对象的可征募人口系数。注册类别只有 state；原版用于州动态修正、顺从度等。按用户排除州／地方对象规则继续排除，不能作为国家遗漏补入。",
+      "proposed_distinct_label": null,
+      "format": {
+        "format_code": "+=%2",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 4552,
+          "end_line": 4555,
+          "excerpt": "## recruitable_population_factor\n\n* Number with 2 decimal places\n* **Categories**: state"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "line": 269,
+          "end_line": 286,
+          "excerpt": "ETH_state_decentralization_dynamic_modifier = {\n\tenable = { always = yes  }\n\tremove_trigger = {\n\t\tROOT = { \n\t\t\tNOT = {\n\t\t\t\tOWNER = {\n\t\t\t\t\toriginal_tag = ETH\n\t\t\t\t}\n\t\t\t} # ROOT refers to the state on which the modifier is added\n\t\t}\n\t}\n\ticon = GFX_modifiers_ETH_state_decentralization\n\tlocal_building_slots_factor = ETH_state_decentralization_building_slots\n\tproduction_speed_infrastructure_factor = ETH.ETH_state_decentralization_infrastructure\n\tstate_resources_factor = ETH.ETH_state_decentralization_resources\n\tarmy_defence_factor = ETH.ETH_state_decentralization_defence\n\tarmy_attack_factor = ETH.ETH_state_decentralization_attack\n\trecruitable_population_factor = ETH.ETH_state_decentralization_recruitable_population"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\resistance_compliance_modifiers\\compliance_modifiers.txt",
+          "line": 39,
+          "end_line": 45,
+          "excerpt": "\ticon = \"GFX_occupation_compliance_modifier_strip:4\"\n\tsmall_icon = \"GFX_occupation_compliance_modifier_small_strip:4\"\n\tthreshold = 60\n\tmargin = 2\n\tstate_modifier = {\n\t\trecruitable_population_factor = 0.2\n\t}"
+        }
+      ]
+    },
+    {
+      "name": "志愿军陆军师数量上限",
+      "category": "政治",
+      "omitted_key": "send_volunteer_factor",
+      "omitted_id": 86,
+      "displayed_key": "send_volunteer_size",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct",
+      "distinction": "志愿军可派遣师数的比例加成；已显示的 size 是额外师数固定值。实际原版赋值分别有 2.0 比例与 3 个师。精确取整顺序未做引擎测试。",
+      "proposed_distinct_label": "志愿军陆军师数量上限（百分比）",
+      "format": {
+        "format_code": "+=%1",
+        "value_type": "percentage",
+        "confidence": "source_inferred",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 731,
+          "end_line": 733,
+          "excerpt": " MODIFIER_SEND_VOLUNTEER_SIZE: \"Max volunteer force divisions\"\n MODIFIER_SEND_VOLUNTEER_FACTOR: \"Max volunteer force divisions\"\n MODIFIER_SEND_VOLUNTEER_DIVISIONS_REQUIRED: \"Divisions required for sending volunteer force\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\taog_traits.txt",
+          "line": 272,
+          "end_line": 280,
+          "excerpt": "\t\twar_support_factor = 0.05\n\t}\n\n\tINS_uncompromising_idealist = {\n\t\trandom = no\n\n\t\tjustify_war_goal_time = -0.75\n\t\tsend_volunteer_factor = 2.0\n\t\twar_support_factor = 0.1"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\taog_traits.txt",
+          "line": 478,
+          "end_line": 487,
+          "excerpt": "\t}\n\n\tSIA_great_war_expeditionary_veteran = {\n\t\trandom = no\n\t\tsprite = 13\n\t\tarmy_defence_factor = 0.05\n\t\tmax_dig_in_factor = 0.1\n\n\t\tsend_volunteer_size = 3\n\t\tsend_volunteers_tension = -1"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 4715,
+          "end_line": 4723,
+          "excerpt": "## send_volunteer_factor\n\n* Number with 1 decimal places\n* **Categories**: country\n\n## send_volunteer_size\n\n* Number with 0 decimal places\n* **Categories**: country"
+        }
+      ]
+    },
+    {
+      "name": "战争贡献度自治度增长",
+      "category": "政治",
+      "omitted_key": "autonomy_gain_warscore_factor",
+      "omitted_id": 41,
+      "displayed_key": "autonomy_gain_warscore",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "distinct_key_formula_unverified",
+      "distinction": "两个独立已注册键，原版都在使用且都显示百分比；不能称为固定值／百分比配对。当前源码证据不足以确认两者在自治度增长计算中的相加／相乘顺序，需保留独立键并在接入前进一步验证。",
+      "proposed_distinct_label": "战争贡献度自治度增长（系数）",
+      "format": {
+        "format_code": "+=%2",
+        "value_type": "percentage",
+        "confidence": "source_inferred",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2057,
+          "end_line": 2065,
+          "excerpt": "## autonomy_gain_warscore\n\n* Number with 2 decimal places\n* **Categories**: autonomy\n\n## autonomy_gain_warscore_factor\n\n* Number with 2 decimal places\n* **Categories**: autonomy"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 922,
+          "end_line": 925,
+          "excerpt": " MODIFIER_AUTONOMY_GAIN_WARSCORE: \"Freedom gain by war score\"\n MODIFIER_AUTONOMY_GAIN_WARSCORE_DESC: \"Effect on freedom gained from war participation\"\n MODIFIER_AUTONOMY_GAIN_WARSCORE_FACTOR: \"Freedom gain by war score\"\n MODIFIER_AUTONOMY_GAIN_WARSCORE_FACTOR_DESC: \"Effect on freedom gained from war participation\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 1055,
+          "end_line": 1055,
+          "excerpt": " autonomy_gain_warscore_tt: \" $MODIFIER_AUTONOMY_GAIN_WARSCORE$ $RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13038,
+          "end_line": 13044,
+          "excerpt": "\t\tsprite = 13\n\t\trandom = no\n\t\tpolitical_power_factor = -0.05\n\t\twar_support_factor = 0.05\n\t\tautonomy_gain_trade_factor = -0.25\n\t\tautonomy_gain_warscore_factor = -0.15\n\t}"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\factions\\goals\\faction_manifests.txt",
+          "line": 565,
+          "end_line": 571,
+          "excerpt": "\t\t\t\tmin = @manifest_fulfilled_value\n\t\n\t\t\t\tmodifier = {\n\t\t\t\t\tsubjects_autonomy_gain = -0.50\n\t\t\t\t\tautonomy_gain_warscore = -0.1\n\t\t\t\t}\n\t\t\t}"
+        }
+      ]
+    },
+    {
+      "name": "附属国人力要求",
+      "category": "政治",
+      "omitted_key": "autonomy_manpower_share_from_subjects",
+      "omitted_id": 43,
+      "displayed_key": "autonomy_manpower_share",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct",
+      "distinction": "宗主国对附属国人力要求的修正，区别于附属国自身提供人力份额的修正。英文名称和描述不同，日方共荣圈与领袖使用 from_subjects，自治等级对附属国设置 share。两者均为比例。",
+      "proposed_distinct_label": "附属国人力要求（宗主国）",
+      "format": {
+        "format_code": "Y=%1",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 892,
+          "end_line": 894,
+          "excerpt": " MODIFIER_AUTONOMY_MANPOWER_SHARE: \"Subject manpower requirement\"\n autonomy_manpower_share_tt: \" $MODIFIER_AUTONOMY_MANPOWER_SHARE$: $RIGHT|Y=%1$\"\n MODIFIER_AUTONOMY_MANPOWER_SHARE_DESC: \"Amount of manpower required by subject forces\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 2605,
+          "end_line": 2607,
+          "excerpt": " MODIFIER_AUTONOMY_MANPOWER_SHARE_FROM_SUBJECTS: \"Manpower Requirement from Subjects\"\n MODIFIER_AUTONOMY_MANPOWER_SHARE_FROM_SUBJECTS_DESC: \"Amount of manpower demanded from subject forces\"\n autonomy_manpower_share_from_subjects_tt: \" $MODIFIER_AUTONOMY_MANPOWER_SHARE_FROM_SUBJECTS$: $RIGHT|Y=%1$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 1552,
+          "end_line": 1560,
+          "excerpt": "\t}\n\n\tJAP_showa_no_youkai = {\n\t\trandom = no\n\t\tsprite = 13 \n\n\t\tsubjects_autonomy_gain = -0.1\n\t\tautonomy_manpower_share_from_subjects = 0.15\n\t\tindustrial_factory_donations = 2"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\SEA_dynamic_modifiers.txt",
+          "line": 441,
+          "end_line": 450,
+          "excerpt": "JAP_east_asia_co_prosperity_sphere_dm = {\n\ticon = GFX_idea_JAP_east_asian_co_prosperity\n\tenable = { always = yes }\n\tremove_trigger = {\n\t\thas_government = communism\n\t}\n\n\tautonomy_manpower_share_from_subjects = JAP_east_asia_co_prosperity_sphere_autonomy_manpower_share_from_subjects\n\tresources_to_overlord_factor = JAP_east_asia_co_prosperity_sphere_resources_to_overlord_factor\n\tproduction_speed_rail_way_factor = JAP_east_asia_co_prosperity_sphere_production_speed_rail_way_factor"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\autonomous_states\\puppet.txt",
+          "line": 17,
+          "end_line": 24,
+          "excerpt": "\t\tcontributes_operatives = no\n\t\tcan_create_collaboration_government = no\n\t}\n\t\n\tmodifier = {\n\t\tautonomy_manpower_share = 0.9\n\t\tcan_master_build_for_us = 1\n\t\textra_trade_to_overlord_factor = 1.0"
+        }
+      ]
+    },
+    {
+      "name": "改善关系获得的评价",
+      "category": "政治",
+      "omitted_key": "opinion_gain_monthly_factor",
+      "omitted_id": 73,
+      "displayed_key": "opinion_gain_monthly",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct",
+      "distinction": "改善关系获得评价的比例加成；已显示键为每月评价固定点数。原版分别赋值 -0.15 与 0.25，描述明确 factor 改善增长效率。",
+      "proposed_distinct_label": "改善关系获得的评价（百分比）",
+      "format": {
+        "format_code": "+=%2",
+        "value_type": "percentage",
+        "confidence": "source_inferred",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 426,
+          "end_line": 428,
+          "excerpt": " MODIFIER_OPINION_GAIN_MONTHLY: \"Improve relations opinion\"\n MODIFIER_OPINION_GAIN_MONTHLY_FACTOR: \"Improve relations opinion\"\n MODIFIER_OPINION_GAIN_MONTHLY_FACTOR_DESC: \"Increases opinion gain with other nations when using §HImprove relations§!\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 4268,
+          "end_line": 4276,
+          "excerpt": "## opinion_gain_monthly\n\n* Number with 1 decimal places\n* **Categories**: country\n\n## opinion_gain_monthly_factor\n\n* Number with 2 decimal places\n* **Categories**: country"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 2634,
+          "end_line": 2641,
+          "excerpt": "\t}\n\n\timperial_connections = {\n\t\trandom = no\n\t\tpolitical_power_factor = -0.1\n\t\topinion_gain_monthly_factor = -0.15\n\t\tpolitical_advisor_cost_factor = -0.25\n\t\ttrade_laws_cost_factor = -0.25"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 6070,
+          "end_line": 6085,
+          "excerpt": "\t\tplanning_speed = -0.2\n\t\tcoordination_bonus = -0.2\n\t}\n\n\ttrusty_no_lar = {\n\t\ttrade_opinion_factor = 0.2\n\t\topinion_gain_monthly = 0.25\n\t\tforeign_subversive_activites = 0.3\n\t}\n\n\ttrusty = {\n\t\ttrade_opinion_factor = 0.2\n\t\topinion_gain_monthly = 0.25\n\t\toperation_coup_government_outcome = 0.25\n\t\toperation_infiltrate_outcome = 0.25\n\t\toperation_boost_resistance_outcome = 0.35"
+        }
+      ]
+    },
+    {
+      "name": "相同意识形态每月评价",
+      "category": "政治",
+      "omitted_key": "opinion_gain_monthly_same_ideology_factor",
+      "omitted_id": 75,
+      "displayed_key": "opinion_gain_monthly_same_ideology",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct",
+      "distinction": "相同意识形态每月评价的比例加成；已显示键为固定评价点。原版精确模板明确百分比，固定键在里宾特洛甫特质中赋值 5。",
+      "proposed_distinct_label": "相同意识形态每月评价（百分比）",
+      "format": {
+        "format_code": "+=%1",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 429,
+          "end_line": 433,
+          "excerpt": " MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY: \"Same ideology monthly opinion\"\n MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY_FACTOR: \"Same ideology monthly opinion\"\n MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY_DESC: \"Monthly opinion change if same ideology.\"\n MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY_FACTOR_DESC: \"Monthly opinion change if same ideology.\"\n opinion_gain_monthly_same_ideology_factor_tt: \" $MODIFIER_OPINION_GAIN_MONTHLY_SAME_IDEOLOGY_FACTOR$: $RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 13377,
+          "end_line": 13384,
+          "excerpt": "\t\tsubversive_activites_upkeep = -0.25\n\t\tdrift_defence_factor = 0.25\n\t\tjustify_war_goal_time = -0.15\n\t\tfaction_trade_opinion_factor = 0.1\n\t\topinion_gain_monthly_same_ideology = 5\n\n\t\tai_will_do = {\n\t\t\tfactor = 1"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\chile.txt",
+          "line": 710,
+          "end_line": 715,
+          "excerpt": "\t\t\tmodifier = {\n\t\t\t\ttrade_laws_cost_factor = -0.25\n\t\t\t\teconomy_cost_factor = -0.25\n\t\t\t\topinion_gain_monthly_same_ideology_factor = 0.4\n\t\t\t\tproduction_speed_industrial_complex_factor = 0.1\n\t\t\t}"
+        }
+      ]
+    },
+    {
+      "name": "地区最大工厂数",
+      "category": "工业",
+      "omitted_key": "global_building_slots",
+      "omitted_id": 142,
+      "displayed_key": "global_building_slots_factor",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct_requested_add",
+      "distinction": "所有州共享建筑位上限的固定数量加成；已显示键为百分比加成。原版精确模板分别 +=0 与 +=%1，实际 fixed 赋值含 2。",
+      "proposed_distinct_label": "地区最大工厂数（固定值）",
+      "format": {
+        "format_code": "+=0",
+        "value_type": "number",
+        "confidence": "confirmed",
+        "display_multiplier": 1
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 9,
+          "end_line": 13,
+          "excerpt": " MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR: \"Max Factories in a State\"\n MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR_DESC: \"Modifies number of shared building slots in all States.\"\n global_building_slots_factor_tt: \" $MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: $RIGHT|+=%1$\"\n MODIFIER_GLOBAL_BUILDING_SLOTS: \"Max Factories in a State\"\n global_building_slots_tt: \" $MODIFIER_GLOBAL_BUILDING_SLOTS$: $RIGHT|+=0$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\british_raj_goe.txt",
+          "line": 1873,
+          "end_line": 1879,
+          "excerpt": "\t\t\tmodifier = {\n\t\t\t\tconscription = 0.05\n\t\t\t\texperience_gain_army = 0.3\n\t\t\t\ttraining_time_army_factor = -0.2\n\t\t\t\tproduction_speed_buildings_factor = 0.2\n\t\t\t\tglobal_building_slots = 2\n\t\t\t}"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2852,
+          "end_line": 2860,
+          "excerpt": "## global_building_slots\n\n* Number with 0 decimal places\n* **Categories**: country, war_production\n\n## global_building_slots_factor\n\n* Number with 0 decimal places\n* **Categories**: country, war_production"
+        }
+      ]
+    },
+    {
+      "name": "加强抵抗组织效率",
+      "category": "情报",
+      "omitted_key": "operation_boost_resistance_outcome",
+      "omitted_id": 548,
+      "displayed_key": "boost_resistance_factor",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "distinct_key_formula_unverified",
+      "distinction": "两个单独赋值的修正键，英文也区分 effectiveness 与 efficiency；但当前行动配置的 outcome_modifiers 显式列出 boost_resistance_factor，未列出 operation_boost_resistance_outcome。后者是否由引擎自动接入、是否与前者处于同一计算通道未验证，不能仅凭中文同名断言别名或已覆盖。",
+      "proposed_distinct_label": "加强抵抗组织行动成果",
+      "format": {
+        "format_code": "+=%0",
+        "value_type": "percentage",
+        "confidence": "source_inferred",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 1457,
+          "end_line": 1457,
+          "excerpt": " MODIFIER_BOOST_RESISTANCE_FACTOR: \"Strengthen Resistance efficiency\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 1747,
+          "end_line": 1747,
+          "excerpt": " operation_boost_resistance_outcome: \"Strengthen Resistance effectiveness\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 6078,
+          "end_line": 6088,
+          "excerpt": "\t}\n\n\ttrusty = {\n\t\ttrade_opinion_factor = 0.2\n\t\topinion_gain_monthly = 0.25\n\t\toperation_coup_government_outcome = 0.25\n\t\toperation_infiltrate_outcome = 0.25\n\t\toperation_boost_resistance_outcome = 0.35\n\t\toperation_targeted_sabotage_industry_outcome = 0.35\n\t\toperation_targeted_sabotage_resources_outcome = 0.35\n\t\toperation_targeted_sabotage_infrastructure_outcome = 0.35"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\intelligence_agency_upgrades\\intelligence_agency_upgrades.txt",
+          "line": 247,
+          "end_line": 252,
+          "excerpt": "\t\tlevel = {\n\t\t\tmodifier = {\n\t\t\t\ttarget_sabotage_factor = 0.25\n\t\t\t\tboost_resistance_factor = 0.25\n\t\t\t}\n\t\t}"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\operations\\00_operations.txt",
+          "line": 1390,
+          "end_line": 1395,
+          "excerpt": "\t}\n\trisk_chance = 0.2\n\texperience = 1.5\n\toutcome_extra_chance = 0.25\n\toutcome_modifiers = { boost_resistance_factor }\n\toutcome_execute = {"
+        }
+      ]
+    },
+    {
+      "name": "解密",
+      "category": "情报",
+      "omitted_key": "decryption_factor",
+      "omitted_id": 542,
+      "displayed_key": "decryption",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct_legacy_context",
+      "distinction": "旧式解密数值的比例加成；已显示键为解密等级／点数固定增量。基础科技为 decryption=1，且受未启用 La Resistance 条件限制；不是新版 decryption_power。",
+      "proposed_distinct_label": "解密（百分比）",
+      "format": {
+        "format_code": "+=%2",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 651,
+          "end_line": 654,
+          "excerpt": " MODIFIER_DECRYPTION: \"Decryption\"\n MODIFIER_DECRYPTION_DESC: \"Decryption will show information about units on the map and focus tree progression from other countries. A higher value than the enemy's encryption will give a decryption combat bonus\"\n MODIFIER_DECRYPTION_FACTOR: \"Decryption\"\n decryption_factor_tt: \" $MODIFIER_DECRYPTION_FACTOR$: $RIGHT|+=%2$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technologies\\electronic_mechanical_engineering.txt",
+          "line": 857,
+          "end_line": 864,
+          "excerpt": "\tbasic_decryption = {\n\n\t\t# decryption 1\n\t\tdecryption = 1\n\t\tallow_branch = {\n\t\t\tNOT = { has_dlc = \"La Resistance\" }\n\t\t}\n\t\tresearch_cost = 1.5"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2358,
+          "end_line": 2366,
+          "excerpt": "## decryption\n\n* Number with 2 decimal places\n* **Categories**: country, aggressive\n\n## decryption_factor\n\n* Number with 2 decimal places\n* **Categories**: country, aggressive"
+        }
+      ]
+    },
+    {
+      "name": "加密",
+      "category": "情报",
+      "omitted_key": "encryption_factor",
+      "omitted_id": 544,
+      "displayed_key": "encryption",
+      "reason": "Previously bound only the first key for the shared Chinese name.",
+      "status": "confirmed_distinct_legacy_context",
+      "distinction": "旧式加密数值的比例加成；已显示键为加密等级／点数固定增量。基础科技为 encryption=1；不是新版密码强度系数。",
+      "proposed_distinct_label": "加密（百分比）",
+      "format": {
+        "format_code": "+=%2",
+        "value_type": "percentage",
+        "confidence": "confirmed",
+        "display_multiplier": 100
+      },
+      "evidence": [
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\modifiers_l_english.yml",
+          "line": 647,
+          "end_line": 650,
+          "excerpt": " MODIFIER_ENCRYPTION: \"Encryption\"\n MODIFIER_ENCRYPTION_DESC: \"Encryption will hide information about units on the map and focus tree progression from other countries. A higher value than the enemy's decryption will negate enemy decryption combat bonus\"\n MODIFIER_ENCRYPTION_FACTOR: \"Encryption\"\n encryption_factor_tt: \" $MODIFIER_ENCRYPTION_FACTOR$: $RIGHT|+=%2$\""
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technologies\\electronic_mechanical_engineering.txt",
+          "line": 728,
+          "end_line": 739,
+          "excerpt": "\tbasic_encryption = {\n\n\t\t# encryption 1\n\t\tencryption = 1\n\t\t\n\t\tresearch_cost = 1\n\t\tstart_year = 1938\n\t\tallow_branch = {\n\t\t\tNOT = { has_dlc = \"La Resistance\" }\n\t\t}\n\t\tfolder = {\n\t\t\tname = electronics_folder"
+        },
+        {
+          "file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2453,
+          "end_line": 2461,
+          "excerpt": "## encryption\n\n* Number with 2 decimal places\n* **Categories**: country, defensive\n\n## encryption_factor\n\n* Number with 2 decimal places\n* **Categories**: country, defensive"
+        }
+      ]
+    }
+  ]
+}

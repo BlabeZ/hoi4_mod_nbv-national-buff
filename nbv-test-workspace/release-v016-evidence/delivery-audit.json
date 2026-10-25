@@ -1,0 +1,22 @@
+{
+  "version": "0.1.6",
+  "date": "2026-10-25T12:27:39.341923+08:00",
+  "local_descriptor": "C:\\Users\\1\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\nbv_national_buff.mod",
+  "descriptor_sha256": "74b739c07bcf0a5674812e4b516e382b7d7428491665c28faab3f4fe4c250265",
+  "source_manifest_sha256": "2a47fc16e78c2636c11286bc3bc5c556b19d03f56963987c1d7cd2a88696f749",
+  "icon_manifest_sha256": "af1fb5bc3d5a17f1a1ca75569f0b9ee5ef584af3e6f74a7cc87706c29f6253d7",
+  "engine_report_sha256": "d7c4d3a86e493a370eb5d24eb6eebb93d22c429ea0de81c70b81f9a83e6425e9",
+  "engine_test_version": "0.1.6",
+  "engine_checks_passed": true,
+  "launcher_sha256": "57f4cb119c9a90486394621cd6fb92f6d89a7dd9bb8887481935a9b2893a37cb",
+  "launcher_restored": true,
+  "user_playset_sha256": "e10307d5b2ff2accdf3856fe6a32f29bcc54dc58178ea3080d381dc7c3caa6dd",
+  "user_playset_modified_by_install": false,
+  "owned_test_process_stopped": true,
+  "original_mod_files_modified": false,
+  "ui_visual_verified": false,
+  "icon_resources_decoded": 352,
+  "icon_metric_coverage": 559,
+  "runtime_files_changed_after_engine_test": false,
+  "monitor_note": "The runner could not read the active writer with File.ReadAllText and timed out after the engine had completed. NBV_SMOKE_END and all checks were verified from the closed log. Runner now uses FileShare.ReadWrite."
+}

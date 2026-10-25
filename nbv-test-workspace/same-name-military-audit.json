@@ -1,0 +1,1709 @@
+{
+  "date": "2026-10-25",
+  "game_version": "1.19.3.0",
+  "scope": "Original 559-key registry; same Chinese-name military keys omitted by the display-layout first-binding policy.",
+  "production_mutations": false,
+  "limitations": [
+    "No native C++ source is shipped with the game.",
+    "No engine gameplay-formula differential tests were run in this read-only audit.",
+    "Separate registered keys and actual assignments prove they must not be silently conflated by label; exact effect formula is stated only where evidenced.",
+    "Source binding counts are catalog candidates, not currently active effects."
+  ],
+  "counts": {
+    "independent_key_unit_pending": 3,
+    "distinct_fixed_and_percentage_confirmed": 5,
+    "distinct_modifier_route_scope_partly_confirmed": 2,
+    "distinct_fixed_and_percentage_source_inferred": 1,
+    "independent_key_unit_pending_for_retained": 1
+  },
+  "omitted_key_count": 12,
+  "input_sha256": {
+    "D:/projects/hoi4_mod/1/hoi4-national-buff/tools/data/metric-index.json": "01a80a16f0e227b2ff8ff700eee88adaef8b8815507fac847ebe787a9e14b14b",
+    "D:/projects/hoi4_mod/1/hoi4-national-buff/tools/data/display-layout.json": "65682020e841465e5eac11737433e49a035e506f4293459ed77ea9add4be84fd",
+    "D:/projects/hoi4_mod/1/hoi4-national-buff/tools/data/modifier-format-bindings.json": "9ef10d3ba255bc010bc8693c93722422bd83e2ec731def07a8b14afcad515ecc"
+  },
+  "records": [
+    {
+      "name": "陆军师组织度恢复速率",
+      "category": "陆军",
+      "retained_id": 206,
+      "retained_key": "army_morale_factor",
+      "omitted_id": 274,
+      "omitted_key": "army_morale",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "independent_key_unit_pending",
+      "distinction": "army_morale_factor 有精确百分比模板；army_morale 是独立注册键，原版大型部队战术分支奖励直接赋值 0.1。基础恢复率增量的具体计量和最终计算层尚未通过引擎差分确认，不能直接套用百分比。",
+      "proposed_disambiguated_name": "陆军师组织度恢复速率（基础项，单位待核实）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "army_morale_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "army_morale",
+          "format_code": "+=1",
+          "confidence": "unresolved",
+          "method": "reviewed_key_override",
+          "value_type": "number",
+          "display_multiplier": 1
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/doctrines/subdoctrines/land/infantry_subdoctrines.txt",
+          "line": 230,
+          "text": "            army_morale = 0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 297,
+          "text": " army_morale_factor_tt: \" $MODIFIER_ARMY_MORALE_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1932,
+          "text": "## army_morale_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1927,
+          "text": "## army_morale"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "doctrine-technology-source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 1,
+      "source_samples": [
+        {
+          "source_id": "large_unit_tactics:reward:4",
+          "source_type": "subdoctrine_reward",
+          "name_zh": "大规模部队战术",
+          "display_name_zh": "大规模部队战术 · 人海压制",
+          "value": 0.1,
+          "source": {
+            "file": "common/doctrines/subdoctrines/land/infantry_subdoctrines.txt",
+            "line": 230,
+            "definition_line": 218,
+            "sha256": "9b1839d0c3070ee1002012d08f744c9be797be584b5f099d2cde2bf9cc5a0507"
+          }
+        }
+      ]
+    },
+    {
+      "name": "陆军师组织度",
+      "category": "陆军",
+      "retained_id": 207,
+      "retained_key": "army_org_factor",
+      "omitted_id": 275,
+      "omitted_key": "army_org",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_confirmed",
+      "distinction": "army_org_tt 明确使用未缩放数值 +=1，army_org_factor_tt 使用 +=%1。分别为固定组织度增量与比例加成；不能合并为一个读数。日本、法国、中共及暹罗国家精神使用固定项，澳大利亚国家动态精神也使用固定项。",
+      "proposed_disambiguated_name": "陆军师组织度（固定值）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "army_org_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "army_org",
+          "format_code": "+=1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "number",
+          "display_multiplier": 1
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 284,
+          "text": " army_org_factor_tt: \"$MODIFIER_ARMY_ORG_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 285,
+          "text": " army_org_tt: \" $MODIFIER_ARMY_ORG$：$RIGHT|+=1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/comchina.txt",
+          "line": 240,
+          "text": "\t\t\t\tarmy_org = 5"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/dynamic_modifiers/TAOG_dynamic_modifiers.txt",
+          "line": 984,
+          "text": "\tarmy_org = AST_australian_military_forces_spirit_army_org"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1952,
+          "text": "## army_org_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1947,
+          "text": "## army_org"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "dynamic-spirit-source-bindings.json": 1,
+        "source-bindings.json": 4
+      },
+      "existing_country_source_binding_total": 5,
+      "source_samples": [
+        {
+          "source_id": "AST_australian_military_forces_spirit",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "澳大利亚军事力量",
+          "display_name_zh": "澳大利亚军事力量",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AST_australian_military_forces_spirit_army_org",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/TAOG_dynamic_modifiers.txt",
+            "line": 984,
+            "definition_line": 979,
+            "sha256": "89c97d456de4d63418c59672ca0301307cb8ac6ca2c94782d051fecccaa60905"
+          }
+        },
+        {
+          "source_id": "for_the_emperor_idea",
+          "source_type": "idea",
+          "name_zh": "帝国万岁！",
+          "value": 5,
+          "source": {
+            "file": "common/ideas/japan.txt",
+            "line": 209,
+            "idea_line": 195,
+            "sha256": "f9f0cefbcd54f5c68fe92df8d700e4e9c9c4aef488056ee917c64c99ffa882e8"
+          }
+        },
+        {
+          "source_id": "FRA_army_of_aggression_focus",
+          "source_type": "idea",
+          "name_zh": "侵略军",
+          "value": 5,
+          "source": {
+            "file": "common/ideas/france.txt",
+            "line": 1545,
+            "idea_line": 1534,
+            "sha256": "2ebe3cad775942f68b66732cde7bc4456bd9b7ab89aa159e792a042f2153c67e"
+          }
+        }
+      ]
+    },
+    {
+      "name": "陆军经验增长",
+      "category": "陆军",
+      "retained_id": 233,
+      "retained_key": "experience_gain_army",
+      "omitted_id": 234,
+      "omitted_key": "experience_gain_army_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_confirmed",
+      "distinction": "experience_gain_army_tt 使用 +=2 固定值模板，experience_gain_army_factor_tt 使用 +=%1 百分比模板。当前只显示固定值，比例加成漏展示。",
+      "proposed_disambiguated_name": "陆军经验增长（百分比）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "experience_gain_army",
+          "format_code": "+=2",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "number",
+          "display_multiplier": 1
+        },
+        {
+          "key": "experience_gain_army_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 253,
+          "text": " experience_gain_army_tt: \"$MODIFIER_XP_GAIN_ARMY$：$RIGHT|+=2$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 255,
+          "text": " experience_gain_army_factor_tt: \"$MODIFIER_XP_GAIN_ARMY_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2647,
+          "text": "## experience_gain_army"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2652,
+          "text": "## experience_gain_army_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "advisor-source-bindings.json": 33,
+        "dynamic-source-bindings.json": 3,
+        "dynamic-spirit-source-bindings.json": 29,
+        "leader-source-bindings.json": 15,
+        "source-bindings.json": 68
+      },
+      "existing_country_source_binding_total": 148,
+      "source_samples": [
+        {
+          "source_id": "CZE_louis_eugene_faucher:army_chief:CZE_louis_eugene_faucher:army_chief_reform_1",
+          "source_type": "advisor_trait",
+          "name_zh": "路易-欧仁·福谢",
+          "display_name_zh": "陆军改革 （专家）",
+          "value": 0.05,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 14950,
+            "trait_line": 14947,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/CZE.txt",
+            "role_line": 3695,
+            "role_sha256": "ed666a42deda337946b708d30cdb692730504f40c3b06c885a983d7ef6568054",
+            "character_file": "common/characters/CZE.txt",
+            "character_line": 3688
+          }
+        },
+        {
+          "source_id": "CZE_louis_eugene_faucher:army_chief:CZE_louis_eugene_faucher:army_chief_reform_2",
+          "source_type": "advisor_trait",
+          "name_zh": "路易-欧仁·福谢",
+          "display_name_zh": "陆军改革 （大师）",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 14967,
+            "trait_line": 14964,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/CZE.txt",
+            "role_line": 3695,
+            "role_sha256": "ed666a42deda337946b708d30cdb692730504f40c3b06c885a983d7ef6568054",
+            "character_file": "common/characters/CZE.txt",
+            "character_line": 3688
+          }
+        },
+        {
+          "source_id": "CZE_send_foreign_attaches",
+          "source_type": "active_decision",
+          "name_zh": "£BoP_right_texticon 派遣外国顾问",
+          "display_name_zh": "£BoP_right_texticon 派遣外国顾问",
+          "value": 0.05,
+          "source": {
+            "file": "common/decisions/CZE.txt",
+            "line": 2235,
+            "definition_line": 2205,
+            "sha256": "11417830f663fe2db178fca27606a20d5fe4533822941b6a31e2bc4f7855a81b"
+          }
+        },
+        {
+          "source_id": "SOV_propaganda_for_the_motherland",
+          "source_type": "active_decision",
+          "name_zh": "为了祖国！",
+          "display_name_zh": "为了祖国！",
+          "value": 0.1,
+          "source": {
+            "file": "common/decisions/SOV.txt",
+            "line": 2725,
+            "definition_line": 2666,
+            "sha256": "75e1cfde7bcca928aac655ba2f89f2a009e0f8f8812200625dfe310761d06474"
+          }
+        },
+        {
+          "source_id": "AFG_nufus_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "努富斯制度",
+          "display_name_zh": "努富斯制度",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AFG_experience_gain_army_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 101,
+            "definition_line": 98,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "AFG_quami_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "库阿米制度",
+          "display_name_zh": "库阿米制度",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AFG_experience_gain_army_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 84,
+            "definition_line": 70,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "eager_commander",
+          "source_type": "country_leader_trait",
+          "name_zh": "热切的主帅",
+          "value": 0.05,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 4403,
+            "trait_line": 4398,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "GER_der_fuhrer_fuhrerprinzip_neurath",
+          "source_type": "country_leader_trait",
+          "name_zh": "$GER_der_fuhrer$",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 13810,
+            "trait_line": 13799,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "AFG_pashtunwali",
+          "source_type": "idea",
+          "name_zh": "普什图瓦里",
+          "value": -0.2,
+          "source": {
+            "file": "common/ideas/afghanistan.txt",
+            "line": 86,
+            "idea_line": 68,
+            "sha256": "6552a3a0f024e52b941426e5b02cc2aec3129306139ccf31b6d75f7697cf6d30"
+          }
+        },
+        {
+          "source_id": "AFG_turkish_military_mission",
+          "source_type": "idea",
+          "name_zh": "土耳其军事顾问团",
+          "value": 0.1,
+          "source": {
+            "file": "common/ideas/afghanistan.txt",
+            "line": 166,
+            "idea_line": 150,
+            "sha256": "6552a3a0f024e52b941426e5b02cc2aec3129306139ccf31b6d75f7697cf6d30"
+          }
+        }
+      ]
+    },
+    {
+      "name": "堑壕上限",
+      "category": "陆军",
+      "retained_id": 240,
+      "retained_key": "max_dig_in",
+      "omitted_id": 241,
+      "omitted_key": "max_dig_in_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_confirmed",
+      "distinction": "max_dig_in_tt 为 +=1 固定堑壕增量，max_dig_in_factor_tt 为 +=%1 比例加成。当前显示固定项，比例项漏展示。",
+      "proposed_disambiguated_name": "堑壕上限（百分比）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "max_dig_in",
+          "format_code": "+=1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "number",
+          "display_multiplier": 1
+        },
+        {
+          "key": "max_dig_in_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 765,
+          "text": " max_dig_in_factor_tt: \"$MODIFIER_MAX_DIG_IN_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 766,
+          "text": " max_dig_in_tt: \"$MODIFIER_MAX_DIG_IN$：$RIGHT|+=1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/switzerland.txt",
+          "line": 626,
+          "text": "\t\t\t\tmax_dig_in_factor = 0.5"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3285,
+          "text": "## max_dig_in"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3290,
+          "text": "## max_dig_in_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "doctrine-technology-source-bindings.json": 1,
+        "dynamic-source-bindings.json": 7,
+        "dynamic-spirit-source-bindings.json": 13,
+        "leader-source-bindings.json": 2,
+        "source-bindings.json": 16
+      },
+      "existing_country_source_binding_total": 39,
+      "source_samples": [
+        {
+          "source_id": "grand_battleplan:milestone:1",
+          "source_type": "doctrine_milestone",
+          "name_zh": "决战计划",
+          "display_name_zh": "决战计划 · 步兵",
+          "value": 0.05,
+          "source": {
+            "file": "common/doctrines/grand_doctrines/land_grand_doctrines.txt",
+            "line": 289,
+            "definition_line": 285,
+            "sha256": "cd81a877366c582f096422320cd7fcf9fb259afcc8d45d3dbb887b37792b329d"
+          }
+        },
+        {
+          "source_id": "DEN_home_guard_state_modifier",
+          "source_type": "dynamic_modifier",
+          "name_zh": "地方军",
+          "display_name_zh": "地方军",
+          "value": 0.1,
+          "source": {
+            "file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+            "line": 989,
+            "definition_line": 978,
+            "sha256": "e916f8c6679ab6e32374a14401de743a485071f12a296cdc49ba9e3ac9dddc55"
+          }
+        },
+        {
+          "source_id": "eben_emael_raided_critical_modifier",
+          "source_type": "dynamic_modifier",
+          "name_zh": "$eben_emael_raided_modifier$",
+          "display_name_zh": "埃本·埃马尔堡垒遭袭",
+          "value": -0.5,
+          "source": {
+            "file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+            "line": 115,
+            "definition_line": 112,
+            "sha256": "2a03bfa939115db4c2b0720466f287927925e9e36b939c574bfb6ce3ad832db3"
+          }
+        },
+        {
+          "source_id": "CZE_ceskoslovenska_armada_dynamic_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "捷克斯洛伐克军队",
+          "display_name_zh": "捷克斯洛伐克军队",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.CZE_ceskoslovenska_armada_max_dig_in_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/mun_dynamic_modifiers.txt",
+            "line": 78,
+            "definition_line": 52,
+            "sha256": "1ebbabb5449c907e4e1489500a43e5300ba3b7c6af8a4aabd4799c707f053750"
+          }
+        },
+        {
+          "source_id": "FIN_finnish_army",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "芬兰陆军",
+          "display_name_zh": "芬兰陆军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.FIN_finnish_army_max_dig_in_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+            "line": 1054,
+            "definition_line": 1041,
+            "sha256": "e916f8c6679ab6e32374a14401de743a485071f12a296cdc49ba9e3ac9dddc55"
+          }
+        },
+        {
+          "source_id": "SIA_great_war_expeditionary_veteran",
+          "source_type": "country_leader_trait",
+          "name_zh": "一战远征军老兵",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/taog_traits.txt",
+            "line": 484,
+            "trait_line": 480,
+            "sha256": "6624e7060bf9843921e9d52b251b0b9e02e2651dd302d95e1cc3abfef7a1e3a3"
+          }
+        },
+        {
+          "source_id": "SWE_ardent_conservative",
+          "source_type": "country_leader_trait",
+          "name_zh": "热诚的保守主义者",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 6006,
+            "trait_line": 6001,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "CZE_army_readiness_1",
+          "source_type": "idea",
+          "name_zh": "无准备的军队",
+          "value": -0.15,
+          "source": {
+            "file": "common/ideas/czechoslovakia.txt",
+            "line": 1438,
+            "idea_line": 1422,
+            "sha256": "9decc5b967cb1d181458a71071a6d76c82f91197caca5ac9c68ac036ee3c0aed"
+          }
+        },
+        {
+          "source_id": "CZE_army_readiness_2",
+          "source_type": "idea",
+          "name_zh": "无准备的军队",
+          "value": -0.1,
+          "source": {
+            "file": "common/ideas/czechoslovakia.txt",
+            "line": 1458,
+            "idea_line": 1442,
+            "sha256": "9decc5b967cb1d181458a71071a6d76c82f91197caca5ac9c68ac036ee3c0aed"
+          }
+        }
+      ]
+    },
+    {
+      "name": "堑壕速度",
+      "category": "陆军",
+      "retained_id": 232,
+      "retained_key": "dig_in_speed_factor",
+      "omitted_id": 283,
+      "omitted_key": "dig_in_speed",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "independent_key_unit_pending",
+      "distinction": "两个键均独立注册且实际赋值。国家精神 SWI_spirit_of_helvetia_defensive_war 使用 dig_in_speed=0.3；领袖能力另有 6.0。dig_in_speed_factor 有百分比模板，但 dig_in_speed 的原版精确模板和计算层未确认。现有格式表按同名类比为百分比，不足以证明单位或两键等价。只列国家持有贡献，领袖能力的单位对象贡献仍排除。",
+      "proposed_disambiguated_name": "堑壕速度（基础项，单位待核实）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "dig_in_speed_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "dig_in_speed",
+          "format_code": "+=%0",
+          "confidence": "source_inferred",
+          "method": "reviewed_key_override",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/switzerland.txt",
+          "line": 625,
+          "text": "\t\t\t\tdig_in_speed = 0.3"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/abilities/generic_leader_abilities.txt",
+          "line": 379,
+          "text": "\t\t\tdig_in_speed = 6.0"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 343,
+          "text": " dig_in_speed_factor_tt: \"$MODIFIER_DIG_IN_SPEED_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2403,
+          "text": "## dig_in_speed_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2398,
+          "text": "## dig_in_speed"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 1,
+      "source_samples": [
+        {
+          "source_id": "SWI_spirit_of_helvetia_defensive_war",
+          "source_type": "idea",
+          "name_zh": "$SWI_spirit_of_helvetia_defensive_peace$",
+          "value": 0.3,
+          "source": {
+            "file": "common/ideas/switzerland.txt",
+            "line": 625,
+            "idea_line": 616,
+            "sha256": "8f67fd650041e6a6aa21bf73b607900d91dce76752b58f5d32d342d0326945be"
+          }
+        }
+      ]
+    },
+    {
+      "name": "骑兵攻击",
+      "category": "陆军",
+      "retained_id": 279,
+      "retained_key": "cavalry_attack_factor",
+      "omitted_id": 309,
+      "omitted_key": "modifier_army_sub_unit_cavalry_attack_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_modifier_route_scope_partly_confirmed",
+      "distinction": "与 cavalry_attack_factor 是两个独立注册键。unit_modifiers.txt 明确将长键注册为指定 sub_unit cavalry 的修正；短键为原生 cavalry 修正。两者都可由国家精神持有，前者已见军阀政府和意大利/阿富汗动态精神，不能因含 sub_unit 就当作单个单位对象排除。短键针对何种师分类、长键对营贡献如何聚合及二者叠加公式尚未做引擎战斗差分，不断言互为别名或给出完整公式。",
+      "proposed_disambiguated_name": "骑兵攻击（骑兵营修正）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "cavalry_attack_factor",
+          "format_code": "+=%0",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "modifier_army_sub_unit_cavalry_attack_factor",
+          "format_code": "+=%2",
+          "confidence": "source_inferred",
+          "method": "vanilla_named_literal",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/units/unit_modifiers/unit_modifiers.txt",
+          "line": 1,
+          "text": "#list all modifiers that will be used for specific sub unit or sub unit categories"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/units/unit_modifiers/unit_modifiers.txt",
+          "line": 23,
+          "text": "\tmodifier_army_sub_unit_cavalry_attack_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/china_warlord.txt",
+          "line": 111,
+          "text": "\t\t\t\tmodifier_army_sub_unit_cavalry_attack_factor = 0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/poland.txt",
+          "line": 1891,
+          "text": "\t\t\tcavalry_attack_factor = 0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 440,
+          "text": "\tmodifier_army_sub_unit_cavalry_attack_factor = ITA_re_modifier_army_sub_unit_cavalry_attack_factor #0.03"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2162,
+          "text": "## cavalry_attack_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3530,
+          "text": "## modifier_army_sub_unit_cavalry_attack_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "dynamic-spirit-source-bindings.json": 10,
+        "source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 11,
+      "source_samples": [
+        {
+          "source_id": "AFG_quami_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "库阿米制度",
+          "display_name_zh": "库阿米制度",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AFG_modifier_army_sub_unit_cavalry_attack_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 80,
+            "definition_line": 70,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "IRQ_royal_army_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "国民军队",
+          "display_name_zh": "国民军队",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.IRQ_modifier_army_sub_unit_cavalry_attack_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 771,
+            "definition_line": 744,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "CHI_warlord_state_idea_cav",
+          "source_type": "idea",
+          "name_zh": "军阀政府",
+          "value": 0.1,
+          "source": {
+            "file": "common/ideas/china_warlord.txt",
+            "line": 111,
+            "idea_line": 89,
+            "sha256": "ec13753fdbec4b6ac4d1c3e3061f0f64d4dfdaf2edbc93b41fa512379920149a"
+          }
+        }
+      ]
+    },
+    {
+      "name": "骑兵防御",
+      "category": "陆军",
+      "retained_id": 280,
+      "retained_key": "cavalry_defence_factor",
+      "omitted_id": 310,
+      "omitted_key": "modifier_army_sub_unit_cavalry_defence_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_modifier_route_scope_partly_confirmed",
+      "distinction": "与 cavalry_defence_factor 是两个独立注册键。长键在 unit_modifiers.txt 明确注册为 sub_unit cavalry 防御；短键为原生 cavalry 防御。军阀政府及意大利/阿富汗动态精神对国家提供长键，不能用短键替代读取。准确战斗计算层仍待引擎差分，不能按同中文名合并。",
+      "proposed_disambiguated_name": "骑兵防御（骑兵营修正）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "cavalry_defence_factor",
+          "format_code": "+=%0",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "modifier_army_sub_unit_cavalry_defence_factor",
+          "format_code": "+=%2",
+          "confidence": "source_inferred",
+          "method": "vanilla_named_literal",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/units/unit_modifiers/unit_modifiers.txt",
+          "line": 4,
+          "text": "# modifier_army_sub_unit_[sub_unit or sub_unit_category]_defence_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/units/unit_modifiers/unit_modifiers.txt",
+          "line": 24,
+          "text": "\tmodifier_army_sub_unit_cavalry_defence_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/china_warlord.txt",
+          "line": 110,
+          "text": "\t\t\t\tmodifier_army_sub_unit_cavalry_defence_factor = 0.05"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/poland.txt",
+          "line": 1892,
+          "text": "\t\t\tcavalry_defence_factor = 0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 459,
+          "text": "\tmodifier_army_sub_unit_cavalry_defence_factor = ITA_re_modifier_army_sub_unit_cavalry_defence_factor #0.05"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2167,
+          "text": "## cavalry_defence_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3535,
+          "text": "## modifier_army_sub_unit_cavalry_defence_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "dynamic-spirit-source-bindings.json": 10,
+        "source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 11,
+      "source_samples": [
+        {
+          "source_id": "AFG_quami_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "库阿米制度",
+          "display_name_zh": "库阿米制度",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AFG_modifier_army_sub_unit_cavalry_defence_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 81,
+            "definition_line": 70,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "IRQ_royal_army_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "国民军队",
+          "display_name_zh": "国民军队",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.IRQ_modifier_army_sub_unit_cavalry_defence_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/GoE_dynamic_modifiers.txt",
+            "line": 772,
+            "definition_line": 744,
+            "sha256": "06bda5e1b39190cff7b97daf6645dc8c10cf7845d2db1d2631eeafcd9f949ebd"
+          }
+        },
+        {
+          "source_id": "CHI_warlord_state_idea_cav",
+          "source_type": "idea",
+          "name_zh": "军阀政府",
+          "value": 0.05,
+          "source": {
+            "file": "common/ideas/china_warlord.txt",
+            "line": 110,
+            "idea_line": 89,
+            "sha256": "ec13753fdbec4b6ac4d1c3e3061f0f64d4dfdaf2edbc93b41fa512379920149a"
+          }
+        }
+      ]
+    },
+    {
+      "name": "海军经验增长",
+      "category": "海军",
+      "retained_id": 378,
+      "retained_key": "experience_gain_navy",
+      "omitted_id": 379,
+      "omitted_key": "experience_gain_navy_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_confirmed",
+      "distinction": "experience_gain_navy_tt 使用 +=2 固定值模板，experience_gain_navy_factor_tt 使用 +=%1 百分比模板。当前只显示固定值，比例加成漏展示。",
+      "proposed_disambiguated_name": "海军经验增长（百分比）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "experience_gain_navy",
+          "format_code": "+=2",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "number",
+          "display_multiplier": 1
+        },
+        {
+          "key": "experience_gain_navy_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 257,
+          "text": " experience_gain_navy_tt: \"$MODIFIER_XP_GAIN_NAVY$：$RIGHT|+=2$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 259,
+          "text": " experience_gain_navy_factor_tt: \" $MODIFIER_XP_GAIN_NAVY_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2672,
+          "text": "## experience_gain_navy"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2677,
+          "text": "## experience_gain_navy_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "advisor-source-bindings.json": 73,
+        "dynamic-spirit-source-bindings.json": 9,
+        "leader-source-bindings.json": 5,
+        "source-bindings.json": 26
+      },
+      "existing_country_source_binding_total": 113,
+      "source_samples": [
+        {
+          "source_id": "AST_ragnar_colvin:navy_chief:AST_ragnar_colvin:navy_chief_reform_1",
+          "source_type": "advisor_trait",
+          "name_zh": "拉格纳·科尔文",
+          "display_name_zh": "海军改革 （专家）",
+          "value": 0.05,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 16833,
+            "trait_line": 16830,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/AST.txt",
+            "role_line": 1805,
+            "role_sha256": "b13a3885de962f198cff728f9e5f7f16c960936841f6949c6b243c8cda8f0346",
+            "character_file": "common/characters/AST.txt",
+            "character_line": 1798
+          }
+        },
+        {
+          "source_id": "AST_ragnar_colvin:navy_chief:AST_ragnar_colvin:navy_chief_reform_2",
+          "source_type": "advisor_trait",
+          "name_zh": "拉格纳·科尔文",
+          "display_name_zh": "海军改革 （大师）",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 16850,
+            "trait_line": 16847,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/AST.txt",
+            "role_line": 1805,
+            "role_sha256": "b13a3885de962f198cff728f9e5f7f16c960936841f6949c6b243c8cda8f0346",
+            "character_file": "common/characters/AST.txt",
+            "character_line": 1798
+          }
+        },
+        {
+          "source_id": "AUS_navy",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "奥地利海军",
+          "display_name_zh": "奥地利海军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AUS_navy_xp_gain_navy_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+            "line": 401,
+            "definition_line": 398,
+            "sha256": "2a03bfa939115db4c2b0720466f287927925e9e36b939c574bfb6ce3ad832db3"
+          }
+        },
+        {
+          "source_id": "CHI_ROCN",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "中华民国海军",
+          "display_name_zh": "中华民国海军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.CHI_ROCN_experience_gain_navy_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/SEA_dynamic_modifiers.txt",
+            "line": 855,
+            "definition_line": 852,
+            "sha256": "35271677371255c20b8596cb2cfb372afa448cd474f5f2d5135948c1a9416f1f"
+          }
+        },
+        {
+          "source_id": "GER_der_fuhrer_fuhrerprinzip_neurath",
+          "source_type": "country_leader_trait",
+          "name_zh": "$GER_der_fuhrer$",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 13812,
+            "trait_line": 13799,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "GER_der_fuhrer_neurath",
+          "source_type": "country_leader_trait",
+          "name_zh": "$GER_der_fuhrer$",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 13765,
+            "trait_line": 13753,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "AFG_pashtunwali",
+          "source_type": "idea",
+          "name_zh": "普什图瓦里",
+          "value": -0.2,
+          "source": {
+            "file": "common/ideas/afghanistan.txt",
+            "line": 87,
+            "idea_line": 68,
+            "sha256": "6552a3a0f024e52b941426e5b02cc2aec3129306139ccf31b6d75f7697cf6d30"
+          }
+        },
+        {
+          "source_id": "AST_faction_training_initiative_idea_1",
+          "source_type": "idea",
+          "name_zh": "训练倡议",
+          "value": 0.05,
+          "source": {
+            "file": "common/ideas/australia.txt",
+            "line": 497,
+            "idea_line": 474,
+            "sha256": "20862d1ba2db7eca591f37fe10dccfdfa4fef19c54b76badce50d4e183f46c8a"
+          }
+        }
+      ]
+    },
+    {
+      "name": "海军组织度",
+      "category": "海军",
+      "retained_id": 394,
+      "retained_key": "navy_org_factor",
+      "omitted_id": 450,
+      "omitted_key": "navy_org",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_source_inferred",
+      "distinction": "中央军事委员会国家精神直接赋值 navy_org=5，原版 navy_org_factor 使用百分比模板。这强烈支持前者是未缩放固定组织度、后者为比例项；前者尚无精确 RIGHT 模板或本轮引擎差分，单位结论标为源码支持的推断。",
+      "proposed_disambiguated_name": "海军组织度（固定值）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "navy_org_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "navy_org",
+          "format_code": "+=1",
+          "confidence": "source_inferred",
+          "method": "reviewed_key_override",
+          "value_type": "number",
+          "display_multiplier": 1
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/comchina.txt",
+          "line": 243,
+          "text": "\t\t\t\tnavy_org = 5"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 286,
+          "text": " MODIFIER_NAVY_ORG: \"海军组织度\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 288,
+          "text": " navy_org_factor_tt: \"$MODIFIER_NAVY_ORG_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 4133,
+          "text": "## navy_org_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 4128,
+          "text": "## navy_org"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 1,
+      "source_samples": [
+        {
+          "source_id": "PRC_central_military_commission_idea",
+          "source_type": "idea",
+          "name_zh": "中央军事委员会",
+          "value": 5,
+          "source": {
+            "file": "common/ideas/comchina.txt",
+            "line": 243,
+            "idea_line": 229,
+            "sha256": "9023b265b3e167da96ca3ee9dee8eeeb3fa35feee003fde4a4a008dc4fe7e39a"
+          }
+        }
+      ]
+    },
+    {
+      "name": "海军组织度恢复速率",
+      "category": "海军",
+      "retained_id": 431,
+      "retained_key": "naval_morale",
+      "omitted_id": 432,
+      "omitted_key": "naval_morale_factor",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "independent_key_unit_pending_for_retained",
+      "distinction": "遗漏的 naval_morale_factor 有精确 +=%1 模板，是确定的百分比项。已显示 naval_morale 的单位却未确认：现有格式表引用 ITA_supermarina_rm_tt 的 MODIFIER_NAVAL_MORALE +10%，但实际国策修改 ITA_rm_naval_morale_factor，动态表写入 naval_morale_factor，不能据同名提示证明 naval_morale 的单位。比利时国家精神确实另用 naval_morale=0.15。应独立保留键并核实当前已显示项单位。",
+      "proposed_disambiguated_name": "海军组织度恢复速率（百分比）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "naval_morale",
+          "format_code": "+=%1",
+          "confidence": "source_inferred",
+          "method": "vanilla_named_literal",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "naval_morale_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 302,
+          "text": " naval_morale_factor_tt: \" $MODIFIER_NAVAL_MORALE_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/belgium.txt",
+          "line": 373,
+          "text": "\t\t\t\tnaval_morale = 0.15"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/english/bba_focus_l_english.yml",
+          "line": 1406,
+          "text": " ITA_supermarina_rm_tt: \"$ITA_modify_regia_marina_dynamic_modifier_ns_intro$ \\n$MODIFIER_NAVAL_MORALE$: §G+10.0%§! \\n$MODIFIER_STRIKE_FORCE_MOVING_ORG$: §G-5.00%§! \\n$MODIFIER_NAVAL_DOCTRINE_COST_FACTOR$: §G-10.00%§! \\n\\n\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/national_focus/italy.txt",
+          "line": 6276,
+          "text": "\t\t\tadd_to_variable = { ITA_rm_naval_morale_factor = 0.1 }"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 1039,
+          "text": "\tnaval_morale_factor = ITA_rm_naval_morale_factor #0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3903,
+          "text": "## naval_morale"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 3908,
+          "text": "## naval_morale_factor"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "doctrine-technology-source-bindings.json": 2,
+        "dynamic-source-bindings.json": 1,
+        "dynamic-spirit-source-bindings.json": 19,
+        "leader-source-bindings.json": 1,
+        "source-bindings.json": 18
+      },
+      "existing_country_source_binding_total": 41,
+      "source_samples": [
+        {
+          "source_id": "massed_carrier_fleet",
+          "source_type": "subdoctrine",
+          "name_zh": "航母舰队集群",
+          "display_name_zh": "航母舰队集群",
+          "value": 0.05,
+          "source": {
+            "file": "common/doctrines/subdoctrines/sea/navy_carrier_doctrines.txt",
+            "line": 260,
+            "definition_line": 240,
+            "sha256": "539a05998deb5f7f5442d252a03253ccc1cb2e625fea6f4609e41e00a1426799"
+          }
+        },
+        {
+          "source_id": "patrol_boats:reward:4",
+          "source_type": "subdoctrine_reward",
+          "name_zh": "巡逻舰艇",
+          "display_name_zh": "巡逻舰艇 · 快速出动周转",
+          "value": 0.1,
+          "source": {
+            "file": "common/doctrines/subdoctrines/sea/navy_screen_doctrines.txt",
+            "line": 468,
+            "definition_line": 467,
+            "sha256": "50d9b37fdf80b990ee51a3a689a81c0a68fb198691e1429feeb2d190d193175c"
+          }
+        },
+        {
+          "source_id": "NOR_royal_navy_dmod",
+          "source_type": "dynamic_modifier",
+          "name_zh": "挪威皇家海军",
+          "display_name_zh": "挪威皇家海军",
+          "value": 0.1,
+          "source": {
+            "file": "common/dynamic_modifiers/aat_dynamic_modifiers.txt",
+            "line": 332,
+            "definition_line": 321,
+            "sha256": "e916f8c6679ab6e32374a14401de743a485071f12a296cdc49ba9e3ac9dddc55"
+          }
+        },
+        {
+          "source_id": "ARG_navy_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "$SMB_navy_ARG$",
+          "display_name_zh": "阿根廷海军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.JUNO_naval_morale_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/toa_dynamic_modifiers.txt",
+            "line": 487,
+            "definition_line": 466,
+            "sha256": "1d8a797325df68ff985ff51bcd09e83943de3cbdbe183cdf0cad03fa9ffb4704"
+          }
+        },
+        {
+          "source_id": "BRA_navy_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "$SMB_navy_BRA$",
+          "display_name_zh": "巴西海军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.JUNO_naval_morale_factor",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/toa_dynamic_modifiers.txt",
+            "line": 456,
+            "definition_line": 435,
+            "sha256": "1d8a797325df68ff985ff51bcd09e83943de3cbdbe183cdf0cad03fa9ffb4704"
+          }
+        },
+        {
+          "source_id": "GER_high_admiral",
+          "source_type": "country_leader_trait",
+          "name_zh": "海军最高司令部",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 2613,
+            "trait_line": 2611,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "fleet_interoperability_navy_spirit",
+          "source_type": "idea",
+          "name_zh": "舰队协作",
+          "value": 0.2,
+          "source": {
+            "file": "common/ideas/navy_spirits.txt",
+            "line": 443,
+            "idea_line": 436,
+            "sha256": "bccf688b4306bfb32be02ab7975fdce427687d0236519e6f8e60f6a57705a4c2"
+          }
+        },
+        {
+          "source_id": "ICE_viking_spirit_aegir",
+          "source_type": "idea",
+          "name_zh": "阿萨神族",
+          "value": 0.15,
+          "source": {
+            "file": "common/ideas/iceland.txt",
+            "line": 625,
+            "idea_line": 605,
+            "sha256": "8a952b2d6c314fd2721f99fd836aec09aec1615980ab64b7ff102b26d0f4809d"
+          }
+        }
+      ]
+    },
+    {
+      "name": "空军事故几率",
+      "category": "空军",
+      "retained_id": 469,
+      "retained_key": "air_accidents_factor",
+      "omitted_id": 488,
+      "omitted_key": "air_accidents",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "independent_key_unit_pending",
+      "distinction": "air_accidents_factor 有精确百分比模板。独立的 air_accidents 被暹罗国家精神气象广播赋值 -0.1，天气静态块也用该键；本页面只能读取国家持有部分。现有格式表援引 ETH_bring_in_foreign_advisors_tt 的 MODIFIER_AIR_ACCIDENTS -15%，但对应国策和动态表实际修改 air_accidents_factor。不能把该提示用来确认无 factor 项的单位、是否为百分点或二者计算层，更不能称两者是别名。",
+      "proposed_disambiguated_name": "空军事故几率（基础项，单位待核实）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "air_accidents_factor",
+          "format_code": "-=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "air_accidents",
+          "format_code": "-=%1",
+          "confidence": "source_inferred",
+          "method": "vanilla_named_literal",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 73,
+          "text": " air_accidents_factor_tt: \"$MODIFIER_AIR_ACCIDENTS_FACTOR$：$RIGHT|-=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/ideas/siam.txt",
+          "line": 1428,
+          "text": "\t\t\t\tair_accidents = -0.1"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/english/bba_focus_l_english.yml",
+          "line": 116,
+          "text": " ETH_bring_in_foreign_advisors_tt: \"Modify §Y[GetEthiopianAirforceSpiritName]§! by:\\n $MODIFIER_ENEMY_ARMY_BONUS_AIR_SUPERIORITY_FACTOR$: §G-5%§!\\n $MODIFIER_AIR_DOCTRINE_COST_FACTOR$: §G-5%§!\\n $MODIFIER_AIR_ACCIDENTS$: §G-15%§!  \""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/national_focus/ethiopia.txt",
+          "line": 1218,
+          "text": "\t\t\tadd_to_variable = {\tETH_airforce_air_accidents_factor = -0.15 }"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/common/dynamic_modifiers/bba_dynamic_modifiers.txt",
+          "line": 180,
+          "text": "\tair_accidents_factor = ETH_airforce_air_accidents_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1497,
+          "text": "## air_accidents_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 1492,
+          "text": "## air_accidents"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "source-bindings.json": 1
+      },
+      "existing_country_source_binding_total": 1,
+      "source_samples": [
+        {
+          "source_id": "idea_SIA_weather_broadcasts",
+          "source_type": "idea",
+          "name_zh": "气象广播",
+          "value": -0.1,
+          "source": {
+            "file": "common/ideas/siam.txt",
+            "line": 1428,
+            "idea_line": 1412,
+            "sha256": "1ac8fff3811e24588ff34619b7aec9f1f8f0c5f041548ac2d6a742c3dd8036a4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "空军经验增长",
+      "category": "空军",
+      "retained_id": 484,
+      "retained_key": "experience_gain_air_factor",
+      "omitted_id": 504,
+      "omitted_key": "experience_gain_air",
+      "cause": "Keep the first binding in the original exported registry.",
+      "status": "distinct_fixed_and_percentage_confirmed",
+      "distinction": "experience_gain_air_tt 使用 +=2 固定值模板，experience_gain_air_factor_tt 使用 +=%1 百分比模板。当前只显示百分比，固定经验增量漏展示。",
+      "proposed_disambiguated_name": "空军经验增长（固定值）",
+      "registered_as_separate_keys": true,
+      "alias_equivalence_proven": false,
+      "runtime_formula_verified_this_audit": false,
+      "current_format_bindings_not_independent_proof": [
+        {
+          "key": "experience_gain_air_factor",
+          "format_code": "+=%1",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "percentage",
+          "display_multiplier": 100
+        },
+        {
+          "key": "experience_gain_air",
+          "format_code": "+=2",
+          "confidence": "confirmed",
+          "method": "exact_vanilla_tooltip",
+          "value_type": "number",
+          "display_multiplier": 1
+        }
+      ],
+      "evidence": [
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 261,
+          "text": " experience_gain_air_tt: \"$MODIFIER_XP_GAIN_AIR$：$RIGHT|+=2$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/localisation/simp_chinese/modifiers_l_simp_chinese.yml",
+          "line": 263,
+          "text": " experience_gain_air_factor_tt: \" $MODIFIER_XP_GAIN_AIR_FACTOR$：$RIGHT|+=%1$\""
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2642,
+          "text": "## experience_gain_air_factor"
+        },
+        {
+          "file": "E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md",
+          "line": 2637,
+          "text": "## experience_gain_air"
+        }
+      ],
+      "existing_country_source_binding_counts": {
+        "advisor-source-bindings.json": 563,
+        "dynamic-source-bindings.json": 4,
+        "dynamic-spirit-source-bindings.json": 12,
+        "leader-source-bindings.json": 3,
+        "source-bindings.json": 11
+      },
+      "existing_country_source_binding_total": 593,
+      "source_samples": [
+        {
+          "source_id": "AFG_ali_muhammed_khan:air_chief:AFG_ali_muhammed_khan:air_chief_reform_1",
+          "source_type": "advisor_trait",
+          "name_zh": "阿里·穆罕默德·汗",
+          "display_name_zh": "空军改革 （专家）",
+          "value": 0.2,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 15895,
+            "trait_line": 15893,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/AFG.txt",
+            "role_line": 352,
+            "role_sha256": "06cedeec7e712ef8c5a75709dd5edf68b41c5e2a05c73109b65727fe929cb054",
+            "character_file": "common/characters/AFG.txt",
+            "character_line": 351,
+            "constant": {
+              "name": "@chief_experience_gain_low",
+              "line": 13,
+              "resolved_literal": "0.20"
+            }
+          }
+        },
+        {
+          "source_id": "AFG_ali_muhammed_khan:air_chief:AFG_ali_muhammed_khan:air_chief_reform_2",
+          "source_type": "advisor_trait",
+          "name_zh": "阿里·穆罕默德·汗",
+          "display_name_zh": "空军改革 （大师）",
+          "value": 0.3,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 15912,
+            "trait_line": 15910,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5",
+            "role_file": "common/characters/AFG.txt",
+            "role_line": 352,
+            "role_sha256": "06cedeec7e712ef8c5a75709dd5edf68b41c5e2a05c73109b65727fe929cb054",
+            "character_file": "common/characters/AFG.txt",
+            "character_line": 351,
+            "constant": {
+              "name": "@chief_experience_gain_medium",
+              "line": 14,
+              "resolved_literal": "0.30"
+            }
+          }
+        },
+        {
+          "source_id": "RAJ_GOE_contact_dissenting_officers",
+          "source_type": "active_decision",
+          "name_zh": "接触异见官员",
+          "display_name_zh": "接触异见官员",
+          "value": 0.1,
+          "source": {
+            "file": "common/decisions/RAJ_GOE.txt",
+            "line": 4024,
+            "definition_line": 3999,
+            "sha256": "3b99609b24365b753257f1b83ada542e612225318a8d16be06bc58ebda5806ff"
+          }
+        },
+        {
+          "source_id": "RAJ_GOE_spread_dissent_in_the_army",
+          "source_type": "active_decision",
+          "name_zh": "利用激进军官在军队中散布不满情绪",
+          "display_name_zh": "利用激进军官在军队中散布不满情绪",
+          "value": 0.05,
+          "source": {
+            "file": "common/decisions/RAJ_GOE.txt",
+            "line": 4072,
+            "definition_line": 4049,
+            "sha256": "3b99609b24365b753257f1b83ada542e612225318a8d16be06bc58ebda5806ff"
+          }
+        },
+        {
+          "source_id": "ARG_airforce_modifier",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "$SMB_air_force_ARG$",
+          "display_name_zh": "阿根廷空军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.JUNO_airforce_modifier_experience_gain_air",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/toa_dynamic_modifiers.txt",
+            "line": 322,
+            "definition_line": 309,
+            "sha256": "1d8a797325df68ff985ff51bcd09e83943de3cbdbe183cdf0cad03fa9ffb4704"
+          }
+        },
+        {
+          "source_id": "AUS_airforce",
+          "source_type": "dynamic_modifier_variable",
+          "name_zh": "奥地利空军",
+          "display_name_zh": "奥地利空军",
+          "value": 1,
+          "value_expression": {
+            "variable": "ROOT.AUS_airforce_xp_gain_air",
+            "coefficient": "1",
+            "offset": "0"
+          },
+          "source": {
+            "file": "common/dynamic_modifiers/wuw_dynamic_modifiers.txt",
+            "line": 351,
+            "definition_line": 348,
+            "sha256": "2a03bfa939115db4c2b0720466f287927925e9e36b939c574bfb6ce3ad832db3"
+          }
+        },
+        {
+          "source_id": "council_of_theorists",
+          "source_type": "country_leader_trait",
+          "name_zh": "理论委员会",
+          "value": 0.03,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 10559,
+            "trait_line": 10556,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "GDC_king_of_the_southern_skies",
+          "source_type": "country_leader_trait",
+          "name_zh": "南天王",
+          "value": 0.1,
+          "source": {
+            "file": "common/country_leader/00_traits.txt",
+            "line": 914,
+            "trait_line": 907,
+            "sha256": "b629d44fde5fa93d176a1db04bdac83c53e51f55dd789359dca7a96ab4d25dc5"
+          }
+        },
+        {
+          "source_id": "branch_independence_spirit",
+          "source_type": "idea",
+          "name_zh": "兵种独立",
+          "value": 0.1,
+          "source": {
+            "file": "common/ideas/air_spirits.txt",
+            "line": 125,
+            "idea_line": 121,
+            "sha256": "b7038dbde7446e61f54cab173e43d0e46dd1b2039d1640b99c4878a76311fab5"
+          }
+        },
+        {
+          "source_id": "BUL_international_pilot_training_program",
+          "source_type": "idea",
+          "name_zh": "国际飞行员训练计划",
+          "value": 0.05,
+          "source": {
+            "file": "common/ideas/bulgaria.txt",
+            "line": 795,
+            "idea_line": 782,
+            "sha256": "0ace14ba8a3f21b2bc8ab5a1f7d42409317c9e75d0c9b0516ea889c9b147bda2"
+          }
+        }
+      ]
+    }
+  ]
+}

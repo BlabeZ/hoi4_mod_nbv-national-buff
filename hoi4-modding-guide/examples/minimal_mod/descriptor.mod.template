@@ -1,0 +1,4 @@
+name = "H4Guide Local Demo"
+version = "0.1.0"
+supported_version = "REPLACE_WITH_TESTED_MAJOR_MINOR.*"
+tags = { "Events" }

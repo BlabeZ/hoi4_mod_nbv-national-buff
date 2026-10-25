@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "catalog_snapshot_date": "2026-10-24",
+  "method": "仅人工复核指定四个修正的国家历史初始化、动态精神定义、直接国策/简单脚本链；未扩展完整事件图。",
+  "classification_note": "strong_focus_or_country_dynamic_spirit表示能够确认国家级动态精神或国策来源，不等于证明当前国家有非零数值。两项只发现零初始化，已单独注明。",
+  "records": {
+    "air_equipment_upgrade_xp_cost": {
+      "key": "air_equipment_upgrade_xp_cost",
+      "strong_focus_or_country_dynamic_spirit": true,
+      "reason": "埃塞俄比亚与意大利的国家历史文件在国家作用域添加工业动态民族精神；精神直属字段分别读取ETH_air_equipment_upgrade_xp_cost与ITA_military_industry_air_equipment_upgrade_xp_cost。ETH_adapt_and_improve和ITA_standardization等国策在同一国家奖励作用域直接改变这些变量，构成初始化—国家动态精神—国策变量修改的完整静态链，非跨作用域同名猜测。",
+      "object_ids": ["ETH_industrialization_dynamic_modifier", "ITA_military_industry_dynamic_modifier"],
+      "focus_ids": ["ETH_adapt_and_improve", "ITA_standardization", "ITA_specialization", "ITA_multirole_aircraft"],
+      "nonzero_change_proven": true,
+      "caveats": ["各分支与DLC条件决定具体生效时机，不表示两国效果叠加到同一国家。"],
+      "evidence": [
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt", "line": 220, "label": "ETH_industrialization_dynamic_modifier定义，原版注释标明NATIONAL SPIRIT"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt", "line": 234, "label": "air_equipment_upgrade_xp_cost读取ETH_air_equipment_upgrade_xp_cost"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\ETH - Ethiopia.txt", "line": 75, "label": "国家历史初始化添加ETH_industrialization_dynamic_modifier"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\ethiopia.txt", "line": 1811, "label": "国策ID ETH_adapt_and_improve"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\ethiopia.txt", "line": 1836, "label": "国家completion_reward将ETH_air_equipment_upgrade_xp_cost减少0.25"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt", "line": 416, "label": "意大利工业动态精神读取ITA_military_industry_air_equipment_upgrade_xp_cost"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\ITA - Italy.txt", "line": 220, "label": "意大利国家变量初始化为0"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\ITA - Italy.txt", "line": 222, "label": "同一国家添加ITA_military_industry_dynamic_modifier"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\italy.txt", "line": 5300, "label": "ITA_standardization的国家奖励将该变量增加0.25"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\italy.txt", "line": 5357, "label": "ITA_specialization继续修改同一国家变量"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\italy.txt", "line": 5546, "label": "ITA_multirole_aircraft继续修改同一国家变量"}
+      ]
+    },
+    "autonomy_gain_warscore": {
+      "key": "autonomy_gain_warscore",
+      "strong_focus_or_country_dynamic_spirit": true,
+      "reason": "INS_dutch_east_indies是国家历史在Thunder at Our Gates条件下添加的国家动态精神，其直属autonomy_gain_warscore读取国家变量。国策INS_the_declaration_of_independence调用indonesia_form_other_indies_effect；该效果以create_dynamic_country创建国家并保存为INS_dutch_indonesia，因此随后向该event_target添加动态精神可确认为国家作用域，补足自动trace的unknown。",
+      "object_ids": ["INS_dutch_east_indies"],
+      "focus_ids": ["INS_the_declaration_of_independence"],
+      "nonzero_change_proven": false,
+      "caveats": [
+        "本机common/events/history对INS_dutch_east_indies_autonomy_gain_warscore的精确文本检索仅发现有效的初始0赋值；拟增加1.5的联合国策代码已全部注释。",
+        "因此可确认国家精神字段来源，不能声称该版本存在已确认的非零国策加成。归A若依据‘来源出现’成立；展示时宜隐藏零值或标为预留字段。"
+      ],
+      "evidence": [
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\TAOG_dynamic_modifiers.txt", "line": 2, "label": "INS_dutch_east_indies定义；enable要求DLC与original_tag=INS"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\TAOG_dynamic_modifiers.txt", "line": 23, "label": "autonomy_gain_warscore直属字段读取INS_dutch_east_indies_autonomy_gain_warscore"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\INS - Indonesia.txt", "line": 131, "label": "国家变量初始化为0"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\INS - Indonesia.txt", "line": 464, "label": "DLC条件下向印度尼西亚国家添加动态精神"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\indonesia.txt", "line": 560, "label": "独立宣言国策在completion_reward内调用indonesia_form_other_indies_effect"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_effects\\INS_scripted_effects.txt", "line": 781, "label": "create_dynamic_country证明新建对象为国家"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_effects\\INS_scripted_effects.txt", "line": 786, "label": "将新建国家保存为INS_dutch_indonesia全局事件目标"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_effects\\INS_scripted_effects.txt", "line": 842, "label": "在已证明为国家的event_target上添加INS_dutch_east_indies"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\indonesia_joint.txt", "line": 10311, "label": "增加1.5的代码前有#注释，不构成有效非零修改证据"}
+      ]
+    },
+    "consumer_goods_expected_value": {
+      "key": "consumer_goods_expected_value",
+      "strong_focus_or_country_dynamic_spirit": true,
+      "reason": "德国国家历史初始化GER_industrial_consumer_goods_expected_value并添加MEFO动态精神；MEFO及征服经济的直属consumer_goods_expected_value读取这一国家变量。GER_establish_the_reichswerke等国策在国家作用域检查已持有这两种精神后调用GER_add_mefo_bills_penalty，效果改变该同国变量。链路包含真实非零惩罚值0.1，可证明不是仅靠同名变量猜测。",
+      "object_ids": ["GER_mefo_bills_modifier", "GER_economy_of_conquest_modifier"],
+      "focus_ids": ["GER_establish_the_reichswerke", "GER_seize_foreign_industries", "GER_coal_liquefaction", "GER_subsidize_hoesch_benzin", "GER_establish_buna_werke", "GER_autarky_achieved", "GER_fate_of_czechoslovakia"],
+      "nonzero_change_proven": true,
+      "caveats": ["变量修改具有消费品阈值与国家标记条件；来源证明不等于所有国策完成后都无条件产生同一数值。"],
+      "evidence": [
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt", "line": 491, "label": "MEFO动态精神的consumer_goods_expected_value读取国家变量"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\wuw_dynamic_modifiers.txt", "line": 528, "label": "征服经济动态精神读取同一国家变量"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\GER - Germany.txt", "line": 190, "label": "GER_expected_consumer_goods_penalty初始化为0.1"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\GER - Germany.txt", "line": 221, "label": "德国国家变量GER_industrial_consumer_goods_expected_value初始化为0"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\GER - Germany.txt", "line": 223, "label": "德国国家历史添加MEFO动态精神"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\germany.txt", "line": 1825, "label": "国策奖励检查国家已持有MEFO或征服经济精神"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\germany.txt", "line": 1829, "label": "同一国家作用域调用GER_add_mefo_bills_penalty"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_effects\\GER_scripted_effects.txt", "line": 818, "label": "惩罚效果定义，后续检查消费品变量阈值与国家标记"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\scripted_effects\\GER_scripted_effects.txt", "line": 829, "label": "将国家动态精神读取变量增加GER_expected_consumer_goods_penalty，即0.1"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\events\\WUW_Germany.txt", "line": 66, "label": "国家事件将MEFO替换成征服经济动态精神"}
+      ]
+    },
+    "opinion_gain_monthly": {
+      "key": "opinion_gain_monthly",
+      "strong_focus_or_country_dynamic_spirit": true,
+      "reason": "SSB_saadabad_pact是向协定成员国家添加的动态民族精神。联合国策SSB_the_saadabad_pact在completion_reward_joint_originator入口初始化SSB_opinion_gain_monthly并添加该精神；加入协定的country_event及1939国家历史也有国家级添加证据。上一版自动扫描漏掉联合国策奖励入口，本次已将joint_originator/member入口补入主扫描；这里保留人工确认及零值路径证据。",
+      "object_ids": ["SSB_saadabad_pact"],
+      "focus_ids": ["SSB_the_saadabad_pact"],
+      "nonzero_change_proven": false,
+      "caveats": [
+        "本机common/events/history对SSB_opinion_gain_monthly的精确文本检索只发现联合国策及加入协定事件中的0初始化，未找到有效非零赋值或增减。",
+        "可确认国家动态精神字段存在，不能将其描述为已确认会产生非零月度关系收益；宜隐藏零值或标为预留字段。",
+        "主扫描已扩展原版实际存在的joint_originator/member奖励入口，但未扩展全部事件调用图。"
+      ],
+      "evidence": [
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\GoE_dynamic_modifiers.txt", "line": 986, "label": "SSB_saadabad_pact动态精神定义"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\GoE_dynamic_modifiers.txt", "line": 1012, "label": "opinion_gain_monthly直属字段读取SSB_opinion_gain_monthly"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\goe_shared_saadabad_branch.txt", "line": 2, "label": "联合国策ID SSB_the_saadabad_pact"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\goe_shared_saadabad_branch.txt", "line": 136, "label": "completion_reward_joint_originator奖励入口，作用于联合国策发起国"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\goe_shared_saadabad_branch.txt", "line": 161, "label": "发起国变量SSB_opinion_gain_monthly初始化为0"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\national_focus\\goe_shared_saadabad_branch.txt", "line": 167, "label": "向联合国策发起国添加SSB_saadabad_pact"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\events\\GOE_Persia.txt", "line": 2070, "label": "PER_imperial_events.200为country_event"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\events\\GOE_Persia.txt", "line": 2121, "label": "加入协定事件将国家变量初始化为0"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\events\\GOE_Persia.txt", "line": 2127, "label": "同一国家事件选项添加SSB_saadabad_pact"},
+        {"file": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\history\\countries\\PER - Persia.txt", "line": 273, "label": "波斯1939国家历史分支添加协定动态精神"}
+      ]
+    }
+  }
+}

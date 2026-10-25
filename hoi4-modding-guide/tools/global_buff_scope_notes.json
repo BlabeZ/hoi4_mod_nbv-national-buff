@@ -1,0 +1,632 @@
+{
+  "review_date": "2026-10-24",
+  "game_root": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV",
+  "game_version": "Operation Postern v1.19.3.0.c01a (5632)",
+  "scope_contract": {
+    "include": "国家所持有的数值修正，包括核心/非核心等地区条件加成，以及全国资源/治理修正的国家分量。来源可以是国家精神、动态修正、科技、学说、顾问、法律、情报升级等；不要求在common/ideas出现。",
+    "exclude": "州/省/战略区域/地形/单个领袖/单位/装备变体/生产线/MIO本体的对象分量，不作为国家总量；按用户要求排除天气相关指标。",
+    "label": "显示国家修正分量，不称为某单位/某州/某装备的最终属性。",
+    "runtime_status": "所有ROOT.modifier@读取路径在此均为复用已文档化接口的候选；未启动游戏逐项验证返回值、刷新、基值和正负显示。"
+  },
+  "principles": [
+    {
+      "id": "storage_not_directory",
+      "decision": "按存储对象和父块判定，不按文件夹、key前缀或engine_categories单独判定。",
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 496,
+          "note": "country的modifier：a modifier stored in country scope"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 1136,
+          "note": "state的modifier：该state中存储的值，例123.modifier@local_manpower"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 1230,
+          "note": "unit_leader的leader_modifier"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 1379,
+          "note": "unit_leader的unit_modifier，示例unit_modifier@army_attack_factor"
+        }
+      ]
+    },
+    {
+      "id": "no_idea_is_not_exclusion",
+      "decision": "没有common/ideas国家精神定义不是排除条件；科技、学说和情报升级等可提供国家持有修正。零静态定义也只表示此次扫描无命中，不能单独证明不可读或无用。",
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technologies\\artillery.txt",
+          "line": 811,
+          "note": "科技antiair2顶层static_anti_air_damage_factor=0.1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\intelligence_agency_upgrades\\intelligence_agency_upgrades.txt",
+          "line": 419,
+          "note": "升级level.modifier同时提供crypto_strength=1与decryption_power=25"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\doctrines\\subdoctrines\\special_forces\\special_forces_subdoctrines.txt",
+          "line": 285,
+          "note": "学说奖励naval_invasion_plan_cap=2"
+        }
+      ]
+    },
+    {
+      "id": "idea_is_not_sufficient",
+      "decision": "出现在国家idea文件仍不足以作为ROOT.modifier@候选：必须区分modifier、targeted_modifier、equipment_bonus及其他带对象的嵌套载荷。",
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 527,
+          "note": "同一idea的普通modifier含war_support_factor"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 531,
+          "note": "同一idea的targeted_modifier指定tag=MAN后才设attack_bonus_against和defense_bonus_against"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 1362,
+          "note": "equipment_bonus按small_plane_cas_airframe/medium_plane_airframe设置build_cost_ic"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 4619,
+          "note": "equipment_bonus按convoy_1设置build_cost_ic=-0.15"
+        }
+      ]
+    },
+    {
+      "id": "country_army_air_navy",
+      "decision": "国家持有的army/air/navy系数可作为ROOT.modifier@候选；不能因engine_categories只有army/air/naval就排除，也不能将同key的王牌、领袖、地形等局部分量并入国家读数。",
+      "examples": [
+        "army_attack_factor",
+        "army_org_factor",
+        "air_attack_factor",
+        "air_defence_factor",
+        "naval_coordination",
+        "navy_visibility"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 1797,
+          "note": "army_attack_factor分类army, aggressive；分类不是严格country读取白名单"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\siam.txt",
+          "line": 1600,
+          "note": "普通国家idea.modifier含air_agility_factor与air_attack_factor"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\navy_spirits.txt",
+          "line": 492,
+          "note": "普通海军精神modifier含navy_visibility=-0.05"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\unit_leader\\00_traits.txt",
+          "line": 2155,
+          "note": "concealment_expert海军领袖特质modifier也使用navy_visibility=-0.1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\unit_leader\\00_traits.txt",
+          "line": 2258,
+          "note": "sub_unit_modifiers.destroyer也使用navy_visibility=-0.1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\aces\\00_aces.txt",
+          "line": 9,
+          "note": "王牌effect使用air_attack_factor，属于额外局部来源"
+        }
+      ]
+    },
+    {
+      "id": "core_noncore_are_retained",
+      "decision": "保留国家持有的核心、非核心、宣称、敌国等级等条件系数；名称中有地区条件不等于该值存储于州。展示时保留条件标签，不能标成所有战斗统一生效。",
+      "examples": [
+        "army_core_attack_factor",
+        "army_core_defence_factor",
+        "army_non_core_attack_factor",
+        "army_non_core_defence_factor",
+        "army_claim_attack_factor",
+        "army_claim_defence_factor",
+        "army_attack_against_major_factor",
+        "army_attack_against_minor_factor"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\GER.txt",
+          "line": 2168,
+          "note": "同一普通国家modifier并列army_core_attack_factor、army_core_defence_factor与army_defence_factor"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\GER.txt",
+          "line": 3783,
+          "note": "普通国家modifier并列核心攻防与稳定/战争支持"
+        }
+      ]
+    },
+    {
+      "id": "local_does_not_always_mean_state_only",
+      "decision": "local_resources_factor保留国家分量，不能用local_前缀或state类别一刀切。具体州最终资源、州附加值与占领法造成的各州最终收益不纳入国家数值表。",
+      "examples": [
+        "local_resources_factor",
+        "compliance_gain"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\argentina.txt",
+          "line": 250,
+          "note": "国家idea ARG_resource_extration_focus普通modifier设置local_resources_factor=0.15"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 3230,
+          "note": "local_resources_factor标签为state,war_production，但原版国家idea仍使用"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 3161,
+          "note": "sultana国家领袖特质compliance_gain=0.01"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2257,
+          "note": "compliance_gain标签同时含country,state"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 1136,
+          "note": "读取特定州分量应进入state scope，不可与国家分量混称"
+        }
+      ]
+    },
+    {
+      "id": "target_country_needs_target",
+      "decision": "targeted_modifier必须保留目标国家维度；attack_bonus_against/defense_bonus_against不能用无目标的单行国家总值表示“对全部国家加成”。本轮应移出普通全局表，留给未来目标国家详情。",
+      "examples": [
+        "attack_bonus_against",
+        "attack_bonus_against_cores",
+        "defense_bonus_against",
+        "naval_hit_chance_against",
+        "navy_capital_ship_attack_factor_against"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 531,
+          "note": "tag=MAN，attack_bonus_against=0.15、defense_bonus_against=0.1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\japan.txt",
+          "line": 4762,
+          "note": "tag=JAP.JAP_first_strike_principle_target_1，运行时目标国变量"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+          "line": 496,
+          "note": "公开country.modifier说明没有按目标国家聚合或选择参数"
+        }
+      ]
+    },
+    {
+      "id": "same_name_different_storage",
+      "decision": "max_organisation等同名属性需逐父块审计，不能按裸key总频次直接升级为国家BUFF。装备设计统计中的armor_value/soft_attack/build_cost_ic等也不是ROOT的同名最终值。",
+      "examples": [
+        "max_organisation",
+        "navy_visibility",
+        "air_attack_factor"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\doctrines\\subdoctrines\\special_forces\\special_forces_subdoctrines.txt",
+          "line": 58,
+          "note": "category_special_forces中max_organisation=5，与soft_attack并列，是兵种属性奖励"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 3310,
+          "note": "max_organisation在修正注册文档中同时列为naval"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\localisation\\english\\stats_l_english.yml",
+          "line": 12,
+          "note": "STAT_COMMON_MAX_ORG及其说明是单位组织度属性"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\00_generic_organization.txt",
+          "line": 130,
+          "note": "equipment_bonus含armor_value/defense/build_cost_ic"
+        }
+      ]
+    },
+    {
+      "id": "ai_and_boolean",
+      "decision": "AI行为权重移出玩家BUFF数值表；Boolean不按百分比统计，可另做规则状态徽章。它们即使可读也不等于适合统计页，且排除理由不是没有国家来源。",
+      "examples": [
+        "ai_desired_divisions_factor",
+        "ai_focus_aggressive_factor",
+        "can_guarantee_other_ideologies",
+        "cannot_retreat_while_attacking",
+        "crypto_department_enabled"
+      ],
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 1427,
+          "note": "ai_desired_divisions_factor分类ai"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\country_leader\\00_traits.txt",
+          "line": 50,
+          "note": "dictator国家领袖特质确实可带ai_desired_divisions_factor"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2107,
+          "note": "can_guarantee_other_ideologies为Boolean且分类country"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+          "line": 2117,
+          "note": "cannot_retreat_while_attacking为Boolean"
+        }
+      ]
+    }
+  ],
+  "manufacturers_and_mio": {
+    "current_vanilla_country_modifier_block_found": false,
+    "negative_search_scope": "只读检索当前原版common中所有.txt，未发现country_modifier =赋值；MIO自带_documentation.md亦未声明此载荷。此结果不等于引擎永不支持同名扩展。",
+    "actual_mio_blocks": {
+      "equipment_bonus": "分配给装备变体时生效；排除该对象分量。",
+      "production_bonus": "分配给生产线时生效；排除该生产线分量。",
+      "organization_modifier": "MIO组织本体修正；不是国家总值。"
+    },
+    "evidence": [
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+        "line": 156,
+        "note": "equipment_bonus说明：trait解锁且MIO分配给装备变体"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+        "line": 162,
+        "note": "production_bonus说明：trait解锁且MIO分配给生产线"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\organizations\\_documentation.md",
+        "line": 169,
+        "note": "organization_modifier说明：作用在组织本身"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\military_industrial_organization\\policies\\_documentation.md",
+        "line": 4,
+        "note": "policy bonuses only applies to equipment variant or production line assigned"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+        "line": 1066,
+        "note": "MIO也有独立modifier动态变量"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\argentina.txt",
+        "line": 1297,
+        "note": "工业企业类别industrial_concern"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\argentina.txt",
+        "line": 1325,
+        "note": "ARG央行工业企业的普通modifier包含consumer_goods_factor=-0.05"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\dynamic_variables_documentation.md",
+        "line": 496,
+        "note": "country.modifier只描述国家存储值，没有来源过滤参数"
+      }
+    ],
+    "source_filter_limit": "原始制造商/工业企业的普通idea.modifier如果是全国效果，会按该机制进入国家修正。若要“排除制造商来源”但继续读取同一key的其他来源，ROOT.modifier@接口没有现成按来源剔除参数。也不能为排除某来源而删除consumer_goods_factor整个key，因为会一并丢失其他来源。",
+    "do_not_claim": "不声称当前原版MIO存在country_modifier并已验证进入国家总值；MIO脚本若另在国家作用域添加idea/dynamic modifier，则应按实际脚本效果判断，不依据MIO文件夹先验。",
+    "recommended_contract": "采用国家引擎总值时，按对象范围排除MIO/装备/生产线的局部值；若坚持剔除制造商的全国来源分量，需要单独维护可审计的来源分解与叠加公式，不能由单次ROOT.modifier@完成。"
+  },
+  "weather_and_terrain": {
+    "weather_key_exclusion": [
+      "acclimatization_cold_climate_gain_factor",
+      "acclimatization_hot_climate_gain_factor",
+      "air_weather_penalty",
+      "navy_weather_penalty",
+      "heat_attrition",
+      "heat_attrition_factor",
+      "winter_attrition",
+      "winter_attrition_factor"
+    ],
+    "weather_key_note": "按用户天气排除要求排除，即便其中部分有全国来源；该清单为已确认明确天气/温度相关键，不把night一词自动视为天气。",
+    "exclude_source_blocks": [
+      "weather_rain_light",
+      "weather_rain_heavy",
+      "weather_snow",
+      "weather_blizzard",
+      "weather_sandstorm",
+      "weather_arctic_water",
+      "weather_mud",
+      "weather_extreme_cold",
+      "weather_very_cold",
+      "weather_very_hot",
+      "weather_extreme_hot",
+      "weather_ground_snow_medium",
+      "weather_ground_snow_high"
+    ],
+    "terrain_rule": "common/terrain中的forest/hills/mountain等环境对象载荷排除；不能因同一key在terrain/weather中出现就排除其已确认国家分量。例如army_attack_factor在泥泞省份也出现，但国家攻击修正仍保留。国家持有的地区条件加成按scope_contract保留。",
+    "not_automatic_weather_exclusions": [
+      "land_night_attack",
+      "naval_night_attack",
+      "air_night_penalty",
+      "night_spotting_chance",
+      "terrain_penalty_reduction"
+    ],
+    "evidence": [
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\modifiers\\00_static_modifiers.txt",
+        "line": 9,
+        "note": "weather_rain_light注释on Region"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\modifiers\\00_static_modifiers.txt",
+        "line": 90,
+        "note": "weather_mud注释on Province，且含army_attack_factor"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\modifiers\\00_static_modifiers.txt",
+        "line": 98,
+        "note": "weather_extreme_cold的局部攻击/突破/冬季损耗"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\modifiers\\00_static_modifiers.txt",
+        "line": 113,
+        "note": "weather_very_hot/extreme_hot局部炎热损耗"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\terrain\\00_terrain.txt",
+        "line": 29,
+        "note": "forest是地形对象，内部units.attack及supply_flow_penalty_factor等只描述该地形"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\ideas\\navy_spirits.txt",
+        "line": 625,
+        "note": "navy_weather_penalty即使国家精神提供，也按用户天气排除要求移出"
+      }
+    ]
+  },
+  "template_policy": {
+    "registered_keys": 4484,
+    "fixed_keys": 722,
+    "expanded_keys": 3762,
+    "building_terrain_limit_keys": 1648,
+    "decision": "模板数量不代表重要性或国家可读性。1648个建筑/地形上限键优先移出默认BUFF统计视图，保留完整目录和对象详情候选；国家级建筑速度等已确认全局参数仍可选入，不按所有模板统一排除。",
+    "evidence": [
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+        "line": 1224,
+        "note": "国家级建筑最大地形等级模板"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+        "line": 1232,
+        "note": "含具体地形的模板展开"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+        "line": 4845,
+        "note": "州建筑地形等级上限模板"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+        "line": 4853,
+        "note": "州建筑具体地形等级上限模板"
+      },
+      {
+        "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\documentation\\modifiers_documentation.md",
+        "line": 4484,
+        "note": "国家建筑建造速度模板有不同语义，不应与上限族一起排除"
+      }
+    ]
+  },
+  "useful_candidates_without_common_ideas_definition": [
+    {
+      "key": "crypto_strength",
+      "name": "加密等级",
+      "definition_count": 6,
+      "common_ideas_definition_present": false,
+      "recommendation": "情报升级提供的加密等级，适合国家情报概览。",
+      "candidate_read": "[?ROOT.modifier@crypto_strength]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\intelligence_agency_upgrades\\intelligence_agency_upgrades.txt",
+          "line": 421,
+          "context": [
+            "branch_crypto",
+            "upgrade_form_department",
+            "level",
+            "modifier"
+          ],
+          "value": "1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\intelligence_agency_upgrades\\intelligence_agency_upgrades.txt",
+          "line": 515,
+          "context": [
+            "branch_crypto",
+            "upgrade_crypto_strength",
+            "level",
+            "modifier"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "key": "static_anti_air_damage_factor",
+      "name": "防空阵地伤害系数",
+      "definition_count": 3,
+      "common_ideas_definition_present": false,
+      "recommendation": "科技提供的全国防空阵地伤害系数；州内实际防空火力另算。",
+      "candidate_read": "[?ROOT.modifier@static_anti_air_damage_factor]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technologies\\artillery.txt",
+          "line": 811,
+          "context": [
+            "technologies",
+            "antiair2"
+          ],
+          "value": "0.1"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\technologies\\artillery.txt",
+          "line": 1007,
+          "context": [
+            "technologies",
+            "antiair5"
+          ],
+          "value": "0.1"
+        }
+      ]
+    },
+    {
+      "key": "naval_invasion_plan_cap",
+      "name": "登陆作战计划上限",
+      "definition_count": 8,
+      "common_ideas_definition_present": false,
+      "recommendation": "学说/科技提供的登陆作战计划容量，适合海军分类。",
+      "candidate_read": "[?ROOT.modifier@naval_invasion_plan_cap]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\doctrines\\subdoctrines\\special_forces\\special_forces_subdoctrines.txt",
+          "line": 285,
+          "context": [
+            "marines_1",
+            "rewards",
+            "reward_4"
+          ],
+          "value": "2"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\doctrines\\subdoctrines\\special_forces\\special_forces_subdoctrines.txt",
+          "line": 369,
+          "context": [
+            "marines_2",
+            "rewards",
+            "reward_1"
+          ],
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "key": "naval_invasion_division_cap",
+      "name": "每项登陆作战计划的陆军师容量",
+      "definition_count": 13,
+      "common_ideas_definition_present": false,
+      "recommendation": "学说和动态修正提供的每计划登陆师容量，需按当前1.19机制而非旧版单一容量解释。",
+      "candidate_read": "[?ROOT.modifier@naval_invasion_division_cap]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\doctrines\\subdoctrines\\special_forces\\special_forces_subdoctrines.txt",
+          "line": 368,
+          "context": [
+            "marines_2",
+            "rewards",
+            "reward_1"
+          ],
+          "value": "2"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\bba_dynamic_modifiers.txt",
+          "line": 1043,
+          "context": [
+            "ITA_regia_marina_dynamic_modifier"
+          ],
+          "value": "ITA_rm_naval_invasion_capacity"
+        }
+      ]
+    },
+    {
+      "key": "air_defence_factor",
+      "name": "空中防御",
+      "definition_count": 14,
+      "common_ideas_definition_present": false,
+      "recommendation": "原版国家动态修正有定义，即使common/ideas没有直接项，也不应漏掉空中防御国家系数。",
+      "candidate_read": "[?ROOT.modifier@air_defence_factor]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "line": 294,
+          "context": [
+            "NOR_army_air_force_dmod"
+          ],
+          "value": "NOR.NOR_army_air_force_dmod_air_defence_factor"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "line": 317,
+          "context": [
+            "NOR_royal_air_force_dmod"
+          ],
+          "value": "NOR.NOR_army_air_force_dmod_air_defence_factor"
+        }
+      ]
+    },
+    {
+      "key": "experience_gain_navy_unit_factor",
+      "name": "舰艇经验增长",
+      "definition_count": 27,
+      "common_ideas_definition_present": false,
+      "recommendation": "国家决议与动态修正提供舰艇经验系数；局部舰艇勋章分量不据此汇入国家值。",
+      "candidate_read": "[?ROOT.modifier@experience_gain_navy_unit_factor]",
+      "read_verified": false,
+      "evidence": [
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\decisions\\SIA.txt",
+          "line": 687,
+          "context": [
+            "SIA_movie_theater_cat",
+            "SIA_undauntedly_love_nation",
+            "modifier"
+          ],
+          "value": "0.2"
+        },
+        {
+          "path": "E:\\Steam\\steamapps\\common\\Hearts of Iron IV\\common\\dynamic_modifiers\\aat_dynamic_modifiers.txt",
+          "line": 1119,
+          "context": [
+            "FIN_finnish_navy"
+          ],
+          "value": "FIN_finnish_navy_experience_gain_navy_unit_factor"
+        }
+      ]
+    }
+  ],
+  "runtime_validation_plan": [
+    "在纯原版测试环境逐项记录基线ROOT.modifier@与对应原版UI数值。",
+    "一次只给测试国家增加/移除一个已知普通modifier，验证国家读数差值与显示单位。",
+    "再对一个州、一个领袖、一个装备/MIO或生产线加同名载荷，验证不会误称为国家总量。",
+    "核心/非核心类只校验国家持有系数，不用单场战斗最终数值代替。",
+    "制造商全国修正须单独验证加入/移除前后的国家总值；验证结果不应被误写成支持来源过滤。"
+  ],
+  "limitations": [
+    "未启动游戏，没有逐项运行验证。",
+    "注册文档Categories是引擎分类线索，不是已证实的严格存储作用域白名单。",
+    "静态源定义次数不等于同时生效次数、最终强度或引擎读取可用性。",
+    "此文件只作二次筛选边界证据，不重写完整目录或决定所有4484项运行读取规则。"
+  ]
+}

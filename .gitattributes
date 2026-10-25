@@ -1,4 +1,4 @@
-# Preserve original line endings and encoding, especially HOI4 UTF-8 BOM files.
+# Keep existing Windows line endings and HOI4 localisation BOMs intact.
 * -text
 *.png binary
 *.jpg binary
@@ -6,4 +6,9 @@
 *.webp binary
 *.dds binary
 *.tga binary
+*.xlsx binary
 *.zip binary
+
+# Preserve large research data and release packages through Git LFS.
+hoi4-modding-guide/vanilla-modifier-catalog/global-buff-review/data/focus-spirit-evidence.json filter=lfs diff=lfs merge=lfs -text
+dist/*.zip filter=lfs diff=lfs merge=lfs -text

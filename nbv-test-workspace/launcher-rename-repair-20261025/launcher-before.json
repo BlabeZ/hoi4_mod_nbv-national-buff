@@ -1,0 +1,11 @@
+[
+  {
+    "id": "a35f6b06-091c-460e-ba23-5493ffbcb291",
+    "gameRegistryId": "mod/nbv_national_buff.mod",
+    "name": null,
+    "displayName": "国家BUFF统计 UI",
+    "dirPath": "D:\\projects\\hoi4_mod\\1\\nbv-national-buff",
+    "status": "ready_to_play",
+    "source": "local"
+  }
+]

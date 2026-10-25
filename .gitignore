@@ -1,4 +1,5 @@
-# Python build caches and local environments
+# Reinstallable dependencies, language caches and local editor state
+node_modules/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -6,19 +7,26 @@ __pycache__/
 .ruff_cache/
 .venv/
 venv/
-
-# Editor and OS files
 .idea/
 .vscode/
 .DS_Store
 Thumbs.db
 Desktop.ini
 
-# Local credentials and temporary output
+# Credentials and local environment overrides
 .env
 .env.*
-*.log
-*.tmp
-*.bak
-dist/
-nbv-test-workspace/
+.npmrc
+.pypirc
+
+# Test runtime profile and local launcher databases (not project sources)
+/nbv-test-workspace/profile/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.cache
+.launcher-cache/
+shadercache/
+
+# Source, research, outputs, test evidence and dist archives are intentionally tracked.

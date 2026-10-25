@@ -1,0 +1,115 @@
+[03:34:28][no_game_date][main.cpp:1964]: Not compiled with PDX_DEBUG. Memory usage info will be limited.
+[03:34:28][no_game_date][gameapplication.cpp:812]: Memory before first init: 114324KB memory.
+[03:34:28][no_game_date][gameapplication.cpp:825]: InitTextureLookup(gfx/models) takes 0KB memory.
+[03:34:29][no_game_date][gameapplication.cpp:1252]: InitBase:: CApplication takes 27052KB memory.
+[03:34:29][no_game_date][gameapplication.cpp:1379]: InitBase:: CGameGraphics takes 53356KB memory.
+[03:34:29][no_game_date][gameapplication.cpp:1387]: InitBase:: InitLoadScreen takes 24620KB memory.
+[03:34:34][no_game_date][gameapplication.cpp:1421]: InitBase:: InitGUI takes 837128KB memory.
+[03:34:35][no_game_date][gameapplication.cpp:1476]: InitBase:: AddMapShaderDefines takes 8KB memory.
+[03:34:35][no_game_date][gameapplication.cpp:1488]: InitBase:: CGraphicalCultureTypeDataBase takes 1796KB memory.
+[03:34:35][no_game_date][gameapplication.cpp:832]: InitBase takes 996708KB memory.
+[03:34:36][no_game_date][gameapplication.cpp:840]: _pGraphics->Init3DTypes() takes 157496KB memory.
+[03:34:36][no_game_date][gameapplication.cpp:849]: LoadAssets takes 67188KB memory.
+[03:34:37][no_game_date][map.cpp:600]: ThreadedPostPostRead:: GenerateBoundingBoxes takes 5428KB memory.
+[03:34:37][no_game_date][map.cpp:607]: ThreadedPostPostRead:: CalculateAdjacencies takes 5956KB memory.
+[03:34:37][no_game_date][map.cpp:622]: ThreadedPostPostRead:: CProvinceTemplate takes 11440KB memory.
+[03:34:41][no_game_date][gameapplication.cpp:1541]: InitGame:: LoadDatabases takes 769840KB memory.
+[03:34:42][no_game_date][gameapplication.cpp:1597]: InitGame:: achivements, event and onactions takes 354280KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:354]: Pre layersallocation: 20120KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[0]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[1]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[2]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[3]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[4]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[5]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[6]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[7]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[8]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[9]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[10]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[11]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[12]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[13]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[14]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[15]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[16]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[17]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 0KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[18]: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[19]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[20]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[21]: 11268KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1292]: Buffer: 4KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1322]: _ProvinceMask: 0KB memory.
+[03:34:44][no_game_date][gradientborder.cpp:1327]: ClearBuffer: 11264KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:363]: AllocateLocalBuffers[22]: 11268KB memory.
+[03:34:44][no_game_date][gradientbordermanager.cpp:371]: After layersallocation: 45060KB memory.
+[03:34:44][no_game_date][mapmodemanager.cpp:430]: _pGBMan->LoadDatabase: 211668KB memory.
+[03:34:44][no_game_date][gamestate.cpp:917]: InitGameState:: CreateMapModes 211724KB memory.
+[03:34:45][no_game_date][gameapplication.cpp:1621]: InitGame:: Creating gamestate takes 1.18977e+06KB memory.
+[03:34:45][no_game_date][gameapplication.cpp:1637]: InitGame:: CAIAreaDatabasee::BuildProvinceAreaLookup takes 332KB memory.
+[03:34:45][no_game_date][gameapplication.cpp:1652]: InitGame:: LoadFlagTextures takes 1748KB memory.
+[03:34:45][no_game_date][gameapplication.cpp:1660]: InitGame:: CMapIconManagerImpl takes 0KB memory.
+[03:34:46][no_game_date][gameapplication.cpp:1673]: InitGame:: CFrontEnd takes 21148KB memory.
+[03:34:46][no_game_date][gameapplication.cpp:1710]: InitGame:: CButtonMenu takes 0KB memory.
+[03:34:46][no_game_date][gameapplication.cpp:1717]: InitGame:: DumpMissing takes 32KB memory.
+[03:34:46][no_game_date][gameapplication.cpp:1723]: InitGame:: InitFileWatchers takes 180KB memory.
+[03:34:46][no_game_date][gameapplication.cpp:853]: InitGame() takes 2.34236e+06KB memory.
+[03:34:50][1936.01.01.12][gameapplication.cpp:1767]: InitMap:: CGraphicalMap takes 245216KB memory.
+[03:34:51][1936.01.01.12][gameapplication.cpp:1774]: InitMap:: Init map stuff takes 36096KB memory.
+[03:34:51][1936.01.01.12][frontend.cpp:444]: _Super.InitMap takes 310816KB memory.

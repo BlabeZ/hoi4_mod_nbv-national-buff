@@ -1,0 +1,211 @@
+# 情报修正目录
+
+共 203 项；这是主类归档，跨领域关联和完整字段见 [离线检索页](../catalog.html) 与 [完整数据](../data/catalog.json)。
+
+“定义次数”是本机原版源码的上下文过滤赋值计数，不是存档触发率。P0 为核心候选，P1 为分类页重点候选，P2 为专项扩展，P3 为仅注册或未发现定义赋值。名称由模板组合时可在检索页查看标记。
+
+| 优先级 | 修正键和名称 | 定义次数／文件数 | 两模组选取 | 作用或选择理由 |
+|---|---|---:|---|---|
+| P0 | [operative_slot](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4263>)<br>特工位 | 110／33 | 决议、UI | 作用项：特工位。本地原版未提供详细公式说明。 |
+| P0 | [navy_intel_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4078>)<br>海军情报 | 21／11 | 决议、UI | 作用项：海军情报。本地原版未提供详细公式说明。 |
+| P0 | [agency_upgrade_time](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1412>)<br>情报机构升级时间 | 37／10 | 决议、UI | 作用项：情报机构升级时间。本地原版未提供详细公式说明。 |
+| P0 | [army_intel_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1887>)<br>陆军情报 | 25／12 | 决议、UI | 作用项：陆军情报。本地原版未提供详细公式说明。 |
+| P0 | [airforce_intel_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1717>)<br>空军情报 | 15／9 | 决议、UI | 作用项：空军情报。本地原版未提供详细公式说明。 |
+| P0 | [civilian_intel_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2212>)<br>民政情报 | 20／9 | 决议、UI | 作用项：民政情报。本地原版未提供详细公式说明。 |
+| P0 | [intelligence_agency_defense](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2972>)<br>反间谍 | 51／21 | 未选 | 作用项：反间谍。本地原版未提供详细公式说明。 |
+| P0 | [decryption_power_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2373>)<br>破译能力修正 | 2／2 | 决议、UI | 作用项：破译能力修正。本地原版未提供详细公式说明。 |
+| P1 | [civilian_intel_to_others](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2217>)<br>泄露给他国的民政情报 | 60／21 | 决议、UI | 作用项：泄露给他国的民政情报。本地原版未提供详细公式说明。 |
+| P1 | [army_intel_to_others](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1892>)<br>泄露给他国的陆军情报 | 39／18 | 决议、UI | 作用项：泄露给他国的陆军情报。本地原版未提供详细公式说明。 |
+| P1 | [enemy_operative_capture_chance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2498>)<br>敌方特工被捕几率 | 29／15 | 决议、UI | 作用项：敌方特工被捕几率。本地原版未提供详细公式说明。 |
+| P1 | [airforce_intel_to_others](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1722>)<br>泄露给他国的空军情报 | 26／14 | 决议、UI | 作用项：泄露给他国的空军情报。本地原版未提供详细公式说明。 |
+| P1 | [navy_intel_to_others](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4083>)<br>泄露给他国的海军情报 | 23／13 | 决议、UI | 作用项：泄露给他国的海军情报。本地原版未提供详细公式说明。 |
+| P1 | [intel_network_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2967>)<br>情报网强度增长率 | 34／8 | 决议、UI | 作用项：情报网强度增长率。本地原版未提供详细公式说明。 |
+| P1 | [enemy_operative_intel_extraction_rate](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2533>)<br>敌方特工情报获取率 | 14／9 | 决议、UI | 作用项：敌方特工情报获取率。本地原版未提供详细公式说明。 |
+| P1 | [enemy_operative_detection_chance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2508>)<br>敌方特工被发现几率系数 | 13／6 | 决议、UI | 作用项：敌方特工被发现几率系数。本地原版未提供详细公式说明。 |
+| P1 | [decryption_power](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2368>)<br>破译能力 | 10／4 | 决议、UI | 作用项：破译能力。本地原版未提供详细公式说明。 |
+| P1 | [foreign_subversive_activites](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2802>)<br>名称待核验 | 72／23 | 未选 | 作用名称未确认；保留原始键与定义位置供复核。 |
+| P1 | [enemy_operative_detection_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2503>)<br>敌方特工被发现几率补正 | 12／3 | 决议、UI | 作用项：敌方特工被发现几率补正。本地原版未提供详细公式说明。 |
+| P1 | [new_operative_slot_bonus](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4193>)<br>特工招募选项 | 9／4 | 决议、UI | 作用项：特工招募选项。本地原版未提供详细公式说明。 |
+| P1 | [own_operative_detection_chance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4338>)<br>我方特工被发现几率系数 | 5／3 | 决议、UI | 作用项：我方特工被发现几率系数。本地原版未提供详细公式说明。 |
+| P1 | [intel_network_gain](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2962>)<br>情报网强度增长 | 4／3 | 决议、UI | 作用项：情报网强度增长。本地原版未提供详细公式说明。 |
+| P1 | [operation_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4243>)<br>行动花费 | 2／2 | 决议、UI | 作用项：行动花费。本地原版未提供详细公式说明。 |
+| P1 | [operation_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4253>)<br>行动效率 | 2／2 | 决议、UI | 作用项：行动效率。本地原版未提供详细公式说明。 |
+| P1 | [crypto_strength](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2353>)<br>加密等级 | 6／1 | 决议、UI | 作用项：加密等级。本地原版未提供详细公式说明。 |
+| P1 | [own_operative_capture_chance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4328>)<br>我方特工被捕几率 | 1／1 | 决议、UI | 作用项：我方特工被捕几率。本地原版未提供详细公式说明。 |
+| P1 | [own_operative_detection_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4333>)<br>我方特工被发现几率补正 | 1／1 | 决议、UI | 作用项：我方特工被发现几率补正。本地原版未提供详细公式说明。 |
+| P1 | [operation_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险 | 0／0 | 决议、UI | 行动风险。引擎模板说明：Operation risk modifier. |
+| P1 | [own_operative_intel_extraction_rate](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4353>)<br>情报获取率 | 0／0 | 决议、UI | 作用项：情报获取率。本地原版未提供详细公式说明。 |
+| P1 | [intelligence_operation_speed](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2977>)<br>情报行动速度系数 | 0／0 | 未选 | 作用项：情报行动速度系数。本地原版未提供详细公式说明。 |
+| P2 | [decryption_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2363>)<br>解密 | 34／13 | 未选 | 作用项：解密。本地原版未提供详细公式说明。 |
+| P2 | [subversive_activites_upkeep](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4956>)<br>颠覆活动成本 | 50／13 | 未选 | 作用项：颠覆活动成本。本地原版未提供详细公式说明。 |
+| P2 | [encryption_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2458>)<br>加密 | 29／12 | 未选 | 作用项：加密。本地原版未提供详细公式说明。 |
+| P2 | [boost_ideology_mission_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2087>)<br>加强意识形态任务成果 | 12／8 | 未选 | 作用项：加强意识形态任务成果。本地原版未提供详细公式说明。 |
+| P2 | [encryption](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2453>)<br>加密 | 19／12 | 未选 | 加密能够使部队在地图上的信息和国策树的进程对外国隐藏。高于敌方的解密值能够抵消其战斗加成 |
+| P2 | [intel_from_combat_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2952>)<br>从战斗获取的情报 | 12／9 | 未选 | 作用项：从战斗获取的情报。本地原版未提供详细公式说明。 |
+| P2 | [root_out_resistance_effectiveness_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4680>)<br>根除抵抗组织任务成果 | 14／7 | 未选 | 作用项：根除抵抗组织任务成果。本地原版未提供详细公式说明。 |
+| P2 | [boost_resistance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2092>)<br>加强抵抗组织效率 | 11／8 | 未选 | 作用项：加强抵抗组织效率。本地原版未提供详细公式说明。 |
+| P2 | [decryption](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2358>)<br>解密 | 12／7 | 未选 | 解密能显示出其他国家部队在地图上的信息和国策树的进程。高于敌方的加密值能够提供战斗加成 |
+| P2 | [intel_from_operatives_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2957>)<br>从特工与渗透线人获得情报 | 9／6 | 未选 | 作用项：从特工与渗透线人获得情报。本地原版未提供详细公式说明。 |
+| P2 | [target_sabotage_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4986>)<br>目标破坏效率 | 6／5 | 未选 | 作用项：目标破坏效率。本地原版未提供详细公式说明。 |
+| P2 | [operation_boost_resistance_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>加强抵抗组织效率 | 4／4 | 未选 | 加强抵抗组织效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [propaganda_mission_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4512>)<br>政治宣传任务成果 | 6／5 | 未选 | 作用项：政治宣传任务成果。本地原版未提供详细公式说明。 |
+| P2 | [operation_infiltrate_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4248>)<br>渗透效率 | 4／3 | 未选 | 作用项：渗透效率。本地原版未提供详细公式说明。 |
+| P2 | [diplomatic_pressure_mission_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2408>)<br>外交施压任务成果 | 3／3 | 未选 | 作用项：外交施压任务成果。本地原版未提供详细公式说明。 |
+| P2 | [operation_make_resistance_contacts_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>接触抵抗组织效率 | 3／3 | 未选 | 接触抵抗组织效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [army_intel_decryption_bonus](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1882>)<br>破译的陆军密码加成：$VALUE$ | 3／2 | 未选 | 作用项：破译的陆军密码加成：$VALUE$。本地原版未提供详细公式说明。 |
+| P2 | [civilian_intel_decryption_bonus](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2207>)<br>破译的民政密码加成：$VALUE$ | 3／2 | 未选 | 作用项：破译的民政密码加成：$VALUE$。本地原版未提供详细公式说明。 |
+| P2 | [local_factory_sabotage](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:3182>)<br>破坏建设几率 | 4／3 | 未选 | 作用项：破坏建设几率。本地原版未提供详细公式说明。 |
+| P2 | [local_intel_to_enemies](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:3187>)<br>敌人获取的情报 | 5／2 | 未选 | 作用项：敌人获取的情报。本地原版未提供详细公式说明。 |
+| P2 | [commando_trait_chance_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2252>)<br>招募具有特战专家特质特工的几率 | 2／2 | 未选 | 作用项：招募具有特战专家特质特工的几率。本地原版未提供详细公式说明。 |
+| P2 | [control_trade_mission_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2292>)<br>控制贸易任务成果 | 2／2 | 未选 | 作用项：控制贸易任务成果。本地原版未提供详细公式说明。 |
+| P2 | [enemy_intel_network_gain_factor_over_occupied_tag](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2483>)<br>敌方情报网强度增长 | 2／2 | 未选 | 作用项：敌方情报网强度增长。本地原版未提供详细公式说明。 |
+| P2 | [operation_steal_tech_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>窃取蓝图效率 | 2／2 | 未选 | 窃取蓝图效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_steal_tech_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>窃取蓝图风险 | 2／2 | 未选 | 窃取蓝图风险。引擎模板说明：Operation risk modifier. |
+| P2 | [operation_targeted_sabotage_industry_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>破坏工业效率 | 2／2 | 未选 | 破坏工业效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_targeted_sabotage_infrastructure_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>破坏基础设施效率 | 2／2 | 未选 | 破坏基础设施效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_targeted_sabotage_resources_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>破坏资源效率 | 2／2 | 未选 | 破坏资源效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [target_sabotage_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>破坏活动花费 | 2／2 | 未选 | 破坏活动花费。引擎模板说明：Operation cost modifier. |
+| P2 | [enemy_operative_detection_chance_factor_over_occupied_tag](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2513>)<br>敌方特工被发现几率系数 | 3／2 | 未选 | 作用项：敌方特工被发现几率系数。本地原版未提供详细公式说明。 |
+| P2 | [airforce_intel_decryption_bonus](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1712>)<br>破译的空军密码加成：$VALUE$ | 2／1 | 未选 | 作用项：破译的空军密码加成：$VALUE$。本地原版未提供详细公式说明。 |
+| P2 | [navy_intel_decryption_bonus](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4073>)<br>破译的海军密码加成：$VALUE$ | 2／1 | 未选 | 作用项：破译的海军密码加成：$VALUE$。本地原版未提供详细公式说明。 |
+| P2 | [operation_boost_resistance_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>加强抵抗组织花费 | 2／1 | 未选 | 加强抵抗组织花费。引擎模板说明：Operation cost modifier. |
+| P2 | [operation_capture_cipher_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>夺取密码效率 | 2／1 | 未选 | 夺取密码效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_infiltrate_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>渗透风险 | 2／1 | 未选 | 渗透风险。引擎模板说明：Operation risk modifier. |
+| P2 | [operation_make_resistance_contacts_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>接触抵抗组织花费 | 2／1 | 未选 | 接触抵抗组织花费。引擎模板说明：Operation cost modifier. |
+| P2 | [operation_make_resistance_contacts_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>接触抵抗组织风险 | 2／1 | 未选 | 接触抵抗组织风险。引擎模板说明：Operation risk modifier. |
+| P2 | [crypto_department_enabled](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2348>)<br>解锁密码部门 | 1／1 | 未选 | 作用项：解锁密码部门。本地原版未提供详细公式说明。 |
+| P2 | [enemy_operative_detection_chance_over_occupied_tag](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2518>)<br>敌方特工被发现几率补正 | 1／1 | 未选 | 作用项：敌方特工被发现几率补正。本地原版未提供详细公式说明。 |
+| P2 | [enemy_operative_recruitment_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2538>)<br>敌国国籍特工招募几率 | 1／1 | 未选 | 作用项：敌国国籍特工招募几率。本地原版未提供详细公式说明。 |
+| P2 | [occupied_operative_recruitment_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4228>)<br>敌占区友方国籍特工招募几率 | 1／1 | 未选 | 作用项：敌占区友方国籍特工招募几率。本地原版未提供详细公式说明。 |
+| P2 | [operation_capture_cipher_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>夺取密码风险 | 1／1 | 未选 | 夺取密码风险。引擎模板说明：Operation risk modifier. |
+| P2 | [operation_coordinated_strike_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>协同打击效率 | 1／1 | 未选 | 协同打击效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_coup_government_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>策划政变花费 | 1／1 | 未选 | 策划政变花费。引擎模板说明：Operation cost modifier. |
+| P2 | [operation_coup_government_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>策划政变效率 | 1／1 | 未选 | 策划政变效率。引擎模板说明：Operation outcome modifier. |
+| P2 | [operation_coup_government_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>策划政变风险 | 1／1 | 未选 | 策划政变风险。引擎模板说明：Operation risk modifier. |
+| P2 | [operation_rescue_operative_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>营救特工花费 | 1／1 | 未选 | 营救特工花费。引擎模板说明：Operation cost modifier. |
+| P2 | [operation_rescue_operative_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>营救特工风险 | 1／1 | 未选 | 营救特工风险。引擎模板说明：Operation risk modifier. |
+| P2 | [operative_death_on_capture_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4258>)<br>我方特工在被捕时死亡几率 | 1／1 | 未选 | 作用项：我方特工在被捕时死亡几率。本地原版未提供详细公式说明。 |
+| P2 | [target_sabotage_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>破坏活动风险 | 1／1 | 未选 | 破坏活动风险。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_central_africa_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划中非政变 | 0／0 | 未选 | 行动成本：策划中非政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_central_africa_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划中非政变 | 0／0 | 未选 | 行动结果：策划中非政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_central_africa_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划中非政变 | 0／0 | 未选 | 行动风险：策划中非政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_indochina_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划印度支那政变 | 0／0 | 未选 | 行动成本：策划印度支那政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_indochina_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划印度支那政变 | 0／0 | 未选 | 行动结果：策划印度支那政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_indochina_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划印度支那政变 | 0／0 | 未选 | 行动风险：策划印度支那政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_madagascar_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划马达加斯加政变 | 0／0 | 未选 | 行动成本：策划马达加斯加政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_madagascar_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划马达加斯加政变 | 0／0 | 未选 | 行动结果：策划马达加斯加政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_madagascar_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划马达加斯加政变 | 0／0 | 未选 | 行动风险：策划马达加斯加政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_north_africa_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划北非政变 | 0／0 | 未选 | 行动成本：策划北非政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_north_africa_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划北非政变 | 0／0 | 未选 | 行动结果：策划北非政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_north_africa_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划北非政变 | 0／0 | 未选 | 行动风险：策划北非政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_syria_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划叙利亚政变 | 0／0 | 未选 | 行动成本：策划叙利亚政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_syria_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划叙利亚政变 | 0／0 | 未选 | 行动结果：策划叙利亚政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_syria_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划叙利亚政变 | 0／0 | 未选 | 行动风险：策划叙利亚政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_coup_in_west_africa_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：策划西非政变 | 0／0 | 未选 | 行动成本：策划西非政变。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_coup_in_west_africa_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：策划西非政变 | 0／0 | 未选 | 行动结果：策划西非政变。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_coup_in_west_africa_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：策划西非政变 | 0／0 | 未选 | 行动风险：策划西非政变。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_instigate_workers_revolution_britain_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：煽动英国的工人革命 | 0／0 | 未选 | 行动成本：煽动英国的工人革命。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_instigate_workers_revolution_britain_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：煽动英国的工人革命 | 0／0 | 未选 | 行动结果：煽动英国的工人革命。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_instigate_workers_revolution_britain_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：煽动英国的工人革命 | 0／0 | 未选 | 行动风险：煽动英国的工人革命。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_instigate_workers_revolution_germany_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：煽动德国的工人革命 | 0／0 | 未选 | 行动成本：煽动德国的工人革命。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_instigate_workers_revolution_germany_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：煽动德国的工人革命 | 0／0 | 未选 | 行动结果：煽动德国的工人革命。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_instigate_workers_revolution_germany_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：煽动德国的工人革命 | 0／0 | 未选 | 行动风险：煽动德国的工人革命。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_instigate_workers_revolution_italy_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：煽动意大利的工人革命 | 0／0 | 未选 | 行动成本：煽动意大利的工人革命。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_instigate_workers_revolution_italy_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：煽动意大利的工人革命 | 0／0 | 未选 | 行动结果：煽动意大利的工人革命。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_instigate_workers_revolution_italy_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：煽动意大利的工人革命 | 0／0 | 未选 | 行动风险：煽动意大利的工人革命。引擎模板说明：Operation risk modifier. |
+| P3 | [FRA_instigate_workers_revolution_spain_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：煽动西班牙的工人革命 | 0／0 | 未选 | 行动成本：煽动西班牙的工人革命。引擎模板说明：Operation cost modifier. |
+| P3 | [FRA_instigate_workers_revolution_spain_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：煽动西班牙的工人革命 | 0／0 | 未选 | 行动结果：煽动西班牙的工人革命。引擎模板说明：Operation outcome modifier. |
+| P3 | [FRA_instigate_workers_revolution_spain_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：煽动西班牙的工人革命 | 0／0 | 未选 | 行动风险：煽动西班牙的工人革命。引擎模板说明：Operation risk modifier. |
+| P3 | [bruneval_raid_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：叮咬行动 | 0／0 | 未选 | 行动成本：叮咬行动。引擎模板说明：Operation cost modifier. |
+| P3 | [bruneval_raid_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：叮咬行动 | 0／0 | 未选 | 行动结果：叮咬行动。引擎模板说明：Operation outcome modifier. |
+| P3 | [bruneval_raid_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：叮咬行动 | 0／0 | 未选 | 行动风险：叮咬行动。引擎模板说明：Operation risk modifier. |
+| P3 | [capture_tito_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：跳马行动 | 0／0 | 未选 | 行动成本：跳马行动。引擎模板说明：Operation cost modifier. |
+| P3 | [capture_tito_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：跳马行动 | 0／0 | 未选 | 行动结果：跳马行动。引擎模板说明：Operation outcome modifier. |
+| P3 | [capture_tito_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：跳马行动 | 0／0 | 未选 | 行动风险：跳马行动。引擎模板说明：Operation risk modifier. |
+| P3 | [defense_impact_on_blueprint_stealing](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2388>)<br>对敌方关于窃取蓝图行动反间谍的影响 | 0／0 | 未选 | 作用项：对敌方关于窃取蓝图行动反间谍的影响。本地原版未提供详细公式说明。 |
+| P3 | [enemy_operative_forced_into_hiding_time_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2523>)<br>敌方被迫躲藏时间 | 0／0 | 未选 | 作用项：敌方被迫躲藏时间。本地原版未提供详细公式说明。 |
+| P3 | [enemy_operative_harmed_time_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2528>)<br>敌方破坏时间 | 0／0 | 未选 | 作用项：敌方破坏时间。本地原版未提供详细公式说明。 |
+| P3 | [enemy_spy_negative_status_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2543>)<br>敌方间谍消极状态[wip] | 0／0 | 未选 | 作用项：敌方间谍消极状态[wip]。本地原版未提供详细公式说明。 |
+| P3 | [experience_gain_fake_intel_unit_combat_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2613>)<br>单位战斗经验获取系数：疑兵营 | 0／0 | 未选 | 单位战斗经验获取系数：疑兵营。引擎模板说明：Unit experience gain factor in combat. |
+| P3 | [experience_gain_fake_intel_unit_mission_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2621>)<br>单位任务经验获取系数：疑兵营 | 0／0 | 未选 | 单位任务经验获取系数：疑兵营。引擎模板说明：Unit experience gain factor in missions. |
+| P3 | [experience_gain_fake_intel_unit_training_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2629>)<br>单位训练经验获取系数：疑兵营 | 0／0 | 未选 | 单位训练经验获取系数：疑兵营。引擎模板说明：Unit experience gain factor on training. |
+| P3 | [female_random_operative_chance](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:2762>)<br>名称待核验 | 0／0 | 未选 | 作用名称未确认；保留原始键与定义位置供复核。 |
+| P3 | [heavy_water_raid_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：冈赛塞德行动 | 0／0 | 未选 | 行动成本：冈赛塞德行动。引擎模板说明：Operation cost modifier. |
+| P3 | [heavy_water_raid_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：冈赛塞德行动 | 0／0 | 未选 | 行动结果：冈赛塞德行动。引擎模板说明：Operation outcome modifier. |
+| P3 | [heavy_water_raid_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：冈赛塞德行动 | 0／0 | 未选 | 行动风险：冈赛塞德行动。引擎模板说明：Operation risk modifier. |
+| P3 | [murder_trotsky_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：取巧刺杀 | 0／0 | 未选 | 行动成本：取巧刺杀。引擎模板说明：Operation cost modifier. |
+| P3 | [murder_trotsky_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：取巧刺杀 | 0／0 | 未选 | 行动结果：取巧刺杀。引擎模板说明：Operation outcome modifier. |
+| P3 | [murder_trotsky_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：取巧刺杀 | 0／0 | 未选 | 行动风险：取巧刺杀。引擎模板说明：Operation risk modifier. |
+| P3 | [nuclear_espionage_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：渗透核计划 | 0／0 | 未选 | 行动成本：渗透核计划。引擎模板说明：Operation cost modifier. |
+| P3 | [nuclear_espionage_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：渗透核计划 | 0／0 | 未选 | 行动结果：渗透核计划。引擎模板说明：Operation outcome modifier. |
+| P3 | [nuclear_espionage_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：渗透核计划 | 0／0 | 未选 | 行动风险：渗透核计划。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_boost_resistance_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>加强抵抗组织风险 | 0／0 | 未选 | 加强抵抗组织风险。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_capture_cipher_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>夺取密码花费 | 0／0 | 未选 | 夺取密码花费。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_collaboration_government_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>筹建合作政府花费 | 0／0 | 未选 | 筹建合作政府花费。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_collaboration_government_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>筹建合作政府效率 | 0／0 | 未选 | 筹建合作政府效率。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_collaboration_government_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>筹建合作政府风险 | 0／0 | 未选 | 筹建合作政府风险。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_coordinated_strike_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>协同打击花费 | 0／0 | 未选 | 协同打击花费。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_coordinated_strike_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>协同打击风险 | 0／0 | 未选 | 协同打击风险。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_coup_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：operation_coup | 0／0 | 未选 | 行动成本：operation_coup。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_fake_intel_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>伪报花费 | 0／0 | 未选 | 伪报花费。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_fake_intel_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>伪报效率 | 0／0 | 未选 | 伪报效率。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_fake_intel_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>伪报风险 | 0／0 | 未选 | 伪报风险。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_infiltrate_armed_forces_airforce_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：渗透空军 | 0／0 | 未选 | 行动成本：渗透空军。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_infiltrate_armed_forces_airforce_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：渗透空军 | 0／0 | 未选 | 行动结果：渗透空军。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_infiltrate_armed_forces_airforce_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：渗透空军 | 0／0 | 未选 | 行动风险：渗透空军。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_infiltrate_armed_forces_army_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：渗透陆军 | 0／0 | 未选 | 行动成本：渗透陆军。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_infiltrate_armed_forces_army_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：渗透陆军 | 0／0 | 未选 | 行动结果：渗透陆军。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_infiltrate_armed_forces_army_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：渗透陆军 | 0／0 | 未选 | 行动风险：渗透陆军。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_infiltrate_armed_forces_navy_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：渗透海军 | 0／0 | 未选 | 行动成本：渗透海军。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_infiltrate_armed_forces_navy_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：渗透海军 | 0／0 | 未选 | 行动结果：渗透海军。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_infiltrate_armed_forces_navy_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：渗透海军 | 0／0 | 未选 | 行动风险：渗透海军。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_infiltrate_civilian_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：渗透民政管理机构 | 0／0 | 未选 | 行动成本：渗透民政管理机构。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_infiltrate_civilian_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：渗透民政管理机构 | 0／0 | 未选 | 行动结果：渗透民政管理机构。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_infiltrate_civilian_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：渗透民政管理机构 | 0／0 | 未选 | 行动风险：渗透民政管理机构。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_infiltrate_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>渗透花费 | 0／0 | 未选 | 渗透花费。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_rescue_general_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：营救被俘指挥官 | 0／0 | 未选 | 行动成本：营救被俘指挥官。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_rescue_general_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：营救被俘指挥官 | 0／0 | 未选 | 行动结果：营救被俘指挥官。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_rescue_general_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：营救被俘指挥官 | 0／0 | 未选 | 行动风险：营救被俘指挥官。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_rescue_operative_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>营救特工效率 | 0／0 | 未选 | 营救特工效率。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_steal_tech_airforce_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：窃取航空工业蓝图 | 0／0 | 未选 | 行动成本：窃取航空工业蓝图。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_steal_tech_airforce_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：窃取航空工业蓝图 | 0／0 | 未选 | 行动结果：窃取航空工业蓝图。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_steal_tech_airforce_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：窃取航空工业蓝图 | 0／0 | 未选 | 行动风险：窃取航空工业蓝图。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_steal_tech_army_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：窃取军事设计图纸 | 0／0 | 未选 | 行动成本：窃取军事设计图纸。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_steal_tech_army_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：窃取军事设计图纸 | 0／0 | 未选 | 行动结果：窃取军事设计图纸。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_steal_tech_army_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：窃取军事设计图纸 | 0／0 | 未选 | 行动风险：窃取军事设计图纸。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_steal_tech_civilian_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：窃取工业设计图纸 | 0／0 | 未选 | 行动成本：窃取工业设计图纸。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_steal_tech_civilian_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：窃取工业设计图纸 | 0／0 | 未选 | 行动结果：窃取工业设计图纸。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_steal_tech_civilian_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：窃取工业设计图纸 | 0／0 | 未选 | 行动风险：窃取工业设计图纸。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_steal_tech_navy_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：窃取海军设计图纸 | 0／0 | 未选 | 行动成本：窃取海军设计图纸。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_steal_tech_navy_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：窃取海军设计图纸 | 0／0 | 未选 | 行动结果：窃取海军设计图纸。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_steal_tech_navy_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：窃取海军设计图纸 | 0／0 | 未选 | 行动风险：窃取海军设计图纸。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_targeted_sabotage_industry_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：破坏工业 | 0／0 | 未选 | 行动成本：破坏工业。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_targeted_sabotage_industry_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：破坏工业 | 0／0 | 未选 | 行动风险：破坏工业。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_targeted_sabotage_infrastructure_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：破坏基础设施 | 0／0 | 未选 | 行动成本：破坏基础设施。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_targeted_sabotage_infrastructure_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：破坏基础设施 | 0／0 | 未选 | 行动风险：破坏基础设施。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_targeted_sabotage_resources_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：破坏资源 | 0／0 | 未选 | 行动成本：破坏资源。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_targeted_sabotage_resources_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：破坏资源 | 0／0 | 未选 | 行动风险：破坏资源。引擎模板说明：Operation risk modifier. |
+| P3 | [operation_warsaw_uprising_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：华沙起义 | 0／0 | 未选 | 行动成本：华沙起义。引擎模板说明：Operation cost modifier. |
+| P3 | [operation_warsaw_uprising_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：华沙起义 | 0／0 | 未选 | 行动结果：华沙起义。引擎模板说明：Operation outcome modifier. |
+| P3 | [operation_warsaw_uprising_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：华沙起义 | 0／0 | 未选 | 行动风险：华沙起义。引擎模板说明：Operation risk modifier. |
+| P3 | [own_operative_forced_into_hiding_time_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4343>)<br>被迫躲藏时间 | 0／0 | 未选 | 作用项：被迫躲藏时间。本地原版未提供详细公式说明。 |
+| P3 | [own_operative_harmed_time_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:4348>)<br>破坏时间 | 0／0 | 未选 | 作用项：破坏时间。本地原版未提供详细公式说明。 |
+| P3 | [raid_trotskys_villa_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：突袭托洛茨基的别墅 | 0／0 | 未选 | 行动成本：突袭托洛茨基的别墅。引擎模板说明：Operation cost modifier. |
+| P3 | [raid_trotskys_villa_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：突袭托洛茨基的别墅 | 0／0 | 未选 | 行动结果：突袭托洛茨基的别墅。引擎模板说明：Operation outcome modifier. |
+| P3 | [raid_trotskys_villa_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：突袭托洛茨基的别墅 | 0／0 | 未选 | 行动风险：突袭托洛茨基的别墅。引擎模板说明：Operation risk modifier. |
+| P3 | [rescue_mussolini_cost](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1344>)<br>行动成本：营救贝尼托·墨索里尼 | 0／0 | 未选 | 行动成本：营救贝尼托·墨索里尼。引擎模板说明：Operation cost modifier. |
+| P3 | [rescue_mussolini_outcome](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1352>)<br>行动结果：营救贝尼托·墨索里尼 | 0／0 | 未选 | 行动结果：营救贝尼托·墨索里尼。引擎模板说明：Operation outcome modifier. |
+| P3 | [rescue_mussolini_risk](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:1360>)<br>行动风险：营救贝尼托·墨索里尼 | 0／0 | 未选 | 行动风险：营救贝尼托·墨索里尼。引擎模板说明：Operation risk modifier. |
+| P3 | [trait_operative_commando_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>特战专家特工特质经验增长速度 | 0／0 | 未选 | 特战专家特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_demolition_expert_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>爆破专家特工特质经验增长速度 | 0／0 | 未选 | 爆破专家特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_double_agent_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>双面间谍特工特质经验增长速度 | 0／0 | 未选 | 双面间谍特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_escape_artist_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>逃脱大师特工特质经验增长速度 | 0／0 | 未选 | 逃脱大师特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_infiltrator_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>渗透者特工特质经验增长速度 | 0／0 | 未选 | 渗透者特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_linguist_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>语言学家特工特质经验增长速度 | 0／0 | 未选 | 语言学家特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_master_interrogator_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>审讯大师特工特质经验增长速度 | 0／0 | 未选 | 审讯大师特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_natural_orator_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>天生演说家特工特质经验增长速度 | 0／0 | 未选 | 天生演说家特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_safe_cracker_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>撬锁行家特工特质经验增长速度 | 0／0 | 未选 | 撬锁行家特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_seducer_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>魅惑者特工特质经验增长速度 | 0／0 | 未选 | 魅惑者特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_tough_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>坚韧不拔特工特质经验增长速度 | 0／0 | 未选 | 坚韧不拔特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [trait_operative_well_groomed_xp_gain_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5054>)<br>衣冠楚楚特工特质经验增长速度 | 0／0 | 未选 | 衣冠楚楚特工特质经验增长速度。引擎模板说明：Xp gain factor (used if the trait has not prefix 'trait_'). |
+| P3 | [unit_fake_intel_unit_design_cost_factor](<E:/Steam/steamapps/common/Hearts of Iron IV/documentation/modifiers_documentation.md:5087>)<br>疑兵营单位编成花费 | 0／0 | 未选 | 疑兵营单位编成花费。引擎模板说明：Unit design cost factor. |

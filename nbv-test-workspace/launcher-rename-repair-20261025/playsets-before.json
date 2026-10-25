@@ -1,0 +1,14 @@
+[
+  {
+    "playsetId": "05a46255-1b70-4bb2-98f0-c217b9ae7392",
+    "modId": "a35f6b06-091c-460e-ba23-5493ffbcb291",
+    "enabled": 1,
+    "position": 0
+  },
+  {
+    "playsetId": "45698ec1-140f-48a8-96eb-7975a0c6c880",
+    "modId": "a35f6b06-091c-460e-ba23-5493ffbcb291",
+    "enabled": 1,
+    "position": 39
+  }
+]

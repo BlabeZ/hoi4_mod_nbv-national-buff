@@ -1,0 +1,7 @@
+on_actions = {
+ on_startup = {
+  effect = {
+   GER = { country_event = { id = nbv_smoke.1 } }
+  }
+ }
+}

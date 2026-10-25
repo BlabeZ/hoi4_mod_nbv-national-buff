@@ -1,0 +1,35 @@
+{
+  "script_sha256": "b226f0f2cdfd9f33506cdf88e45d56ed58a8d77a3c5a3805a67aef04f187dae4",
+  "run_directory": "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\launcher-rename-repair-20261025\\fixture-run-173925",
+  "passed": true,
+  "results": [
+    {
+      "name": "migration_normal_update_and_launcher_rename",
+      "passed": true
+    },
+    {
+      "name": "workshop_id_conflict_refuses_without_changes",
+      "passed": true
+    },
+    {
+      "name": "other_mod_descriptor_not_overwritten",
+      "passed": true
+    },
+    {
+      "name": "other_mod_directory_not_overwritten",
+      "passed": true
+    },
+    {
+      "name": "manifest_escape_refused_without_changes",
+      "passed": true
+    },
+    {
+      "name": "duplicate_installations_refused",
+      "passed": true
+    },
+    {
+      "name": "nested_junction_escape_refused",
+      "passed": true
+    }
+  ]
+}

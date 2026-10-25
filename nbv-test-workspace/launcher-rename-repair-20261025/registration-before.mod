@@ -1,0 +1,8 @@
+name="国家BUFF统计 UI"
+version="0.1.11"
+tags={
+	"Utilities"
+	"Gameplay"
+}
+supported_version="1.19.*"
+path="D:/projects/hoi4_mod/1/nbv-national-buff"

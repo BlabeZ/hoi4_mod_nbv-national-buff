@@ -1,0 +1,312 @@
+{
+  "record_count": 4484,
+  "counts": {
+    "template_derived": 2973,
+    "has_chinese_name": 4405,
+    "exact_lowercase_prefix": 582,
+    "exact_key": 270,
+    "exact_modifier_prefix": 511,
+    "unmatched": 79,
+    "has_chinese_description": 210,
+    "explicit_tooltip_reference": 51,
+    "exact_modifiers_prefix": 15,
+    "reviewed_script_tooltip_chain": 2,
+    "exact_uppercase_key": 1
+  },
+  "explicit_aliases": [
+    {
+      "key": "air_ace_bonuses_factor",
+      "localisation_key": "MODIFIER_ACE_BONUSES_FACTOR"
+    },
+    {
+      "key": "air_mission_xp_gain_factor",
+      "localisation_key": "MODIFIER_AIR_MISSION_XP_FACTOR"
+    },
+    {
+      "key": "air_strategic_bomber_bombing_factor",
+      "localisation_key": "MODIFIER_STRATEGIC_BOMBER_BOMBING_FACTOR"
+    },
+    {
+      "key": "attack_bonus_against",
+      "localisation_key": "MODIFIER_ATTACK_BONUS_AGAINST_A_COUNTRY"
+    },
+    {
+      "key": "breakthrough_factor",
+      "localisation_key": "MODIFIER_BREAKTHROUGH"
+    },
+    {
+      "key": "compliance_gain",
+      "localisation_key": "MODIFIER_COMPLIANCE_GAIN_ADD"
+    },
+    {
+      "key": "conscription",
+      "localisation_key": "MODIFIER_CONSCRIPTION_FACTOR"
+    },
+    {
+      "key": "convoy_escort_efficiency",
+      "localisation_key": "MODIFIER_MISSION_CONVOY_ESCORT_EFFICIENCY"
+    },
+    {
+      "key": "defensive_war_stability_factor",
+      "localisation_key": "MODIFIER_STABILITY_DEFENSIVE_WAR_FACTOR"
+    },
+    {
+      "key": "dont_lose_dig_in_on_attack",
+      "localisation_key": "MODIFIER_DONT_LOSE_DIGIN_ON_ATTACK_MOVE"
+    },
+    {
+      "key": "experience_gain_air",
+      "localisation_key": "MODIFIER_XP_GAIN_AIR"
+    },
+    {
+      "key": "experience_gain_air_factor",
+      "localisation_key": "MODIFIER_XP_GAIN_AIR_FACTOR"
+    },
+    {
+      "key": "experience_gain_army",
+      "localisation_key": "MODIFIER_XP_GAIN_ARMY"
+    },
+    {
+      "key": "experience_gain_army_factor",
+      "localisation_key": "MODIFIER_XP_GAIN_ARMY_FACTOR"
+    },
+    {
+      "key": "experience_gain_army_unit_factor",
+      "localisation_key": "MODIFIER_XP_GAIN_ARMY_UNIT_FACTOR"
+    },
+    {
+      "key": "experience_gain_navy",
+      "localisation_key": "MODIFIER_XP_GAIN_NAVY"
+    },
+    {
+      "key": "experience_gain_navy_factor",
+      "localisation_key": "MODIFIER_XP_GAIN_NAVY_FACTOR"
+    },
+    {
+      "key": "experience_gain_navy_unit_factor",
+      "localisation_key": "MODIFIER_XP_GAIN_NAVY_UNIT"
+    },
+    {
+      "key": "extra_marine_supply_grace",
+      "localisation_key": "MODIFIER_MARINE_EXTRA_SUPPLY_GRACE"
+    },
+    {
+      "key": "extra_trade_to_overlord_factor",
+      "localisation_key": "MODIFIER_TRADE_TO_OVERLORD_FACTOR"
+    },
+    {
+      "key": "guarantee_tension",
+      "localisation_key": "MODIFIER_GUARANTEE_TENSION_LIMIT"
+    },
+    {
+      "key": "industrial_capacity_dockyard",
+      "localisation_key": "MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR"
+    },
+    {
+      "key": "industrial_capacity_dockyard_powered",
+      "localisation_key": "MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_POWERED_FACTOR"
+    },
+    {
+      "key": "industrial_capacity_factory",
+      "localisation_key": "MODIFIER_INDUSTRIAL_CAPACITY_FACTOR"
+    },
+    {
+      "key": "industrial_capacity_factory_powered",
+      "localisation_key": "MODIFIER_INDUSTRIAL_CAPACITY_POWERED_FACTOR"
+    },
+    {
+      "key": "join_faction_tension",
+      "localisation_key": "MODIFIER_JOIN_FACTION_TENSION_LIMIT"
+    },
+    {
+      "key": "legitimacy_gain_factor",
+      "localisation_key": "MODIFIER_LEGITIMACY_FACTOR"
+    },
+    {
+      "key": "lend_lease_tension",
+      "localisation_key": "MODIFIER_LEND_LEASE_TENSION_LIMIT"
+    },
+    {
+      "key": "military_industrial_organization_funds_gain",
+      "localisation_key": "MODIFIER_MIO_FUNDS_GAIN"
+    },
+    {
+      "key": "military_industrial_organization_research_bonus",
+      "localisation_key": "MODIFIER_MIO_RESEARCH_BONUS"
+    },
+    {
+      "key": "min_export",
+      "localisation_key": "MODIFIER_MIN_EXPORT_FACTOR"
+    },
+    {
+      "key": "monthly_population",
+      "localisation_key": "MODIFIER_GLOBAL_MONTHLY_POPULATION"
+    },
+    {
+      "key": "naval_invasion_prep_speed",
+      "localisation_key": "MODIFIER_NAVAL_INVASION_PREPARATION_SPEED"
+    },
+    {
+      "key": "navy_casualty_on_hit",
+      "localisation_key": "MODIFIER_NAVAL_CASUALTY_ON_HIT_FACTOR"
+    },
+    {
+      "key": "navy_casualty_on_sink",
+      "localisation_key": "MODIFIER_NAVAL_CASUALTY_ON_SINK_FACTOR"
+    },
+    {
+      "key": "navy_submarine_detection_factor",
+      "localisation_key": "MODIFIERS_SUBMARINE_DETECTION_FACTOR"
+    },
+    {
+      "key": "non_core_manpower",
+      "localisation_key": "MODIFIER_GLOBAL_NON_CORE_MANPOWER"
+    },
+    {
+      "key": "offensive_war_stability_factor",
+      "localisation_key": "MODIFIER_STABILITY_OFFENSIVE_WAR_FACTOR"
+    },
+    {
+      "key": "out_of_power_impact_factor",
+      "localisation_key": "MODIFIER_OUT_OF_POWER_FACTOR"
+    },
+    {
+      "key": "overlord_trade_cost_factor",
+      "localisation_key": "MODIFIER_TRADE_COST_FACTOR"
+    },
+    {
+      "key": "party_popularity_stability_factor",
+      "localisation_key": "MODIFIER_STABILITY_POPULARITY_FACTOR"
+    },
+    {
+      "key": "port_strike",
+      "localisation_key": "MODIFIER_PORT_STRIKE_ATTACK_FACTOR"
+    },
+    {
+      "key": "promote_cost_factor",
+      "localisation_key": "MODIFIER_UNIT_LEADER_PROMOTE_COST_FACTOR"
+    },
+    {
+      "key": "refit_ic_cost",
+      "localisation_key": "MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR"
+    },
+    {
+      "key": "refit_speed",
+      "localisation_key": "MODIFIER_INDUSTRIAL_REFIT_SPEED_FACTOR"
+    },
+    {
+      "key": "resistance_activity",
+      "localisation_key": "MODIFIER_RESISTANCE_ACTIVITY_FACTOR"
+    },
+    {
+      "key": "resistance_damage_to_garrison",
+      "localisation_key": "MODIFIER_RESISTANCE_DAMAGE_TO_GARRISONS"
+    },
+    {
+      "key": "send_volunteers_tension",
+      "localisation_key": "MODIFIER_SEND_VOLUNTEERS_TENSION_LIMIT"
+    },
+    {
+      "key": "shore_bombardment_bonus",
+      "localisation_key": "MODIFIER_SHORE_BOMBARDMENT"
+    },
+    {
+      "key": "sortie_efficiency",
+      "localisation_key": "CARRIER_SORTIE_EFFICIENCY_FACTOR"
+    },
+    {
+      "key": "subjects_autonomy_gain",
+      "localisation_key": "MODIFIER_AUTONOMY_SUBJECT_GAIN"
+    },
+    {
+      "key": "trade_cost_for_target_factor",
+      "localisation_key": "MODIFIER_TRADE_COST_TO_TARGET_FACTOR"
+    },
+    {
+      "key": "war_stability_factor",
+      "localisation_key": "MODIFIER_STABILITY_WAR_FACTOR"
+    }
+  ],
+  "unmatched_keys": [
+    "additional_brigade_column_size",
+    "air_invasion_prep_days",
+    "air_maximum_speed_factor",
+    "air_strategic_bomber_defence_factor",
+    "air_strategic_bomber_night_penalty",
+    "amphibious_invasion_against",
+    "amphibious_invasion_defence",
+    "armor_factor",
+    "army_strength_factor",
+    "attack_bonus_against_cores",
+    "base_fuel_gain",
+    "breakthrough_bonus_against",
+    "choose_preferred_tactics_cost",
+    "critical_receive_chance",
+    "defense_bonus_against",
+    "disable_strategic_redeployment",
+    "disable_strategic_redeployment_for_controller",
+    "disabled_ideas",
+    "experience_gain_army_unit",
+    "experience_gain_factor",
+    "experience_gain_navy_unit",
+    "extra_paratrooper_supply_grace",
+    "extra_trade_to_target_factor",
+    "female_random_admiral_chance",
+    "female_random_army_leader_chance",
+    "female_random_country_leader_chance",
+    "female_random_operative_chance",
+    "female_random_scientist_chance",
+    "fighter_sortie_efficiency",
+    "foreign_subversive_activites",
+    "fortification_damage",
+    "fuel_gain",
+    "generate_wargoal_tension",
+    "generate_wargoal_tension_against",
+    "invasion_preparation",
+    "invasion_preparation_against",
+    "lend_lease_tension_with_overlord",
+    "local_non_core_supply_impact_factor",
+    "local_supply_impact_factor",
+    "max_army_group_size",
+    "max_commander_army_size",
+    "max_fuel",
+    "max_fuel_building",
+    "max_organisation",
+    "max_training",
+    "military_industrial_organization_design_team_assign_cost",
+    "military_industrial_organization_design_team_change_cost",
+    "military_industrial_organization_industrial_manufacturer_assign_cost",
+    "military_industrial_organization_policy_cooldown",
+    "military_industrial_organization_policy_cost",
+    "military_industrial_organization_size_up_requirement",
+    "military_industrial_organization_task_capacity",
+    "naval_attrition",
+    "naval_critical_score_chance_factor_against",
+    "naval_hit_chance_against",
+    "naval_invasion_planning_bonus_speed",
+    "naval_invasion_prep_days",
+    "navy_capital_ship_attack_factor_against",
+    "navy_capital_ship_defence_factor_against",
+    "navy_carrier_air_agility_factor",
+    "navy_carrier_air_attack_factor",
+    "navy_carrier_air_targetting_factor",
+    "navy_screen_attack_factor_against",
+    "navy_screen_defence_factor_against",
+    "navy_submarine_attack_factor_against",
+    "navy_submarine_defence_factor_against",
+    "navy_visibility",
+    "paratrooper_aa_defense",
+    "paratrooper_weight_factor",
+    "request_lease_tension",
+    "resistance_damage_to_garrison_on_our_occupied_states",
+    "river_crossing_factor",
+    "river_crossing_factor_against",
+    "ships_at_battle_start",
+    "skill_bonus_factor",
+    "spotting_chance_against",
+    "starting_compliance",
+    "strategic_bomb_visibility",
+    "strike_force_movement_org_loss"
+  ],
+  "method_note": "直接名称使用精确键、标准前缀、原版 <key>_tt 或 modifier_<key>_tt 的单一本地化引用；另有人工审查的脚本到tooltip调用链，标为reviewed_script_tooltip_chain并保留源位置。不做模糊匹配。template_derived 是按引擎模板翻译组合的编辑名称，不是原版完整本地化；parameter_localisation_complete 可识别残留英文参数。未解析动态占位符原样保留，游戏图标标记从纯文本名称中去除。"
+}

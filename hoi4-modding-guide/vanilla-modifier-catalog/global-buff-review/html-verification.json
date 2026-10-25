@@ -1,0 +1,160 @@
+{
+  "status": "passed",
+  "method": "Node.js vm with a minimal DOM mock; expected values read from display-catalog.json",
+  "limitation": "DOM 模拟功能测试，未进行真实浏览器视觉布局、无障碍或文件导航行为测试。",
+  "node_version": "v24.16.0",
+  "source": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\catalog.html",
+  "expected_data": "D:\\projects\\hoi4_mod\\1\\hoi4-modding-guide\\vanilla-modifier-catalog\\global-buff-review\\data\\display-catalog.json",
+  "checks": [
+    {
+      "name": "Registry has 4484 unique keys and embedded data matches source JSON",
+      "status": "passed"
+    },
+    {
+      "name": "Initial render defaults to named AB selection, 60 rows and first-page controls",
+      "status": "passed"
+    },
+    {
+      "name": "Group filter A equals JSON-defined selection",
+      "status": "passed"
+    },
+    {
+      "name": "Group filter B equals JSON-defined selection",
+      "status": "passed"
+    },
+    {
+      "name": "Group filter C equals JSON-defined selection",
+      "status": "passed"
+    },
+    {
+      "name": "Group filter AB equals JSON-defined selection",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 政治",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 工业",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 陆军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 海军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 空军",
+      "status": "passed"
+    },
+    {
+      "name": "Category filter 情报",
+      "status": "passed"
+    },
+    {
+      "name": "Old BUFF mod coverage filter yes",
+      "status": "passed"
+    },
+    {
+      "name": "Old BUFF mod coverage filter no",
+      "status": "passed"
+    },
+    {
+      "name": "Case/whitespace/multi-term search: army_attack_factor",
+      "status": "passed"
+    },
+    {
+      "name": "Case/whitespace/multi-term search: 陆军",
+      "status": "passed"
+    },
+    {
+      "name": "Case/whitespace/multi-term search:  ARMY_ATTACK_FACTOR ",
+      "status": "passed"
+    },
+    {
+      "name": "Case/whitespace/multi-term search: army attack",
+      "status": "passed"
+    },
+    {
+      "name": "Combined AB/category/coverage filters",
+      "status": "passed"
+    },
+    {
+      "name": "Sort mode source",
+      "status": "passed"
+    },
+    {
+      "name": "Sort mode focus uses unique focus count",
+      "status": "passed"
+    },
+    {
+      "name": "Sort mode key",
+      "status": "passed"
+    },
+    {
+      "name": "Rendered focus column uses focus_unique_count",
+      "status": "passed"
+    },
+    {
+      "name": "Every 60-item page renders each key exactly once",
+      "status": "passed"
+    },
+    {
+      "name": "No-result state and disabled pagination",
+      "status": "passed"
+    },
+    {
+      "name": "Changing filters resets to first page",
+      "status": "passed"
+    },
+    {
+      "name": "HTML text escaping",
+      "status": "passed"
+    },
+    {
+      "name": "Relative navigation targets exist",
+      "status": "passed"
+    },
+    {
+      "name": "HTML and source JSON remained unchanged during verification",
+      "status": "passed"
+    }
+  ],
+  "source_sha256": "096506eb98779b0faa1ccde265557702e853fb334adcb285a692280dec2b4a42",
+  "expected_data_sha256": "a0664fd559d06bb911baceb0c6ff7463099f11a8f9c4eeb071729a183034515b",
+  "source_bytes": 4534876,
+  "catalog_date": "2026-10-25",
+  "expected_group_counts": {
+    "C": 3925,
+    "A": 521,
+    "B": 38
+  },
+  "expected_category_counts": {
+    "工业": 2823,
+    "陆军": 728,
+    "空军": 127,
+    "海军": 453,
+    "政治": 150,
+    "情报": 203
+  },
+  "pagination": {
+    "rows_per_page": 60,
+    "pages": 75,
+    "last_page_rows": 44,
+    "unique_rendered_keys": 4484
+  },
+  "local_navigation_targets": [
+    "README.md",
+    "A-focus-spirit-required.md",
+    "B-other-global-required.md",
+    "C-not-displayed.md",
+    "methodology.md",
+    "user-revision-2026-10-25.md"
+  ],
+  "passed_checks": 29,
+  "failed_checks": 0,
+  "verified_at_utc": "2026-10-24T17:36:13.651Z"
+}

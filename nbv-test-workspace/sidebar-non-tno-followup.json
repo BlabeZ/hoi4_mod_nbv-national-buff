@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-25",
+  "scope": "KR, EAW, TFR, BUFF UI only; no TNO or TNO submod work",
+  "production_modified": false,
+  "current_nbviewer": {
+    "parent": "raid_filter",
+    "position": [
+      0,
+      -202
+    ],
+    "container_size": [
+      77,
+      77
+    ],
+    "button_inset": [
+      3,
+      3
+    ],
+    "button_size": [
+      71,
+      71
+    ]
+  },
+  "coordinate_convention": "Coordinates relative to screen right/bottom for lower_right anchors, logical GUI pixels. W/H denote logical screen dimensions; no mouse/visual validation performed.",
+  "mods": [
+    {
+      "id": "1521695605",
+      "name": "Kaiserreich",
+      "nbv_lower_right_bounds": [
+        -76,
+        -437,
+        1,
+        -360
+      ],
+      "nearest_entry": "mitteleuropa_open_button_window",
+      "entry_lower_right_bounds": [
+        -76,
+        -350,
+        1,
+        -273
+      ],
+      "container_gap": 10,
+      "overlap": false,
+      "movement_required": false,
+      "native_safe_detection": [
+        {
+          "condition": "has_country_flag = MIT_was_in_mitteleuropa",
+          "caveat": "Ever-member flag, not exact current visibility"
+        },
+        {
+          "condition": "has_global_flag = KR_CURRENT_VERSION_1.7",
+          "caveat": "Version-specific whole-mod marker"
+        }
+      ],
+      "visibility_exact": "has_dynamic_modifier = { modifier = MIT_mitteleuropa_modifier }; absent modifier requires engine validation if used without compatibility definition",
+      "other_entry": "KR intro screen opener is at top-right (-131,+62), not near NBV"
+    },
+    {
+      "id": "1826643372",
+      "name": "Equestria at War",
+      "raid_filter_lower_right_position": [
+        -76,
+        -300
+      ],
+      "nbv_lower_right_bounds": [
+        -76,
+        -502,
+        1,
+        -425
+      ],
+      "nearest_sidebar_entry": "eaw_state_lore_mapicon_control_panel_gui",
+      "sidebar_container_lower_right_bounds": [
+        -87,
+        -296,
+        0,
+        -230
+      ],
+      "sidebar_gap": 129,
+      "overlap": false,
+      "movement_required": false,
+      "source_gui": "interface/eaw_state_lore.gui:128",
+      "source_sg": "common/scripted_guis/eaw_state_lore_gui.txt:73",
+      "visible": "NOT = { original_tag = KXN }",
+      "native_safe_detection": [
+        {
+          "condition": "has_variable = eaw_help_tab_on",
+          "caveat": "Only help tab open state; not whole-mod marker"
+        },
+        {
+          "condition": "has_country_flag = EaW_state_lore_mapicons_visible",
+          "caveat": "Map lore selected state; not whole-mod/entry visibility marker"
+        }
+      ],
+      "additional_notes": [
+        "Help opener/menu in upper-right; no overlap at user supplied 1920x1080/scale 1 screenshot geometry. Help menu background can extend to y313; do not equate empty background with function button.",
+        "Diplomacy popup list is a transient notification at (-435,-444), entry logical width350, not a permanent sidebar opener. Right edge x=-85 has 9px separation from NBV container x=-76.",
+        "Artifact/country function openers at top bar y3..4, no collision near current NBV."
+      ],
+      "sidebar_background_lower_right_bounds": [
+        -87,
+        -304,
+        0,
+        -237
+      ],
+      "sidebar_background_gap": 121,
+      "sidebar_button_lower_right_bounds": [
+        -62,
+        -296,
+        -10.3,
+        -241
+      ],
+      "sidebar_button_dimensions_scaled": [
+        51.7,
+        55
+      ]
+    },
+    {
+      "id": "3350890356",
+      "name": "The Fire Rises",
+      "raid_filter_lower_right_position": [
+        -76,
+        -235
+      ],
+      "nbv_lower_right_bounds": [
+        -76,
+        -437,
+        1,
+        -360
+      ],
+      "overlap": false,
+      "movement_required": false,
+      "findings": [
+        "No scripted GUI attached to raid_filter or MapmodesInterface_Ingame.",
+        "Economy widgets are at top-right x=-655,-525,-457,-427,-400, y4 or20.",
+        "Top-bar/startup/modals do not establish same-area sidebar function buttons.",
+        "Two GUI parse failures manually reviewed: subideology text in politics/diplomacy; soviet propaganda decision section. Neither is a sidebar opener."
+      ],
+      "native_safe_detection": [
+        {
+          "condition": "has_global_flag = TFR_startup_global",
+          "source": "common/on_actions/00_TFR_on_actions_ZZZ_startup.txt:18",
+          "caveat": "Established on_startup; only mod detection, not collision evidence"
+        }
+      ]
+    },
+    {
+      "id": "3795966002",
+      "name": "buff display ui",
+      "entry_parent": "politics_tab",
+      "entry_position": [
+        185,
+        0
+      ],
+      "overlap": false,
+      "movement_required": false,
+      "findings": [
+        "Entry in politics heading near upper-left, not right sidebar."
+      ]
+    }
+  ],
+  "conclusion": "No actual permanent right-sidebar button collision found for current x0,y-202 baseline among audited installed non-TNO mods. Do not shift just because a mod marker is present. Known-mod adapter candidate at this baseline is a no-op; generic unknown-mod collision detection is not established."
+}

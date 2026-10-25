@@ -1,0 +1,10 @@
+[11:34:47][no_game_date][dlc.cpp:142]: incorrect checksum for DLC
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:48934: remove_dynamic_modifier modifier does not exist: SOV_the_red_army_dynamic_modifier
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:48975: remove_dynamic_modifier modifier does not exist: SOV_soviet_airforce_dynamic_modifier
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49016: remove_dynamic_modifier modifier does not exist: ITA_regio_esercito_dynamic_modifier
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49057: remove_dynamic_modifier modifier does not exist: ITA_regia_marina_dynamic_modifier
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49098: remove_dynamic_modifier modifier does not exist: JAP_national_army_dm
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49139: remove_dynamic_modifier modifier does not exist: JAP_japanese_navy_dm
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49177: remove_dynamic_modifier modifier does not exist: GER_overburdened_state_modifier
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: common/scripted_effects/nbv_smoke_effects.txt:49198: remove_dynamic_modifier modifier does not exist: SOV_invaders_must_die
+[11:35:19][1936.01.01.12][effectimplementation.cpp:19490]: events/nbv_dynamic_probe_events.txt:54: remove_dynamic_modifier modifier does not exist: INS_state_militia_sabotage_1

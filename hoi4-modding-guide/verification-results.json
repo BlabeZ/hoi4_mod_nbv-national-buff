@@ -1,0 +1,15 @@
+{
+  "authored_markdown_local_links_checked": 81,
+  "example_scripts_checked": 4,
+  "localisation_files_checked": 2,
+  "wiki_snapshots_hash_verified": 2,
+  "upstream_snapshot_files": 116,
+  "api_documentation_records": {
+    "effects": 553,
+    "triggers": 598,
+    "modifiers": 764
+  },
+  "game_test_performed": false,
+  "cwtools_validator_run": false,
+  "status": "PASS"
+}

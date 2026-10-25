@@ -1,0 +1,401 @@
+[14:22:38][no_game_date][dlc.cpp:142]: incorrect checksum for DLC
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31480
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31492
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31504
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31516
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31528
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31540
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31552
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 31564
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34241
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34242
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34243
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34244
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34245
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34246
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34247
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 34258
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35634
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35635
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35636
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35637
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35638
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35639
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35640
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 35641
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36857
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_big_ben is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36858
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36859
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_gen is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36860
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_nanjing_presidential_palace_prc is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36861
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36862
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36863
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 36864
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:57][no_game_date][scopedvariable.cpp:560]: Token landmark_tokyo_imperial_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61687
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61699
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61711
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61723
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61735
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61747
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61759
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61771
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61783
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61795
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 61807
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65223
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65224
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65225
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65226
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65227
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65228
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65239
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65240
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65241
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65242
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 65243
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 66998
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 66999
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67000
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67001
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67002
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67003
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67004
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67005
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67006
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67007
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 67008
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68553
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68554
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68555
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_bojnice_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68556
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_cristo_redentor is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68557
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_eiffel_tower is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68558
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hagia_sophia is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68559
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hofburg_palace is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68560
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_national_diet is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68561
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_sadabad_complex is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68562
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_statue_of_liberty is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 68563
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_taj_mahal is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 81345
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 81357
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 81369
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 83616
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 83617
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 83618
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 84774
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 84775
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 84776
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 85792
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_volkshalle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 85793
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_colosseum is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 85794
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 129600
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 130194
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 130507
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_hakko_ichiu is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 163490
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 163725
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 163849
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_forbidden_city is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377197
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377209
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377456
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377457
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377583
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_kremlin is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from common/scripted_localisation/nbv_source_localisation.txt line : 377584
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:22:58][no_game_date][scopedvariable.cpp:560]: Token landmark_prague_castle is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 6
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 6" in file: "events/nbv_special_probe_events.txt" near line: 6
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 13
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 13" in file: "events/nbv_special_probe_events.txt" near line: 13
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 22
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 22" in file: "events/nbv_special_probe_events.txt" near line: 22
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 29
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 29" in file: "events/nbv_special_probe_events.txt" near line: 29
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 38
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 38" in file: "events/nbv_special_probe_events.txt" near line: 38
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 45
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 45" in file: "events/nbv_special_probe_events.txt" near line: 45
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 53
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 53" in file: "events/nbv_special_probe_events.txt" near line: 53
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 60
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 60" in file: "events/nbv_special_probe_events.txt" near line: 60
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 67
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 67" in file: "events/nbv_special_probe_events.txt" near line: 67
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 74
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 74" in file: "events/nbv_special_probe_events.txt" near line: 74
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 81
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 81" in file: "events/nbv_special_probe_events.txt" near line: 81
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 88
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 88" in file: "events/nbv_special_probe_events.txt" near line: 88
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 97
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 97" in file: "events/nbv_special_probe_events.txt" near line: 97
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 104
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 104" in file: "events/nbv_special_probe_events.txt" near line: 104
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 111
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 111" in file: "events/nbv_special_probe_events.txt" near line: 111
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 118
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 118" in file: "events/nbv_special_probe_events.txt" near line: 118
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 125
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 125" in file: "events/nbv_special_probe_events.txt" near line: 125
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 132
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 132" in file: "events/nbv_special_probe_events.txt" near line: 132
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 141
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 141" in file: "events/nbv_special_probe_events.txt" near line: 141
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 148
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 148" in file: "events/nbv_special_probe_events.txt" near line: 148
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 155
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 155" in file: "events/nbv_special_probe_events.txt" near line: 155
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 162
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 162" in file: "events/nbv_special_probe_events.txt" near line: 162
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 169
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 169" in file: "events/nbv_special_probe_events.txt" near line: 169
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 176
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 176" in file: "events/nbv_special_probe_events.txt" near line: 176
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 187
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 187" in file: "events/nbv_special_probe_events.txt" near line: 187
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 194
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 194" in file: "events/nbv_special_probe_events.txt" near line: 194
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 201
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 201" in file: "events/nbv_special_probe_events.txt" near line: 201
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 208
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 208" in file: "events/nbv_special_probe_events.txt" near line: 208
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 215
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 215" in file: "events/nbv_special_probe_events.txt" near line: 215
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 222
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 222" in file: "events/nbv_special_probe_events.txt" near line: 222
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 229
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 229" in file: "events/nbv_special_probe_events.txt" near line: 229
+[14:23:00][no_game_date][trigger.cpp:700]: Invalid trigger 'has_ideas' in events/nbv_special_probe_events.txt line : 236
+[14:23:00][no_game_date][trigger.cpp:568]: Error: "Unknown trigger-type: has_ideas, near line: 236" in file: "events/nbv_special_probe_events.txt" near line: 236
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 249
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 259
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 269
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 280
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 290
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][triggerbase.cpp:298]: Not a valid compare token in trigger '=' from events/nbv_special_probe_events.txt line : 301
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:00][no_game_date][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es
+[14:23:26][1936.01.01.12][scopedvariable.cpp:560]: Token landmark_berlin_reichstag is a dynamic token, this can cause OOS depending on how it's used, please add it as a synchronized dynamic token to prevent OOS:es

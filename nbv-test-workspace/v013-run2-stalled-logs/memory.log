@@ -1,0 +1,6 @@
+[03:30:48][no_game_date][main.cpp:1964]: Not compiled with PDX_DEBUG. Memory usage info will be limited.
+[03:30:48][no_game_date][gameapplication.cpp:812]: Memory before first init: 112408KB memory.
+[03:30:48][no_game_date][gameapplication.cpp:825]: InitTextureLookup(gfx/models) takes 20KB memory.
+[03:30:49][no_game_date][gameapplication.cpp:1252]: InitBase:: CApplication takes 27300KB memory.
+[03:30:50][no_game_date][gameapplication.cpp:1379]: InitBase:: CGameGraphics takes 68872KB memory.
+[03:30:50][no_game_date][gameapplication.cpp:1387]: InitBase:: InitLoadScreen takes 23752KB memory.

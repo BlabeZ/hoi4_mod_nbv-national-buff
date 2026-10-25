@@ -1,0 +1,5 @@
+name = "H4Guide Local Demo"
+version = "0.1.0"
+supported_version = "REPLACE_WITH_TESTED_MAJOR_MINOR.*"
+tags = { "Events" }
+path = "D:/projects/hoi4_mod/1/h4guide_demo"

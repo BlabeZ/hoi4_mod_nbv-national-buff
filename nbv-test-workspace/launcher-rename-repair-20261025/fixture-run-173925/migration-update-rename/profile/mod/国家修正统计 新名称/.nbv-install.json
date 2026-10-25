@@ -1,0 +1,11 @@
+{
+    "files":  [
+                  "common\\new.txt",
+                  "gfx\\sample.txt",
+                  "interface\\sample.txt",
+                  "localisation\\sample.txt"
+              ],
+    "install_id":  "nbv-national-buff-local-install-v1",
+    "source":  "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\launcher-rename-repair-20261025\\fixture-run-173925\\migration-update-rename\\project\\nbv-national-buff",
+    "registration":  "国家修正统计 新名称.mod"
+}

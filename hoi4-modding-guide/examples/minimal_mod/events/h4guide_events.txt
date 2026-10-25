@@ -1,0 +1,18 @@
+add_namespace = h4guide
+
+country_event = {
+    id = h4guide.1
+    title = h4guide.1.t
+    desc = h4guide.1.d
+    is_triggered_only = yes
+
+    option = {
+        name = h4guide.1.a
+        if = {
+            limit = {
+                h4guide_can_receive_reward = yes
+            }
+            h4guide_grant_reward = yes
+        }
+    }
+}

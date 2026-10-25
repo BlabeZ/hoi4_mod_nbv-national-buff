@@ -1,0 +1,37 @@
+{
+  "script_sha256": "0bc7c7fc2b75415b284f19c961112cd19e9058b5be612e08307f32d75acf76a0",
+  "run_directory": "D:\\projects\\hoi4_mod\\1\\nbv-test-workspace\\launcher-rename-repair-20261025\\fixture-run-173816",
+  "passed": false,
+  "results": [
+    {
+      "name": "migration_normal_update_and_launcher_rename",
+      "passed": false,
+      "error": "AssertionError((1, \"descriptor.mod must contain a display name.\\r\\nAt D:\\\\projects\\\\hoi4_mod\\\\1\\\\nbv-test-workspace\\\\launcher-rename-repair-20261025\\\\fixture-run-173816\\\\migration-update-rename\\r\\n\\\\project\\\\nbv-national-buff\\\\install-local.ps1:27 char:44\\r\\n+ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }\\r\\n+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException\\r\\n    + FullyQualifiedErrorId : descriptor.mod must contain a display name.\\r\\n \\r\\n\"))"
+    },
+    {
+      "name": "workshop_id_conflict_refuses_without_changes",
+      "passed": false,
+      "error": "AssertionError((1, \"descriptor.mod must contain a display name.\\r\\nAt D:\\\\projects\\\\hoi4_mod\\\\1\\\\nbv-test-workspace\\\\launcher-rename-repair-20261025\\\\fixture-run-173816\\\\id-conflict\\\\project\\\\nbv\\r\\n-national-buff\\\\install-local.ps1:27 char:44\\r\\n+ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }\\r\\n+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException\\r\\n    + FullyQualifiedErrorId : descriptor.mod must contain a display name.\\r\\n \\r\\n\"))"
+    },
+    {
+      "name": "other_mod_descriptor_not_overwritten",
+      "passed": false,
+      "error": "AssertionError()"
+    },
+    {
+      "name": "other_mod_directory_not_overwritten",
+      "passed": false,
+      "error": "AssertionError()"
+    },
+    {
+      "name": "manifest_escape_refused_without_changes",
+      "passed": false,
+      "error": "AssertionError((1, \"descriptor.mod must contain a display name.\\r\\nAt D:\\\\projects\\\\hoi4_mod\\\\1\\\\nbv-test-workspace\\\\launcher-rename-repair-20261025\\\\fixture-run-173816\\\\outside-manifest-path\\\\p\\r\\nroject\\\\nbv-national-buff\\\\install-local.ps1:27 char:44\\r\\n+ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }\\r\\n+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException\\r\\n    + FullyQualifiedErrorId : descriptor.mod must contain a display name.\\r\\n \\r\\n\"))"
+    },
+    {
+      "name": "duplicate_installations_refused",
+      "passed": false,
+      "error": "AssertionError((1, \"descriptor.mod must contain a display name.\\r\\nAt D:\\\\projects\\\\hoi4_mod\\\\1\\\\nbv-test-workspace\\\\launcher-rename-repair-20261025\\\\fixture-run-173816\\\\duplicate-installations\\r\\n\\\\project\\\\nbv-national-buff\\\\install-local.ps1:27 char:44\\r\\n+ ... Body 'name')) { throw 'descriptor.mod must contain a display name.' }\\r\\n+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\r\\n    + CategoryInfo          : OperationStopped: (descriptor.mod ...a display name.:String) [], RuntimeException\\r\\n    + FullyQualifiedErrorId : descriptor.mod must contain a display name.\\r\\n \\r\\n\"))"
+    }
+  ]
+}

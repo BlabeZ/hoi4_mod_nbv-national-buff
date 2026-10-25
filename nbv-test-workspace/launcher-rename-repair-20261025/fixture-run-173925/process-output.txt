@@ -1,0 +1,134 @@
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\国家修正统计 新名称
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\migration-update-rename\profile\mod\国家修正统计 新名称.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\id-conflict\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\id-conflict\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\id-conflict\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\id-conflict\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+Conflicting Workshop IDs; no installation changed.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\id-conflict\project\nbv
+-national-buff\install-local.ps1:60 char:13
++             throw 'Conflicting Workshop IDs; no installation changed. ...
++             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Conflicting Wor...lation changed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Conflicting Workshop IDs; no installation changed.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\other-descriptor\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+A different descriptor already uses nbv_national_buff.mod; no installation changed.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\other-descriptor\projec
+t\nbv-national-buff\install-local.ps1:65 char:5
++     throw 'A different descriptor already uses nbv_national_buff.mod; ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (A different des...lation changed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : A different descriptor already uses nbv_national_buff.mod; no installation changed.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\other-directory\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+The installation directory already exists and is not managed by this installer.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\other-directory\project
+\nbv-national-buff\install-local.ps1:73 char:5
++     throw 'The installation directory already exists and is not manag ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (The installatio...this installer.:String) [], RuntimeException
+    + FullyQualifiedErrorId : The installation directory already exists and is not managed by this installer.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\outside-manifest-path\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\outside-manifest-path\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\outside-manifest-path\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\outside-manifest-path\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+Unsafe path in installation manifest.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\outside-manifest-path\p
+roject\nbv-national-buff\install-local.ps1:108 char:56
++ ... ldFile $nbvTarget)) { throw 'Unsafe path in installation manifest.' }
++                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Unsafe path in installation manifest.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Unsafe path in installation manifest.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\duplicate-installations\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\duplicate-installations\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\duplicate-installations\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\duplicate-installations\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+Multiple NBV installations found; no installation changed.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\duplicate-installations
+\project\nbv-national-buff\install-local.ps1:45 char:35
++ ... nt -gt 1) { throw 'Multiple NBV installations found; no installation  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Multiple NBV in...lation changed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Multiple NBV installations found; no installation changed.
+ 
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\nested-junction\project\nbv-national-buff
+EXPECTED=True
+EXIT=0
+Installed: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\nested-junction\profile\mod\nbv-national-buff
+Registered: D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\nested-junction\profile\mod\nbv_national_buff.mod
+Restart the launcher to reload the installation. Existing playsets have not been edited.
+
+
+SOURCE=D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\nested-junction\project\nbv-national-buff
+EXPECTED=False
+EXIT=1
+Linked files or subdirectories are not allowed in the installation.
+At D:\projects\hoi4_mod\1\nbv-test-workspace\launcher-rename-repair-20261025\fixture-run-173925\nested-junction\project
+\nbv-national-buff\install-local.ps1:83 char:81
++ ... rsePoint) { throw 'Linked files or subdirectories are not allowed in  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Linked files or...e installation.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Linked files or subdirectories are not allowed in the installation.
+ 
+

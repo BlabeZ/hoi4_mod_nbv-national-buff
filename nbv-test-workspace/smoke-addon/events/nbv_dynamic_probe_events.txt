@@ -1,0 +1,73 @@
+add_namespace = nbv_dynamic_probe
+country_event = { id = nbv_dynamic_probe.1 hidden = yes is_triggered_only = yes immediate = {
+set_temp_variable = { nbv_dynamic_probe_owned = 0 }
+if = { limit = { has_dynamic_modifier = INS_royal_netherlands_east_indies_army } set_temp_variable = { nbv_dynamic_probe_owned = 1 } }
+set_temp_variable = { nbv_dynamic_probe_input_existed = 0 }
+if = { limit = { has_variable = ROOT.INS_royal_netherlands_east_indies_army_offence } set_temp_variable = { nbv_dynamic_probe_input_existed = 1 } }
+set_temp_variable = { nbv_dynamic_probe_saved_input = ROOT.INS_royal_netherlands_east_indies_army_offence }
+set_temp_variable = { nbv_dynamic_probe_enabled = 0 }
+if = { limit = { has_dlc = "Thunder at Our Gates" original_tag = INS } set_temp_variable = { nbv_dynamic_probe_enabled = 1 } }
+log = "NBV_DYNAMIC_CONDITION index=18527 country=[ROOT.GetTag] enabled=[?nbv_dynamic_probe_enabled|0] END_DYNAMIC_CONDITION"
+if = { limit = { has_dynamic_modifier = INS_royal_netherlands_east_indies_army } remove_dynamic_modifier = { modifier = INS_royal_netherlands_east_indies_army } }
+set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = .125 }
+set_temp_variable = { nbv_source_value_18527 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18527 phase=inactive text=[NBVSource18527] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18527 phase=inactive value=[?nbv_source_value_18527|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18527 phase=inactive text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+add_dynamic_modifier = { modifier = INS_royal_netherlands_east_indies_army }
+set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = .125 }
+set_temp_variable = { nbv_source_value_18527 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18527 phase=active text=[NBVSource18527] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18527 phase=active value=[?nbv_source_value_18527|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18527 phase=active text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = .25 }
+set_temp_variable = { nbv_source_value_18527 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18527 phase=updated text=[NBVSource18527] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18527 phase=updated value=[?nbv_source_value_18527|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18527 phase=updated text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = 0 }
+set_temp_variable = { nbv_source_value_18527 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18527 phase=zero text=[NBVSource18527] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18527 phase=zero value=[?nbv_source_value_18527|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18527 phase=zero text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+if = { limit = { has_dynamic_modifier = INS_royal_netherlands_east_indies_army } remove_dynamic_modifier = { modifier = INS_royal_netherlands_east_indies_army } }
+set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = .125 }
+set_temp_variable = { nbv_source_value_18527 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18527 phase=removed text=[NBVSource18527] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18527 phase=removed value=[?nbv_source_value_18527|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18527 phase=removed text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+if = { limit = { check_variable = { nbv_dynamic_probe_input_existed = 1 } } set_variable = { ROOT.INS_royal_netherlands_east_indies_army_offence = nbv_dynamic_probe_saved_input } }
+else = { clear_variable = ROOT.INS_royal_netherlands_east_indies_army_offence }
+if = { limit = { check_variable = { nbv_dynamic_probe_owned = 1 } } add_dynamic_modifier = { modifier = INS_royal_netherlands_east_indies_army } }
+} }
+country_event = { id = nbv_dynamic_probe.2 hidden = yes is_triggered_only = yes immediate = {
+set_temp_variable = { nbv_dynamic_probe_owned = 0 }
+if = { limit = { has_dynamic_modifier = INS_state_militia_sabotage_1 } set_temp_variable = { nbv_dynamic_probe_owned = 1 } }
+set_temp_variable = { nbv_dynamic_probe_enabled = 0 }
+if = { limit = { has_dlc = "Thunder at Our Gates" } set_temp_variable = { nbv_dynamic_probe_enabled = 1 } }
+log = "NBV_DYNAMIC_CONDITION index=18506 country=[ROOT.GetTag] enabled=[?nbv_dynamic_probe_enabled|0] END_DYNAMIC_CONDITION"
+if = { limit = { has_dynamic_modifier = INS_state_militia_sabotage_1 } remove_dynamic_modifier = { modifier = INS_state_militia_sabotage_1 } }
+set_temp_variable = { nbv_source_value_18506 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18506 phase=inactive text=[NBVSource18506] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18506 phase=inactive value=[?nbv_source_value_18506|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18506 phase=inactive text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+add_dynamic_modifier = { modifier = INS_state_militia_sabotage_1 }
+set_temp_variable = { nbv_source_value_18506 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18506 phase=active text=[NBVSource18506] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18506 phase=active value=[?nbv_source_value_18506|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18506 phase=active text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+if = { limit = { has_dynamic_modifier = INS_state_militia_sabotage_1 } remove_dynamic_modifier = { modifier = INS_state_militia_sabotage_1 } }
+set_temp_variable = { nbv_source_value_18506 = 0 }
+log = "NBV_DYNAMIC_TEXT kind=conditional index=18506 phase=removed text=[NBVSource18506] END_DYNAMIC_TEXT"
+log = "NBV_DYNAMIC_VALUE kind=conditional index=18506 phase=removed value=[?nbv_source_value_18506|5] END_DYNAMIC_VALUE"
+set_temp_variable = { nbv_entry_id = 204 }
+log = "NBV_DYNAMIC_TOOLTIP kind=conditional index=18506 phase=removed text=[NBVRowTooltip] END_DYNAMIC_TOOLTIP"
+if = { limit = { check_variable = { nbv_dynamic_probe_owned = 1 } } add_dynamic_modifier = { modifier = INS_state_militia_sabotage_1 } }
+} }

@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-25",
+  "all_passed": true,
+  "checks": {
+    "exactly_559_unique_selected_keys": true,
+    "same_keys_as_authoritative_selection": true,
+    "grades_521_A_38_B": true,
+    "six_categories_expected_counts": true,
+    "priorities_preserved": true,
+    "priority_bands_198_high_361_low": true,
+    "six_categories_priority_band_counts": true,
+    "priority_band_mapping": true,
+    "grid_columns_3_high_4_low": true,
+    "grid_sections_vertical_high_before_low": true,
+    "confirmed_ui_requirements_preserved": true,
+    "six_top_page_buttons": true,
+    "stable_category_priority_key_order": true,
+    "display_order_contiguous_per_category": true,
+    "markdown_high_low_sections_per_category": true,
+    "no_empty_or_placeholder_names": true,
+    "no_C_records": true,
+    "all_runtime_validation_false": true,
+    "all_unit_validation_false": true,
+    "read_expressions_preserved": true,
+    "grades_match_strong_evidence": true,
+    "all_evidence_files_exist": true,
+    "all_evidence_lines_positive": true,
+    "all_evidence_lines_within_file": true,
+    "all_markdown_local_links_resolve": true,
+    "markdown_has_one_data_row_per_key": true,
+    "input_hashes_unchanged": true
+  },
+  "record_count": 559,
+  "source_grades": {
+    "A": 521,
+    "B": 38
+  },
+  "categories": {
+    "政治": {
+      "A": 92,
+      "B": 2,
+      "total": 94,
+      "high": 35,
+      "low": 59
+    },
+    "工业": {
+      "A": 105,
+      "B": 4,
+      "total": 109,
+      "high": 30,
+      "low": 79
+    },
+    "陆军": {
+      "A": 160,
+      "B": 6,
+      "total": 166,
+      "high": 51,
+      "low": 115
+    },
+    "海军": {
+      "A": 78,
+      "B": 14,
+      "total": 92,
+      "high": 32,
+      "low": 60
+    },
+    "空军": {
+      "A": 48,
+      "B": 3,
+      "total": 51,
+      "high": 25,
+      "low": 26
+    },
+    "情报": {
+      "A": 38,
+      "B": 9,
+      "total": 47,
+      "high": 25,
+      "low": 22
+    }
+  },
+  "priorities": {
+    "P0": 45,
+    "P1": 153,
+    "P2": 357,
+    "P3": 4
+  },
+  "display_priority_bands": {
+    "high": 198,
+    "low": 361
+  },
+  "input_manifest": [
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/vanilla-modifier-catalog/global-buff-review/data/display-catalog.json",
+      "sha256": "a0664fd559d06bb911baceb0c6ff7463099f11a8f9c4eeb071729a183034515b"
+    },
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/vanilla-modifier-catalog/data/catalog.json",
+      "sha256": "298d98a49402452514a85c7b1dd87c72273b3bc66d5e32ced5530a5601fb0444"
+    }
+  ],
+  "generator": {
+    "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/tools/build_buff_delivery_catalog.py",
+    "sha256": "474576d7e1fc990523dcc74270aa036c9b30e45814904107fed1fbaeb9019844"
+  },
+  "output_manifest": [
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/data/buff-display-whitelist.json",
+      "sha256": "200498c85c0273bcc72c294cb74a157ae95470c8dfb60c1903e62621f1b8a548",
+      "bytes": 1022083
+    },
+    {
+      "path": "D:/projects/hoi4_mod/1/hoi4-modding-guide/buff-statistics-mod/01-buff-catalog.md",
+      "sha256": "401add9841d28763f61677be4091d85b5294bdb299dbd9d1b6ccf805f818dfd7",
+      "bytes": 224556
+    }
+  ]
+}
